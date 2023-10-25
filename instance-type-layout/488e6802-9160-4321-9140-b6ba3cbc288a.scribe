@@ -1,0 +1,11 @@
+resource "instance-type-layout" "488e6802-9160-4321-9140-b6ba3cbc288a" {
+  code = "488e6802-9160-4321-9140-b6ba3cbc288a"
+  name = "AP CentOS Layout"
+  uuid = "4105f1bd-bd70-4689-9813-e33c456ff094"
+  instanceType = { code = "OS" }
+  instanceVersion = "7.5"
+  memoryRequirement = 0
+  optionTypes = [ { code = "environment" }, { code = "plan" } ]
+  provisionType = { code = "vmware" }
+  workloads = [ { code = "1adf4708-e99e-470d-9acb-23d8c61d61f1" } ]
+}

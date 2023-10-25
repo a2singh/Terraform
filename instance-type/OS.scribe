@@ -1,0 +1,8 @@
+resource "instance-type" "OS" {
+  code = "OS"
+  name = "AP CentOS"
+  uuid = "3e3ccc0e-c831-4a90-8222-d7c6ea1d1474"
+  category = "os"
+  deploymentService = ""
+  environmentPrefix = "AP_CENTOS"
+}

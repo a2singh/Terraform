@@ -1,0 +1,16 @@
+resource "container-type" "1adf4708-e99e-470d-9acb-23d8c61d61f1" {
+  code = "1adf4708-e99e-470d-9acb-23d8c61d61f1"
+  name = "AP centOS"
+  uuid = "0275dc2e-7124-4dde-8655-44b195822c69"
+  containerVersion = "7.5"
+  entryPoint = ""
+  labels = [ "os" ]
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "os"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "fusion.image.morpheus.centos.7.5-v4" }
+}
