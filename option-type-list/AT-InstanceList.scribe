@@ -1,0 +1,15 @@
+resource "option-type-list" "AT-InstanceList" {
+  name = "AT-InstanceList"
+  uuid = "61ec5af8-cd5c-42cb-a4b3-eb2efa8c835c"
+  config = "{\"sourceHeaders\":[{\"name\":\"authorization\",\"value\":\"bearer dea43501-83d4-4708-bc53-5ffb5e85c33f\",\"masked\":false}]}"
+  ignoreSSLErrors = true
+  sourceUrl = "https://10.32.23.86/api/instances"
+  translationScript = <<EOFSCRIBE
+var results = [];
+var instances = data.instances;
+for (var i = 0; i < instances.length; i++) {
+     results.push({ name: instances[i].name, value: instances[i].name });
+}
+EOFSCRIBE
+  visibility = "public"
+}
