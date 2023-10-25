@@ -1,0 +1,15 @@
+resource "container-type" "b7973908-0c69-487f-a9f8-d37837804215" {
+  code = "b7973908-0c69-487f-a9f8-d37837804215"
+  name = "amit centOS"
+  uuid = "e1a20680-a4b0-45d9-a15e-fbe8cc971afc"
+  containerVersion = "7.5"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "os"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "fusion.image.morpheus.centos.7.5-v4" }
+}

@@ -1,0 +1,10 @@
+resource "instance-type-layout" "226b114b-336e-49e6-b463-6d36790b7086" {
+  code = "226b114b-336e-49e6-b463-6d36790b7086"
+  name = "amit layout"
+  uuid = "021843eb-2d55-472c-ad47-0844f5247324"
+  instanceType = { code = "cent" }
+  instanceVersion = "7.5"
+  memoryRequirement = 0
+  provisionType = { code = "vmware" }
+  workloads = [ { code = "b7973908-0c69-487f-a9f8-d37837804215" } ]
+}

@@ -1,0 +1,8 @@
+resource "instance-type" "cent" {
+  code = "cent"
+  name = "amit centos"
+  uuid = "4efc5165-b37d-48e7-92ec-20a951aa5e37"
+  category = "os"
+  deploymentService = ""
+  environmentPrefix = "AMIT_CENTOS"
+}
