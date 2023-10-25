@@ -1,0 +1,13 @@
+resource "option-type" "morphcloud" {
+  code = "morphcloud"
+  name = "morphcloud"
+  uuid = "fa15adb1-3e78-460d-8d57-ef2661a84275"
+  dependsOnCode = "morphgroup"
+  fieldContext = "config.customOptions"
+  fieldLabel = "morphcloud"
+  fieldName = "morphcloud"
+  optionList = { name = "morphcloud" }
+  optionSource = "list"
+  required = true
+  type = "select"
+}
