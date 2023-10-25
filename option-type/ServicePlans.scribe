@@ -1,0 +1,14 @@
+resource "option-type" "ServicePlans" {
+  code = "ServicePlans"
+  name = "Service Plans"
+  uuid = "ac2ea93e-ec87-4eb9-ad71-d37829cc89b2"
+  dependsOnCode = "morphcloud"
+  description = "morpheus service plans"
+  fieldContext = "config.customOptions"
+  fieldLabel = "Plans"
+  fieldName = "ServicePlans"
+  optionList = { name = "Service Plans" }
+  optionSource = "list"
+  required = true
+  type = "select"
+}
