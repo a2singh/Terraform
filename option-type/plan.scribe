@@ -1,0 +1,12 @@
+resource "option-type" "plan" {
+  code = "plan"
+  name = "Service plan"
+  uuid = "4f68c9da-dafb-4821-ac1a-f949cc9b0ad3"
+  fieldContext = "config.customOptions"
+  fieldLabel = "Service plan"
+  fieldName = "plan"
+  optionList = { name = "Service plan" }
+  optionSource = "list"
+  required = true
+  type = "select"
+}

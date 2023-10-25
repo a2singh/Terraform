@@ -1,0 +1,43 @@
+resource "option-type-list" "Service plan" {
+  name = "Service plan"
+  uuid = "8f2bbe58-e68d-4362-8c67-487cc48b0d2c"
+  initialDataset = <<EOFSCRIBE
+[
+  {"name": "1 CPU, 4GB Memory", "value": 250},
+  {"name": "2 CPU, 8GB Memory", "value": 251} ,
+  {"name": "Singh, 1CPU, 2GB MEMORY", "value": 1052}
+]
+
+function parseObjectProperties (obj, parse) {
+  for (var k in obj) {
+    if (typeof obj[k] === 'object' && obj[k] !== null) {
+      parseObjectProperties(obj[k], parse)
+    } else {
+      parse(k, obj[k])
+    }
+  }
+}
+
+
+// then apply to the property the task you want, in this case just console
+console.log('---------Start Trans vsServicePlans Input------')
+parseObjectProperties(input, function(k, prop) {
+console.log(k + ': ' + prop)
+})
+console.log('---------Stop Trans vsServicePlans Input------')
+
+console.log('---------Start Trans vsServicePlans Data------')
+parseObjectProperties(data, function(k, prop) {
+console.log(k + ': ' + prop)
+})
+console.log('---------Stop Trans vsServicePlans Data------')
+
+console.log('---------Start Trans vsServicePlans Results ------')
+parseObjectProperties(results, function(k, prop) {
+console.log(k + ': ' + prop)
+})
+console.log('---------Stop Trans vsServicePlans Results------')
+EOFSCRIBE
+  realTime = true
+  type = "manual"
+}
