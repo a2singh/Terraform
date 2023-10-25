@@ -1,0 +1,10 @@
+resource "resource-spec-template" "4024bbfe-239d-437c-a2ae-11b91ffa0501" {
+  name = "AP fluentbit 1.7 resources v1"
+  uuid = "4024bbfe-239d-437c-a2ae-11b91ffa0501"
+  dateCreated = "2023-10-10T06:31:02.000Z"
+  lastUpdated = "2023-10-10T06:31:02.000Z"
+  template = { uuid = "c2877ebb-7018-4d63-b55b-6016d3c0a1e8" }
+  templatePhase = "clusterProvision"
+  templateType = "kubernetes"
+  type = { code = "kubernetes" }
+}
