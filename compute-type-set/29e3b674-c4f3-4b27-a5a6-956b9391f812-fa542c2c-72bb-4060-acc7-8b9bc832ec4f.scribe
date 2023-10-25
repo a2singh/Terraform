@@ -1,0 +1,14 @@
+resource "compute-type-set" "29e3b674-c4f3-4b27-a5a6-956b9391f812-fa542c2c-72bb-4060-acc7-8b9bc832ec4f" {
+  code = "29e3b674-c4f3-4b27-a5a6-956b9391f812-fa542c2c-72bb-4060-acc7-8b9bc832ec4f"
+  name = "Singh Kubernetes -worker-fa542c2c-72bb-4060-acc7-8b9bc832ec4f-set"
+  canAddNodes = true
+  computeServerType = { code = "vmwareKubeWorker" }
+  dynamicCount = true
+  installContainerRuntime = true
+  installStorageRuntime = true
+  nameSuffix = "-worker"
+  nodeCount = 3
+  nodeType = "worker"
+  priorityOrder = 1
+  workloadType = { code = "fa542c2c-72bb-4060-acc7-8b9bc832ec4f" }
+}

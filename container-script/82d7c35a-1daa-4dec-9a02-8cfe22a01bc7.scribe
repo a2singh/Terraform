@@ -1,0 +1,15 @@
+resource "container-script" "82d7c35a-1daa-4dec-9a02-8cfe22a01bc7" {
+  code = "82d7c35a-1daa-4dec-9a02-8cfe22a01bc7"
+  name = "AP prep-k8sconfig Script Template"
+  uuid = "f65dc84c-00ec-467e-8d7e-a2896ad9c832"
+  dateCreated = "2023-10-10T05:24:23.000Z"
+  lastUpdated = "2023-10-10T11:48:25.000Z"
+  runAsUser = "root"
+  script = <<EOFSCRIBE
+mkdir -p <%=morpheus.morpheusHome%>/.kube
+sudo cp -i /etc/kubernetes/admin.conf <%=morpheus.morpheusHome%>/.kube/config &&
+sudo chown <%=morpheus.morpheusUser%>:<%=morpheus.morpheusUser%> <%=morpheus.morpheusHome%>/.kube/config
+EOFSCRIBE
+  scriptPhase = "postProvision"
+  sudoUser = true
+}

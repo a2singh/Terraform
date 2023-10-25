@@ -1,0 +1,22 @@
+resource "compute-type-layout" "29e3b674-c4f3-4b27-a5a6-956b9391f812" {
+  code = "29e3b674-c4f3-4b27-a5a6-956b9391f812"
+  name = "Singh Kubernetes"
+  computeServers = [
+    {
+      code = "29e3b674-c4f3-4b27-a5a6-956b9391f812-4a90f615-d45d-4a86-bcab-7e0f99e73bc0"
+    },
+    {
+      code = "29e3b674-c4f3-4b27-a5a6-956b9391f812-fa542c2c-72bb-4060-acc7-8b9bc832ec4f"
+    }
+  ]
+  computeVersion = "22.04v1"
+  dateCreated = "2023-10-10T11:55:29.000Z"
+  description = "Custom Kubernetes"
+  groupType = { code = "kubernetes-cluster" }
+  hasAutoScale = true
+  labels = [ "Singh Kube" ]
+  lastUpdated = "2023-10-10T11:55:29.000Z"
+  memoryRequirement = 4294967296
+  provisionType = { code = "vmware" }
+  type = { code = "vmwareKubeMaster" }
+}

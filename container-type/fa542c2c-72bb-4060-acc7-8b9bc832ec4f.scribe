@@ -1,0 +1,23 @@
+resource "container-type" "fa542c2c-72bb-4060-acc7-8b9bc832ec4f" {
+  code = "fa542c2c-72bb-4060-acc7-8b9bc832ec4f"
+  name = "ap custom worker"
+  uuid = "80a5c795-9454-43fc-bf83-eea6738eed1d"
+  containerVersion = "22.04v1"
+  entryPoint = ""
+  labels = [ "worker" ]
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  repositoryImage = ""
+  scripts = [
+    { code = "477a46ab-2ca3-4739-be51-9ad0d6e9b902" },
+    { code = "8c76c4ed-790e-46ed-8440-5f666d0cf143" },
+    { code = "82d7c35a-1daa-4dec-9a02-8cfe22a01bc7" }
+  ]
+  serverType = "vm"
+  shortName = "worker"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = {
+    code = "vmware.vsphere.image.morpheus.ubuntu.22.04-v1.ubuntu.22.04.amd64"
+  }
+}

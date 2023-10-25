@@ -1,0 +1,38 @@
+resource "container-script" "d284be94-539c-4168-9996-071bad19c936" {
+  code = "d284be94-539c-4168-9996-071bad19c936"
+  name = "AP kubeadm-init Script Template"
+  uuid = "905eb0f1-9167-4f4d-860f-bff9ab5c2b81"
+  dateCreated = "2023-10-10T05:23:46.000Z"
+  lastUpdated = "2023-10-10T05:23:46.000Z"
+  runAsUser = "root"
+  script = <<EOFSCRIBE
+mkdir -p <%=morpheus.morpheusHome%>/kube
+mkdir -p <%=morpheus.morpheusHome%>/kube/working
+mkdir -p <%=morpheus.morpheusHome%>/.kube
+sudo chown <%=morpheus.morpheusUser%>:<%=morpheus.morpheusUser%> <%=morpheus.morpheusHome%>/kube
+sudo chown <%=morpheus.morpheusUser%>:<%=morpheus.morpheusUser%> <%=morpheus.morpheusHome%>/kube/working
+cat <<EOF | sudo tee <%=morpheus.morpheusHome%>/kube/working/kubeadm-config.yaml
+# kubeadm-config.yaml
+kind: ClusterConfiguration
+apiVersion: kubeadm.k8s.io/v1beta3
+kubernetesVersion: v1.26.1
+networking:
+  serviceSubnet: "10.96.0.0/16"
+  podSubnet: "10.244.0.0/24"
+  dnsDomain: "cluster.local"
+apiServer:
+  extraArgs:
+    authorization-mode: "Node,RBAC"
+clusterName: "example-cluster"
+---
+kind: KubeletConfiguration
+apiVersion: kubelet.config.k8s.io/v1beta1
+cgroupDriver: systemd
+EOF
+sudo kubeadm init --config <%=morpheus.morpheusHome%>/kube/working/kubeadm-config.yaml
+sudo cp -i /etc/kubernetes/admin.conf <%=morpheus.morpheusHome%>/.kube/config &&
+sudo chown <%=morpheus.morpheusUser%>:<%=morpheus.morpheusUser%> <%=morpheus.morpheusHome%>/.kube/config
+EOFSCRIBE
+  scriptPhase = "preProvision"
+  sudoUser = true
+}

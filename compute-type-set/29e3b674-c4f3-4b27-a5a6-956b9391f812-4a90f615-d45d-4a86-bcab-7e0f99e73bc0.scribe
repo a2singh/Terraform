@@ -1,0 +1,10 @@
+resource "compute-type-set" "29e3b674-c4f3-4b27-a5a6-956b9391f812-4a90f615-d45d-4a86-bcab-7e0f99e73bc0" {
+  code = "29e3b674-c4f3-4b27-a5a6-956b9391f812-4a90f615-d45d-4a86-bcab-7e0f99e73bc0"
+  name = "Singh Kubernetes -master-4a90f615-d45d-4a86-bcab-7e0f99e73bc0-set"
+  computeServerType = { code = "vmwareKubeMaster" }
+  installContainerRuntime = true
+  installStorageRuntime = true
+  nameSuffix = "-master"
+  nodeType = "master"
+  workloadType = { code = "4a90f615-d45d-4a86-bcab-7e0f99e73bc0" }
+}

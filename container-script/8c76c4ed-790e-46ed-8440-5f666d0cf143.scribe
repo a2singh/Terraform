@@ -1,0 +1,11 @@
+resource "container-script" "8c76c4ed-790e-46ed-8440-5f666d0cf143" {
+  code = "8c76c4ed-790e-46ed-8440-5f666d0cf143"
+  name = "AP k8s-join Script Template"
+  uuid = "4243a451-c36f-4f29-9e05-07d42ccdc7a4"
+  dateCreated = "2023-10-10T05:21:36.000Z"
+  lastUpdated = "2023-10-10T11:47:53.000Z"
+  runAsUser = "root"
+  script = "sudo <%=morpheus.kubernetes.joinCommand%>"
+  scriptPhase = "postProvision"
+  sudoUser = true
+}

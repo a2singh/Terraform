@@ -1,0 +1,23 @@
+resource "container-type" "4a90f615-d45d-4a86-bcab-7e0f99e73bc0" {
+  code = "4a90f615-d45d-4a86-bcab-7e0f99e73bc0"
+  name = "ap custom master"
+  uuid = "8bb52ca5-50db-409e-8c86-b5270a9ed63c"
+  containerVersion = "22.04v1"
+  entryPoint = ""
+  labels = [ "Master" ]
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  repositoryImage = ""
+  scripts = [
+    { code = "477a46ab-2ca3-4739-be51-9ad0d6e9b902" },
+    { code = "d284be94-539c-4168-9996-071bad19c936" },
+    { code = "d1e5114d-30b4-4ccd-b42f-0683c1db2282" }
+  ]
+  serverType = "vm"
+  shortName = "Master"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = {
+    code = "vmware.vsphere.image.morpheus.ubuntu.22.04-v1.ubuntu.22.04.amd64"
+  }
+}
