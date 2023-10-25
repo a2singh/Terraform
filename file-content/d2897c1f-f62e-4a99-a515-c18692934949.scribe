@@ -1,0 +1,34 @@
+resource "file-content" "d2897c1f-f62e-4a99-a515-c18692934949" {
+  uuid = "d2897c1f-f62e-4a99-a515-c18692934949"
+  content = <<EOFSCRIBE
+#!/bin/bash
+
+# This script will get information of vm
+
+# Get the name of the Virtual Machine
+name=$(hostname)
+echo "Name of the Virtual Machine is : $name"
+
+# Get the OS Version
+OS=$(cat /etc/*-release | grep "PRETTY_NAME" | sed 's/PRETTY_NAME=//g' | sed 's/["]//g' | awk '{print $1}')
+echo "The OS version is: $OS"
+
+# Get the Kernel version
+Kernel=$(uname -r)
+echo "The Kernel version is : $Kernel"
+
+# Get the Architecture
+Arch=$(uname -m)
+echo "The Architecture is : $Arch"
+
+# Get the IP address
+IP=$(hostname -I)
+echo "The IP Address is : $IP"
+
+# Get the system Memory
+Memory=$(free -m | grep Mem | awk '{print $2}')
+echo "The Memory of the system is : $Memory MB"
+EOFSCRIBE
+  dateCreated = "2023-10-04T08:48:00.000Z"
+  lastUpdated = "2023-10-04T08:48:00.000Z"
+}
