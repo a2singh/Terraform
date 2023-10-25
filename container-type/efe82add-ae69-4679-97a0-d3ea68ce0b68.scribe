@@ -1,0 +1,16 @@
+resource "container-type" "efe82add-ae69-4679-97a0-d3ea68ce0b68" {
+  code = "efe82add-ae69-4679-97a0-d3ea68ce0b68"
+  name = "AT-custom-node"
+  uuid = "feace3f9-1d0d-4387-8877-8424a3b9047a"
+  containerVersion = "7.5"
+  entryPoint = ""
+  labels = [ "at-node" ]
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "at-vm"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "vmware.vsphere.image.morpheus.centos.7.5" }
+}

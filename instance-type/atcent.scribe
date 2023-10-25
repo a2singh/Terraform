@@ -1,0 +1,9 @@
+resource "instance-type" "atcent" {
+  code = "atcent"
+  name = "AT-Custom-CentOS"
+  uuid = "fda4db95-03d3-42a3-bde8-e1b4dd915e00"
+  category = "os"
+  deploymentService = ""
+  environmentPrefix = "AT-CUSTOM-CENTOS"
+  labels = [ "Operating System CentOS" ]
+}
