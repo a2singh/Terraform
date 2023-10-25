@@ -1,0 +1,10 @@
+resource "task-set" "AT-TestProvisioning_Workflow" {
+  name = "AT-TestProvisioning_Workflow"
+  uuid = "2ebbbb6d-3b8c-44f6-925f-e66a6cd63dc9"
+  dateCreated = "2023-10-19T08:53:13.000Z"
+  description = "Test workflow for provisioning workflow"
+  labels = [ "Test_Workflow" ]
+  lastUpdated = "2023-10-19T11:34:35.000Z"
+  taskSetTasks = [ { uuid = "6696548c-7a85-434d-9e81-56947c9a5e43" } ]
+  visibility = "public"
+}
