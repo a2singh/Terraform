@@ -1,0 +1,8 @@
+resource "option-type-list" "morphgroup" {
+  name = "morphgroup"
+  uuid = "0203c622-1687-415e-a50b-436b7241f074"
+  apiType = "groups"
+  description = "groups"
+  realTime = true
+  type = "api"
+}

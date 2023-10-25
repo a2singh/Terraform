@@ -1,0 +1,12 @@
+resource "option-type" "morphgroup" {
+  code = "morphgroup"
+  name = "morphgroup"
+  uuid = "df164f5e-7f7a-4640-a888-501f109ceb24"
+  fieldContext = "config.customOptions"
+  fieldLabel = "morphgroup"
+  fieldName = "morphgroup"
+  optionList = { name = "morphgroup" }
+  optionSource = "list"
+  required = true
+  type = "select"
+}
