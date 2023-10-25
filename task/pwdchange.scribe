@@ -1,0 +1,15 @@
+resource "task" "pwdchange" {
+  name = "pwdchange"
+  uuid = "447d274f-4fd9-4e28-b20c-0af628d22936"
+  dateCreated = "2023-10-19T11:56:29.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2023-10-19T11:56:29.000Z"
+  options = [
+    { optionType = { code = "shell.sudo" }, value = "on" },
+    {
+      content = { uuid = "8747d8e7-9fc5-46cd-bef7-f9476960b8b7" }
+      optionType = { code = "script" }
+    }
+  ]
+  taskType = { code = "script" }
+}

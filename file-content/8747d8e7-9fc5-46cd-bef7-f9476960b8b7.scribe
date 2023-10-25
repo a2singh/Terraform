@@ -1,0 +1,30 @@
+resource "file-content" "8747d8e7-9fc5-46cd-bef7-f9476960b8b7" {
+  uuid = "8747d8e7-9fc5-46cd-bef7-f9476960b8b7"
+  content = <<EOFSCRIBE
+#!/bin/bash
+
+# Prompt for the username
+$username = "asingh2"
+
+# Check if the username exists
+if id "$username" &>/dev/null; then
+    # Prompt for the new password
+    $new_password = "Welcome@12345"
+    echo
+
+    # Use the passwd command to change the password
+    echo -e "$new_password\n$new_password" | passwd "$username"
+
+    if [ $? -eq 0 ]; then
+        echo "Password for user $username changed successfully."
+    else
+        echo "Failed to change the password for user $username."
+    fi
+else
+    echo "User $username not found."
+fi
+
+EOFSCRIBE
+  dateCreated = "2023-10-19T11:56:29.000Z"
+  lastUpdated = "2023-10-19T11:56:29.000Z"
+}
