@@ -5,7 +5,6 @@ resource "instance-type-layout" "e57439e0-f8f5-4849-a2e6-317249e58430" {
   instanceType = { code = "atcent" }
   instanceVersion = "7.5"
   memoryRequirement = 0
-  optionTypes = [ { code = "environment" }, { code = "plan" } ]
   provisionType = { code = "vmware" }
   workloads = [ { code = "efe82add-ae69-4679-97a0-d3ea68ce0b68" } ]
 }
