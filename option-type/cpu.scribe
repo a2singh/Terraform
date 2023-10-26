@@ -1,0 +1,11 @@
+resource "option-type" "cpu" {
+  code = "cpu"
+  name = "CPU"
+  uuid = "a8255a4c-8174-44e2-a383-54879447a537"
+  defaultValue = "2"
+  fieldContext = "config.customOptions"
+  fieldLabel = "CPU"
+  fieldName = "cpu"
+  type = "number"
+  visibleOnCode = "plan:(1052)"
+}
