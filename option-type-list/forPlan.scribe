@@ -1,0 +1,20 @@
+resource "option-type-list" "forPlan" {
+  name = "forPlan"
+  uuid = "8ca08fea-456d-4944-b611-f11b27445bf8"
+  initialDataset = <<EOFSCRIBE
+[
+  {"name": "1 CPU, 4GB Memory", "value": 250},
+  {"name": "2 CPU, 8GB Memory", "value": 251} ,
+  {"name": "Singh, 1CPU, 2GB MEMORY", "value": 1052}
+]
+EOFSCRIBE
+  translationScript = <<EOFSCRIBE
+if (input.plan) {
+  for (var x = 0; x < data.length; x++) {
+    results.push({name:data[x].name, value:data[x].value});
+  }
+}
+EOFSCRIBE
+  type = "manual"
+  visibility = "public"
+}

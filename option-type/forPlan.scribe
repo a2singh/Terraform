@@ -1,0 +1,11 @@
+resource "option-type" "forPlan" {
+  code = "forPlan"
+  name = "forPlan"
+  uuid = "e09b65c0-545c-43c5-b6b9-16ce1e79f0f8"
+  fieldContext = "config.customOptions"
+  fieldLabel = "forPlan"
+  fieldName = "forPlan"
+  optionList = { name = "forPlan" }
+  optionSource = "list"
+  type = "select"
+}
