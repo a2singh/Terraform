@@ -9,9 +9,14 @@ resource "option-type-list" "forPlan" {
 ]
 EOFSCRIBE
   translationScript = <<EOFSCRIBE
+var results = [];
+ 
 if (input.plan) {
   for (var x = 0; x < data.length; x++) {
-    results.push({name:data[x].name, value:data[x].value});
+    results.push({
+      name: data[x].name,
+      value: data[x].value
+    });
   }
 }
 EOFSCRIBE
