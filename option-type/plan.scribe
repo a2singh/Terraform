@@ -7,6 +7,5 @@ resource "option-type" "plan" {
   fieldName = "plan"
   optionList = { name = "AT-Service plan Manual" }
   optionSource = "list"
-  required = true
   type = "select"
 }
