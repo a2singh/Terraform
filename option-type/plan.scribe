@@ -5,7 +5,9 @@ resource "option-type" "plan" {
   fieldContext = "config.customOptions"
   fieldLabel = "Service plan"
   fieldName = "plan"
+  noBlank = true
   optionList = { name = "AT-Service plan Manual" }
   optionSource = "list"
+  required = true
   type = "select"
 }
