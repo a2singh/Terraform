@@ -1,0 +1,18 @@
+resource "account-integration" "AP Ansible" {
+  name = "AP Ansible"
+  uuid = "2c0447c4-a570-4287-a3b7-167df2dbcfaf"
+  config = {
+    ansibleCommandBus = "on"
+    ansibleGalaxyEnabled = null
+    ansibleGroupVars = "/group_vars"
+    ansibleHostVars = "/hosts"
+    ansiblePlaybooks = "/"
+    ansibleRoles = "/roles"
+    ansibleVerbose = "on"
+    cacheEnabled = "on"
+    defaultBranch = "main"
+  }
+  integrationType = { code = "ansible" }
+  serviceUrl = "https://github.com/a2singh/ansible.git"
+  type = "ansible"
+}

@@ -1,0 +1,15 @@
+resource "task" "Agent" {
+  name = "Agent"
+  uuid = "5dd79bc6-b126-46ac-a2e6-7b344ef29964"
+  dateCreated = "2023-10-31T12:50:54.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2023-10-31T12:50:54.000Z"
+  options = [
+    {
+      optionType = { code = "ansibleGitId" }
+      value = { name = "AP Ansible" }
+    },
+    { optionType = { code = "ansiblePlaybook" }, value = "agent.sh" }
+  ]
+  taskType = { code = "ansibleTask" }
+}
