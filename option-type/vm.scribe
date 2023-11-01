@@ -1,0 +1,10 @@
+resource "option-type" "vm" {
+  code = "vm"
+  name = "vm"
+  uuid = "3d33e8ec-f354-45fa-bc2e-9cfa8619a158"
+  fieldContext = "config.customOptions"
+  fieldLabel = "vm"
+  fieldName = "vm"
+  required = true
+  visibleOnCode = "false"
+}
