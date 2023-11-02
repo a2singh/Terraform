@@ -1,0 +1,7 @@
+resource "task-set" "Recharge New" {
+  name = "Recharge New"
+  uuid = "d2fc60b9-8795-471f-baf5-f17fbf52a877"
+  dateCreated = "2023-11-02T06:42:04.000Z"
+  lastUpdated = "2023-11-02T06:42:04.000Z"
+  taskSetTasks = [ { uuid = "2a62882b-bf8b-4e16-8f15-88fcc70c6768" } ]
+}
