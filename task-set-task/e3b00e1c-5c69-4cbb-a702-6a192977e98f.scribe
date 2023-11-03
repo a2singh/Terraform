@@ -1,0 +1,5 @@
+resource "task-set-task" "e3b00e1c-5c69-4cbb-a702-6a192977e98f" {
+  uuid = "e3b00e1c-5c69-4cbb-a702-6a192977e98f"
+  task = { name = "Morpheus Spec Variable" }
+  taskPhase = "configure"
+}

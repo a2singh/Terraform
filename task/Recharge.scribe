@@ -3,7 +3,7 @@ resource "task" "Recharge" {
   uuid = "23b60ae3-1da1-4927-a722-b8df466c1ce5"
   dateCreated = "2023-11-02T06:41:36.000Z"
   executeTarget = "local"
-  lastUpdated = "2023-11-03T06:57:56.000Z"
+  lastUpdated = "2023-11-03T07:18:45.000Z"
   options = [
     {
       optionType = { code = "pythonAdditionalPackages" }
