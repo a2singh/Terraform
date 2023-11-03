@@ -94,8 +94,8 @@ def outputPricingData(alwaysCost_preSplit, alwaysPrice_postSplit):
             "incurCharges": "running",
             "currency": "USD",
             "unit": "month",
-            "cost":  0,
-            "price": 0
+            "cost":  round(alwaysCost_preSplit, 2),
+            "price": round(alwaysPrice_postSplit, 2)
         },
         {
             "incurCharges": "stopped",
@@ -140,5 +140,5 @@ print json.dumps(outputPricingData(cost_preSplit, price_postSplit))
 
 EOFSCRIBE
   dateCreated = "2023-11-02T06:41:36.000Z"
-  lastUpdated = "2023-11-03T07:18:45.000Z"
+  lastUpdated = "2023-11-03T11:35:04.000Z"
 }

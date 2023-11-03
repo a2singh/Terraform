@@ -2,12 +2,13 @@ resource "task-set" "Recharge New" {
   name = "Recharge New"
   uuid = "d2fc60b9-8795-471f-baf5-f17fbf52a877"
   dateCreated = "2023-11-02T06:42:04.000Z"
-  lastUpdated = "2023-11-03T08:27:32.000Z"
+  lastUpdated = "2023-11-03T12:00:05.000Z"
   taskSetTasks = [
-    { uuid = "72f3ec13-912b-4ed6-99b5-d354db7801d0" },
-    { uuid = "a8b70f18-4ddb-4ae8-9969-f9d06ffecb53" },
-    { uuid = "bf14b453-9d58-4e7e-bd9a-2d54b38e018b" },
-    { uuid = "d6ad0842-1e2f-42be-a653-0d86dd56ece2" },
-    { uuid = "ec92375d-ca46-4473-b600-a00592bfd946" }
+    { uuid = "2049b70b-3dd7-42fc-9bd2-3a5986e821fe" },
+    { uuid = "23b5e7b3-bffb-4d38-83bb-e0ecb45e344d" },
+    { uuid = "c0760730-43c9-45e7-be0e-5da3024b1668" },
+    { uuid = "db136297-664b-4887-9dd3-b347483fb157" },
+    { uuid = "e4c676a5-a60a-4243-b87b-9f7f806365d3" },
+    { uuid = "f17bf2a8-89bc-49e2-8188-71dbaeea3e3d" }
   ]
 }
