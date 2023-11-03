@@ -1,0 +1,19 @@
+resource "task" "Morpheus Spec Variable" {
+  name = "Morpheus Spec Variable"
+  uuid = "ab3fbe28-6fd0-4bcb-9666-685e38395acd"
+  dateCreated = "2023-11-03T05:07:28.000Z"
+  executeTarget = "local"
+  lastUpdated = "2023-11-03T05:39:04.000Z"
+  options = [
+    {
+      optionType = { code = "pythonAdditionalPackages" }
+      value = "json"
+    },
+    {
+      content = { uuid = "9f374d5e-379d-4b58-9685-4adaf21b0061" }
+      optionType = { code = "pythonScript" }
+    }
+  ]
+  resultType = "json"
+  taskType = { code = "jythonTask" }
+}
