@@ -1,0 +1,7 @@
+resource "option-type-list" "supportElection" {
+  name = "supportElection"
+  uuid = "e35fe3ca-989a-4e89-93ac-e4af0ba3e23b"
+  config = "{\"realTime\":null,\"ignoreSSLErrors\":\"\",\"clientId\":\"\",\"accessTokenUrl\":\"\",\"scope\":\"\",\"clientSecret\":\"\",\"grantType\":\"\",\"clientAuth\":\"\"}"
+  initialDataset = "[{\"name\":\"Waived\",\"value\":\"Waived\"},{\"name\":\"BusinessHours\",\"value\":\"BusinessHours\"},{\"name\":\"AroundTheClock\",\"value\":\"AroundTheClock\"}]"
+  type = "manual"
+}
