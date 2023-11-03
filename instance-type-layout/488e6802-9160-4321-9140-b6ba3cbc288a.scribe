@@ -6,6 +6,6 @@ resource "instance-type-layout" "488e6802-9160-4321-9140-b6ba3cbc288a" {
   instanceVersion = "7.5"
   memoryRequirement = 0
   provisionType = { code = "vmware" }
-  taskSets = [ { name = "Morpheus Spec Variable" } ]
+  taskSets = [ { name = "Recharge New" } ]
   workloads = [ { code = "1adf4708-e99e-470d-9acb-23d8c61d61f1" } ]
 }
