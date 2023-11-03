@@ -1,0 +1,6 @@
+resource "task-set-task" "a8b70f18-4ddb-4ae8-9969-f9d06ffecb53" {
+  uuid = "a8b70f18-4ddb-4ae8-9969-f9d06ffecb53"
+  task = { name = "Recharge" }
+  taskOrder = 1
+  taskPhase = "price"
+}

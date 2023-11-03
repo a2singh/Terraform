@@ -1,0 +1,6 @@
+resource "task-set-task" "72f3ec13-912b-4ed6-99b5-d354db7801d0" {
+  uuid = "72f3ec13-912b-4ed6-99b5-d354db7801d0"
+  task = { name = "Morpheus Spec Variable" }
+  taskOrder = 2
+  taskPhase = "preProvision"
+}
