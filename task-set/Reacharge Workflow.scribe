@@ -2,6 +2,6 @@ resource "task-set" "Reacharge Workflow" {
   name = "Reacharge Workflow"
   uuid = "3189c348-4294-4f43-88f6-4e539cb6606b"
   dateCreated = "2023-11-02T06:21:50.000Z"
-  lastUpdated = "2023-11-02T06:21:50.000Z"
-  taskSetTasks = [ { uuid = "4c77b171-134f-4c59-be73-d0c195c22c90" } ]
+  lastUpdated = "2023-11-03T11:28:08.000Z"
+  taskSetTasks = [ { uuid = "99b861c9-d8ab-4a93-9c6f-af04448c8d2a" } ]
 }

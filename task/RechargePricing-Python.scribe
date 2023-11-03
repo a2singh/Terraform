@@ -1,0 +1,19 @@
+resource "task" "RechargePricing-Python" {
+  name = "RechargePricing-Python"
+  uuid = "65223041-bde8-4a01-9578-5fbc1a1c6656"
+  dateCreated = "2023-11-03T11:24:35.000Z"
+  executeTarget = "local"
+  lastUpdated = "2023-11-03T11:24:35.000Z"
+  options = [
+    {
+      optionType = { code = "pythonAdditionalPackages" }
+      value = "JSON"
+    },
+    {
+      content = { uuid = "3936cc8b-e31c-4ed3-8f08-653ca4b531a1" }
+      optionType = { code = "pythonScript" }
+    }
+  ]
+  resultType = "json"
+  taskType = { code = "jythonTask" }
+}

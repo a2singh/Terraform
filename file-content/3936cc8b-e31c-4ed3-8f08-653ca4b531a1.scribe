@@ -1,0 +1,35 @@
+resource "file-content" "3936cc8b-e31c-4ed3-8f08-653ca4b531a1" {
+  uuid = "3936cc8b-e31c-4ed3-8f08-653ca4b531a1"
+  content = <<EOFSCRIBE
+import json
+def outputPricingData():
+  pricingObject = { "priceData": [
+    {
+      "incurCharges": "always",
+      "currency": "USD",
+      "unit": "month",
+      "cost":  2.0,
+      "price": 2.0
+    },
+    {
+      "incurCharges": "running",
+      "currency": "USD",
+      "unit": "month",
+      "cost":  3.0,
+      "price": 3.0
+    },
+    {
+      "incurCharges": "stopped",
+      "currency": "USD",
+      "unit": "month",
+      "cost":  1.0,
+      "price": 1.0
+    }
+  ]
+  }
+  return pricingObject
+print(json.dumps(outputPricingData()))
+EOFSCRIBE
+  dateCreated = "2023-11-03T11:24:35.000Z"
+  lastUpdated = "2023-11-03T11:24:35.000Z"
+}
