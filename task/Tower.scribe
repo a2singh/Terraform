@@ -1,0 +1,26 @@
+resource "task" "Tower" {
+  name = "Tower"
+  uuid = "ca0f661f-894d-4dc7-a743-087712d192dc"
+  dateCreated = "2023-11-06T18:22:45.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2023-11-06T18:22:45.000Z"
+  options = [
+    {
+      optionType = { code = "ansibleTowerIntegrationId" }
+      value = { name = "AT-Ansible Tower" }
+    },
+    {
+      optionType = { code = "ansibleTowerInventoryId" }
+      value = { name = "AT-VMware NSX-T" }
+    },
+    {
+      optionType = { code = "ansibleTowerJobTemplateId" }
+      value = "17"
+    },
+    {
+      optionType = { code = "ansibleTowerExecuteMode" }
+      value = "executeHost"
+    }
+  ]
+  taskType = { code = "ansibleTowerTask" }
+}

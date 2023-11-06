@@ -1,0 +1,5 @@
+resource "task-set-task" "b6ed5672-d223-4987-9630-ef82c35cd19f" {
+  uuid = "b6ed5672-d223-4987-9630-ef82c35cd19f"
+  task = { name = "Tower" }
+  taskPhase = "provision"
+}

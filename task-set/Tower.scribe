@@ -1,0 +1,8 @@
+resource "task-set" "Tower" {
+  name = "Tower"
+  uuid = "ef0b930c-11ed-4c10-8943-4db8945c486b"
+  dateCreated = "2023-11-06T18:24:06.000Z"
+  lastUpdated = "2023-11-06T18:24:06.000Z"
+  platform = "linux"
+  taskSetTasks = [ { uuid = "b6ed5672-d223-4987-9630-ef82c35cd19f" } ]
+}
