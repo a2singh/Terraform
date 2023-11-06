@@ -1,6 +1,7 @@
 resource "file-content" "238c9d75-9c3a-45c8-8283-6638d5dd321a" {
   uuid = "238c9d75-9c3a-45c8-8283-6638d5dd321a"
   content = <<EOFSCRIBE
+println(morpheus)
 def rtn = [
   priceData: [
     [
@@ -29,5 +30,5 @@ def rtn = [
 return rtn
 EOFSCRIBE
   dateCreated = "2023-11-02T06:20:53.000Z"
-  lastUpdated = "2023-11-02T06:20:53.000Z"
+  lastUpdated = "2023-11-06T04:13:55.000Z"
 }

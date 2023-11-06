@@ -3,7 +3,7 @@ resource "task" "Reacharge Pricing" {
   uuid = "93a67d1a-2d07-4a8d-9d8a-7337333442a6"
   dateCreated = "2023-11-02T06:20:53.000Z"
   executeTarget = "local"
-  lastUpdated = "2023-11-02T06:20:53.000Z"
+  lastUpdated = "2023-11-06T04:13:55.000Z"
   options = [
     {
       content = { uuid = "238c9d75-9c3a-45c8-8283-6638d5dd321a" }
