@@ -1,0 +1,14 @@
+resource "file-content" "dadc0079-6c87-4f7f-957e-7eb36e0cab27" {
+  uuid = "dadc0079-6c87-4f7f-957e-7eb36e0cab27"
+  content = <<EOFSCRIBE
+println(morpheus)
+println(instance)
+def morpheusJson = new groovy.json.JsonBuilder(morpheus).toPrettyString()
+return morpheusJson
+
+def instanceJson = new groovy.json.JsonBuilder(instance).toPrettyString()
+return instanceJson
+EOFSCRIBE
+  dateCreated = "2023-11-07T07:01:48.000Z"
+  lastUpdated = "2023-11-07T07:12:48.000Z"
+}

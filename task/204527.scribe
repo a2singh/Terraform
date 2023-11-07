@@ -1,0 +1,15 @@
+resource "task" "204527" {
+  name = "204527"
+  uuid = "8bd71a48-749c-4560-bba3-e990597d0d1c"
+  dateCreated = "2023-11-07T07:01:48.000Z"
+  executeTarget = "local"
+  lastUpdated = "2023-11-07T07:12:48.000Z"
+  options = [
+    {
+      content = { uuid = "dadc0079-6c87-4f7f-957e-7eb36e0cab27" }
+      optionType = { code = "groovyScript" }
+    }
+  ]
+  resultType = "json"
+  taskType = { code = "groovyTask" }
+}
