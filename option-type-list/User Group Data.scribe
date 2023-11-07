@@ -1,0 +1,27 @@
+resource "option-type-list" "User Group Data" {
+  name = "User Group Data"
+  uuid = "3cc651e4-ea34-4a55-84a4-0499c73af9bf"
+  apiType = "groups"
+  config = "{\"sourceHeaders\":[{\"name\":\"authorization\",\"value\":\"bearer dea43501-83d4-4708-bc53-5ffb5e85c33f\",\"masked\":false}]}"
+  ignoreSSLErrors = true
+  labels = [ "userdata" ]
+  realTime = true
+  sourceUrl = "https://10.32.23.86/api/whoami"
+  translationScript = <<EOFSCRIBE
+var results = [];
+var userRoleId = data.user.roleId; // Assuming you have the user's role ID
+
+for (var x = 0; x < data.groups.length; x++) {
+    var group = data.groups[x];
+    
+    // Check if the group has a role ID that matches the user's role ID
+    if (group.roleId === userRoleId) {
+        results.push({
+            name: group.name,
+            value: group.id
+        });
+    }
+}
+EOFSCRIBE
+  type = "api"
+}

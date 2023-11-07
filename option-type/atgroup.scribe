@@ -5,7 +5,7 @@ resource "option-type" "atgroup" {
   fieldContext = "config.customOptions"
   fieldLabel = "userdata"
   fieldName = "atgroup"
-  optionList = { name = "User Data" }
+  optionList = { name = "User Group Data" }
   optionSource = "list"
   type = "select"
 }
