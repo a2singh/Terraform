@@ -1,20 +1,18 @@
 resource "option-type-list" "User Data" {
   name = "User Data"
   uuid = "3cc651e4-ea34-4a55-84a4-0499c73af9bf"
+  apiType = "groups"
   config = "{\"sourceHeaders\":[{\"name\":\"authorization\",\"value\":\"bearer dea43501-83d4-4708-bc53-5ffb5e85c33f\",\"masked\":false}]}"
   ignoreSSLErrors = true
   labels = [ "userdata" ]
   realTime = true
   sourceUrl = "https://10.32.23.86/api/whoami"
   translationScript = <<EOFSCRIBE
-for (var x = 0; x < data.user.roles.length; x++) {
-
+for (var x = 0; x < data.user.group.length; x++) {
 results.push({
-
-name: data.user.roles[x].name,
-
-value: data.user.roles[x].id});
-
+name: data.user.group[x].name,
+value: data.user.group[x].id});
 }
 EOFSCRIBE
+  type = "api"
 }
