@@ -3,7 +3,7 @@ resource "task-set" "AT-InstanceSelection" {
   uuid = "e0703e8a-3e18-4f77-ae8f-4ccd29af99f4"
   dateCreated = "2023-10-12T11:59:24.000Z"
   lastUpdated = "2023-11-06T12:27:57.000Z"
-  optionTypes = [ { code = "atuserdata" } ]
+  optionTypes = [ { code = "atgroup" } ]
   taskSetType = "operation"
   visibility = "public"
 }

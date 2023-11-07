@@ -1,0 +1,11 @@
+resource "option-type" "atgroup" {
+  code = "atgroup"
+  name = "whoami"
+  uuid = "db0ae6a1-614e-43c6-bf44-d4701aa5dc56"
+  fieldContext = "config.customOptions"
+  fieldLabel = "userdata"
+  fieldName = "atgroup"
+  optionList = { name = "User Data" }
+  optionSource = "list"
+  type = "select"
+}
