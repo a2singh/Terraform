@@ -1,0 +1,8 @@
+resource "instance-type" "cd204488" {
+  code = "cd204488"
+  name = "204488"
+  uuid = "cd9b518e-d268-4e75-82f3-5d54fb0a42a4"
+  category = "cloud"
+  deploymentService = ""
+  environmentPrefix = "204488"
+}

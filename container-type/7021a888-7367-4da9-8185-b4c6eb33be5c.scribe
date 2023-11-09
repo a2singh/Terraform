@@ -1,0 +1,15 @@
+resource "container-type" "7021a888-7367-4da9-8185-b4c6eb33be5c" {
+  code = "7021a888-7367-4da9-8185-b4c6eb33be5c"
+  name = "204488_AT_Node"
+  uuid = "6d89d087-adb3-4348-9698-cea769680fc6"
+  containerVersion = "14"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "amazon" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "atnode"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "amazon.ec2.image.morpheus.apache.2.4" }
+}
