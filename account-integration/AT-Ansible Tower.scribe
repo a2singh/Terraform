@@ -2,7 +2,7 @@ resource "account-integration" "AT-Ansible Tower" {
   name = "AT-Ansible Tower"
   uuid = "5b9a6a75-5e7e-4cd7-906f-b601893ef333"
   integrationType = { code = "ansibleTower" }
-  serviceUrl = "http://labs-awxtower1.prod.dc2.den.morpheusdata.com:32000/"
+  serviceUrl = "https://tower.prod.dc2.den.morpheusdata.com"
   serviceVersion = "v2"
   type = "ansibleTower"
 }
