@@ -1,0 +1,15 @@
+resource "container-type" "0bf15c62-583f-48e1-b37e-2c26699f5795" {
+  code = "0bf15c62-583f-48e1-b37e-2c26699f5795"
+  name = "204488_DG_node"
+  uuid = "5edc6f60-d4bd-4a36-bc44-5b873534eb1a"
+  containerVersion = "22"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "amazon" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "dgnode"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "amazon.ec2.image.morpheus.windows.2022-v4" }
+}

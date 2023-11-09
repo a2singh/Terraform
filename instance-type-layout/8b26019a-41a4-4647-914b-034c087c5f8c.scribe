@@ -1,0 +1,10 @@
+resource "instance-type-layout" "8b26019a-41a4-4647-914b-034c087c5f8c" {
+  code = "8b26019a-41a4-4647-914b-034c087c5f8c"
+  name = "204488_DG"
+  uuid = "c81fa28e-4bb3-482a-9ad5-82c8e746cec7"
+  instanceType = { code = "cd204488" }
+  instanceVersion = "DG-AWS"
+  memoryRequirement = 0
+  provisionType = { code = "amazon" }
+  workloads = [ { code = "0bf15c62-583f-48e1-b37e-2c26699f5795" } ]
+}
