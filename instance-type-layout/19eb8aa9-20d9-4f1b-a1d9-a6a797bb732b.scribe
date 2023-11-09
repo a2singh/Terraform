@@ -1,0 +1,10 @@
+resource "instance-type-layout" "19eb8aa9-20d9-4f1b-a1d9-a6a797bb732b" {
+  code = "19eb8aa9-20d9-4f1b-a1d9-a6a797bb732b"
+  name = "204488_AP"
+  uuid = "87c6af10-7b12-45bb-86ca-8e40460ef6c5"
+  instanceType = { code = "cd204488" }
+  instanceVersion = "AP-AWS"
+  memoryRequirement = 0
+  provisionType = { code = "amazon" }
+  workloads = [ { code = "fac5e647-f87f-4e86-a288-01af92482db0" } ]
+}

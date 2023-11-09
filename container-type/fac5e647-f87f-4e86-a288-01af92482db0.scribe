@@ -1,0 +1,15 @@
+resource "container-type" "fac5e647-f87f-4e86-a288-01af92482db0" {
+  code = "fac5e647-f87f-4e86-a288-01af92482db0"
+  name = "204488_AP_Node"
+  uuid = "3dff8a41-7b9d-4697-90d7-873fa6ba50b1"
+  containerVersion = "9"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "amazon" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "ap-node"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "amazon.ec2.image.morpheus.centos.9-stream.20230710" }
+}
