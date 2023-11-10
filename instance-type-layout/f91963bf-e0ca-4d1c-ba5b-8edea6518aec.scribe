@@ -1,0 +1,10 @@
+resource "instance-type-layout" "f91963bf-e0ca-4d1c-ba5b-8edea6518aec" {
+  code = "f91963bf-e0ca-4d1c-ba5b-8edea6518aec"
+  name = "ASingh-Windows-2019"
+  uuid = "fe55e8cb-db2b-4548-ab7e-b7ce07a8ce4c"
+  instanceType = { code = "cd204488" }
+  instanceVersion = "2019"
+  memoryRequirement = 0
+  provisionType = { code = "amazon" }
+  workloads = [ { code = "fd917bfd-9ced-4585-9c27-6d2d8ba89ce0" } ]
+}

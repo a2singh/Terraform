@@ -1,0 +1,16 @@
+resource "container-type" "fd917bfd-9ced-4585-9c27-6d2d8ba89ce0" {
+  code = "fd917bfd-9ced-4585-9c27-6d2d8ba89ce0"
+  name = "ASingh-Windows-2019-node"
+  uuid = "ec19b78b-61b3-44de-9fe3-3760c8024f51"
+  containerVersion = "2019"
+  entryPoint = ""
+  labels = [ "ASingh-Windows-2019" ]
+  logTypeCode = "vm"
+  provisionType = { code = "amazon" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "win2019"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "amazon.ec2.image.5.ami-0ea8dda9f6a769d72" }
+}
