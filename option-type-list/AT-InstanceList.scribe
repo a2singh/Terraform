@@ -7,11 +7,6 @@ resource "option-type-list" "AT-InstanceList" {
   labels = [ "API Type Oprion List" ]
   realTime = true
   sourceUrl = "https://10.32.23.86/api/instances"
-  translationScript = <<EOFSCRIBE
-for(var i=0; i<data.instances.length; i++) { 
-  results.push({name: data.instances[i].name, value: data.instances[i].value}); 
-}
-EOFSCRIBE
   type = "api"
   visibility = "public"
 }

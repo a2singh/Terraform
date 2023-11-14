@@ -1,6 +1,6 @@
 resource "option-type" "instanceList" {
   code = "instanceList"
-  name = "instance list"
+  name = "MorphAPI-Instance list"
   uuid = "e5e647bf-bb37-44b9-9637-b77a50176953"
   dependsOnCode = "vm"
   fieldContext = "config.customOptions"
