@@ -3,8 +3,8 @@ resource "account-integration" "AT-VMware NSX-T" {
   uuid = "147e4f36-125f-477d-bb3e-55f3f06db899"
   category = "network"
   integrationType = { code = "nsx-t" }
-  lastSync = "2023-11-19T14:53:18.000Z"
-  lastSyncDuration = 60128
+  lastSync = "2023-11-19T15:53:19.000Z"
+  lastSyncDuration = 50383
   refId = "2"
   refType = "NetworkServer"
   servicePort = "22"
