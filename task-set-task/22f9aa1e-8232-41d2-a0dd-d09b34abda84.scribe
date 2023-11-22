@@ -1,0 +1,4 @@
+resource "task-set-task" "22f9aa1e-8232-41d2-a0dd-d09b34abda84" {
+  uuid = "22f9aa1e-8232-41d2-a0dd-d09b34abda84"
+  task = { name = "AP-Tower" }
+}

@@ -1,0 +1,15 @@
+resource "account-integration" "phpIPAM" {
+  name = "phpIPAM"
+  uuid = "02dc68c4-3a98-4e41-8639-1ce94981ecc1"
+  category = "ipam"
+  config = {
+    _inventoryExisting = ""
+    appId = "morphqa"
+    inventoryExisting = "on"
+  }
+  integrationType = { code = "phpipam" }
+  isPlugin = true
+  servicePort = "22"
+  serviceUrl = "http://10.32.21.138/api"
+  type = "phpipam"
+}

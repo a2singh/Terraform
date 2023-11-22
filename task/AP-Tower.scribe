@@ -1,0 +1,26 @@
+resource "task" "AP-Tower" {
+  name = "AP-Tower"
+  uuid = "ca0f661f-894d-4dc7-a743-087712d192dc"
+  dateCreated = "2023-11-06T18:22:45.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2023-11-22T05:48:58.000Z"
+  options = [
+    {
+      optionType = { code = "ansibleTowerInventoryId" }
+      value = { name = "phpIPAM" }
+    },
+    {
+      optionType = { code = "ansibleTowerIntegrationId" }
+      value = "11"
+    },
+    {
+      optionType = { code = "ansibleTowerJobTemplateId" }
+      value = "30"
+    },
+    {
+      optionType = { code = "ansibleTowerExecuteMode" }
+      value = "executeHost"
+    }
+  ]
+  taskType = { code = "ansibleTowerTask" }
+}

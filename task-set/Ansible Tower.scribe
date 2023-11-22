@@ -1,0 +1,8 @@
+resource "task-set" "Ansible Tower" {
+  name = "Ansible Tower"
+  uuid = "ef0b930c-11ed-4c10-8943-4db8945c486b"
+  dateCreated = "2023-11-06T18:24:06.000Z"
+  lastUpdated = "2023-11-22T05:52:24.000Z"
+  platform = "linux"
+  taskSetTasks = [ { uuid = "22f9aa1e-8232-41d2-a0dd-d09b34abda84" } ]
+}
