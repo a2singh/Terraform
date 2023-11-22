@@ -1,0 +1,8 @@
+resource "account-integration" "AP AnsibleTower" {
+  name = "AP AnsibleTower"
+  uuid = "3dfedcd2-4b81-48d2-b4fd-288f815b3e0d"
+  integrationType = { code = "ansibleTower" }
+  serviceUrl = "https://tower.prod.dc2.den.morpheusdata.com"
+  serviceVersion = "v2"
+  type = "ansibleTower"
+}
