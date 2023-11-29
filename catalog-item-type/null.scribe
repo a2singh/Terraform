@@ -1,8 +1,10 @@
 resource "catalog-item-type" "null" {
-  name = "aung"
-  uuid = "ce1016b7-360b-497f-a556-32f46ec0bbd3"
-  dateCreated = "2023-11-14T07:13:13.000Z"
-  formType = "form"
-  lastUpdated = "2023-11-14T07:13:13.000Z"
-  refType = "InstanceType"
+  name = "instance list"
+  uuid = "0ad69344-325e-4d03-9742-e5b63d4b280a"
+  dateCreated = "2023-11-01T22:48:59.000Z"
+  formType = "optionTypes"
+  lastUpdated = "2023-11-01T22:48:59.000Z"
+  optionTypes = [ { code = "vm" }, { code = "instanceList" } ]
+  refType = "OperationalWorkflow"
+  visibility = "public"
 }
