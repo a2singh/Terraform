@@ -1,0 +1,9 @@
+resource "job-type" "ansibleTower.job" {
+  code = "ansibleTower.job"
+  name = "Ansible Tower Job"
+  category = "automation"
+  canCreate = false
+  executionService = "jobWorkflowExecutionService"
+  iconPath = "ansible-tower-job"
+  onIntegration = true
+}
