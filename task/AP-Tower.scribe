@@ -10,12 +10,12 @@ resource "task" "AP-Tower" {
       value = { name = "AP AnsibleTower" }
     },
     {
-      optionType = { code = "ansibleTowerJobTemplateId" }
-      value = { code = "ansibleTower.jobTemplate.12.24" }
-    },
-    {
       optionType = { code = "ansibleTowerInventoryId" }
       value = { name = "phpIPAM" }
+    },
+    {
+      optionType = { code = "ansibleTowerJobTemplateId" }
+      value = { code = "ansibleTower.jobTemplate.12.24" }
     },
     {
       optionType = { code = "ansibleTowerExecuteMode" }
