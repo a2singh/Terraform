@@ -1,0 +1,8 @@
+resource "option-type-list" "AT-Network Option List" {
+  name = "AT-Network Option List"
+  uuid = "e3b358ca-35c8-4b88-9c1f-58aacb78ec7d"
+  apiType = "networks"
+  labels = [ "Network" ]
+  realTime = true
+  type = "api"
+}

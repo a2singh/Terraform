@@ -1,0 +1,12 @@
+resource "option-type" "Network" {
+  code = "Network"
+  name = "AT-Network Input"
+  uuid = "87c55338-674a-4ad5-b182-2b367c32309d"
+  description = "shows the network list"
+  fieldContext = "config.customOptions"
+  fieldLabel = "Network"
+  fieldName = "Network"
+  optionList = { name = "AT-Network Option List" }
+  optionSource = "list"
+  type = "select"
+}
