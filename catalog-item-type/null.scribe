@@ -1,14 +1,9 @@
 resource "catalog-item-type" "null" {
-  name = "AT-Service_Plan"
-  uuid = "b9499060-bfbf-4d29-8af6-3e3e17016fb7"
-  dateCreated = "2023-10-20T07:53:48.000Z"
-  formType = "optionTypes"
-  lastUpdated = "2023-11-09T07:15:44.000Z"
-  optionTypes = [
-    { code = "cpu" },
-    { code = "ram" },
-    { code = "plan" },
-    { code = "environment" }
-  ]
+  name = "velanTest"
+  uuid = "1f2df8fa-c475-42aa-892a-195868eb1cc1"
+  dateCreated = "2023-10-31T13:39:24.000Z"
+  featured = true
+  formType = "form"
+  lastUpdated = "2023-10-31T13:39:24.000Z"
   refType = "InstanceType"
 }
