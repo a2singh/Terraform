@@ -1,11 +1,14 @@
 resource "catalog-item-type" "null" {
-  name = "AP-DISK-TEST"
-  uuid = "307189f5-a0d8-432f-ad8e-7ee6939eb101"
-  darkIconPath = "https://10.32.23.86/storage/logos/uploads/CatalogItemType/5/logo/AP-DISK-TEST_original.png"
-  dateCreated = "2023-10-17T18:41:49.000Z"
-  formType = "form"
-  iconPath = "/branding/140x40/centos.svg"
-  lastUpdated = "2023-10-31T09:37:57.000Z"
-  logoSettings = "{\"type\":\"custom\"}"
+  name = "AT-Service_Plan"
+  uuid = "b9499060-bfbf-4d29-8af6-3e3e17016fb7"
+  dateCreated = "2023-10-20T07:53:48.000Z"
+  formType = "optionTypes"
+  lastUpdated = "2023-11-09T07:15:44.000Z"
+  optionTypes = [
+    { code = "cpu" },
+    { code = "ram" },
+    { code = "plan" },
+    { code = "environment" }
+  ]
   refType = "InstanceType"
 }
