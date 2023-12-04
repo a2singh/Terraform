@@ -1,0 +1,21 @@
+resource "option-type-list" "ATCloud" {
+  name = "ATCloud"
+  uuid = "48ee5cc3-fe80-4a92-89e4-638089f89f48"
+  apiType = "clouds"
+  description = "atcloud"
+  labels = [ "ATCloud" ]
+  realTime = true
+  requestScript = <<EOFSCRIBE
+if (input.ATGroup) {
+  results.siteId = input.ATGroup
+}
+EOFSCRIBE
+  translationScript = <<EOFSCRIBE
+if (input.ATGroup) {
+  for(var x=0;x < data.length; x++) {
+   results.push({name: data[x].name,value:data[x].id});
+  }
+}
+EOFSCRIBE
+  type = "api"
+}

@@ -1,0 +1,14 @@
+resource "task-set" "AT-Tenant" {
+  name = "AT-Tenant"
+  uuid = "e0703e8a-3e18-4f77-ae8f-4ccd29af99f4"
+  dateCreated = "2023-10-12T11:59:24.000Z"
+  lastUpdated = "2023-12-04T11:56:15.000Z"
+  optionTypes = [
+    { code = "atgroup" },
+    { code = "atcloud" },
+    { code = "atresourcepool" },
+    { code = "atserviceplan" }
+  ]
+  taskSetType = "operation"
+  visibility = "public"
+}

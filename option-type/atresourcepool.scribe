@@ -1,0 +1,13 @@
+resource "option-type" "atresourcepool" {
+  code = "atresourcepool"
+  name = "ATResource Pool"
+  uuid = "7833e009-7d1a-453b-b87b-11a1edb3a5a1"
+  dependsOnCode = "atcloud"
+  fieldContext = "config.customOptions"
+  fieldLabel = "Resource Pool"
+  fieldName = "atresourcepool"
+  labels = [ "atresourcepool" ]
+  optionList = { name = "ATResourcePool" }
+  optionSource = "list"
+  type = "select"
+}

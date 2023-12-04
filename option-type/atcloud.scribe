@@ -1,0 +1,13 @@
+resource "option-type" "atcloud" {
+  code = "atcloud"
+  name = "ATCloud"
+  uuid = "7623753e-c120-4afa-b909-be0f83070e1d"
+  dependsOnCode = "atgroup"
+  fieldContext = "config.customOptions"
+  fieldLabel = "Cloud"
+  fieldName = "atcloud"
+  labels = [ "ATCloud" ]
+  optionList = { name = "ATCloud" }
+  optionSource = "list"
+  type = "select"
+}

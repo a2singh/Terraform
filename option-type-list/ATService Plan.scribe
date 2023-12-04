@@ -1,0 +1,21 @@
+resource "option-type-list" "ATService Plan" {
+  name = "ATService Plan"
+  uuid = "f2f3afaa-19f9-4623-a590-431f2de45f08"
+  apiType = "servicePlans"
+  description = "serviceplan"
+  realTime = true
+  requestScript = <<EOFSCRIBE
+if (input.ATCloud && input.morphgroup) {
+  results.zoneId = input.ATCloud
+  results.siteId = input.ATGroup
+}
+EOFSCRIBE
+  translationScript = <<EOFSCRIBE
+if (input.ATCloud && input.ATGroup) {
+  for (var x = 0; x < data.length; x++) {
+    results.push({name:data[x].name, value:data[x].id});
+  }
+}
+EOFSCRIBE
+  type = "api"
+}
