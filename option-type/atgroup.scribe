@@ -1,11 +1,13 @@
 resource "option-type" "atgroup" {
   code = "atgroup"
-  name = "whoami"
-  uuid = "db0ae6a1-614e-43c6-bf44-d4701aa5dc56"
+  name = "ATGroup"
+  uuid = "c0a52553-271a-4ae9-984c-ccd1ebca7393"
+  description = "atgroup"
   fieldContext = "config.customOptions"
-  fieldLabel = "userdata"
+  fieldLabel = "Group"
   fieldName = "atgroup"
-  optionList = { name = "User Group Data" }
+  labels = [ "atgroup" ]
+  optionList = { name = "at group" }
   optionSource = "list"
   type = "select"
 }
