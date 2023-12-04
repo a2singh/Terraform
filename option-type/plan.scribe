@@ -6,7 +6,7 @@ resource "option-type" "plan" {
   fieldLabel = "Service plan"
   fieldName = "plan"
   noBlank = true
-  optionList = { name = "AT-Service plan Manual" }
+  optionList = { name = "Service plan Manual-AT" }
   optionSource = "list"
   required = true
   type = "select"
