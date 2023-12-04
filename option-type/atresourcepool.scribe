@@ -7,7 +7,8 @@ resource "option-type" "atresourcepool" {
   fieldLabel = "Resource Pool"
   fieldName = "atresourcepool"
   labels = [ "atresourcepool" ]
-  optionList = { name = "ATResourcePool" }
+  optionList = { name = "at resourcepool" }
   optionSource = "list"
+  required = true
   type = "select"
 }

@@ -2,11 +2,12 @@ resource "option-type" "atgroup" {
   code = "atgroup"
   name = "ATGroup"
   uuid = "c0a52553-271a-4ae9-984c-ccd1ebca7393"
+  description = "atgroup"
   fieldContext = "config.customOptions"
   fieldLabel = "Group"
   fieldName = "atgroup"
   labels = [ "atgroup" ]
-  optionList = { name = "ATGroup" }
+  optionList = { name = "at group" }
   optionSource = "list"
   type = "select"
 }

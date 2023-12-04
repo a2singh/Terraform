@@ -7,7 +7,7 @@ resource "option-type" "atserviceplan" {
   fieldContext = "config.customOptions"
   fieldLabel = "Service Plan"
   fieldName = "atserviceplan"
-  optionList = { name = "ATService Plan" }
+  optionList = { name = "at service plan" }
   optionSource = "list"
   type = "select"
 }
