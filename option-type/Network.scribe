@@ -6,7 +6,6 @@ resource "option-type" "Network" {
   fieldContext = "config.customOptions"
   fieldLabel = "Network"
   fieldName = "Network"
-  optionList = { name = "AT-Network Option List" }
   optionSource = "list"
   type = "select"
 }
