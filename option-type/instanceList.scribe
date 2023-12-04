@@ -6,7 +6,6 @@ resource "option-type" "instanceList" {
   fieldContext = "config.customOptions"
   fieldLabel = "Instance"
   fieldName = "instanceList"
-  optionList = { name = "AT-InstanceList" }
   optionSource = "list"
   required = true
   type = "select"
