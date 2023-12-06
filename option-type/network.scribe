@@ -2,9 +2,12 @@ resource "option-type" "network" {
   code = "network"
   name = "Network"
   uuid = "bbc094dc-7db6-4813-8d47-bf078e054547"
+  defaultValue = "275"
   fieldContext = "config.customOptions"
   fieldLabel = "Network"
   fieldName = "network"
   labels = [ "network" ]
+  optionList = { name = "FORM-Network" }
+  optionSource = "list"
   type = "select"
 }

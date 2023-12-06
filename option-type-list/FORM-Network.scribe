@@ -1,0 +1,21 @@
+resource "option-type-list" "FORM-Network" {
+  name = "FORM-Network"
+  uuid = "3b7d9f04-e6ae-43fa-a53c-748bc5837aa8"
+  apiType = "networks"
+  labels = [ "network" ]
+  realTime = true
+  requestScript = <<EOFSCRIBE
+if (input.group && input.atcloud){
+results.zoneId = input.atcloud
+results.siteId = input.group
+}
+EOFSCRIBE
+  translationScript = <<EOFSCRIBE
+for (var x = 0; x < data.length; x++) {
+if (input.group && input.atcloud) {
+   results.push({name:data[x].name,value:data[x].id});
+}
+}
+EOFSCRIBE
+  type = "api"
+}
