@@ -1,0 +1,5 @@
+resource "task-set-task" "e1fdfa5c-1d2d-4f93-b7cf-e9ce89bbc5d7" {
+  uuid = "e1fdfa5c-1d2d-4f93-b7cf-e9ce89bbc5d7"
+  task = { name = "Recharge" }
+  taskOrder = 2
+}
