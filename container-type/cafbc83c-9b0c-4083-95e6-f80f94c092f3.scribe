@@ -1,0 +1,15 @@
+resource "container-type" "cafbc83c-9b0c-4083-95e6-f80f94c092f3" {
+  code = "cafbc83c-9b0c-4083-95e6-f80f94c092f3"
+  name = "volume node"
+  uuid = "36cda385-954e-4578-8b57-8c31980c9eba"
+  containerVersion = "2019"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "volumeerror"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "vmware.vsphere.image.3.vm-172976" }
+}

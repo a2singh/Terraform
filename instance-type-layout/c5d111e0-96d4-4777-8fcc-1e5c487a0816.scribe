@@ -1,0 +1,10 @@
+resource "instance-type-layout" "c5d111e0-96d4-4777-8fcc-1e5c487a0816" {
+  code = "c5d111e0-96d4-4777-8fcc-1e5c487a0816"
+  name = "volume layout"
+  uuid = "9b895843-e0f0-43fd-878a-96b5fa0c4554"
+  instanceType = { code = "vm" }
+  instanceVersion = "2019"
+  memoryRequirement = 0
+  provisionType = { code = "vmware" }
+  workloads = [ { code = "cafbc83c-9b0c-4083-95e6-f80f94c092f3" } ]
+}

@@ -1,0 +1,8 @@
+resource "instance-type" "vm" {
+  code = "vm"
+  name = "volume error"
+  uuid = "2a0980ba-2edf-4125-a137-f594c2a8885b"
+  category = "os"
+  deploymentService = ""
+  environmentPrefix = "VOLUME_ERROR"
+}
