@@ -1,0 +1,21 @@
+resource "option-type-list" "FormOptionList" {
+  name = "FormOptionList"
+  uuid = "02e283c1-40a3-48b9-9398-b688abf1e5e0"
+  apiType = "networks"
+  realTime = true
+  requestScript = <<EOFSCRIBE
+if (input.group && input.atcloud && input.resourcepool){
+results.poolId = input.resourcepool
+results.zoneId = input.atcloud
+results.siteId = input.group
+}
+EOFSCRIBE
+  translationScript = <<EOFSCRIBE
+for (var x = 0; x < data.length; x++) {
+if (input.group && input.atcloud && input.input.resourcepool){
+   results.push({name:data[x].name,value:data[x].id});
+}
+}
+EOFSCRIBE
+  type = "api"
+}
