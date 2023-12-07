@@ -7,7 +7,7 @@ resource "task-set" "AT-API Select List-204781" {
   lastUpdated = "2023-12-04T12:03:30.000Z"
   optionTypes = [
     { code = "group" },
-    { code = "atcloud" },
+    { code = "cloud" },
     { code = "resourcepool" },
     { code = "serviceplan" }
   ]

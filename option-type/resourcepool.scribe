@@ -2,7 +2,7 @@ resource "option-type" "resourcepool" {
   code = "resourcepool"
   name = "ATResource Pool"
   uuid = "7833e009-7d1a-453b-b87b-11a1edb3a5a1"
-  dependsOnCode = "atcloud"
+  dependsOnCode = "cloud"
   description = "AT Resource Pool"
   fieldContext = "config.customOptions"
   fieldLabel = "Resource Pool"
