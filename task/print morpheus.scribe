@@ -3,7 +3,7 @@ resource "task" "print morpheus" {
   uuid = "c2b7489a-b25c-426a-b5fa-cd72bce6311f"
   dateCreated = "2023-12-07T04:12:56.000Z"
   executeTarget = "resource"
-  lastUpdated = "2023-12-07T04:12:56.000Z"
+  lastUpdated = "2023-12-07T05:17:26.000Z"
   options = [
     {
       optionType = { code = "ansibleGitId" }
