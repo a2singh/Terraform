@@ -1,6 +1,7 @@
 resource "option-type-list" "Service plan Manual-AT" {
   name = "Service plan Manual-AT"
   uuid = "8f2bbe58-e68d-4362-8c67-487cc48b0d2c"
+  description = "AT Service plan Manual"
   initialDataset = <<EOFSCRIBE
 [
   {"name": "1 CPU, 4GB Memory", "value": 250},
@@ -8,6 +9,7 @@ resource "option-type-list" "Service plan Manual-AT" {
   {"name": "Singh, 1CPU, 2GB MEMORY", "value": 1052}
 ]
 EOFSCRIBE
+  labels = [ "serviceplanmanual" ]
   realTime = true
   type = "manual"
 }
