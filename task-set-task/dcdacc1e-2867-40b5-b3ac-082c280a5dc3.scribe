@@ -1,0 +1,4 @@
+resource "task-set-task" "dcdacc1e-2867-40b5-b3ac-082c280a5dc3" {
+  uuid = "dcdacc1e-2867-40b5-b3ac-082c280a5dc3"
+  task = { name = "print morpheus" }
+}

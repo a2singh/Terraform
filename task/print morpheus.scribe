@@ -1,0 +1,18 @@
+resource "task" "print morpheus" {
+  name = "print morpheus"
+  uuid = "c2b7489a-b25c-426a-b5fa-cd72bce6311f"
+  dateCreated = "2023-12-07T04:12:56.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2023-12-07T04:12:56.000Z"
+  options = [
+    {
+      optionType = { code = "ansibleGitId" }
+      value = { name = "AP Ansible" }
+    },
+    {
+      optionType = { code = "ansiblePlaybook" }
+      value = "print_morpheus"
+    }
+  ]
+  taskType = { code = "ansibleTask" }
+}

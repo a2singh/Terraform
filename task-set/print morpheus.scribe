@@ -1,0 +1,7 @@
+resource "task-set" "print morpheus" {
+  name = "print morpheus"
+  uuid = "afcffe42-260c-40df-a030-e828f9dac15d"
+  dateCreated = "2023-12-07T04:16:34.000Z"
+  lastUpdated = "2023-12-07T04:16:34.000Z"
+  taskSetTasks = [ { uuid = "dcdacc1e-2867-40b5-b3ac-082c280a5dc3" } ]
+}
