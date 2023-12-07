@@ -1,11 +1,13 @@
 resource "option-type" "ram" {
   code = "ram"
-  name = "RAM"
+  name = "ATRAM"
   uuid = "495f8bce-d6f4-42d2-b7a1-40160e1bc98d"
   defaultValue = "8"
+  description = "AT RAM"
   fieldContext = "config.customOptions"
   fieldLabel = "RAM"
   fieldName = "ram"
+  labels = [ "ram" ]
   type = "number"
   visibleOnCode = "plan:(1052)"
 }

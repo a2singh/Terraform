@@ -1,11 +1,13 @@
 resource "option-type" "cpu" {
   code = "cpu"
-  name = "CPU"
+  name = "ATCPU"
   uuid = "a8255a4c-8174-44e2-a383-54879447a537"
   defaultValue = "2"
+  description = "AT CPU"
   fieldContext = "config.customOptions"
   fieldLabel = "CPU"
   fieldName = "cpu"
+  labels = [ "cpu" ]
   type = "number"
   visibleOnCode = "plan:(1052)"
 }
