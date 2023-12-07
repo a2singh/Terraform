@@ -6,14 +6,15 @@ resource "option-type-list" "at network" {
   labels = [ "network" ]
   realTime = true
   requestScript = <<EOFSCRIBE
-if (input.group && input.cloud){
+if (input.group && input.cloud && input.resourcepool){
+results.poolId = input.resourcepool
 results.zoneId = input.cloud
 results.siteId = input.group
 }
 EOFSCRIBE
   translationScript = <<EOFSCRIBE
 for (var x = 0; x < data.length; x++) {
-if (input.group && input.cloud) {
+if (input.group && input.cloud && input.resourcepool) {
    results.push({name:data[x].name,value:data[x].id});
 }
 }
