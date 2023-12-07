@@ -6,10 +6,10 @@ resource "task-set" "AT-API Select List-204781" {
   labels = [ "apiselectlist" ]
   lastUpdated = "2023-12-04T12:03:30.000Z"
   optionTypes = [
-    { code = "atgroup" },
+    { code = "group" },
     { code = "atcloud" },
-    { code = "atresourcepool" },
-    { code = "atserviceplan" }
+    { code = "resourcepool" },
+    { code = "serviceplan" }
   ]
   taskSetType = "operation"
   visibility = "public"

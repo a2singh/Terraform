@@ -2,8 +2,8 @@ resource "option-type-list" "at group" {
   name = "at group"
   uuid = "b1b1b4aa-6034-4579-9f03-322f0e86e630"
   apiType = "groups"
-  description = "atgroup"
-  labels = [ "atgroup" ]
+  description = "AT Group"
+  labels = [ "group" ]
   realTime = true
   type = "api"
 }

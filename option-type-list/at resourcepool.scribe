@@ -2,12 +2,12 @@ resource "option-type-list" "at resourcepool" {
   name = "at resourcepool"
   uuid = "944b64cd-36b9-47cc-80cf-2e2bd5bad3dd"
   apiType = "resourcePools"
-  description = "atresourcepool"
+  description = "AT Resource Pool"
   labels = [ "atresourcepool" ]
   realTime = true
   requestScript = <<EOFSCRIBE
-results.zoneId = input.atcloud
-results.siteId = input.atgroup
+results.zoneId = input.cloud
+results.siteId = input.group
 EOFSCRIBE
   translationScript = <<EOFSCRIBE
 var i=0;
