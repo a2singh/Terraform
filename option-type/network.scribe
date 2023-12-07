@@ -1,13 +1,13 @@
 resource "option-type" "network" {
   code = "network"
-  name = "Network"
-  uuid = "bbc094dc-7db6-4813-8d47-bf078e054547"
-  defaultValue = "275"
+  name = "ATNetwork"
+  uuid = "87c55338-674a-4ad5-b182-2b367c32309d"
+  description = "AT-Network Input"
   fieldContext = "config.customOptions"
   fieldLabel = "Network"
   fieldName = "network"
   labels = [ "network" ]
-  optionList = { name = "FORM-Network" }
+  optionList = { name = "at network" }
   optionSource = "list"
   type = "select"
 }
