@@ -5,13 +5,13 @@ resource "task" "AT-Task" {
   dateCreated = "2023-10-19T08:57:40.000Z"
   executeTarget = "resource"
   labels = [ "Test Task" ]
-  lastUpdated = "2023-10-19T10:21:25.000Z"
+  lastUpdated = "2023-12-19T12:45:01.000Z"
   options = [
+    { optionType = { code = "shell.sudo" }, value = "on" },
     {
       content = { uuid = "d44ce246-4116-4274-b807-e0a40f41afa6" }
       optionType = { code = "script" }
-    },
-    { optionType = { code = "shell.sudo" }, value = "on" }
+    }
   ]
   taskType = { code = "script" }
   visibility = "public"

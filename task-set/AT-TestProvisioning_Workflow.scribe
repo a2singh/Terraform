@@ -4,7 +4,7 @@ resource "task-set" "AT-TestProvisioning_Workflow" {
   dateCreated = "2023-10-19T08:53:13.000Z"
   description = "Test workflow for provisioning workflow"
   labels = [ "Test_Workflow" ]
-  lastUpdated = "2023-10-19T11:34:35.000Z"
+  lastUpdated = "2023-12-19T12:45:01.000Z"
   taskSetTasks = [ { uuid = "6696548c-7a85-434d-9e81-56947c9a5e43" } ]
   visibility = "public"
 }
