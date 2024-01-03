@@ -1,0 +1,17 @@
+resource "catalog-item-type" "testinstance" {
+  code = "testinstance"
+  name = "AT-TestInstance"
+  uuid = "8ac23562-2579-4e07-b61f-ddb37ee85b64"
+  dateCreated = "2024-01-03T07:43:38.000Z"
+  formType = "optionTypes"
+  labels = [ { name = "AT-Instance" } ]
+  lastUpdated = "2024-01-03T07:47:16.000Z"
+  optionTypes = [
+    { code = "group" },
+    { code = "cloud" },
+    { code = "serviceplan" },
+    { code = "resourcepool" },
+    { code = "network" }
+  ]
+  refType = "InstanceType"
+}
