@@ -1,16 +1,11 @@
 resource "file-content" "ea836c35-06df-4779-8aa5-f727844c68b0" {
   uuid = "ea836c35-06df-4779-8aa5-f727844c68b0"
   content = <<EOFSCRIBE
-osname = configspec['hostName']
+osname = configspec['Hostname']
 newname = osname.lower()
-configspec['computedHostName'] = newname
-configspec['instance']['hostName'] = newname
-configspec['computedName'] = newname
 
-if 'customOptions' in configspec and 'hostName' in configspec['customOptions']:
-    configspec['customOptions']['hostName'] = newname
 
 EOFSCRIBE
   dateCreated = "2024-01-03T12:38:57.000Z"
-  lastUpdated = "2024-01-03T12:41:22.000Z"
+  lastUpdated = "2024-01-03T13:09:55.000Z"
 }
