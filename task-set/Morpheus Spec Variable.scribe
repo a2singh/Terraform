@@ -2,6 +2,6 @@ resource "task-set" "Morpheus Spec Variable" {
   name = "Morpheus Spec Variable"
   uuid = "3e68c070-dd47-4094-9d92-05f58f3c128a"
   dateCreated = "2023-11-03T05:10:38.000Z"
-  lastUpdated = "2023-11-03T05:10:38.000Z"
-  taskSetTasks = [ { uuid = "10996ec6-459a-4e58-88b0-03c19b963143" } ]
+  lastUpdated = "2024-01-03T13:20:35.000Z"
+  taskSetTasks = [ { uuid = "7e5ed6d3-c802-4be7-b9ee-be23aa217a2e" } ]
 }
