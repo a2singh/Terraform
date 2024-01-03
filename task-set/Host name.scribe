@@ -1,0 +1,7 @@
+resource "task-set" "Host name" {
+  name = "Host name"
+  uuid = "b6dddd24-b834-4ab4-8fa9-0bf50a8087cb"
+  dateCreated = "2024-01-03T12:42:03.000Z"
+  lastUpdated = "2024-01-03T12:42:03.000Z"
+  taskSetTasks = [ { uuid = "39c9befe-6afd-4a8a-a0ee-8726949ca53b" } ]
+}

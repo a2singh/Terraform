@@ -1,0 +1,14 @@
+resource "task" "lower case" {
+  name = "lower case"
+  uuid = "ef31e3f9-bd65-4159-a1bc-19be93e595f3"
+  dateCreated = "2024-01-03T12:38:57.000Z"
+  executeTarget = "local"
+  lastUpdated = "2024-01-03T12:41:22.000Z"
+  options = [
+    {
+      content = { uuid = "ea836c35-06df-4779-8aa5-f727844c68b0" }
+      optionType = { code = "pythonScript" }
+    }
+  ]
+  taskType = { code = "jythonTask" }
+}
