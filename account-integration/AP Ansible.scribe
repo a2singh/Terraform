@@ -9,7 +9,7 @@ resource "account-integration" "AP Ansible" {
     ansiblePlaybooks = "/"
     ansibleRoles = "/roles"
     ansibleVerbose = "on"
-    cacheEnabled = "on"
+    cacheEnabled = null
     defaultBranch = "main"
   }
   integrationType = { code = "ansible" }
