@@ -1,0 +1,8 @@
+resource "catalog-item-type" "at.morphe" {
+  code = "at.morphe"
+  name = "AT_Morphe_Ubuntu"
+  uuid = "06a7198a-937d-4fe8-a530-1cc80b4db9a3"
+  dateCreated = "2024-01-04T10:29:19.000Z"
+  lastUpdated = "2024-01-04T10:31:25.000Z"
+  refType = "InstanceType"
+}
