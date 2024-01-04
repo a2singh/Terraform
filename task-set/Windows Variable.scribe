@@ -1,0 +1,7 @@
+resource "task-set" "Windows Variable" {
+  name = "Windows Variable"
+  uuid = "a5e636f5-a74e-4c5d-8ec8-b6f1de141d06"
+  dateCreated = "2024-01-04T11:35:38.000Z"
+  lastUpdated = "2024-01-04T11:35:38.000Z"
+  taskSetTasks = [ { uuid = "977e1229-c9ed-409c-8528-ef6f5ddce2c5" } ]
+}

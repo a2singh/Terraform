@@ -1,0 +1,4 @@
+resource "task-set-task" "977e1229-c9ed-409c-8528-ef6f5ddce2c5" {
+  uuid = "977e1229-c9ed-409c-8528-ef6f5ddce2c5"
+  task = { name = "Windows Variable Task" }
+}

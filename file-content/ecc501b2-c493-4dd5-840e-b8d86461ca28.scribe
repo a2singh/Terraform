@@ -1,0 +1,11 @@
+resource "file-content" "ecc501b2-c493-4dd5-840e-b8d86461ca28" {
+  uuid = "ecc501b2-c493-4dd5-840e-b8d86461ca28"
+  content = <<EOFSCRIBE
+$domain_host = "<%=evars.domain_IP%>"
+$member_host = "<%=evars.member_IP%>"
+Write-Host "Domain IP: $domain_host"
+Write-Host "Member IP: $member_host"
+EOFSCRIBE
+  dateCreated = "2024-01-04T11:35:00.000Z"
+  lastUpdated = "2024-01-04T11:35:00.000Z"
+}
