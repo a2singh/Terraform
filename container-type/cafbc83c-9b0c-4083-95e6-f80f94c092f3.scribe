@@ -11,5 +11,4 @@ resource "container-type" "cafbc83c-9b0c-4083-95e6-f80f94c092f3" {
   shortName = "volumeerror"
   showServerLogs = true
   statTypeCode = "vm"
-  virtualImage = { code = "vmware.vsphere.image.3.vm-172976" }
 }
