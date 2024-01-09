@@ -5,4 +5,5 @@ resource "instance-type" "cent" {
   category = "os"
   deploymentService = ""
   environmentPrefix = "AMIT_CENTOS"
+  layouts = [ { code = "226b114b-336e-49e6-b463-6d36790b7086" } ]
 }
