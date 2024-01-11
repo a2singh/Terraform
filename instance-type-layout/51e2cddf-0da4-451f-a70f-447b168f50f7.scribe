@@ -1,0 +1,12 @@
+resource "instance-type-layout" "51e2cddf-0da4-451f-a70f-447b168f50f7" {
+  code = "51e2cddf-0da4-451f-a70f-447b168f50f7"
+  name = "205067"
+  uuid = "9db071e1-52aa-41ec-b57e-e860b5b689a5"
+  instanceType = { code = "volume" }
+  instanceVersion = "7.5"
+  labels = [ "layout" ]
+  memoryRequirement = 0
+  provisionType = { code = "vmware" }
+  sortOrder = -2
+  workloads = [ { code = "dd987c7b-4e04-48e9-ba4a-152c981dd50c" } ]
+}

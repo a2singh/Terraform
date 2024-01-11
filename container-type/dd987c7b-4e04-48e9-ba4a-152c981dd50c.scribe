@@ -1,0 +1,16 @@
+resource "container-type" "dd987c7b-4e04-48e9-ba4a-152c981dd50c" {
+  code = "dd987c7b-4e04-48e9-ba4a-152c981dd50c"
+  name = "205067vm"
+  uuid = "cfff7259-a320-457e-8870-e4160e261d67"
+  containerVersion = "7.5"
+  entryPoint = ""
+  labels = [ "vm" ]
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "205067"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "vmware.vsphere.image.morpheus.centos.7.5" }
+}
