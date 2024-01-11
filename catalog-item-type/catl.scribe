@@ -1,0 +1,9 @@
+resource "catalog-item-type" "catl" {
+  code = "catl"
+  name = "205067-C"
+  uuid = "c6ee33d0-5fbb-4ce6-88ca-cc2f47560b39"
+  dateCreated = "2024-01-11T07:05:33.000Z"
+  formType = "form"
+  lastUpdated = "2024-01-11T07:08:08.000Z"
+  refType = "InstanceType"
+}
