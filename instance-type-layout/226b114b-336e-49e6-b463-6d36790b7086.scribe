@@ -6,5 +6,6 @@ resource "instance-type-layout" "226b114b-336e-49e6-b463-6d36790b7086" {
   instanceVersion = "7.5"
   memoryRequirement = 0
   provisionType = { code = "vmware" }
+  sortOrder = 1
   workloads = [ { code = "b7973908-0c69-487f-a9f8-d37837804215" } ]
 }
