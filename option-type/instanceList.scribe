@@ -1,12 +1,10 @@
 resource "option-type" "instanceList" {
   code = "instanceList"
-  name = "MorphAPI-Instance list"
-  uuid = "e5e647bf-bb37-44b9-9637-b77a50176953"
-  dependsOnCode = "vm"
+  name = "API-InstanceList"
+  uuid = "852d0390-15df-4d62-8e4c-4c686c2f8898"
+  config = { _multiSelect = "", multiSelect = "on" }
   fieldContext = "config.customOptions"
-  fieldLabel = "Instance"
+  fieldLabel = "Instance List"
   fieldName = "instanceList"
   optionSource = "list"
-  required = true
-  type = "select"
 }
