@@ -1,0 +1,8 @@
+resource "instance-type" "rds" {
+  code = "rds"
+  name = "RDS Instance Type"
+  uuid = "258e74d7-f4ca-49aa-9a2b-8af057894463"
+  category = "os"
+  deploymentService = ""
+  environmentPrefix = "RDS_INSTANCE_TYPE"
+}

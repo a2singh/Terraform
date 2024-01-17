@@ -1,0 +1,9 @@
+resource "instance-type-layout" "e5fe5ce4-621a-4efc-bb7a-9f76c3a97ad7" {
+  code = "e5fe5ce4-621a-4efc-bb7a-9f76c3a97ad7"
+  name = "RDS"
+  uuid = "b80f1f0c-c79e-4fc1-9462-65c8ec71c021"
+  instanceType = { code = "rds" }
+  instanceVersion = "latest"
+  memoryRequirement = 0
+  provisionType = { code = "amazon" }
+}
