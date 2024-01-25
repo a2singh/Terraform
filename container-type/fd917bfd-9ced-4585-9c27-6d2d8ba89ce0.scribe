@@ -12,5 +12,4 @@ resource "container-type" "fd917bfd-9ced-4585-9c27-6d2d8ba89ce0" {
   shortName = "win2019"
   showServerLogs = true
   statTypeCode = "vm"
-  virtualImage = { code = "amazon.ec2.image.5.ami-0ea8dda9f6a769d72" }
 }
