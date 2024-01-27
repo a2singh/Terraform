@@ -1,9 +1,10 @@
 resource "catalog-item-type" "null" {
-  name = "DELETE ME"
-  uuid = "60e242bc-9dca-4350-8eeb-371011e17544"
-  dateCreated = "2024-01-12T11:09:12.000Z"
-  formType = "form"
-  lastUpdated = "2024-01-12T11:33:46.000Z"
-  refType = "InstanceType"
+  name = "instance list"
+  uuid = "0ad69344-325e-4d03-9742-e5b63d4b280a"
+  dateCreated = "2023-11-01T22:48:59.000Z"
+  formType = "optionTypes"
+  lastUpdated = "2023-11-01T22:48:59.000Z"
+  optionTypes = [ { code = "vm" }, { code = "instanceList" } ]
+  refType = "OperationalWorkflow"
   visibility = "public"
 }
