@@ -3,7 +3,9 @@ resource "option-type-list" "manual instance" {
   uuid = "d442f41e-1fb0-49f1-a361-2a7eb3055049"
   initialDataset = <<EOFSCRIBE
 [
-{"name":"ap-new-3","value":295}
+{"name":"ap-new-4","value":296},
+{"name":"ap-newn5","value":297}
+ 
 ]
 EOFSCRIBE
   realTime = true
