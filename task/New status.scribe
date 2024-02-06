@@ -2,14 +2,14 @@ resource "task" "New status" {
   name = "New status"
   uuid = "44827775-9870-4a1a-b781-83e60e55ee27"
   dateCreated = "2024-02-06T07:57:00.000Z"
-  executeTarget = "resource"
-  lastUpdated = "2024-02-06T08:28:05.000Z"
+  executeTarget = "local"
+  lastUpdated = "2024-02-06T15:07:55.000Z"
   options = [
-    { optionType = { code = "shell.sudo" }, value = "on" },
     {
       content = { uuid = "1d6af224-5785-4dfe-8803-d9583bc91a6e" }
       optionType = { code = "script" }
-    }
+    },
+    { optionType = { code = "shell.sudo" }, value = "on" }
   ]
   taskType = { code = "script" }
 }
