@@ -2,11 +2,8 @@ resource "task-set" "get server info" {
   name = "get server info"
   uuid = "aa43338b-3971-44a7-acb8-744395137a90"
   dateCreated = "2024-02-06T07:19:45.000Z"
-  lastUpdated = "2024-02-06T07:57:24.000Z"
+  lastUpdated = "2024-02-06T08:30:45.000Z"
   optionTypes = [ { code = "serviceList" }, { code = "serviceStatus" } ]
-  taskSetTasks = [
-    { uuid = "8adf1a42-3ede-464b-ac29-58051ba44445" },
-    { uuid = "ce6d7d47-6f75-494e-b11d-0616054d8cd3" }
-  ]
+  taskSetTasks = [ { uuid = "77bee66b-31e0-4b6b-94a2-df157495e69f" } ]
   taskSetType = "operation"
 }
