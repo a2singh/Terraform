@@ -1,0 +1,11 @@
+resource "option-type" "manual" {
+  code = "manual"
+  name = "manual instance"
+  uuid = "1b915174-2203-4268-b042-2e27d97d6fe0"
+  fieldContext = "config.customOptions"
+  fieldLabel = "instance"
+  fieldName = "manual"
+  optionList = { name = "manual instance" }
+  optionSource = "list"
+  type = "select"
+}
