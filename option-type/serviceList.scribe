@@ -1,0 +1,11 @@
+resource "option-type" "serviceList" {
+  code = "serviceList"
+  name = "service list"
+  uuid = "5147fafe-35dc-406f-aa4a-4ebec2016ec0"
+  fieldContext = "config.customOptions"
+  fieldLabel = "Service List"
+  fieldName = "serviceList"
+  optionList = { name = "Service list" }
+  optionSource = "list"
+  type = "select"
+}

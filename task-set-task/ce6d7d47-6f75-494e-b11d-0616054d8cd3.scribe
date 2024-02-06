@@ -1,0 +1,6 @@
+resource "task-set-task" "ce6d7d47-6f75-494e-b11d-0616054d8cd3" {
+  uuid = "ce6d7d47-6f75-494e-b11d-0616054d8cd3"
+  task = { name = "New status" }
+  taskOrder = 1
+  taskPhase = "operation"
+}

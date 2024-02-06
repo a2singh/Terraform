@@ -1,0 +1,10 @@
+resource "file-content" "1d6af224-5785-4dfe-8803-d9583bc91a6e" {
+  uuid = "1d6af224-5785-4dfe-8803-d9583bc91a6e"
+  content = <<EOFSCRIBE
+STAT = "<%=customOptions.serviceStatus%>"
+SERV = "<%=customOptions.serviceList%>"
+systemctl $STAT $SERV
+EOFSCRIBE
+  dateCreated = "2024-02-06T07:57:00.000Z"
+  lastUpdated = "2024-02-06T07:59:43.000Z"
+}

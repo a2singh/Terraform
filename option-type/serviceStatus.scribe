@@ -1,0 +1,12 @@
+resource "option-type" "serviceStatus" {
+  code = "serviceStatus"
+  name = "Service Status"
+  uuid = "4b2d55cb-ea57-402b-a51a-ab83b6fcead0"
+  displayOrder = 1
+  fieldContext = "config.customOptions"
+  fieldLabel = "Service Status"
+  fieldName = "serviceStatus"
+  optionList = { name = "service status" }
+  optionSource = "list"
+  type = "select"
+}

@@ -1,0 +1,13 @@
+resource "option-type-list" "service status" {
+  name = "service status"
+  uuid = "fdb59914-581b-4986-8c17-8986d07c8ae4"
+  initialDataset = <<EOFSCRIBE
+[
+  {"name": "Start", "value": "Start"},
+  {"name": "Stop", "value": "Stop"},
+  {"name": "restart", "value": "restart"}
+]
+EOFSCRIBE
+  realTime = true
+  type = "manual"
+}

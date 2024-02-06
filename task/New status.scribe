@@ -1,0 +1,14 @@
+resource "task" "New status" {
+  name = "New status"
+  uuid = "44827775-9870-4a1a-b781-83e60e55ee27"
+  dateCreated = "2024-02-06T07:57:00.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2024-02-06T07:59:43.000Z"
+  options = [
+    {
+      content = { uuid = "1d6af224-5785-4dfe-8803-d9583bc91a6e" }
+      optionType = { code = "script" }
+    }
+  ]
+  taskType = { code = "script" }
+}

@@ -1,0 +1,12 @@
+resource "option-type-list" "Service list" {
+  name = "Service list"
+  uuid = "2ea2ee40-6de5-4473-9a11-d12edad7229c"
+  initialDataset = <<EOFSCRIBE
+[
+  {"name": "cloud-init.service ", "value": "cloud-init.service "},
+  {"name": "vmtoolsd.service", "value": "vmtoolsd.service"}
+]
+EOFSCRIBE
+  realTime = true
+  type = "manual"
+}
