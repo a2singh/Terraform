@@ -1,0 +1,5 @@
+resource "task-set-task" "bb3e72fe-88f9-4ec6-8f91-a70617c22b8e" {
+  uuid = "bb3e72fe-88f9-4ec6-8f91-a70617c22b8e"
+  task = { name = "Cloud init status" }
+  taskPhase = "operation"
+}
