@@ -1,0 +1,10 @@
+resource "option-type" "AT_APIDomain" {
+  code = "AT_APIDomain"
+  name = "AT_APIDomain"
+  uuid = "47f51dbd-1d51-4995-8626-f3a7f6164548"
+  fieldContext = "config.customOptions"
+  fieldLabel = "Domains"
+  fieldName = "AT_APIDomain"
+  required = true
+  type = "select"
+}
