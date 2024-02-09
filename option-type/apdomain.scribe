@@ -1,0 +1,13 @@
+resource "option-type" "apdomain" {
+  code = "apdomain"
+  name = "ap domain"
+  uuid = "87bc1c32-eff2-4461-ac96-8026c509331f"
+  displayValueOnDetails = true
+  fieldContext = "config.customOptions"
+  fieldLabel = "Domain"
+  fieldName = "apdomain"
+  optionList = { name = "ap domain" }
+  optionSource = "list"
+  required = true
+  type = "select"
+}
