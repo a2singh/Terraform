@@ -1,10 +1,13 @@
 resource "catalog-item-type" "null" {
-  name = "instance list"
-  uuid = "0ad69344-325e-4d03-9742-e5b63d4b280a"
-  dateCreated = "2023-11-01T22:48:59.000Z"
+  name = "new cat"
+  uuid = "4d5d31bf-3837-4821-b129-7de31eac81e8"
+  dateCreated = "2024-02-06T15:05:59.000Z"
   formType = "optionTypes"
-  lastUpdated = "2023-11-01T22:48:59.000Z"
-  optionTypes = [ { code = "vm" }, { code = "instanceList" } ]
+  lastUpdated = "2024-02-06T15:05:59.000Z"
+  optionTypes = [
+    { code = "serviceList" },
+    { code = "serviceStatus" },
+    { code = "manual" }
+  ]
   refType = "OperationalWorkflow"
-  visibility = "public"
 }
