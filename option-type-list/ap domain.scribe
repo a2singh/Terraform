@@ -4,10 +4,11 @@ resource "option-type-list" "ap domain" {
   config = "{\"sourceHeaders\":[{\"name\":\"authorization\",\"value\":\"bearer b805b374-17e8-49f5-b32d-a6f022a1dd3a\",\"masked\":false}]}"
   description = "test domain"
   ignoreSSLErrors = true
+  realTime = true
   sourceUrl = "https://10.32.23.86/api/networks/domains"
   translationScript = <<EOFSCRIBE
 for(var i=0; i<data.networkDomains.length; i++) { 
-  results.push({name: data.networkDomains[i].name, value: data.networkDomains[i]}); 
+  results.push({name: data.networkDomains[i].name, value: data.networkDomains[i].id}); 
 }
 EOFSCRIBE
 }
