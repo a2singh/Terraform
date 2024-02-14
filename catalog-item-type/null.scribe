@@ -1,7 +1,10 @@
 resource "catalog-item-type" "null" {
-  name = "Get Server info"
-  uuid = "ebbd0258-be7b-4a46-9104-3ce5717033ee"
-  dateCreated = "2024-02-06T07:23:13.000Z"
-  lastUpdated = "2024-02-06T13:49:20.000Z"
+  name = "instance list"
+  uuid = "0ad69344-325e-4d03-9742-e5b63d4b280a"
+  dateCreated = "2023-11-01T22:48:59.000Z"
+  formType = "optionTypes"
+  lastUpdated = "2023-11-01T22:48:59.000Z"
+  optionTypes = [ { code = "vm" }, { code = "instanceList" } ]
   refType = "OperationalWorkflow"
+  visibility = "public"
 }
