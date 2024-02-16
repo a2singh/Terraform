@@ -5,7 +5,7 @@ resource "task" "AT-Task" {
   dateCreated = "2023-10-19T08:57:40.000Z"
   executeTarget = "resource"
   labels = [ "Test Task" ]
-  lastUpdated = "2023-12-19T12:45:01.000Z"
+  lastUpdated = "2024-02-16T05:08:42.000Z"
   options = [
     {
       content = { uuid = "d44ce246-4116-4274-b807-e0a40f41afa6" }
