@@ -1,0 +1,15 @@
+resource "container-type" "55358140-7961-4a84-a42b-d4f31a53435f" {
+  code = "55358140-7961-4a84-a42b-d4f31a53435f"
+  name = "ap multinode"
+  uuid = "887ddb8f-ff89-49ab-903e-371a29212f06"
+  containerVersion = "1.7"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "multiple"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "vmware.vsphere.image.9.vm-63421" }
+}

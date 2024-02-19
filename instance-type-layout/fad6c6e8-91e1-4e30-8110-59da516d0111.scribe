@@ -1,0 +1,10 @@
+resource "instance-type-layout" "fad6c6e8-91e1-4e30-8110-59da516d0111" {
+  code = "fad6c6e8-91e1-4e30-8110-59da516d0111"
+  name = "multiple disk"
+  uuid = "0a901642-3713-4de3-bf60-3eaa31b26fff"
+  instanceType = { code = "1.1" }
+  instanceVersion = "1.4"
+  memoryRequirement = 0
+  provisionType = { code = "vmware" }
+  workloads = [ { code = "55358140-7961-4a84-a42b-d4f31a53435f" } ]
+}
