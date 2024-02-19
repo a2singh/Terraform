@@ -1,0 +1,15 @@
+resource "container-type" "13cb7549-b851-4232-8324-f97d81e9079e" {
+  code = "13cb7549-b851-4232-8324-f97d81e9079e"
+  name = "Ap single node"
+  uuid = "3b1c3df2-5c2d-4b50-b0fd-bf46583b288b"
+  containerVersion = "7.5"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "cenr.7.5"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "fusion.image.morpheus.centos.7.5-v4" }
+}

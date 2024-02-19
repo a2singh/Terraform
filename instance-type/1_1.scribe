@@ -1,0 +1,8 @@
+resource "instance-type" "1.1" {
+  code = "1.1"
+  name = "AP DELETE ME"
+  uuid = "6bf78e7c-1891-46e6-82b0-a013318dcefa"
+  category = "web"
+  deploymentService = ""
+  environmentPrefix = "AP_DELETE_ME"
+}

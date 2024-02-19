@@ -1,0 +1,11 @@
+resource "instance-type-layout" "506cd032-4931-4878-94cc-9ae0170bcddf" {
+  code = "506cd032-4931-4878-94cc-9ae0170bcddf"
+  name = "single disk"
+  uuid = "d57ea305-9f80-41ee-a2f3-a78a8743052d"
+  instanceType = { code = "1.1" }
+  instanceVersion = "1.3"
+  memoryRequirement = 0
+  provisionType = { code = "vmware" }
+  sortOrder = 1
+  workloads = [ { code = "13cb7549-b851-4232-8324-f97d81e9079e" } ]
+}
