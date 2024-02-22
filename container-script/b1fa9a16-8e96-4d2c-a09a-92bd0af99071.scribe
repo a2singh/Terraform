@@ -1,0 +1,18 @@
+resource "container-script" "b1fa9a16-8e96-4d2c-a09a-92bd0af99071" {
+  code = "b1fa9a16-8e96-4d2c-a09a-92bd0af99071"
+  name = "AT Reconfigure Script"
+  uuid = "86905a2e-75c8-4f08-8563-103026b24a1d"
+  dateCreated = "2024-02-22T08:55:57.000Z"
+  labels = [ "reconfigure plan" ]
+  lastUpdated = "2024-02-22T08:55:57.000Z"
+  script = <<EOFSCRIBE
+payload = {
+  "instance": {
+    "plan": {
+      "id": 5468
+    }
+  }
+EOFSCRIBE
+  scriptPhase = "reconfigure"
+  sudoUser = true
+}
