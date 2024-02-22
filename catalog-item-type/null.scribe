@@ -1,13 +1,8 @@
 resource "catalog-item-type" "null" {
-  name = "new cat"
-  uuid = "4d5d31bf-3837-4821-b129-7de31eac81e8"
-  dateCreated = "2024-02-06T15:05:59.000Z"
-  formType = "optionTypes"
-  lastUpdated = "2024-02-06T15:05:59.000Z"
-  optionTypes = [
-    { code = "serviceList" },
-    { code = "serviceStatus" },
-    { code = "manual" }
-  ]
-  refType = "OperationalWorkflow"
+  name = "Recharge Price"
+  uuid = "e72ea73a-24e2-4b90-8577-464aff6815d8"
+  dateCreated = "2023-11-02T06:30:27.000Z"
+  formType = "form"
+  lastUpdated = "2023-11-03T11:18:18.000Z"
+  refType = "InstanceType"
 }
