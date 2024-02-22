@@ -1,8 +1,13 @@
 resource "catalog-item-type" "null" {
-  name = "multiple disk issue"
-  uuid = "07944c0d-ef72-4767-b455-1326a675479b"
-  dateCreated = "2024-02-19T08:35:01.000Z"
-  formType = "form"
-  lastUpdated = "2024-02-19T08:35:01.000Z"
-  refType = "InstanceType"
+  name = "new cat"
+  uuid = "4d5d31bf-3837-4821-b129-7de31eac81e8"
+  dateCreated = "2024-02-06T15:05:59.000Z"
+  formType = "optionTypes"
+  lastUpdated = "2024-02-06T15:05:59.000Z"
+  optionTypes = [
+    { code = "serviceList" },
+    { code = "serviceStatus" },
+    { code = "manual" }
+  ]
+  refType = "OperationalWorkflow"
 }
