@@ -1,0 +1,41 @@
+resource "file-content" "kubernetes-rook-1-15-storage-install-v1" {
+  code = "kubernetes-rook-1-15-storage-install-v1"
+  uuid = "8a234702-ccd2-4dfb-aaeb-9a31fe2a6872"
+  content = <<EOFSCRIBE
+apiVersion: ceph.rook.io/v1
+kind: CephBlockPool
+metadata:
+  name: replicapool
+  namespace: rook-ceph
+spec:
+  failureDomain: host
+  replicated:
+    size: 3
+    requireSafeReplicaSize: true
+---
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: rook-ceph-block
+provisioner: rook-ceph.rbd.csi.ceph.com
+parameters:
+  clusterID: rook-ceph
+  pool: replicapool
+  imageFormat: "2"
+  imageFeatures: layering
+  csi.storage.k8s.io/provisioner-secret-name: rook-csi-rbd-provisioner
+  csi.storage.k8s.io/provisioner-secret-namespace: rook-ceph
+  csi.storage.k8s.io/controller-expand-secret-name: rook-csi-rbd-provisioner
+  csi.storage.k8s.io/controller-expand-secret-namespace: rook-ceph
+  csi.storage.k8s.io/node-stage-secret-name: rook-csi-rbd-node
+  csi.storage.k8s.io/node-stage-secret-namespace: rook-ceph
+  csi.storage.k8s.io/fstype: ext4
+#uncomment the following to use rbd-nbd as mounter on supported nodes
+#mounter: rbd-nbd
+allowVolumeExpansion: true
+reclaimPolicy: Delete
+
+EOFSCRIBE
+  dateCreated = "2023-09-25T10:45:15.000Z"
+  lastUpdated = "2023-09-25T10:45:15.000Z"
+}

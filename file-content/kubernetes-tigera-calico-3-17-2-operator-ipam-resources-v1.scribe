@@ -1,0 +1,527 @@
+resource "file-content" "kubernetes-tigera-calico-3-17-2-operator-ipam-resources-v1" {
+  code = "kubernetes-tigera-calico-3-17-2-operator-ipam-resources-v1"
+  uuid = "5abe75f4-e02f-4b0b-8277-cde264e23277"
+  content = <<EOFSCRIBE
+# Source: crds/calico/kdd/crd.projectcalico.org_ipamblocks.yaml
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: ipamblocks.crd.projectcalico.org
+spec:
+  group: crd.projectcalico.org
+  names:
+    kind: IPAMBlock
+    listKind: IPAMBlockList
+    plural: ipamblocks
+    singular: ipamblock
+  scope: Cluster
+  versions:
+  - name: v1
+    schema:
+      openAPIV3Schema:
+        properties:
+          apiVersion:
+            description: 'APIVersion defines the versioned schema of this representation
+              of an object. Servers should convert recognized schemas to the latest
+              internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            type: string
+          kind:
+            description: 'Kind is a string value representing the REST resource this
+              object represents. Servers may infer this from the endpoint the client
+              submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            type: string
+          metadata:
+            type: object
+          spec:
+            description: IPAMBlockSpec contains the specification for an IPAMBlock
+              resource.
+            properties:
+              affinity:
+                type: string
+              allocations:
+                items:
+                  type: integer
+                  # TODO: This nullable is manually added in. We should update controller-gen
+                  # to handle []*int properly itself.
+                  nullable: true
+                type: array
+              attributes:
+                items:
+                  properties:
+                    handle_id:
+                      type: string
+                    secondary:
+                      additionalProperties:
+                        type: string
+                      type: object
+                  type: object
+                type: array
+              cidr:
+                type: string
+              deleted:
+                type: boolean
+              strictAffinity:
+                type: boolean
+              unallocated:
+                items:
+                  type: integer
+                type: array
+            required:
+            - allocations
+            - attributes
+            - cidr
+            - strictAffinity
+            - unallocated
+            type: object
+        type: object
+    served: true
+    storage: true
+status:
+  acceptedNames:
+    kind: ""
+    plural: ""
+  conditions: []
+  storedVersions: []
+
+---
+# Source: crds/calico/kdd/crd.projectcalico.org_ipamconfigs.yaml
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: ipamconfigs.crd.projectcalico.org
+spec:
+  group: crd.projectcalico.org
+  names:
+    kind: IPAMConfig
+    listKind: IPAMConfigList
+    plural: ipamconfigs
+    singular: ipamconfig
+  scope: Cluster
+  versions:
+  - name: v1
+    schema:
+      openAPIV3Schema:
+        properties:
+          apiVersion:
+            description: 'APIVersion defines the versioned schema of this representation
+              of an object. Servers should convert recognized schemas to the latest
+              internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            type: string
+          kind:
+            description: 'Kind is a string value representing the REST resource this
+              object represents. Servers may infer this from the endpoint the client
+              submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            type: string
+          metadata:
+            type: object
+          spec:
+            description: IPAMConfigSpec contains the specification for an IPAMConfig
+              resource.
+            properties:
+              autoAllocateBlocks:
+                type: boolean
+              maxBlocksPerHost:
+                description: MaxBlocksPerHost, if non-zero, is the max number of blocks
+                  that can be affine to each host.
+                type: integer
+              strictAffinity:
+                type: boolean
+            required:
+            - autoAllocateBlocks
+            - strictAffinity
+            type: object
+        type: object
+    served: true
+    storage: true
+status:
+  acceptedNames:
+    kind: ""
+    plural: ""
+  conditions: []
+  storedVersions: []
+
+---
+# Source: crds/calico/kdd/crd.projectcalico.org_ipamhandles.yaml
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: ipamhandles.crd.projectcalico.org
+spec:
+  group: crd.projectcalico.org
+  names:
+    kind: IPAMHandle
+    listKind: IPAMHandleList
+    plural: ipamhandles
+    singular: ipamhandle
+  scope: Cluster
+  versions:
+  - name: v1
+    schema:
+      openAPIV3Schema:
+        properties:
+          apiVersion:
+            description: 'APIVersion defines the versioned schema of this representation
+              of an object. Servers should convert recognized schemas to the latest
+              internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            type: string
+          kind:
+            description: 'Kind is a string value representing the REST resource this
+              object represents. Servers may infer this from the endpoint the client
+              submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            type: string
+          metadata:
+            type: object
+          spec:
+            description: IPAMHandleSpec contains the specification for an IPAMHandle
+              resource.
+            properties:
+              block:
+                additionalProperties:
+                  type: integer
+                type: object
+              deleted:
+                type: boolean
+              handleID:
+                type: string
+            required:
+            - block
+            - handleID
+            type: object
+        type: object
+    served: true
+    storage: true
+status:
+  acceptedNames:
+    kind: ""
+    plural: ""
+  conditions: []
+  storedVersions: []
+
+---
+# Source: crds/calico/kdd/crd.projectcalico.org_ippools.yaml
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: ippools.crd.projectcalico.org
+spec:
+  group: crd.projectcalico.org
+  names:
+    kind: IPPool
+    listKind: IPPoolList
+    plural: ippools
+    singular: ippool
+  scope: Cluster
+  versions:
+  - name: v1
+    schema:
+      openAPIV3Schema:
+        properties:
+          apiVersion:
+            description: 'APIVersion defines the versioned schema of this representation
+              of an object. Servers should convert recognized schemas to the latest
+              internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            type: string
+          kind:
+            description: 'Kind is a string value representing the REST resource this
+              object represents. Servers may infer this from the endpoint the client
+              submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            type: string
+          metadata:
+            type: object
+          spec:
+            description: IPPoolSpec contains the specification for an IPPool resource.
+            properties:
+              blockSize:
+                description: The block size to use for IP address assignments from
+                  this pool. Defaults to 26 for IPv4 and 112 for IPv6.
+                type: integer
+              cidr:
+                description: The pool CIDR.
+                type: string
+              disabled:
+                description: When disabled is true, Calico IPAM will not assign addresses
+                  from this pool.
+                type: boolean
+              ipip:
+                description: 'Deprecated: this field is only used for APIv1 backwards
+                  compatibility. Setting this field is not allowed, this field is
+                  for internal use only.'
+                properties:
+                  enabled:
+                    description: When enabled is true, ipip tunneling will be used
+                      to deliver packets to destinations within this pool.
+                    type: boolean
+                  mode:
+                    description: The IPIP mode.  This can be one of "always" or "cross-subnet".  A
+                      mode of "always" will also use IPIP tunneling for routing to
+                      destination IP addresses within this pool.  A mode of "cross-subnet"
+                      will only use IPIP tunneling when the destination node is on
+                      a different subnet to the originating node.  The default value
+                      (if not specified) is "always".
+                    type: string
+                type: object
+              ipipMode:
+                description: Contains configuration for IPIP tunneling for this pool.
+                  If not specified, then this is defaulted to "Never" (i.e. IPIP tunneling
+                  is disabled).
+                type: string
+              nat-outgoing:
+                description: 'Deprecated: this field is only used for APIv1 backwards
+                  compatibility. Setting this field is not allowed, this field is
+                  for internal use only.'
+                type: boolean
+              natOutgoing:
+                description: When nat-outgoing is true, packets sent from Calico networked
+                  containers in this pool to destinations outside of this pool will
+                  be masqueraded.
+                type: boolean
+              nodeSelector:
+                description: Allows IPPool to allocate for a specific node by label
+                  selector.
+                type: string
+              vxlanMode:
+                description: Contains configuration for VXLAN tunneling for this pool.
+                  If not specified, then this is defaulted to "Never" (i.e. VXLAN
+                  tunneling is disabled).
+                type: string
+            required:
+            - cidr
+            type: object
+        type: object
+    served: true
+    storage: true
+status:
+  acceptedNames:
+    kind: ""
+    plural: ""
+  conditions: []
+  storedVersions: []
+
+---
+# Source: crds/calico/kdd/crd.projectcalico.org_kubecontrollersconfigurations.yaml
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: kubecontrollersconfigurations.crd.projectcalico.org
+spec:
+  group: crd.projectcalico.org
+  names:
+    kind: KubeControllersConfiguration
+    listKind: KubeControllersConfigurationList
+    plural: kubecontrollersconfigurations
+    singular: kubecontrollersconfiguration
+  scope: Cluster
+  versions:
+  - name: v1
+    schema:
+      openAPIV3Schema:
+        properties:
+          apiVersion:
+            description: 'APIVersion defines the versioned schema of this representation
+              of an object. Servers should convert recognized schemas to the latest
+              internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            type: string
+          kind:
+            description: 'Kind is a string value representing the REST resource this
+              object represents. Servers may infer this from the endpoint the client
+              submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            type: string
+          metadata:
+            type: object
+          spec:
+            description: KubeControllersConfigurationSpec contains the values of the
+              Kubernetes controllers configuration.
+            properties:
+              controllers:
+                description: Controllers enables and configures individual Kubernetes
+                  controllers
+                properties:
+                  namespace:
+                    description: Namespace enables and configures the namespace controller.
+                      Enabled by default, set to nil to disable.
+                    properties:
+                      reconcilerPeriod:
+                        description: 'ReconcilerPeriod is the period to perform reconciliation
+                          with the Calico datastore. [Default: 5m]'
+                        type: string
+                    type: object
+                  node:
+                    description: Node enables and configures the node controller.
+                      Enabled by default, set to nil to disable.
+                    properties:
+                      hostEndpoint:
+                        description: HostEndpoint controls syncing nodes to host endpoints.
+                          Disabled by default, set to nil to disable.
+                        properties:
+                          autoCreate:
+                            description: 'AutoCreate enables automatic creation of
+                              host endpoints for every node. [Default: Disabled]'
+                            type: string
+                        type: object
+                      reconcilerPeriod:
+                        description: 'ReconcilerPeriod is the period to perform reconciliation
+                          with the Calico datastore. [Default: 5m]'
+                        type: string
+                      syncLabels:
+                        description: 'SyncLabels controls whether to copy Kubernetes
+                          node labels to Calico nodes. [Default: Enabled]'
+                        type: string
+                    type: object
+                  policy:
+                    description: Policy enables and configures the policy controller.
+                      Enabled by default, set to nil to disable.
+                    properties:
+                      reconcilerPeriod:
+                        description: 'ReconcilerPeriod is the period to perform reconciliation
+                          with the Calico datastore. [Default: 5m]'
+                        type: string
+                    type: object
+                  serviceAccount:
+                    description: ServiceAccount enables and configures the service
+                      account controller. Enabled by default, set to nil to disable.
+                    properties:
+                      reconcilerPeriod:
+                        description: 'ReconcilerPeriod is the period to perform reconciliation
+                          with the Calico datastore. [Default: 5m]'
+                        type: string
+                    type: object
+                  workloadEndpoint:
+                    description: WorkloadEndpoint enables and configures the workload
+                      endpoint controller. Enabled by default, set to nil to disable.
+                    properties:
+                      reconcilerPeriod:
+                        description: 'ReconcilerPeriod is the period to perform reconciliation
+                          with the Calico datastore. [Default: 5m]'
+                        type: string
+                    type: object
+                type: object
+              etcdV3CompactionPeriod:
+                description: 'EtcdV3CompactionPeriod is the period between etcdv3
+                  compaction requests. Set to 0 to disable. [Default: 10m]'
+                type: string
+              healthChecks:
+                description: 'HealthChecks enables or disables support for health
+                  checks [Default: Enabled]'
+                type: string
+              logSeverityScreen:
+                description: 'LogSeverityScreen is the log severity above which logs
+                  are sent to the stdout. [Default: Info]'
+                type: string
+            required:
+            - controllers
+            type: object
+          status:
+            description: KubeControllersConfigurationStatus represents the status
+              of the configuration. It's useful for admins to be able to see the actual
+              config that was applied, which can be modified by environment variables
+              on the kube-controllers process.
+            properties:
+              environmentVars:
+                additionalProperties:
+                  type: string
+                description: EnvironmentVars contains the environment variables on
+                  the kube-controllers that influenced the RunningConfig.
+                type: object
+              runningConfig:
+                description: RunningConfig contains the effective config that is running
+                  in the kube-controllers pod, after merging the API resource with
+                  any environment variables.
+                properties:
+                  controllers:
+                    description: Controllers enables and configures individual Kubernetes
+                      controllers
+                    properties:
+                      namespace:
+                        description: Namespace enables and configures the namespace
+                          controller. Enabled by default, set to nil to disable.
+                        properties:
+                          reconcilerPeriod:
+                            description: 'ReconcilerPeriod is the period to perform
+                              reconciliation with the Calico datastore. [Default:
+                              5m]'
+                            type: string
+                        type: object
+                      node:
+                        description: Node enables and configures the node controller.
+                          Enabled by default, set to nil to disable.
+                        properties:
+                          hostEndpoint:
+                            description: HostEndpoint controls syncing nodes to host
+                              endpoints. Disabled by default, set to nil to disable.
+                            properties:
+                              autoCreate:
+                                description: 'AutoCreate enables automatic creation
+                                  of host endpoints for every node. [Default: Disabled]'
+                                type: string
+                            type: object
+                          reconcilerPeriod:
+                            description: 'ReconcilerPeriod is the period to perform
+                              reconciliation with the Calico datastore. [Default:
+                              5m]'
+                            type: string
+                          syncLabels:
+                            description: 'SyncLabels controls whether to copy Kubernetes
+                              node labels to Calico nodes. [Default: Enabled]'
+                            type: string
+                        type: object
+                      policy:
+                        description: Policy enables and configures the policy controller.
+                          Enabled by default, set to nil to disable.
+                        properties:
+                          reconcilerPeriod:
+                            description: 'ReconcilerPeriod is the period to perform
+                              reconciliation with the Calico datastore. [Default:
+                              5m]'
+                            type: string
+                        type: object
+                      serviceAccount:
+                        description: ServiceAccount enables and configures the service
+                          account controller. Enabled by default, set to nil to disable.
+                        properties:
+                          reconcilerPeriod:
+                            description: 'ReconcilerPeriod is the period to perform
+                              reconciliation with the Calico datastore. [Default:
+                              5m]'
+                            type: string
+                        type: object
+                      workloadEndpoint:
+                        description: WorkloadEndpoint enables and configures the workload
+                          endpoint controller. Enabled by default, set to nil to disable.
+                        properties:
+                          reconcilerPeriod:
+                            description: 'ReconcilerPeriod is the period to perform
+                              reconciliation with the Calico datastore. [Default:
+                              5m]'
+                            type: string
+                        type: object
+                    type: object
+                  etcdV3CompactionPeriod:
+                    description: 'EtcdV3CompactionPeriod is the period between etcdv3
+                      compaction requests. Set to 0 to disable. [Default: 10m]'
+                    type: string
+                  healthChecks:
+                    description: 'HealthChecks enables or disables support for health
+                      checks [Default: Enabled]'
+                    type: string
+                  logSeverityScreen:
+                    description: 'LogSeverityScreen is the log severity above which
+                      logs are sent to the stdout. [Default: Info]'
+                    type: string
+                required:
+                - controllers
+                type: object
+            type: object
+        type: object
+    served: true
+    storage: true
+status:
+  acceptedNames:
+    kind: ""
+    plural: ""
+  conditions: []
+  storedVersions: []
+
+EOFSCRIBE
+  dateCreated = "2023-09-25T10:45:15.000Z"
+  lastUpdated = "2023-09-25T10:45:15.000Z"
+}

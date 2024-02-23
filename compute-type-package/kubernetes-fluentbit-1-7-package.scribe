@@ -1,0 +1,14 @@
+resource "compute-type-package" "kubernetes-fluentbit-1-7-package" {
+  code = "kubernetes-fluentbit-1-7-package"
+  name = "fluentbit 1.7 package"
+  category = "kubernetes.logging"
+  dateCreated = "2023-09-25T10:45:16.000Z"
+  description = "install fluentbit logging"
+  lastUpdated = "2024-01-31T17:30:02.000Z"
+  packageType = "fluentbit"
+  packageVersion = "1.7"
+  providerType = "kubernetes"
+  sortOrder = 40
+  specTemplates = [ { code = "kubernetes-fluentbit-1-7-resources-v1" } ]
+  type = "logging"
+}

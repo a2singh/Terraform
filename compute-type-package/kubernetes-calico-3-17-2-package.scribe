@@ -1,0 +1,32 @@
+resource "compute-type-package" "kubernetes-calico-3-17-2-package" {
+  code = "kubernetes-calico-3-17-2-package"
+  name = "calico 3.17.2 package"
+  category = "kubernetes.network"
+  dateCreated = "2023-09-25T10:45:15.000Z"
+  description = "install calico networking"
+  lastUpdated = "2024-01-31T17:30:02.000Z"
+  packageType = "calico"
+  packageVersion = "3.17.2"
+  providerType = "kubernetes"
+  restartDns = true
+  sortOrder = 10
+  specTemplates = [
+    { code = "kubernetes-tigera-calico-3-17-2-operator-bgp-resources-v1" },
+    {
+      code = "kubernetes-tigera-calico-3-17-2-operator-policy-resources-v1"
+    },
+    {
+      code = "kubernetes-tigera-calico-3-17-2-operator-ipam-resources-v1"
+    },
+    {
+      code = "kubernetes-tigera-calico-3-17-2-operator-network-resources-v1"
+    },
+    {
+      code = "kubernetes-tigera-calico-3-17-2-operator-operator-resources-v1"
+    },
+    { code = "kubernetes-tigera-calico-3-17-2-operator-spec-v1" },
+    { code = "kubernetes-calico-3-17-2-install-v1" }
+  ]
+  type = "network"
+  workloadReadyCheck = "calico-system.DaemonSet.calico-node"
+}

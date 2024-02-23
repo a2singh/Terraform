@@ -17,6 +17,12 @@ resource "compute-type-layout" "29e3b674-c4f3-4b27-a5a6-956b9391f812" {
   labels = [ "Singh Kube" ]
   lastUpdated = "2023-10-10T11:55:29.000Z"
   memoryRequirement = 4294967296
+  packages = [
+    { code = "kubernetes-calico-3-17-2-package" },
+    { code = "kubernetes-rook-1-15-package" },
+    { code = "kubernetes-fluentbit-1-7-package" },
+    { code = "kubernetes-prometheus-0-7-package" }
+  ]
   provisionType = { code = "vmware" }
   type = { code = "vmwareKubeMaster" }
 }

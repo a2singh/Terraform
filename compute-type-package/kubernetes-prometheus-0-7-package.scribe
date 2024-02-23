@@ -1,0 +1,23 @@
+resource "compute-type-package" "kubernetes-prometheus-0-7-package" {
+  code = "kubernetes-prometheus-0-7-package"
+  name = "prometheus 0.7 package"
+  category = "kubernetes.monitoring"
+  dateCreated = "2023-09-25T10:45:16.000Z"
+  description = "install prometheus cluster monitoring"
+  lastUpdated = "2024-01-31T17:30:02.000Z"
+  packageType = "prometheus"
+  packageVersion = "0.7"
+  providerType = "kubernetes"
+  sortOrder = 30
+  specTemplates = [
+    { code = "kubernetes-prometheus-0-7-setup-v1" },
+    { code = "kubernetes-prometheus-0-7-alertmanager-v1" },
+    { code = "kubernetes-prometheus-0-7-grafana-v1" },
+    { code = "kubernetes-prometheus-0-7-metrics-v1" },
+    { code = "kubernetes-prometheus-0-7-node-exporter-v1" },
+    { code = "kubernetes-prometheus-0-7-adapter-v1" },
+    { code = "kubernetes-prometheus-0-7-resources-v1" },
+    { code = "kubernetes-prometheus-0-7-service-v1" }
+  ]
+  type = "monitoring"
+}

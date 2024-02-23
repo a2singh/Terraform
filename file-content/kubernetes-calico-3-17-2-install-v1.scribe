@@ -1,0 +1,25 @@
+resource "file-content" "kubernetes-calico-3-17-2-install-v1" {
+  code = "kubernetes-calico-3-17-2-install-v1"
+  uuid = "5deeb5ed-aadb-4ca4-b6f4-5597944680da"
+  content = <<EOFSCRIBE
+# This section includes base Calico installation configuration.
+# For more information, see: https://docs.projectcalico.org/v3.17/reference/installation/api#operator.tigera.io/v1.Installation
+apiVersion: operator.tigera.io/v1
+kind: Installation
+metadata:
+  name: default
+spec:
+  # Configures Calico networking.
+  calicoNetwork:
+    # Note: The ipPools section cannot be modified post-install.
+    ipPools:
+    - blockSize: 26
+      cidr: <%=cluster.podCidr ?: '192.168.0.0/16'%>
+      encapsulation: VXLANCrossSubnet
+      natOutgoing: Enabled
+      nodeSelector: all()
+
+EOFSCRIBE
+  dateCreated = "2023-09-25T10:45:14.000Z"
+  lastUpdated = "2023-09-25T10:45:14.000Z"
+}

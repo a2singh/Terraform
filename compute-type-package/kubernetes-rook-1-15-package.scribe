@@ -1,0 +1,21 @@
+resource "compute-type-package" "kubernetes-rook-1-15-package" {
+  code = "kubernetes-rook-1-15-package"
+  name = "rook 1.15 package"
+  category = "kubernetes.storage"
+  dateCreated = "2023-09-25T10:45:15.000Z"
+  description = "install rook storage"
+  lastUpdated = "2024-01-31T17:30:02.000Z"
+  packageType = "rook"
+  packageVersion = "1.15"
+  providerType = "kubernetes"
+  sortOrder = 20
+  specTemplates = [
+    { code = "kubernetes-rook-1-15-resources-v1" },
+    { code = "kubernetes-rook-1-15-common-v1" },
+    { code = "kubernetes-rook-1-15-operator-v1" },
+    { code = "kubernetes-rook-1-15-cluster-v1" },
+    { code = "kubernetes-rook-1-15-storage-v1" }
+  ]
+  storageRuntime = "rook"
+  type = "storage"
+}
