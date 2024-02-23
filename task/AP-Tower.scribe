@@ -6,16 +6,16 @@ resource "task" "AP-Tower" {
   lastUpdated = "2023-11-22T11:06:09.000Z"
   options = [
     {
-      optionType = { code = "ansibleTowerInventoryId" }
-      value = { name = "phpIPAM" }
+      optionType = { code = "ansibleTowerIntegrationId" }
+      value = { name = "AP AnsibleTower" }
     },
     {
       optionType = { code = "ansibleTowerJobTemplateId" }
       value = { code = "ansibleTower.jobTemplate.12.24" }
     },
     {
-      optionType = { code = "ansibleTowerIntegrationId" }
-      value = { name = "AP AnsibleTower" }
+      optionType = { code = "ansibleTowerInventoryId" }
+      value = { name = "phpIPAM" }
     },
     {
       optionType = { code = "ansibleTowerExecuteMode" }
