@@ -1,12 +1,8 @@
 resource "catalog-item-type" "null" {
-  name = "AP-DISK-TEST"
-  uuid = "307189f5-a0d8-432f-ad8e-7ee6939eb101"
-  darkIconPath = "https://10.32.23.86/storage/logos/uploads/CatalogItemType/5/logo/AP-DISK-TEST_original.png"
-  dateCreated = "2023-10-17T18:41:49.000Z"
+  name = "ap-new-d"
+  uuid = "07ddc0be-9648-4e2b-9769-1836a00e9c6a"
+  dateCreated = "2024-02-09T12:44:13.000Z"
   formType = "form"
-  iconPath = "/branding/140x40/centos.svg"
-  lastUpdated = "2024-01-17T05:35:10.000Z"
-  logoSettings = "{\"type\":\"custom\"}"
+  lastUpdated = "2024-02-12T13:01:33.000Z"
   refType = "InstanceType"
-  visibility = "public"
 }
