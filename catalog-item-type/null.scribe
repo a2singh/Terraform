@@ -1,10 +1,8 @@
 resource "catalog-item-type" "null" {
-  name = "instance list"
-  uuid = "0ad69344-325e-4d03-9742-e5b63d4b280a"
-  dateCreated = "2023-11-01T22:48:59.000Z"
-  formType = "optionTypes"
-  lastUpdated = "2023-11-01T22:48:59.000Z"
-  optionTypes = [ { code = "vm" }, { code = "instanceList" } ]
-  refType = "OperationalWorkflow"
-  visibility = "public"
+  name = "multiple disk issue"
+  uuid = "07944c0d-ef72-4767-b455-1326a675479b"
+  dateCreated = "2024-02-19T08:35:01.000Z"
+  formType = "form"
+  lastUpdated = "2024-02-19T08:35:01.000Z"
+  refType = "InstanceType"
 }
