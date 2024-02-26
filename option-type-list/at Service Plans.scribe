@@ -1,0 +1,21 @@
+resource "option-type-list" "at Service Plans" {
+  name = "at Service Plans"
+  uuid = "1731df14-4362-4f3b-a424-15a40074295d"
+  apiType = "servicePlans"
+  labels = [ "service_plan" ]
+  realTime = true
+  requestScript = <<EOFSCRIBE
+if (input.morphcloud && input.morphgroup) {
+  results.zoneId = input.morphcloud
+  results.siteId = input.morphgroup
+}
+EOFSCRIBE
+  translationScript = <<EOFSCRIBE
+if (input.morphcloud && input.morphgroup) {
+  for (var x = 0; x < data.length; x++) {
+    results.push({name:data[x].name, value:data[x].id});
+  }
+}
+EOFSCRIBE
+  type = "api"
+}
