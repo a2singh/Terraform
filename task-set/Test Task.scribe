@@ -2,7 +2,7 @@ resource "task-set" "Test Task" {
   name = "Test Task"
   uuid = "dcd93e98-ef12-4033-bf5a-bcad190668c8"
   dateCreated = "2024-02-15T07:45:49.000Z"
-  lastUpdated = "2024-02-15T07:45:49.000Z"
-  taskSetTasks = [ { uuid = "5f0caa7c-0b0c-4014-865f-091548547428" } ]
+  lastUpdated = "2024-02-26T12:46:13.000Z"
+  optionTypes = [ { code = "API_Instance_List" } ]
   taskSetType = "operation"
 }

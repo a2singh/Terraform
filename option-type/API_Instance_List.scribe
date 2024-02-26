@@ -1,0 +1,11 @@
+resource "option-type" "API_Instance_List" {
+  code = "API_Instance_List"
+  name = "AT_Morph API instance"
+  uuid = "1b915174-2203-4268-b042-2e27d97d6fe0"
+  fieldContext = "config.customOptions"
+  fieldLabel = "instance"
+  fieldName = "API_Instance_List"
+  optionList = { name = "AT_MorphAPI_Instances" }
+  optionSource = "list"
+  type = "select"
+}
