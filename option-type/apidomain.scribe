@@ -1,0 +1,13 @@
+resource "option-type" "apidomain" {
+  code = "apidomain"
+  name = "AT_API_Domain"
+  uuid = "47f51dbd-1d51-4995-8626-f3a7f6164548"
+  fieldContext = "config.customOptions"
+  fieldLabel = "Domains"
+  fieldName = "apidomain"
+  labels = [ "API_Domain" ]
+  optionList = { name = "ap domain" }
+  optionSource = "list"
+  required = true
+  type = "select"
+}
