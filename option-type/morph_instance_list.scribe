@@ -1,0 +1,13 @@
+resource "option-type" "morph_instance_list" {
+  code = "morph_instance_list"
+  name = "AT_MorphAPI-Instance list"
+  uuid = "e5e647bf-bb37-44b9-9637-b77a50176953"
+  fieldContext = "config.customOptions"
+  fieldLabel = "Instance"
+  fieldName = "morph_instance_list"
+  labels = [ "MorphAPI_Instance_List" ]
+  optionList = { name = "AT_MorphAPI_Instances" }
+  optionSource = "list"
+  required = true
+  type = "select"
+}

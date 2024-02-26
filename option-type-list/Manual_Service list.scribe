@@ -1,0 +1,13 @@
+resource "option-type-list" "Manual_Service list" {
+  name = "Manual_Service list"
+  uuid = "2ea2ee40-6de5-4473-9a11-d12edad7229c"
+  initialDataset = <<EOFSCRIBE
+[
+  {"name": "cloud-init.service ", "value": "cloud-init.service "},
+  {"name": "vmtoolsd.service", "value": "vmtoolsd.service"}
+]
+EOFSCRIBE
+  labels = [ "Manual_Service_List" ]
+  realTime = true
+  type = "manual"
+}

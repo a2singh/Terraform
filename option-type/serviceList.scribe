@@ -5,7 +5,7 @@ resource "option-type" "serviceList" {
   fieldContext = "config.customOptions"
   fieldLabel = "Service List"
   fieldName = "serviceList"
-  optionList = { name = "Service list" }
+  optionList = { name = "Manual_Service list" }
   optionSource = "list"
   type = "select"
 }
