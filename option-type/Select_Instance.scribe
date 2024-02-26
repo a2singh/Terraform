@@ -1,9 +1,10 @@
 resource "option-type" "Select_Instance" {
   code = "Select_Instance"
-  name = "AT Instnace Select"
+  name = "AT-Select_Instnace_List"
   uuid = "ff45bc71-468b-4e00-ac27-1fea15084ea7"
   fieldContext = "config.customOptions"
   fieldLabel = "instance list"
   fieldName = "Select_Instance"
+  optionSource = "list"
   type = "select"
 }
