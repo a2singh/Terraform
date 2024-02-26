@@ -2,6 +2,7 @@ resource "option-type-list" "AT_MorphAPI_Instances" {
   name = "AT_MorphAPI_Instances"
   uuid = "769a1207-c1a6-4d65-b9f8-24e1aad7b904"
   apiType = "instances"
+  labels = [ "morph_api_instance" ]
   realTime = true
   type = "api"
 }
