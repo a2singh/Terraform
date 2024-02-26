@@ -1,0 +1,14 @@
+resource "option-type-list" "Test_Manual_Instance" {
+  name = "Test_Manual_Instance"
+  uuid = "d442f41e-1fb0-49f1-a361-2a7eb3055049"
+  initialDataset = <<EOFSCRIBE
+[
+{"name":"ap-new-4","value":296},
+{"name":"ap-newn5","value":297}
+ 
+]
+EOFSCRIBE
+  labels = [ "manual_Instance" ]
+  realTime = true
+  type = "manual"
+}
