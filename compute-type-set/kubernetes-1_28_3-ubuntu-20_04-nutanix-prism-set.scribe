@@ -1,0 +1,10 @@
+resource "compute-type-set" "kubernetes-1.28.3-ubuntu-20.04-nutanix-prism-set" {
+  code = "kubernetes-1.28.3-ubuntu-20.04-nutanix-prism-set"
+  name = "kubernetes master"
+  category = "ubuntu"
+  computeServerType = { code = "nutanix-prism-kube-master" }
+  installStorageRuntime = true
+  nameSuffix = "-master"
+  nodeType = "master"
+  workloadType = { code = "kubernetes-1.28.3-ubuntu-20.04-nutanix-prism" }
+}
