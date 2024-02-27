@@ -1,0 +1,14 @@
+resource "compute-type-set" "kubernetes-1.27.7-ubuntu-20.04-worker-nutanix-prism-set" {
+  code = "kubernetes-1.27.7-ubuntu-20.04-worker-nutanix-prism-set"
+  name = "kubernetes worker"
+  category = "ubuntu"
+  canAddNodes = true
+  computeServerType = { code = "nutanix-prism-kube-worker" }
+  dynamicCount = true
+  installStorageRuntime = true
+  nameSuffix = "-worker"
+  nodeCount = 3
+  nodeType = "worker"
+  priorityOrder = 1
+  workloadType = { code = "kubernetes-1.27.7-ubuntu-20.04-worker-nutanix-prism" }
+}
