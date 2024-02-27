@@ -1,0 +1,28 @@
+resource "file-content" "kubernetes-calico-3-26-0-install" {
+  code = "kubernetes-calico-3-26-0-install"
+  uuid = "42c328c2-8ff6-4428-a3bb-a9e227673533"
+  content = <<EOFSCRIBE
+# This section includes base Calico installation configuration.
+# For more information, see: https://projectcalico.docs.tigera.io/v3.22/reference/installation/api#operator.tigera.io/v1.Installation
+apiVersion: operator.tigera.io/v1
+kind: Installation
+metadata:
+  name: default
+spec:
+  imagePullSecrets:
+  - name: default-docker-secret
+  # Configures Calico networking.
+  registry: quay.io
+  calicoNetwork:
+    # Note: The ipPools section cannot be modified post-install.
+    ipPools:
+    - blockSize: 26
+      cidr: <%=cluster.podCidr ?: '172.20.0.0/16'%>
+      encapsulation: VXLANCrossSubnet
+      natOutgoing: Enabled
+      nodeSelector: all()
+
+EOFSCRIBE
+  dateCreated = "2023-11-29T10:37:30.000Z"
+  lastUpdated = "2023-11-29T10:37:30.000Z"
+}

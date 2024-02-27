@@ -1,0 +1,21 @@
+resource "compute-type-package" "kubernetes-nginx-ingress-operator-1-9-4-package" {
+  code = "kubernetes-nginx-ingress-operator-1-9-4-package"
+  name = "nginx ingress operator 1.9.4 package"
+  category = "kubernetes.ingress"
+  dateCreated = "2023-11-29T10:37:32.000Z"
+  description = "install nnginx ingress controllers"
+  lastUpdated = "2023-11-29T10:37:32.000Z"
+  packageType = "nginx"
+  packageVersion = "1.9.4"
+  providerType = "kubernetes"
+  sortOrder = 30
+  specTemplates = [
+    { code = "kubernetes-nginx-service-account-1-9-4" },
+    { code = "kubernetes-nginx-rbac-1-9-4" },
+    { code = "kubernetes-nginx-config-1-9-4" },
+    { code = "kubernetes-ingress-class-1-9-4" },
+    { code = "kubernetes-nginx-custom-resources-1-9-4" },
+    { code = "kubernetes-nginx-operator-deploy-1-9-4" }
+  ]
+  type = "ingress"
+}

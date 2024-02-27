@@ -1,0 +1,21 @@
+resource "compute-type-package" "kubernetes-rook-1-12-package" {
+  code = "kubernetes-rook-1-12-package"
+  name = "rook 1.12 package"
+  category = "kubernetes.storage"
+  dateCreated = "2023-11-29T10:37:31.000Z"
+  description = "install rook storage"
+  lastUpdated = "2023-11-29T10:37:31.000Z"
+  packageType = "rook"
+  packageVersion = "1.12"
+  providerType = "kubernetes"
+  sortOrder = 20
+  specTemplates = [
+    { code = "kubernetes-rook-1-12-resources-v1" },
+    { code = "kubernetes-rook-1-12-common-v1" },
+    { code = "kubernetes-rook-1-12-operator-v1" },
+    { code = "kubernetes-rook-1-12-cluster-v1" },
+    { code = "kubernetes-rook-1-12-storage-v1" }
+  ]
+  storageRuntime = "rook"
+  type = "storage"
+}

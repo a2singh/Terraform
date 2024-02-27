@@ -1,0 +1,25 @@
+resource "compute-type-package" "kubernetes-calico-3-26-0-package" {
+  code = "kubernetes-calico-3-26-0-package"
+  name = "calico 3.26.0 package"
+  category = "kubernetes.network"
+  dateCreated = "2023-11-29T10:37:30.000Z"
+  description = "install calico 3.26.0 networking"
+  lastUpdated = "2023-11-29T10:37:30.000Z"
+  packageType = "calico"
+  packageVersion = "3.26.0"
+  providerType = "kubernetes"
+  restartDns = true
+  sortOrder = 10
+  specTemplates = [
+    { code = "kubernetes-calico-3-26-0-calico-service-accounts" },
+    { code = "kubernetes-calico-3-26-0-calico-typha" },
+    { code = "kubernetes-calico-3-26-0-csi-driver" },
+    { code = "kubernetes-calico-3-26-2" },
+    { code = "kubernetes-tigera-calico-3-26-0-operator-spec" },
+    { code = "kubernetes-tigera-calico-3-26-0-operator-deploy" },
+    { code = "kubernetes-calico-3-26-0-install" },
+    { code = "kubernetes-calico-3-26-0-api-install" }
+  ]
+  type = "network"
+  workloadReadyCheck = "calico-system.DaemonSet.calico-node"
+}

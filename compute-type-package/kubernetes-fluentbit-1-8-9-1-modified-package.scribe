@@ -1,0 +1,14 @@
+resource "compute-type-package" "kubernetes-fluentbit-1-8-9-1-modified-package" {
+  code = "kubernetes-fluentbit-1-8-9-1-modified-package"
+  name = "fluentbit 1.8.9.1 modified package"
+  category = "kubernetes.logging"
+  dateCreated = "2023-11-29T10:37:31.000Z"
+  description = "install fluentbit logging"
+  lastUpdated = "2023-11-29T10:37:31.000Z"
+  packageType = "fluentbit"
+  packageVersion = "1.8.9.1"
+  providerType = "kubernetes"
+  sortOrder = 40
+  specTemplates = [ { code = "kubernetes-fluentbit-1-8-9-1-modified-resources-v1" } ]
+  type = "logging"
+}

@@ -1,0 +1,27 @@
+resource "compute-type-package" "kubernetes-prometheus-0-9-modified-package" {
+  code = "kubernetes-prometheus-0-9-modified-package"
+  name = "prometheus 0.9 modified package"
+  category = "kubernetes.monitoring"
+  dateCreated = "2023-11-29T10:37:31.000Z"
+  description = "install prometheus cluster monitoring"
+  lastUpdated = "2023-11-29T10:37:31.000Z"
+  packageType = "prometheus"
+  packageVersion = "0.9"
+  providerType = "kubernetes"
+  sortOrder = 30
+  specTemplates = [
+    { code = "kubernetes-prometheus-0-9-modified-setup" },
+    { code = "kubernetes-prometheus-0-9-setup-modified-deployment" },
+    { code = "kubernetes-prometheus-0-9-modified-alertmanager" },
+    { code = "kubernetes-prometheus-0-9-modified-grafana" },
+    { code = "kubernetes-prometheus-grafana-modified-deploy" },
+    { code = "kubernetes-prometheus-0-9-modified-metrics" },
+    { code = "kubernetes-prometheus-0-9-modified-node-exporter" },
+    { code = "kubernetes-prometheus-0-9-modified-adapter" },
+    { code = "kubernetes-prometheus-0-9-modified-resources" },
+    { code = "kubernetes-prometheus-resources-kind-modified" },
+    { code = "kubernetes-prometheus-0-9-modified-blackbox" },
+    { code = "kubernetes-prometheus-0-9-modified-service" }
+  ]
+  type = "monitoring"
+}
