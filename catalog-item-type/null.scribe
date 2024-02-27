@@ -1,9 +1,7 @@
 resource "catalog-item-type" "null" {
-  name = "AT-Workflow_Instance_List"
-  uuid = "0ad69344-325e-4d03-9742-e5b63d4b280a"
-  dateCreated = "2023-11-01T22:48:59.000Z"
-  formType = "optionTypes"
-  lastUpdated = "2024-02-26T13:42:08.000Z"
+  name = "ATS_Instance_List"
+  uuid = "0b41f3f2-b11b-449b-a22d-7c81f07c9f7c"
+  dateCreated = "2024-02-26T12:25:00.000Z"
+  lastUpdated = "2024-02-26T12:25:00.000Z"
   refType = "OperationalWorkflow"
-  visibility = "public"
 }
