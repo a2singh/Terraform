@@ -1,20 +1,9 @@
 resource "option-type-list" "morphcloud" {
   name = "morphcloud"
-  uuid = "5e02fe11-dc5a-42b3-ae9b-51b4f8b9d1f9"
+  uuid = "6c1c132c-6981-4d43-b4d6-5144db0a404b"
   apiType = "clouds"
-  description = "cloud"
   realTime = true
-  requestScript = <<EOFSCRIBE
-if (input.morphgroup) {
-  results.siteId = input.morphgroup
-}
-EOFSCRIBE
-  translationScript = <<EOFSCRIBE
-if (input.morphgroup) {
-  for(var x=0;x < data.length; x++) {
-   results.push({name: data[x].name,value:data[x].id});
-  }
-}
-EOFSCRIBE
+  requestScript = "results.siteId = input.morphgroup"
   type = "api"
+  visibility = "public"
 }
