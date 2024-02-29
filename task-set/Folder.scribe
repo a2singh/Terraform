@@ -1,0 +1,13 @@
+resource "task-set" "Folder" {
+  name = "Folder"
+  uuid = "27a65003-f2e4-4b7a-8f45-9aa38c6065d5"
+  dateCreated = "2024-02-29T14:11:47.000Z"
+  lastUpdated = "2024-02-29T14:11:47.000Z"
+  optionTypes = [
+    { code = "morphgroup" },
+    { code = "morphcloud" },
+    { code = "resourcePool" },
+    { code = "Folder" }
+  ]
+  taskSetType = "operation"
+}

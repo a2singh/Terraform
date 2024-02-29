@@ -1,0 +1,26 @@
+resource "option-type-list" "Folder" {
+  name = "Folder"
+  uuid = "0b3464b9-34ca-4ec8-85de-aeadf3b7a25b"
+  config = "{\"sourceHeaders\":[{\"name\":\"Authorization\",\"value\":\"Bearer 834d705d-b16d-4798-8a95-c0ded046c12c\",\"masked\":false}]}"
+  ignoreSSLErrors = true
+  realTime = true
+  requestScript = <<EOFSCRIBE
+results.push({name:"zoneId",value:input.morphcloud});
+results.push({name:"siteId",value:input.morphgroup});
+results.push({name:"resourcePoolId",value:input.resourcePoo});
+EOFSCRIBE
+  sourceUrl = "https://10.32.23.86/api/zones/14/folders"
+  translationScript = <<EOFSCRIBE
+var i = 0;
+results = [];
+
+// Check if data is defined and has the expected structure
+if (data && data.data && Array.isArray(data.data)) {
+    for (i; i < data.data.length; i++) {
+        results.push({ name: data.data[i].name, value: data.data[i].value });
+    }
+} else {
+    console.error("Data is not in the expected format or is undefined.");
+}
+EOFSCRIBE
+}

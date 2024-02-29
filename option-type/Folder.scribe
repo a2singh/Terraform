@@ -1,0 +1,12 @@
+resource "option-type" "Folder" {
+  code = "Folder"
+  name = "Folder"
+  uuid = "a2fd42e7-8cb4-49d5-8cb2-7c07f2cdc900"
+  dependsOnCode = "resourcePool"
+  fieldContext = "config.customOptions"
+  fieldLabel = "Folder"
+  fieldName = "Folder"
+  optionList = { name = "Folder" }
+  optionSource = "list"
+  type = "select"
+}
