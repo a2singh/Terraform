@@ -1,0 +1,8 @@
+resource "catalog-item-type" "at.205612" {
+  code = "at.205612"
+  name = "AT-205612"
+  uuid = "d795c05d-23a3-4f43-abb3-1b09a4254737"
+  dateCreated = "2024-02-29T07:53:29.000Z"
+  lastUpdated = "2024-02-29T07:53:29.000Z"
+  refType = "OperationalWorkflow"
+}
