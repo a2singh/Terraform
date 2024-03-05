@@ -1,0 +1,11 @@
+resource "option-type" "regions" {
+  code = "regions"
+  name = "Regions"
+  uuid = "9d88ac39-656e-43dd-bd49-d9123a80f4fa"
+  fieldContext = "config.customOptions"
+  fieldLabel = "Region"
+  fieldName = "regions"
+  optionList = { name = "regions" }
+  optionSource = "list"
+  type = "select"
+}

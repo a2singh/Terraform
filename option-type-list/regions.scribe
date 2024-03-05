@@ -1,0 +1,10 @@
+resource "option-type-list" "regions" {
+  name = "regions"
+  uuid = "1f537ea0-02cc-48a4-9eb3-b9b834f4614d"
+  initialDataset = <<EOFSCRIBE
+'Americas','americas'
+'Europe','europe'
+'Asiapac','asiapac'
+EOFSCRIBE
+  type = "manual"
+}
