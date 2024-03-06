@@ -12,7 +12,7 @@ resource "compute-type-layout" "kubernetes-1.26.1-ubuntu-20.04-nutanix-prism-sin
   description = "provision a Kubernetes 1.26 cluster on Ubuntu 20.04"
   groupType = { code = "kubernetes-cluster" }
   hasAutoScale = true
-  lastUpdated = "2024-02-27T11:37:23.000Z"
+  lastUpdated = "2024-03-06T06:52:40.000Z"
   memoryRequirement = 1073741824
   networkRuntime = "calico"
   optionTypes = [
