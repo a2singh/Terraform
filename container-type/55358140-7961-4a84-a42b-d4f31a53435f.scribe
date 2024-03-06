@@ -11,5 +11,4 @@ resource "container-type" "55358140-7961-4a84-a42b-d4f31a53435f" {
   shortName = "multiple"
   showServerLogs = true
   statTypeCode = "vm"
-  virtualImage = { code = "vmware.vsphere.image.9.vm-63421" }
 }
