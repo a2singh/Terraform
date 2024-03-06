@@ -1,0 +1,15 @@
+resource "catalog-item-type" "servicecmp" {
+  code = "servicecmp"
+  name = "ServiceCMP"
+  uuid = "84fe3cd0-3c98-415a-b57b-23a0e9bef05c"
+  dateCreated = "2024-03-06T17:39:32.000Z"
+  formType = "optionTypes"
+  labels = [ { name = "servicecmp" } ]
+  lastUpdated = "2024-03-06T17:39:32.000Z"
+  optionTypes = [
+    { code = "morph_instance_list" },
+    { code = "cpu" },
+    { code = "ram" }
+  ]
+  refType = "OperationalWorkflow"
+}
