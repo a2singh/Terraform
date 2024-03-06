@@ -1,0 +1,8 @@
+resource "task-set" "AT-Reconfigure Automation" {
+  name = "AT-Reconfigure Automation"
+  uuid = "b0a64240-38a8-4aec-a075-b020a01439fe"
+  dateCreated = "2024-03-06T17:34:31.000Z"
+  lastUpdated = "2024-03-06T17:34:31.000Z"
+  taskSetTasks = [ { uuid = "364b6d77-0fd8-46fb-8c72-4c70f50a9fa6" } ]
+  taskSetType = "operation"
+}

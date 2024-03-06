@@ -1,0 +1,20 @@
+resource "task" "resize.automation" {
+  code = "resize.automation"
+  name = "AT Resize Automation"
+  uuid = "3a1b2c67-99f4-4cad-9001-8b8ed34d00b7"
+  dateCreated = "2024-03-06T17:26:38.000Z"
+  executeTarget = "local"
+  lastUpdated = "2024-03-06T17:29:00.000Z"
+  options = [
+    {
+      optionType = { code = "pythonAdditionalPackages" }
+      value = "JSON"
+    },
+    {
+      content = { uuid = "2057d644-0f4b-4d00-952d-78081ae05612" }
+      optionType = { code = "pythonScript" }
+    }
+  ]
+  resultType = "json"
+  taskType = { code = "jythonTask" }
+}

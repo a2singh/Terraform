@@ -1,0 +1,5 @@
+resource "task-set-task" "364b6d77-0fd8-46fb-8c72-4c70f50a9fa6" {
+  uuid = "364b6d77-0fd8-46fb-8c72-4c70f50a9fa6"
+  task = { code = "resize.automation" }
+  taskPhase = "operation"
+}

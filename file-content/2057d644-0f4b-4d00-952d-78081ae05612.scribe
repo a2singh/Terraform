@@ -1,0 +1,28 @@
+resource "file-content" "2057d644-0f4b-4d00-952d-78081ae05612" {
+  uuid = "2057d644-0f4b-4d00-952d-78081ae05612"
+  content = <<EOFSCRIBE
+import requests
+
+url = "https://10.32.23.86/api/instances/393/resize"
+
+payload = {
+    "instance": { "plan": { "id": 5468 } },
+    "servicePlanOptions": {
+        "maxCores": 2,
+        "coresPerSocket": 2,
+        "maxMemory": 2048
+    },
+    "deleteOriginalVolumes": False
+}
+headers = {
+    "accept": "application/json",
+    "content-type": "application/json"
+}
+
+response = requests.put(url, json=payload, headers=headers)
+
+print(response.text)
+EOFSCRIBE
+  dateCreated = "2024-03-06T17:26:39.000Z"
+  lastUpdated = "2024-03-06T17:29:00.000Z"
+}
