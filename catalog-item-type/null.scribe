@@ -1,7 +1,8 @@
 resource "catalog-item-type" "null" {
-  name = "ATS_Instance_List"
-  uuid = "0b41f3f2-b11b-449b-a22d-7c81f07c9f7c"
-  dateCreated = "2024-02-26T12:25:00.000Z"
-  lastUpdated = "2024-02-26T12:25:00.000Z"
-  refType = "OperationalWorkflow"
+  name = "aung"
+  uuid = "ce1016b7-360b-497f-a556-32f46ec0bbd3"
+  dateCreated = "2023-11-14T07:13:13.000Z"
+  formType = "form"
+  lastUpdated = "2023-11-14T07:13:13.000Z"
+  refType = "InstanceType"
 }
