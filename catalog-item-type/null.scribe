@@ -1,8 +1,7 @@
 resource "catalog-item-type" "null" {
-  name = "Recharge Price"
-  uuid = "e72ea73a-24e2-4b90-8577-464aff6815d8"
-  dateCreated = "2023-11-02T06:30:27.000Z"
-  formType = "form"
-  lastUpdated = "2023-11-03T11:18:18.000Z"
-  refType = "InstanceType"
+  name = "test-workflow"
+  uuid = "f52157de-50ea-4045-8615-f5897567e238"
+  dateCreated = "2024-02-12T13:16:38.000Z"
+  lastUpdated = "2024-02-12T13:16:38.000Z"
+  refType = "OperationalWorkflow"
 }
