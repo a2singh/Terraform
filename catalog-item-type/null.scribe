@@ -1,14 +1,14 @@
 resource "catalog-item-type" "null" {
-  name = "AT-API Select List"
-  uuid = "718feee5-f47a-4112-a6a0-a5170ec21dcb"
-  dateCreated = "2023-12-04T12:11:07.000Z"
+  name = "AT-Service_Plan"
+  uuid = "b9499060-bfbf-4d29-8af6-3e3e17016fb7"
+  dateCreated = "2023-10-20T07:53:48.000Z"
   formType = "optionTypes"
-  lastUpdated = "2023-12-04T12:11:07.000Z"
+  lastUpdated = "2023-11-09T07:15:44.000Z"
   optionTypes = [
-    { code = "group" },
-    { code = "cloud" },
-    { code = "resourcepool" },
-    { code = "serviceplan" }
+    { code = "cpu" },
+    { code = "ram" },
+    { code = "plan" },
+    { code = "environment" }
   ]
   refType = "InstanceType"
 }
