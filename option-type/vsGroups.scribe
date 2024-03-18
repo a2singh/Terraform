@@ -1,0 +1,11 @@
+resource "option-type" "vsGroups" {
+  code = "vsGroups"
+  name = "vsGroups"
+  uuid = "e120073f-2377-4aed-9804-702f4b859391"
+  fieldContext = "config.customOptions"
+  fieldLabel = "vsGroups"
+  fieldName = "vsGroups"
+  optionList = { name = "vsGroups" }
+  optionSource = "list"
+  type = "select"
+}

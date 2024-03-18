@@ -1,0 +1,18 @@
+resource "option-type-list" "vsResourcepools" {
+  name = "vsResourcepools"
+  uuid = "28cd8423-7dec-4b0b-acdf-fab29a6cac5e"
+  apiType = "resourcePools"
+  realTime = true
+  requestScript = <<EOFSCRIBE
+if (input.vsClouds && input.vsGroups) {
+results.siteId = input.vsGroups
+results.zoneId = input.vsClouds
+}
+EOFSCRIBE
+  translationScript = <<EOFSCRIBE
+for (var x = 0; x < data.length; x++) {
+results.push({name:data[x].name, value:data[x].id});
+}
+EOFSCRIBE
+  type = "api"
+}

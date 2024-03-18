@@ -1,0 +1,7 @@
+resource "option-type-list" "vsGroups" {
+  name = "vsGroups"
+  uuid = "768539fd-563d-4621-9267-6b51045833bf"
+  apiType = "groups"
+  realTime = true
+  type = "api"
+}

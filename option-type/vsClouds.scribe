@@ -1,0 +1,12 @@
+resource "option-type" "vsClouds" {
+  code = "vsClouds"
+  name = "vsClouds"
+  uuid = "08d4ebdc-ec03-4564-be8c-8d89b4eedb4d"
+  dependsOnCode = "vsGroups"
+  fieldContext = "config.customOptions"
+  fieldLabel = "Cloud"
+  fieldName = "vsClouds"
+  optionList = { name = "amitcloud" }
+  optionSource = "list"
+  type = "select"
+}
