@@ -2,6 +2,7 @@ resource "option-type" "morphcloud" {
   code = "morphcloud"
   name = "morphcloud"
   uuid = "f3ba0ef0-aaf4-4b58-b201-f47a23585993"
+  dependsOnCode = "morphgroup"
   fieldContext = "config.customOptions"
   fieldLabel = "Cloud"
   fieldName = "morphcloud"

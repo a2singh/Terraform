@@ -4,8 +4,10 @@ resource "option-type-list" "API Resource Pool" {
   apiType = "resourcePools"
   realTime = true
   requestScript = <<EOFSCRIBE
+if (input.morphcloud) {
 results.zoneId = input.morphcloud
 results.siteId = input.morphgroup
+}
 EOFSCRIBE
   translationScript = <<EOFSCRIBE
 var i=0;
