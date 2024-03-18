@@ -1,13 +1,9 @@
 resource "catalog-item-type" "null" {
-  name = "205649-ap"
-  uuid = "37b47e6f-0c7a-45e6-951a-1d6f8c94e7e8"
-  dateCreated = "2024-03-18T11:32:43.000Z"
+  name = "AP test workflow"
+  uuid = "c976730a-beae-4687-9ef2-f4db94a8441e"
+  dateCreated = "2024-02-27T10:20:27.000Z"
   formType = "optionTypes"
-  lastUpdated = "2024-03-18T11:32:43.000Z"
-  optionTypes = [
-    { code = "morphgroup" },
-    { code = "morphcloud" },
-    { code = "resourcePool" }
-  ]
-  refType = "InstanceType"
+  lastUpdated = "2024-02-27T10:20:27.000Z"
+  optionTypes = [ { code = "morph_instance_list" } ]
+  refType = "OperationalWorkflow"
 }
