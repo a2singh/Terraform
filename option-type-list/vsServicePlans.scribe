@@ -1,0 +1,16 @@
+resource "option-type-list" "vsServicePlans" {
+  name = "vsServicePlans"
+  uuid = "3e2438c7-329c-407a-9d8c-5e3840fbc6f4"
+  apiType = "servicePlans"
+  realTime = true
+  requestScript = <<EOFSCRIBE
+results.siteId = input.vsGroups
+results.zoneId = input.vsClouds
+EOFSCRIBE
+  translationScript = <<EOFSCRIBE
+for (var x = 0; x < data.length; x++) {
+    results.push({name:data[x].name, value:data[x].id});
+  }
+EOFSCRIBE
+  type = "api"
+}

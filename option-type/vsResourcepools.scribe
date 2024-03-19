@@ -2,7 +2,7 @@ resource "option-type" "vsResourcepools" {
   code = "vsResourcepools"
   name = "vsResourcepools"
   uuid = "1369b42a-8f68-4958-9727-6f06cad375da"
-  dependsOnCode = "vsClouds"
+  dependsOnCode = "vsServicePlans"
   fieldContext = "config.customOptions"
   fieldLabel = "Resourcepools"
   fieldName = "vsResourcepools"

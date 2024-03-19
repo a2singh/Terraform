@@ -3,17 +3,11 @@ resource "option-type-list" "amitcloud" {
   uuid = "9b7a2fdd-7aef-45ef-81ac-0be61e2052bd"
   apiType = "clouds"
   realTime = true
-  requestScript = <<EOFSCRIBE
-if (input.vsGroups) {
-  results.siteId = input.vsGroups
-}
-EOFSCRIBE
+  requestScript = "results.siteId = input.vsGroups"
   translationScript = <<EOFSCRIBE
-if (input.vsGroups) {
-  for(var x=0;x < data.length; x++) {
+for(var x=0;x < data.length; x++) {
    results.push({name: data[x].name,value:data[x].id});
   }
-}
 EOFSCRIBE
   type = "api"
 }

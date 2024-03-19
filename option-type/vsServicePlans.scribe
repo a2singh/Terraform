@@ -1,0 +1,13 @@
+resource "option-type" "vsServicePlans" {
+  code = "vsServicePlans"
+  name = "vsServicePlans"
+  uuid = "36c7e123-66b6-40b4-9e93-3b1a428568b2"
+  dependsOnCode = "vsClouds"
+  fieldContext = "config.customOptions"
+  fieldLabel = "vsServicePlans"
+  fieldName = "vsServicePlans"
+  optionList = { name = "vsServicePlans" }
+  optionSource = "list"
+  requireOnCode = "vsResourcepools"
+  type = "select"
+}
