@@ -3,6 +3,10 @@ resource "option-type-list" "vsLayouts" {
   uuid = "2d465be3-2fe9-42dd-809a-c9b97727a42a"
   apiType = "instanceTypeLayouts"
   realTime = true
+  requestScript = <<EOFSCRIBE
+results.siteId = input.vsGroups
+results.zoneId = input.vsClouds
+EOFSCRIBE
   translationScript = <<EOFSCRIBE
 for (var x = 0; x < data.length; x++) {
 results.push({name:data[x].name, value:data[x].id});

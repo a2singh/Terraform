@@ -1,0 +1,12 @@
+resource "option-type" "vsLayouts" {
+  code = "vsLayouts"
+  name = "vsLayouts"
+  uuid = "8a75e2c8-f5c8-410c-880f-6d27f02e661c"
+  dependsOnCode = "vsClouds"
+  fieldContext = "config.customOptions"
+  fieldLabel = "vsLayouts"
+  fieldName = "vsLayouts"
+  optionList = { name = "vsLayouts" }
+  optionSource = "list"
+  type = "select"
+}
