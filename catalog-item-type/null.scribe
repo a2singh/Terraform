@@ -1,9 +1,13 @@
 resource "catalog-item-type" "null" {
-  name = "velanTest"
-  uuid = "1f2df8fa-c475-42aa-892a-195868eb1cc1"
-  dateCreated = "2023-10-31T13:39:24.000Z"
-  featured = true
-  formType = "form"
-  lastUpdated = "2023-10-31T13:39:24.000Z"
+  name = "205649-ap"
+  uuid = "37b47e6f-0c7a-45e6-951a-1d6f8c94e7e8"
+  dateCreated = "2024-03-18T11:32:43.000Z"
+  formType = "optionTypes"
+  lastUpdated = "2024-03-18T11:32:43.000Z"
+  optionTypes = [
+    { code = "morphgroup" },
+    { code = "morphcloud" },
+    { code = "resourcePool" }
+  ]
   refType = "InstanceType"
 }
