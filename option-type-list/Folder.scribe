@@ -1,7 +1,7 @@
 resource "option-type-list" "Folder" {
   name = "Folder"
   uuid = "0b3464b9-34ca-4ec8-85de-aeadf3b7a25b"
-  config = "{\"sourceHeaders\":[{\"name\":\"Authorization\",\"value\":\"Bearer 834d705d-b16d-4798-8a95-c0ded046c12c\",\"masked\":false}]}"
+  config = "{\"sourceHeaders\":[{\"name\":\"Authorization\",\"value\":\"Bearer a9b01a8d-299c-4b43-b7f9-b6c1c26fde3a\",\"masked\":false}]}"
   ignoreSSLErrors = true
   realTime = true
   requestScript = "results.push({name:\"zoneId\",value:input.morphcloud});"
