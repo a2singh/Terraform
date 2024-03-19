@@ -2,7 +2,7 @@ resource "task-set" "Test Workflow for optionlist" {
   name = "Test Workflow for optionlist"
   uuid = "9c79a7a3-008c-4e6c-9411-43dd3bff97cf"
   dateCreated = "2024-02-09T12:27:46.000Z"
-  lastUpdated = "2024-03-19T05:45:59.000Z"
+  lastUpdated = "2024-03-19T06:19:10.000Z"
   optionTypes = [
     { code = "vsGroups" },
     { code = "vsClouds" },

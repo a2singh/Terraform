@@ -7,6 +7,5 @@ resource "option-type" "vsGroups" {
   fieldName = "vsGroups"
   optionList = { name = "vsGroups" }
   optionSource = "list"
-  requireOnCode = "vsClouds"
   type = "select"
 }
