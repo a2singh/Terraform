@@ -9,6 +9,40 @@ results.zoneId = input.vsClouds
 results.planId = input.vsServicePlans
 EOFSCRIBE
   translationScript = <<EOFSCRIBE
+function parseObjectProperties (obj, parse) {
+  for (var k in obj) {
+    if (typeof obj[k] === 'object' && obj[k] !== null) {
+      parseObjectProperties(obj[k], parse)
+    } else {
+      parse(k, obj[k])
+    }
+  }
+}
+
+
+// then apply to the property the task you want, in this case just console
+console.log('---------Start Trans vsResourcepools Input------')
+parseObjectProperties(input, function(k, prop) {
+console.log(k + ': ' + prop)
+})
+console.log('---------Stop Trans vsResourcepools Input------')
+
+console.log('---------Start Trans vsResourcepools Data------')
+parseObjectProperties(data, function(k, prop) {
+console.log(k + ': ' + prop)
+})
+console.log('---------Stop Trans vsResourcepools Data------')
+
+console.log('---------Start Trans vsResourcepools Results ------')
+parseObjectProperties(results, function(k, prop) {
+console.log(k + ': ' + prop)
+})
+console.log('---------Stop Trans vsResourcepools Results------')
+
+
+
+
+
 for (var x = 0; x < data.length; x++) {
 results.push({name:data[x].name, value:data[x].id});
 }
