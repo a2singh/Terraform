@@ -12,5 +12,5 @@ resource "container-type" "1adf4708-e99e-470d-9acb-23d8c61d61f1" {
   shortName = "os"
   showServerLogs = true
   statTypeCode = "vm"
-  virtualImage = { code = "fusion.image.morpheus.centos.7.5-v4" }
+  virtualImage = { code = "vmware.vsphere.image.9.vm-170726" }
 }
