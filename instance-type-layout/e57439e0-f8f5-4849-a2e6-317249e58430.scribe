@@ -1,6 +1,6 @@
 resource "instance-type-layout" "e57439e0-f8f5-4849-a2e6-317249e58430" {
   code = "e57439e0-f8f5-4849-a2e6-317249e58430"
-  name = "AT-Custom-Layout"
+  name = "AT-Custom-CentOS-Layout"
   uuid = "2630eb34-37ad-4be6-9642-58c4303ccb2b"
   instanceType = { code = "atcent" }
   instanceVersion = "7.5"
