@@ -2,6 +2,9 @@ resource "task-set" "Power schedule Test" {
   name = "Power schedule Test"
   uuid = "828086f9-4684-404a-bfd5-7db0adb783ea"
   dateCreated = "2024-03-19T09:35:52.000Z"
-  lastUpdated = "2024-03-19T09:35:52.000Z"
-  taskSetTasks = [ { uuid = "5a3da79d-ff38-43c9-ab7b-40509ab380a1" } ]
+  lastUpdated = "2024-03-20T18:55:38.000Z"
+  taskSetTasks = [
+    { uuid = "19eeba02-8ed8-4ce2-a8ab-3af23acddcf9" },
+    { uuid = "c504df60-2d10-4dae-bf47-1fa09c8f126d" }
+  ]
 }

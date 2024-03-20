@@ -1,0 +1,5 @@
+resource "task-set-task" "c504df60-2d10-4dae-bf47-1fa09c8f126d" {
+  uuid = "c504df60-2d10-4dae-bf47-1fa09c8f126d"
+  task = { name = "Get Server Info" }
+  taskPhase = "start"
+}
