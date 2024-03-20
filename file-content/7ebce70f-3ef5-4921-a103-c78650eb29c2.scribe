@@ -1,0 +1,17 @@
+resource "file-content" "7ebce70f-3ef5-4921-a103-c78650eb29c2" {
+  uuid = "7ebce70f-3ef5-4921-a103-c78650eb29c2"
+  content = <<EOFSCRIBE
+import time
+
+def wait_for_2_minutes():
+    print("Waiting for 2 minutes...")
+    time.sleep(120)  # 120 seconds is equivalent to 2 minutes
+    print("Done waiting!")
+ 
+# Call the function to wait for 2 minutes
+wait_for_2_minutes()
+print(morpheus)
+EOFSCRIBE
+  dateCreated = "2024-03-20T10:50:27.000Z"
+  lastUpdated = "2024-03-20T10:56:24.000Z"
+}

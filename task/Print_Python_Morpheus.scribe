@@ -1,0 +1,14 @@
+resource "task" "Print_Python_Morpheus" {
+  name = "Print_Python_Morpheus"
+  uuid = "320f4001-17c7-4b25-a2cc-0b10569068be"
+  dateCreated = "2024-03-20T10:50:27.000Z"
+  executeTarget = "local"
+  lastUpdated = "2024-03-20T10:56:24.000Z"
+  options = [
+    {
+      content = { uuid = "7ebce70f-3ef5-4921-a103-c78650eb29c2" }
+      optionType = { code = "pythonScript" }
+    }
+  ]
+  taskType = { code = "jythonTask" }
+}
