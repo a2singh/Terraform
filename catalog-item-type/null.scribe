@@ -1,14 +1,7 @@
 resource "catalog-item-type" "null" {
-  name = "AT-Service_Plan"
-  uuid = "b9499060-bfbf-4d29-8af6-3e3e17016fb7"
-  dateCreated = "2023-10-20T07:53:48.000Z"
-  formType = "optionTypes"
-  lastUpdated = "2023-11-09T07:15:44.000Z"
-  optionTypes = [
-    { code = "cpu" },
-    { code = "ram" },
-    { code = "plan" },
-    { code = "environment" }
-  ]
-  refType = "InstanceType"
+  name = "ATS_Instance_List"
+  uuid = "0b41f3f2-b11b-449b-a22d-7c81f07c9f7c"
+  dateCreated = "2024-02-26T12:25:00.000Z"
+  lastUpdated = "2024-02-26T12:25:00.000Z"
+  refType = "OperationalWorkflow"
 }
