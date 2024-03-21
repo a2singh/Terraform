@@ -4,7 +4,8 @@ resource "catalog-item-type" "inputcatalog" {
   uuid = "21cc92ec-a733-4f15-afba-67058f652420"
   dateCreated = "2024-02-09T13:38:34.000Z"
   formType = "optionTypes"
-  lastUpdated = "2024-02-09T13:40:47.000Z"
+  lastUpdated = "2024-03-21T11:34:50.000Z"
   optionTypes = [ { code = "apdomain" } ]
   refType = "InstanceType"
+  visibility = "public"
 }
