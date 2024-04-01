@@ -1,0 +1,7 @@
+resource "task-set" "AT-Provisioning-Workflow" {
+  name = "AT-Provisioning-Workflow"
+  uuid = "71286e73-3209-44dd-9026-899c958e09d3"
+  dateCreated = "2024-04-01T09:07:16.000Z"
+  lastUpdated = "2024-04-01T09:07:16.000Z"
+  taskSetTasks = [ { uuid = "99515ba3-4249-45d0-9764-cb7da90e3d25" } ]
+}
