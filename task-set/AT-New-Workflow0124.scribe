@@ -1,0 +1,8 @@
+resource "task-set" "AT-New-Workflow0124" {
+  name = "AT-New-Workflow0124"
+  uuid = "6d6481b3-8386-4446-8110-23d0d143a4b8"
+  dateCreated = "2024-04-01T09:06:21.000Z"
+  lastUpdated = "2024-04-01T09:06:21.000Z"
+  taskSetTasks = [ { uuid = "a2a8a494-dea6-47c3-a6da-8c267b2afdf6" } ]
+  taskSetType = "operation"
+}
