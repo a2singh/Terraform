@@ -11,7 +11,4 @@ resource "container-type" "8941a95b-d21f-404b-a992-1a121120add2" {
   shortName = "win2012"
   showServerLogs = true
   statTypeCode = "vm"
-  virtualImage = {
-    code = "vcd.image.20.5e332f5f-c678-47ff-b2a1-97d4d9854db4.vappTemplate-4f4eb48c-bbff-4673-8eb5-a0453cb6a0ad"
-  }
 }
