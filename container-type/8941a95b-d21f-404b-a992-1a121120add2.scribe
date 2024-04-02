@@ -1,0 +1,17 @@
+resource "container-type" "8941a95b-d21f-404b-a992-1a121120add2" {
+  code = "8941a95b-d21f-404b-a992-1a121120add2"
+  name = "VS Windows 2012"
+  uuid = "77ff260f-1a16-400a-8a17-949e861cb7bf"
+  containerVersion = "1"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "vcd" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "win2012"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = {
+    code = "vcd.image.20.5e332f5f-c678-47ff-b2a1-97d4d9854db4.vappTemplate-4f4eb48c-bbff-4673-8eb5-a0453cb6a0ad"
+  }
+}
