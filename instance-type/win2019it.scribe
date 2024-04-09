@@ -1,0 +1,10 @@
+resource "instance-type" "win2019it" {
+  code = "win2019it"
+  name = "AT-MS Windows Server"
+  uuid = "02eadfc1-983a-40b2-b4b0-ecc1e14533c7"
+  category = "os"
+  deploymentService = ""
+  environmentPrefix = "Win_Proximus"
+  hasAutoScale = true
+  visibility = "public"
+}

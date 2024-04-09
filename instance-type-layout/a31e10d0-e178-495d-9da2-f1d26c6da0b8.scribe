@@ -1,10 +1,10 @@
 resource "instance-type-layout" "a31e10d0-e178-495d-9da2-f1d26c6da0b8" {
   code = "a31e10d0-e178-495d-9da2-f1d26c6da0b8"
-  name = "Windows 2012 Public Template"
+  name = "AT Windows 2019 Template"
   uuid = "c7ce0cdd-38de-4da3-80b1-deeba575842f"
   actions = [ { code = "generic-add-node" } ]
   hasAutoScale = true
-  instanceType = { code = "win" }
+  instanceType = { code = "win2019it" }
   instanceVersion = "1"
   memoryRequirement = 0
   provisionType = { code = "vcd" }

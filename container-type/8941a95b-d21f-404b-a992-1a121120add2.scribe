@@ -1,6 +1,6 @@
 resource "container-type" "8941a95b-d21f-404b-a992-1a121120add2" {
   code = "8941a95b-d21f-404b-a992-1a121120add2"
-  name = "VS Windows 2012"
+  name = "AT Windows 2019 Template"
   uuid = "77ff260f-1a16-400a-8a17-949e861cb7bf"
   containerVersion = "1"
   entryPoint = ""
@@ -8,7 +8,10 @@ resource "container-type" "8941a95b-d21f-404b-a992-1a121120add2" {
   provisionType = { code = "vcd" }
   repositoryImage = ""
   serverType = "vm"
-  shortName = "win2012"
+  shortName = "win2019"
   showServerLogs = true
   statTypeCode = "vm"
+  virtualImage = {
+    code = "vcd.image.20.29f91805-c85a-4a05-acc2-2ec85f53c0fa.vappTemplate-d9bdd396-b16b-4f7e-8be7-ea6ab56aca9e"
+  }
 }
