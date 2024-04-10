@@ -1,0 +1,11 @@
+resource "instance-type-layout" "94f92d4b-fdc5-40f5-b7b8-1db7f4c02f76" {
+  code = "94f92d4b-fdc5-40f5-b7b8-1db7f4c02f76"
+  name = "windows1010"
+  uuid = "62011534-5662-4a52-ae78-275ff5a08733"
+  actions = [ { code = "generic-add-node" } ]
+  hasAutoScale = false
+  instanceType = { code = "windows" }
+  instanceVersion = "win10"
+  memoryRequirement = 0
+  provisionType = { code = "vmware" }
+}
