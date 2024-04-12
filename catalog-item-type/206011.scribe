@@ -5,6 +5,6 @@ resource "catalog-item-type" "206011" {
   dateCreated = "2024-04-12T07:34:02.000Z"
   description = "Fujitsu Services GmbH-206011"
   formType = "form"
-  lastUpdated = "2024-04-12T07:59:06.000Z"
+  lastUpdated = "2024-04-12T08:01:21.000Z"
   refType = "AppTemplate"
 }
