@@ -2,6 +2,6 @@ resource "task-set" "AT-Ansible-Teardown" {
   name = "AT-Ansible-Teardown"
   uuid = "7eb56fd3-334b-4bbe-b876-c595b1bf0c68"
   dateCreated = "2024-04-12T09:38:01.000Z"
-  lastUpdated = "2024-04-12T09:38:01.000Z"
-  taskSetTasks = [ { uuid = "861feeea-f8f2-4420-8e6c-87f2db039cd9" } ]
+  lastUpdated = "2024-04-12T13:35:10.000Z"
+  taskSetTasks = [ { uuid = "8926c12a-15d5-42b2-9e06-8913860d6309" } ]
 }
