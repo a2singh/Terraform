@@ -1,0 +1,10 @@
+resource "compute-type-set" "docker-nutanix-prism-ubuntu-18.04-set" {
+  code = "docker-nutanix-prism-ubuntu-18.04-set"
+  name = "docker host"
+  canAddNodes = true
+  dynamicCount = true
+  installContainerRuntime = true
+  installStorageRuntime = true
+  nodeType = "worker"
+  workloadType = { code = "docker-nutanix-prism-ubuntu-18.04" }
+}
