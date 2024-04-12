@@ -9,4 +9,5 @@ resource "instance-type-layout" "133861bf-6a60-4b47-88e6-79debab96561" {
   instanceVersion = "20.04"
   memoryRequirement = 0
   provisionType = { code = "vmware" }
+  workloads = [ { code = "886b4b87-9d80-40ed-aec7-09874f24b287" } ]
 }

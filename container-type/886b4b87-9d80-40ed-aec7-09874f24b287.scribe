@@ -1,0 +1,17 @@
+resource "container-type" "886b4b87-9d80-40ed-aec7-09874f24b287" {
+  code = "886b4b87-9d80-40ed-aec7-09874f24b287"
+  name = "UbuntuRT"
+  uuid = "8c98b7a4-7ac0-4b61-b8f3-9f2c0fde0a9b"
+  containerVersion = "20.04"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "ubrt"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = {
+    code = "vmware.vsphere.image.morpheus.ubuntu.20.04.4-v2.ubuntu.20.04.4.amd64"
+  }
+}
