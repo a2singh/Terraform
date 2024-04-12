@@ -1,0 +1,12 @@
+resource "instance-type-layout" "133861bf-6a60-4b47-88e6-79debab96561" {
+  code = "133861bf-6a60-4b47-88e6-79debab96561"
+  name = "UbuntuRT"
+  uuid = "d683dee3-fd90-4f21-85e3-93d18bb4cab8"
+  actions = [ { code = "generic-add-node" } ]
+  description = "Regione Toscana"
+  hasAutoScale = true
+  instanceType = { code = "206013" }
+  instanceVersion = "20.04"
+  memoryRequirement = 0
+  provisionType = { code = "vmware" }
+}
