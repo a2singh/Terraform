@@ -1,0 +1,27 @@
+resource "task" "at" {
+  code = "at"
+  name = "AT-Task"
+  uuid = "7f2f1009-bf25-4464-8e99-fe07bda47340"
+  dateCreated = "2024-04-12T09:34:44.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2024-04-12T09:37:27.000Z"
+  options = [
+    {
+      optionType = { code = "ansibleTowerJobTemplateId" }
+      value = { code = "ansibleTower.jobTemplate.26.28" }
+    },
+    {
+      optionType = { code = "ansibleTowerIntegrationId" }
+      value = { name = "AT Ansible Tower" }
+    },
+    {
+      optionType = { code = "ansibleTowerInventoryId" }
+      value = "33"
+    },
+    {
+      optionType = { code = "ansibleTowerExecuteMode" }
+      value = "executeHost"
+    }
+  ]
+  taskType = { code = "ansibleTowerTask" }
+}
