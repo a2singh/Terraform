@@ -1,0 +1,15 @@
+resource "container-type" "1fc81e96-dd99-474d-827d-3abf8348d014" {
+  code = "1fc81e96-dd99-474d-827d-3abf8348d014"
+  name = "UbuntuRT"
+  uuid = "e523fa4c-b8cf-455d-9ced-635ea24920af"
+  containerVersion = "22.04"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "ubrt"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "vmware.vsphere.image.morpheus.ubuntu.22.04.20230131.amd64" }
+}
