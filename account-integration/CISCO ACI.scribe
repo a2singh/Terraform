@@ -1,0 +1,11 @@
+resource "account-integration" "CISCO ACI" {
+  name = "CISCO ACI"
+  uuid = "2d3a136a-a361-4947-98a0-26787a5f9d7b"
+  category = "network"
+  integrationType = { code = "aci" }
+  refId = "16"
+  refType = "NetworkServer"
+  servicePort = "22"
+  serviceUrl = "https://sandboxapicdc.cisco.com"
+  type = "aci"
+}

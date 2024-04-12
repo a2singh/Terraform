@@ -1,0 +1,26 @@
+resource "task" "AT-Ansible Tower Task" {
+  name = "AT-Ansible Tower Task"
+  uuid = "ca0f661f-894d-4dc7-a743-087712d192dc"
+  dateCreated = "2023-11-06T18:22:45.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2024-04-12T08:54:26.000Z"
+  options = [
+    {
+      optionType = { code = "ansibleTowerIntegrationId" }
+      value = { name = "AT Ansible Tower" }
+    },
+    {
+      optionType = { code = "ansibleTowerJobTemplateId" }
+      value = { code = "ansibleTower.jobTemplate.26.24" }
+    },
+    {
+      optionType = { code = "ansibleTowerInventoryId" }
+      value = { name = "CISCO ACI" }
+    },
+    {
+      optionType = { code = "ansibleTowerExecuteMode" }
+      value = "executeHost"
+    }
+  ]
+  taskType = { code = "ansibleTowerTask" }
+}
