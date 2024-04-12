@@ -9,4 +9,5 @@ resource "instance-type-layout" "307ff83f-f278-4f56-80d4-33419a185678" {
   instanceVersion = "22.04"
   memoryRequirement = 0
   provisionType = { code = "vmware" }
+  workloads = [ { code = "70dcd346-8567-4a1f-a85e-b67972af8cd3" } ]
 }

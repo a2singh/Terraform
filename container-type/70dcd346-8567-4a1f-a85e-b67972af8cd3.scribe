@@ -1,0 +1,15 @@
+resource "container-type" "70dcd346-8567-4a1f-a85e-b67972af8cd3" {
+  code = "70dcd346-8567-4a1f-a85e-b67972af8cd3"
+  name = "UbuntuSSR"
+  uuid = "f32a9f2f-189a-4fb9-9c60-21c41b836727"
+  containerVersion = "22.04"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "ubssr"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "vmware.vsphere.image.morpheus.ubuntu.22.04.20230131.amd64" }
+}
