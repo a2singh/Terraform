@@ -1,0 +1,12 @@
+resource "instance-type-layout" "307ff83f-f278-4f56-80d4-33419a185678" {
+  code = "307ff83f-f278-4f56-80d4-33419a185678"
+  name = "UbuntuSSR"
+  uuid = "9649bd3a-2eaf-417d-8012-848642abe0ad"
+  actions = [ { code = "generic-add-node" } ]
+  description = "Regione Toscana"
+  hasAutoScale = true
+  instanceType = { code = "206013" }
+  instanceVersion = "22.04"
+  memoryRequirement = 0
+  provisionType = { code = "vmware" }
+}
