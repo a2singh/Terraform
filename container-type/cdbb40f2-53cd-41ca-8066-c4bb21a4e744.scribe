@@ -1,0 +1,17 @@
+resource "container-type" "cdbb40f2-53cd-41ca-8066-c4bb21a4e744" {
+  code = "cdbb40f2-53cd-41ca-8066-c4bb21a4e744"
+  name = "UbuntuSSR"
+  uuid = "56146104-1ed0-4762-851b-58b0d8e47edd"
+  containerVersion = "20.04"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "ubssr"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = {
+    code = "vmware.vsphere.image.morpheus.ubuntu.20.04.4-v2.ubuntu.20.04.4.amd64"
+  }
+}
