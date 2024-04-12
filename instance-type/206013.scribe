@@ -1,0 +1,10 @@
+resource "instance-type" "206013" {
+  code = "206013"
+  name = "UBUNTU-206013"
+  uuid = "b6432671-d366-4b1c-86cb-0fd2bd435efd"
+  category = "os"
+  deploymentService = ""
+  description = "Regione Toscana"
+  environmentPrefix = "206013"
+  hasAutoScale = true
+}

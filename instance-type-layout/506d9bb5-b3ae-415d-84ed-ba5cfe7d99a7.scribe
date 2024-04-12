@@ -1,0 +1,12 @@
+resource "instance-type-layout" "506d9bb5-b3ae-415d-84ed-ba5cfe7d99a7" {
+  code = "506d9bb5-b3ae-415d-84ed-ba5cfe7d99a7"
+  name = "UbuntuRT"
+  uuid = "88fe15f6-0356-443f-a510-0ed04d7ef12d"
+  actions = [ { code = "generic-add-node" } ]
+  description = "Regione Toscana"
+  hasAutoScale = true
+  instanceType = { code = "206013" }
+  instanceVersion = "22.04"
+  memoryRequirement = 0
+  provisionType = { code = "vmware" }
+}
