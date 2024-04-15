@@ -7,5 +7,6 @@ resource "account-integration" "CISCO ACI" {
   refType = "NetworkServer"
   servicePort = "22"
   serviceUrl = "https://sandboxapicdc.cisco.com"
+  statusMessage = "aci api not reachable"
   type = "aci"
 }
