@@ -1,0 +1,26 @@
+resource "task" "sleep_ task" {
+  name = "sleep_ task"
+  uuid = "60f91668-7c17-4af6-83cb-a3f606ecfb70"
+  dateCreated = "2024-04-16T06:10:38.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2024-04-16T06:56:35.000Z"
+  options = [
+    {
+      optionType = { code = "ansibleTowerIntegrationId" }
+      value = { name = "AP AnsibleTower" }
+    },
+    {
+      optionType = { code = "ansibleTowerJobTemplateId" }
+      value = { code = "ansibleTower.jobTemplate.12.55" }
+    },
+    {
+      optionType = { code = "ansibleTowerInventoryId" }
+      value = "15"
+    },
+    {
+      optionType = { code = "ansibleTowerExecuteMode" }
+      value = "executeGroup"
+    }
+  ]
+  taskType = { code = "ansibleTowerTask" }
+}
