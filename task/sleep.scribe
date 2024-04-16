@@ -1,0 +1,15 @@
+resource "task" "sleep" {
+  name = "sleep"
+  uuid = "f534310b-7a2a-4173-987c-e30929ecb37a"
+  dateCreated = "2024-04-16T06:02:37.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2024-04-16T06:02:37.000Z"
+  options = [
+    {
+      optionType = { code = "ansibleGitId" }
+      value = { name = "AP Ansible" }
+    },
+    { optionType = { code = "ansiblePlaybook" }, value = "sleep.yml" }
+  ]
+  taskType = { code = "ansibleTask" }
+}
