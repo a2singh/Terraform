@@ -1,0 +1,5 @@
+resource "task-set-task" "964f5013-42a8-4de7-b85b-52400a9c6a6e" {
+  uuid = "964f5013-42a8-4de7-b85b-52400a9c6a6e"
+  task = { code = "AT-Task" }
+  taskPhase = "reconfigure"
+}
