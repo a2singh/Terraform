@@ -1,17 +1,17 @@
 resource "task" "AT-Task" {
   code = "AT-Task"
-  name = "AT-TestTask"
+  name = "AT-Print Task"
   uuid = "6b1bc7e7-d74d-4c70-a795-1cd3aa104b04"
   dateCreated = "2023-10-19T08:57:40.000Z"
   executeTarget = "resource"
   labels = [ "Test Task" ]
-  lastUpdated = "2024-02-16T05:08:42.000Z"
+  lastUpdated = "2024-04-17T08:33:29.000Z"
   options = [
-    { optionType = { code = "shell.sudo" }, value = "on" },
     {
       content = { uuid = "d44ce246-4116-4274-b807-e0a40f41afa6" }
       optionType = { code = "script" }
-    }
+    },
+    { optionType = { code = "shell.sudo" }, value = "on" }
   ]
   taskType = { code = "script" }
   visibility = "public"
