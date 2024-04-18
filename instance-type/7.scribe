@@ -1,0 +1,8 @@
+resource "instance-type" "7" {
+  code = "7"
+  name = "ap lb instance"
+  uuid = "c121e7ec-00d7-4502-bafa-90f55bab8e20"
+  category = "os"
+  deploymentService = ""
+  environmentPrefix = "AP_LB_INSTANCE"
+}

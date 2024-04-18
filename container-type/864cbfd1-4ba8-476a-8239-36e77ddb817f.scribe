@@ -1,0 +1,16 @@
+resource "container-type" "864cbfd1-4ba8-476a-8239-36e77ddb817f" {
+  code = "864cbfd1-4ba8-476a-8239-36e77ddb817f"
+  name = "ap lb node"
+  uuid = "62968352-2c14-4388-95f9-47361520d341"
+  containerPorts = [ { uuid = "521bc86c-1256-459d-9c77-f9d0220f4520" } ]
+  containerVersion = "7"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "lb"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "vmware.vsphere.image.morpheus.centos.7.5" }
+}

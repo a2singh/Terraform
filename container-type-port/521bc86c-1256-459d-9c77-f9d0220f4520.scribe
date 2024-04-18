@@ -1,0 +1,12 @@
+resource "container-type-port" "521bc86c-1256-459d-9c77-f9d0220f4520" {
+  name = "ap lb"
+  uuid = "521bc86c-1256-459d-9c77-f9d0220f4520"
+  export = true
+  exportName = "AP_LB"
+  externalPort = 80
+  internalPort = 80
+  link = true
+  loadBalance = true
+  loadBalanceProtocol = "HTTP"
+  visible = true
+}

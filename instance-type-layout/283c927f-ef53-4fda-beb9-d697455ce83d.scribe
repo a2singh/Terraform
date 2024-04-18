@@ -1,0 +1,10 @@
+resource "instance-type-layout" "283c927f-ef53-4fda-beb9-d697455ce83d" {
+  code = "283c927f-ef53-4fda-beb9-d697455ce83d"
+  name = "ap lb layout"
+  uuid = "ba58a2e4-8acc-4d90-b89b-b28180b6ac49"
+  instanceType = { code = "7" }
+  instanceVersion = "7"
+  memoryRequirement = 0
+  provisionType = { code = "vmware" }
+  workloads = [ { code = "864cbfd1-4ba8-476a-8239-36e77ddb817f" } ]
+}
