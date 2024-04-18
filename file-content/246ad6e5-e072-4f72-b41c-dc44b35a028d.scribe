@@ -1,0 +1,10 @@
+resource "file-content" "246ad6e5-e072-4f72-b41c-dc44b35a028d" {
+  uuid = "246ad6e5-e072-4f72-b41c-dc44b35a028d"
+  content = <<EOFSCRIBE
+$ProgressPreference = "SilentlyContinue"
+Start-Sleep -Seconds 60
+hostname
+EOFSCRIBE
+  dateCreated = "2024-04-18T07:29:49.000Z"
+  lastUpdated = "2024-04-18T07:29:49.000Z"
+}

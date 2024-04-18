@@ -1,0 +1,19 @@
+resource "task" "206047" {
+  name = "206047"
+  uuid = "4c2e291e-f1f7-4ebd-95ca-8839dd29f9f3"
+  dateCreated = "2024-04-18T07:29:49.000Z"
+  executeTarget = "remote"
+  lastUpdated = "2024-04-18T07:29:49.000Z"
+  options = [
+    { optionType = { code = "host" }, value = "10.32.20.55" },
+    { optionType = { code = "port" }, value = "5986" },
+    { optionType = { code = "username" }, value = "amit" },
+    { optionType = { code = "winrm.elevated" }, value = "on" },
+    {
+      content = { uuid = "246ad6e5-e072-4f72-b41c-dc44b35a028d" }
+      optionType = { code = "script" }
+    }
+  ]
+  taskType = { code = "winrmTask" }
+  visibility = "public"
+}
