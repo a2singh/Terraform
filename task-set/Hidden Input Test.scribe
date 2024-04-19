@@ -1,0 +1,8 @@
+resource "task-set" "Hidden Input Test" {
+  name = "Hidden Input Test"
+  uuid = "d3edde00-9eb4-439e-a57c-bdbb52bb2a7b"
+  dateCreated = "2024-04-19T15:19:17.000Z"
+  lastUpdated = "2024-04-19T15:19:17.000Z"
+  optionTypes = [ { code = "group" }, { code = "cloud" } ]
+  taskSetType = "operation"
+}
