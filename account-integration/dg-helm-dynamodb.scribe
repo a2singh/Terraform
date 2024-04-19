@@ -1,0 +1,10 @@
+resource "account-integration" "dg-helm-dynamodb" {
+  name = "dg-helm-dynamodb"
+  uuid = "f522071b-2e06-4acf-979a-2154dfeced44"
+  category = "cm-server"
+  config = { cacheEnabled = false, defaultBranch = "" }
+  integrationType = { code = "git" }
+  serviceFlag = true
+  serviceUrl = "https://github.com/dgaharwar/helm-dynamodb"
+  type = "git"
+}

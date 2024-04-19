@@ -1,0 +1,9 @@
+resource "file-content" "d25c0063-6414-4434-b7a3-e8e921e4ad1e" {
+  uuid = "d25c0063-6414-4434-b7a3-e8e921e4ad1e"
+  contentPath = ""
+  contentRef = "master"
+  dateCreated = "2024-04-19T16:14:11.000Z"
+  lastUpdated = "2024-04-19T16:14:11.000Z"
+  repository = { name = "helm-dynamodb" }
+  sourceType = "repository"
+}

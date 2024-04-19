@@ -1,0 +1,13 @@
+resource "code-repository" "helm-dynamodb" {
+  name = "helm-dynamodb"
+  uuid = "b73f7c60-584a-4f5b-84d9-7bb7cf4c5b4e"
+  dateCreated = "2024-04-19T16:12:59.000Z"
+  defaultBranch = "master"
+  displayName = "dg-helm-dynamodb"
+  externalId = "https://github.com/dgaharwar/helm-dynamodb"
+  integration = { name = "dg-helm-dynamodb" }
+  lastUpdated = "2024-04-19T16:23:15.000Z"
+  orgId = "//github.com/dgaharwar"
+  orgName = "//github.com/dgaharwar"
+  serviceUrl = "https://github.com/dgaharwar/helm-dynamodb"
+}

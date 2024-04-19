@@ -1,0 +1,10 @@
+resource "resource-spec-template" "47db5903-8d92-4204-853a-0a3e4ea45f16" {
+  name = "dg-dynamodb"
+  uuid = "47db5903-8d92-4204-853a-0a3e4ea45f16"
+  config = { terraform = { tfVersion = "" } }
+  dateCreated = "2024-04-19T16:14:11.000Z"
+  lastUpdated = "2024-04-19T16:14:11.000Z"
+  template = { uuid = "d25c0063-6414-4434-b7a3-e8e921e4ad1e" }
+  templateType = "Helm Chart"
+  type = { code = "helm" }
+}
