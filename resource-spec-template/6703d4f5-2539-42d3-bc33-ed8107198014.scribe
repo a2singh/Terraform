@@ -1,0 +1,10 @@
+resource "resource-spec-template" "6703d4f5-2539-42d3-bc33-ed8107198014" {
+  name = "dg-mariadb"
+  uuid = "6703d4f5-2539-42d3-bc33-ed8107198014"
+  config = { terraform = { tfVersion = "" } }
+  dateCreated = "2024-04-19T16:00:00.000Z"
+  lastUpdated = "2024-04-19T16:00:00.000Z"
+  template = { uuid = "6d25a5f5-4f8d-43e1-a61a-178d4f2eba88" }
+  templateType = "Kubernetes Spec"
+  type = { code = "kubernetes" }
+}
