@@ -5,10 +5,11 @@ resource "option-type" "cloud" {
   dependsOnCode = "group"
   description = "AT Cloud"
   fieldContext = "config.customOptions"
-  fieldLabel = "Cloud"
+  fieldLabel = "cloud"
   fieldName = "cloud"
   labels = [ "cloud" ]
   optionList = { name = "at cloud" }
   optionSource = "list"
   type = "select"
+  visibleOnCode = "false"
 }
