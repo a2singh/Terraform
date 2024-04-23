@@ -1,9 +1,8 @@
 resource "catalog-item-type" "null" {
-  name = "DELETE ME"
-  uuid = "60e242bc-9dca-4350-8eeb-371011e17544"
-  dateCreated = "2024-01-12T11:09:12.000Z"
+  name = "dg-form"
+  uuid = "7a40ca88-1095-4f92-aff6-ad925604cbea"
+  dateCreated = "2024-04-08T13:25:36.000Z"
   formType = "form"
-  lastUpdated = "2024-01-12T11:33:46.000Z"
+  lastUpdated = "2024-04-08T13:25:36.000Z"
   refType = "InstanceType"
-  visibility = "public"
 }
