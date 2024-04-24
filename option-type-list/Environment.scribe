@@ -1,0 +1,7 @@
+resource "option-type-list" "Environment" {
+  name = "Environment"
+  uuid = "a9ea1f69-85df-4b3a-9b7d-84b385d2ff07"
+  apiType = "environments"
+  realTime = true
+  type = "api"
+}

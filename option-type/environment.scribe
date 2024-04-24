@@ -4,7 +4,10 @@ resource "option-type" "environment" {
   uuid = "0c0c446f-b5ae-41d4-891e-6d6eaa3c9106"
   description = "AT Environment"
   fieldContext = "config.customOptions"
-  fieldLabel = "Environment"
+  fieldLabel = "environment"
   fieldName = "environment"
   labels = [ "Environment" ]
+  optionList = { name = "Environment" }
+  optionSource = "list"
+  type = "select"
 }
