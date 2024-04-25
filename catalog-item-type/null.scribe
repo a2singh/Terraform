@@ -1,8 +1,14 @@
 resource "catalog-item-type" "null" {
-  name = "dg-form"
-  uuid = "7a40ca88-1095-4f92-aff6-ad925604cbea"
-  dateCreated = "2024-04-08T13:25:36.000Z"
-  formType = "form"
-  lastUpdated = "2024-04-08T13:25:36.000Z"
-  refType = "InstanceType"
+  name = "Get Server info"
+  uuid = "ebbd0258-be7b-4a46-9104-3ce5717033ee"
+  dateCreated = "2024-02-06T07:23:13.000Z"
+  featured = true
+  formType = "optionTypes"
+  lastUpdated = "2024-02-20T11:42:28.000Z"
+  optionTypes = [
+    { code = "morph_instance_list" },
+    { code = "serviceList" },
+    { code = "serviceStatus" }
+  ]
+  refType = "OperationalWorkflow"
 }
