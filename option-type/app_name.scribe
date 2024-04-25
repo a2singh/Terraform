@@ -1,6 +1,6 @@
 resource "option-type" "app_name" {
   code = "app_name"
-  name = "appn_ame"
+  name = "app_name"
   uuid = "be4a6060-11fd-4e30-bf7d-c759ba355c82"
   description = "AT APP_Name"
   fieldContext = "config.customOptions"

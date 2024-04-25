@@ -1,16 +1,10 @@
 resource "catalog-item-type" "206137" {
   code = "206137"
-  name = "AT-206137"
-  uuid = "ffa35e23-ca1a-4ca9-96dc-3926bf61184f"
-  dateCreated = "2024-04-24T15:52:27.000Z"
-  description = "Unisys - TIS"
+  name = "Unisys-TIS 206137"
+  uuid = "388e1099-f6f7-4537-8b36-379d343ba56a"
+  dateCreated = "2024-04-25T10:45:12.000Z"
   formType = "optionTypes"
-  lastUpdated = "2024-04-25T09:55:01.000Z"
-  optionTypes = [
-    { code = "app_name" },
-    { code = "environment" },
-    { code = "network" },
-    { code = "plan" }
-  ]
+  lastUpdated = "2024-04-25T10:59:03.000Z"
+  optionTypes = [ { code = "app_name" }, { code = "network" }, { code = "plan" } ]
   refType = "AppTemplate"
 }
