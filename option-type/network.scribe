@@ -2,13 +2,12 @@ resource "option-type" "network" {
   code = "network"
   name = "ATNetwork"
   uuid = "87c55338-674a-4ad5-b182-2b367c32309d"
-  dependsOnCode = "resourcepool"
   description = "AT-Network Input"
   fieldContext = "config.customOptions"
   fieldLabel = "Network"
   fieldName = "network"
   labels = [ "network" ]
-  optionList = { name = "at network" }
+  optionList = { name = "at network(rest)" }
   optionSource = "list"
   type = "select"
 }

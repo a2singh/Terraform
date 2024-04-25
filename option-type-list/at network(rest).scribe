@@ -1,0 +1,14 @@
+resource "option-type-list" "at network(rest)" {
+  name = "at network(rest)"
+  uuid = "a34e4a5b-2703-459b-a089-768a097157f6"
+  config = "{\"sourceHeaders\":[{\"name\":\"Authorization\",\"value\":\"Bearer 0b85429a-9548-4634-8d56-2787a191df81\",\"masked\":false}]}"
+  description = "network"
+  ignoreSSLErrors = true
+  labels = [ "network" ]
+  sourceUrl = "https://10.32.23.86/api/networks"
+  translationScript = <<EOFSCRIBE
+for(var x=0;x < data.networks.length; x++) {
+  results.push({name: data.networks[x].name, value: data.networks[x].regionCode})
+}
+EOFSCRIBE
+}
