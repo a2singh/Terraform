@@ -1,6 +1,6 @@
 resource "option-type" "serviceplan" {
   code = "serviceplan"
-  name = "ATService Plan"
+  name = "serviceplan"
   uuid = "6c0f0d7e-f81f-4137-9519-a715a9fb72e9"
   description = "AT Service Plan"
   fieldContext = "config.customOptions"
