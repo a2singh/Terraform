@@ -9,7 +9,7 @@ resource "catalog-item-type" "testinstance" {
   optionTypes = [
     { code = "group" },
     { code = "cloud" },
-    { code = "serviceplan" },
+    { code = "plan" },
     { code = "resourcepool" },
     { code = "network" }
   ]
