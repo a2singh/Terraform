@@ -1,14 +1,8 @@
 resource "catalog-item-type" "null" {
-  name = "205649-ap"
-  uuid = "37b47e6f-0c7a-45e6-951a-1d6f8c94e7e8"
-  dateCreated = "2024-03-18T11:32:43.000Z"
-  formType = "optionTypes"
-  lastUpdated = "2024-03-21T11:34:59.000Z"
-  optionTypes = [
-    { code = "morphgroup" },
-    { code = "morphcloud" },
-    { code = "resourcePool" }
-  ]
-  refType = "InstanceType"
-  visibility = "public"
+  name = "206011"
+  uuid = "fde9dcd8-f17a-4045-9ac8-e6ec680adace"
+  dateCreated = "2024-04-12T07:58:31.000Z"
+  formType = "form"
+  lastUpdated = "2024-04-12T07:58:31.000Z"
+  refType = "AppTemplate"
 }
