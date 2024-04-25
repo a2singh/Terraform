@@ -4,10 +4,12 @@ resource "option-type-list" "at plan(rest)" {
   config = "{\"sourceHeaders\":[{\"name\":\"Authorization\",\"value\":\"Bearer 0b85429a-9548-4634-8d56-2787a191df81\",\"masked\":false}]}"
   ignoreSSLErrors = true
   labels = [ "plan" ]
+  requestScript = "//results.push({name: 'regionCode', value: data.azureRegion})"
   sourceUrl = "https://10.32.23.86/api/service-plans?max=700&offset=0&sort=name&direction=asc"
   translationScript = <<EOFSCRIBE
+var result = [];
 for(var x=0;x < data.servicePlans.length; x++) {
-	results.push({name: data.servicePlans[x].name, value: data.servicePlans[x].regionCode})
+	results.push({name: plan.name, value: data.plan.id})
 }
 EOFSCRIBE
 }
