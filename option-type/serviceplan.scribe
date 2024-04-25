@@ -2,13 +2,12 @@ resource "option-type" "serviceplan" {
   code = "serviceplan"
   name = "ATService Plan"
   uuid = "6c0f0d7e-f81f-4137-9519-a715a9fb72e9"
-  dependsOnCode = "cloud"
   description = "AT Service Plan"
   fieldContext = "config.customOptions"
   fieldLabel = "Service Plan"
   fieldName = "serviceplan"
   labels = [ "serviceplan" ]
-  optionList = { name = "at service plan" }
+  optionList = { name = "at plan(rest)" }
   optionSource = "list"
   type = "select"
 }
