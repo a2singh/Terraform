@@ -2,6 +2,7 @@ resource "option-type-list" "environment" {
   name = "environment"
   uuid = "a9ea1f69-85df-4b3a-9b7d-84b385d2ff07"
   apiType = "environments"
+  labels = [ "Environment" ]
   realTime = true
   type = "api"
 }

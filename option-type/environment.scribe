@@ -1,13 +1,13 @@
 resource "option-type" "environment" {
   code = "environment"
-  name = "ATEnvironment"
+  name = "environment"
   uuid = "0c0c446f-b5ae-41d4-891e-6d6eaa3c9106"
   description = "AT Environment"
   fieldContext = "config.customOptions"
-  fieldLabel = "environment"
+  fieldLabel = "Environment"
   fieldName = "environment"
   labels = [ "Environment" ]
-  optionList = { name = "at environment (rest)" }
+  optionList = { name = "environment" }
   optionSource = "list"
   type = "select"
 }

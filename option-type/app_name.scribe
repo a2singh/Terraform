@@ -1,0 +1,10 @@
+resource "option-type" "app_name" {
+  code = "app_name"
+  name = "appn_ame"
+  uuid = "be4a6060-11fd-4e30-bf7d-c759ba355c82"
+  description = "AT APP_Name"
+  fieldContext = "config.customOptions"
+  fieldLabel = "appname"
+  fieldName = "app_name"
+  labels = [ "app_name" ]
+}

@@ -1,8 +1,8 @@
 resource "option-type" "network" {
   code = "network"
-  name = "ATNetwork"
+  name = "network"
   uuid = "87c55338-674a-4ad5-b182-2b367c32309d"
-  description = "AT-Network Input"
+  description = "AT Network"
   fieldContext = "config.customOptions"
   fieldLabel = "Network"
   fieldName = "network"

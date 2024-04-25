@@ -5,9 +5,9 @@ resource "catalog-item-type" "206137" {
   dateCreated = "2024-04-24T15:52:27.000Z"
   description = "Unisys - TIS"
   formType = "optionTypes"
-  lastUpdated = "2024-04-25T07:57:26.000Z"
+  lastUpdated = "2024-04-25T08:46:40.000Z"
   optionTypes = [
-    { code = "appname" },
+    { code = "app_name" },
     { code = "environment" },
     { code = "network" },
     { code = "serviceplan" }
