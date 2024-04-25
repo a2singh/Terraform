@@ -7,7 +7,7 @@ resource "option-type" "environment" {
   fieldLabel = "environment"
   fieldName = "environment"
   labels = [ "Environment" ]
-  optionList = { name = "Environment" }
+  optionList = { name = "at environment (rest)" }
   optionSource = "list"
   type = "select"
 }

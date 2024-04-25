@@ -1,0 +1,12 @@
+resource "option-type-list" "at environment (rest)" {
+  name = "at environment (rest)"
+  uuid = "2166f1f3-6608-46e3-b96a-f7d2c75d2e44"
+  config = "{\"sourceHeaders\":[{\"name\":\"Authorization\",\"value\":\"Bearer 0b85429a-9548-4634-8d56-2787a191df81\",\"masked\":false}]}"
+  ignoreSSLErrors = true
+  sourceUrl = "https://10.32.23.86/api/environments"
+  translationScript = <<EOFSCRIBE
+for(var x=0;x < data.environments.length; x++) {
+  results.push({name: data.environments[x].name, value: data.environments[x].id})
+}
+EOFSCRIBE
+}
