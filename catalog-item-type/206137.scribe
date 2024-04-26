@@ -3,8 +3,9 @@ resource "catalog-item-type" "206137" {
   name = "Unisys-TIS 206137"
   uuid = "388e1099-f6f7-4537-8b36-379d343ba56a"
   dateCreated = "2024-04-25T10:45:12.000Z"
+  featured = true
   formType = "optionTypes"
-  lastUpdated = "2024-04-26T13:44:08.000Z"
+  lastUpdated = "2024-04-26T14:08:03.000Z"
   optionTypes = [
     { code = "app_name" },
     { code = "environment" },
