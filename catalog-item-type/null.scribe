@@ -1,14 +1,14 @@
 resource "catalog-item-type" "null" {
-  name = "ap-205616"
-  uuid = "a0e3b01a-bd82-4930-bd78-7c8c677beaf1"
-  dateCreated = "2024-02-29T11:25:33.000Z"
+  name = "ap-cent-app-cat"
+  uuid = "6cd61e1a-ca23-422a-bc7e-9c11b19f8b4e"
+  dateCreated = "2024-04-26T12:45:39.000Z"
   formType = "optionTypes"
-  lastUpdated = "2024-04-26T12:59:27.000Z"
+  lastUpdated = "2024-04-26T12:59:51.000Z"
   optionTypes = [
-    { code = "instance" },
-    { code = "morphgroup" },
-    { code = "morphcloud" },
-    { code = "resourcePool" }
+    { code = "app_name" },
+    { code = "network" },
+    { code = "plan" },
+    { code = "environment" }
   ]
-  refType = "InstanceType"
+  refType = "AppTemplate"
 }
