@@ -1,14 +1,12 @@
 resource "catalog-item-type" "null" {
-  name = "ap-cent-app-cat"
-  uuid = "6cd61e1a-ca23-422a-bc7e-9c11b19f8b4e"
-  dateCreated = "2024-04-26T12:45:39.000Z"
-  formType = "optionTypes"
-  lastUpdated = "2024-04-26T13:01:58.000Z"
-  optionTypes = [
-    { code = "app_name" },
-    { code = "network" },
-    { code = "plan" },
-    { code = "environment" }
-  ]
-  refType = "AppTemplate"
+  name = "AP-DISK-TEST"
+  uuid = "307189f5-a0d8-432f-ad8e-7ee6939eb101"
+  darkIconPath = "https://10.32.23.86/storage/logos/uploads/CatalogItemType/5/logo/AP-DISK-TEST_original.png"
+  dateCreated = "2023-10-17T18:41:49.000Z"
+  formType = "form"
+  iconPath = "/branding/140x40/centos.svg"
+  lastUpdated = "2024-04-12T08:09:41.000Z"
+  logoSettings = "{\"type\":\"custom\"}"
+  refType = "InstanceType"
+  visibility = "public"
 }
