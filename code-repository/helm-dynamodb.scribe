@@ -6,7 +6,7 @@ resource "code-repository" "helm-dynamodb" {
   displayName = "dg-helm-dynamodb"
   externalId = "https://github.com/dgaharwar/helm-dynamodb"
   integration = { name = "dg-helm-dynamodb" }
-  lastUpdated = "2024-04-22T06:39:36.000Z"
+  lastUpdated = "2024-04-28T06:49:48.000Z"
   orgId = "//github.com/dgaharwar"
   orgName = "//github.com/dgaharwar"
   serviceUrl = "https://github.com/dgaharwar/helm-dynamodb"
