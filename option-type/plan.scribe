@@ -1,13 +1,15 @@
 resource "option-type" "plan" {
   code = "plan"
-  name = "serviceplan"
-  uuid = "6c0f0d7e-f81f-4137-9519-a715a9fb72e9"
-  description = "AT Service Plan"
+  name = "AT Service plan Manual"
+  uuid = "4f68c9da-dafb-4821-ac1a-f949cc9b0ad3"
+  description = "AT Service Plan Manual"
   fieldContext = "config.customOptions"
-  fieldLabel = "plan"
+  fieldLabel = "Service plan"
   fieldName = "plan"
-  labels = [ "plan" ]
-  optionList = { name = "at plan(rest)" }
+  labels = [ "serviceplanmanual" ]
+  noBlank = true
+  optionList = { name = "Service plan Manual-AT" }
   optionSource = "list"
+  required = true
   type = "select"
 }
