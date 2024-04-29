@@ -1,0 +1,15 @@
+resource "container-type" "a65c21c8-1d25-4cb3-b0b9-4afa0759d8b9" {
+  code = "a65c21c8-1d25-4cb3-b0b9-4afa0759d8b9"
+  name = "AT-AZ-Ubuntu"
+  uuid = "d6c4178b-6a1d-43a6-bf52-f0b925acd429"
+  containerVersion = "18.04"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "azure" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "azubuntu"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { uuid = "6818ee69-faa5-4260-ad2f-bb9c572afa96" }
+}

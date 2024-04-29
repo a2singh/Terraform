@@ -1,0 +1,8 @@
+resource "instance-type" "ubnt" {
+  code = "ubnt"
+  name = "az Ubuntu"
+  uuid = "3b6ed7fc-05a7-4fb4-8221-2be2a9180211"
+  category = "os"
+  deploymentService = ""
+  environmentPrefix = "AZ_UBUNTU"
+}

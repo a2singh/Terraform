@@ -1,0 +1,10 @@
+resource "instance-type-layout" "c24ee400-ae34-41d4-81a8-368991b35f5a" {
+  code = "c24ee400-ae34-41d4-81a8-368991b35f5a"
+  name = "AT-AZ-Ubuntu"
+  uuid = "28eed4df-4a0a-4607-a378-33ef33748857"
+  instanceType = { code = "ubnt" }
+  instanceVersion = "18.04"
+  memoryRequirement = 2147483648
+  provisionType = { code = "azure" }
+  workloads = [ { code = "a65c21c8-1d25-4cb3-b0b9-4afa0759d8b9" } ]
+}
