@@ -1,0 +1,14 @@
+resource "task" "Replace License Warning Message" {
+  name = "Replace License Warning Message"
+  uuid = "6688f922-dbfc-4606-8d63-7cd64c3be80f"
+  dateCreated = "2024-04-29T12:13:22.000Z"
+  executeTarget = "local"
+  lastUpdated = "2024-04-29T12:13:22.000Z"
+  options = [
+    {
+      content = { uuid = "4bce6a72-0150-4baa-8bc1-14e8599613fb" }
+      optionType = { code = "groovyScript" }
+    }
+  ]
+  taskType = { code = "groovyTask" }
+}

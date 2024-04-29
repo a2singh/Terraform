@@ -1,0 +1,12 @@
+resource "file-content" "4bce6a72-0150-4baa-8bc1-14e8599613fb" {
+  uuid = "4bce6a72-0150-4baa-8bc1-14e8599613fb"
+  content = <<EOFSCRIBE
+// Get the element with the text-danger class
+var element = document.querySelector('.text-danger');
+// Replace the text content
+element.textContent = "This is my new license warning message";
+
+EOFSCRIBE
+  dateCreated = "2024-04-29T12:13:23.000Z"
+  lastUpdated = "2024-04-29T12:13:23.000Z"
+}
