@@ -1,9 +1,9 @@
 resource "catalog-item-type" "null" {
-  name = "AT-AZ-Catalog"
-  uuid = "765467c8-a916-4ab4-a680-42f06a735488"
-  dateCreated = "2024-04-29T10:19:59.000Z"
+  name = "AT-Kajal-Catalog"
+  uuid = "f5b794c5-48a6-43be-8ff7-5ab087740554"
+  dateCreated = "2024-04-01T12:13:39.000Z"
   formType = "optionTypes"
-  lastUpdated = "2024-04-29T10:30:11.000Z"
-  optionTypes = [ { code = "app_name" }, { code = "plan" } ]
-  refType = "AppTemplate"
+  lastUpdated = "2024-04-01T12:13:39.000Z"
+  optionTypes = [ { code = "Select_Instance" } ]
+  refType = "OperationalWorkflow"
 }
