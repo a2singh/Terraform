@@ -1,0 +1,8 @@
+resource "instance-type" "13.1" {
+  code = "13.1"
+  name = "Postgres Standalone"
+  uuid = "7ff5afd2-9201-44c8-baa9-a31d85ae1a4e"
+  category = "sql"
+  deploymentService = ""
+  environmentPrefix = "_POSTGRES_STANDALONE"
+}
