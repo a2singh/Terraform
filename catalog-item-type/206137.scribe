@@ -10,7 +10,7 @@ resource "catalog-item-type" "206137" {
     { code = "app_name" },
     { code = "environment" },
     { code = "network" },
-    { code = "plan" }
+    { code = "servicePlans" }
   ]
   refType = "AppTemplate"
 }
