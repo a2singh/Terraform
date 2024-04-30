@@ -4,37 +4,7 @@ resource "option-type-list" "at plan(rest)" {
   config = "{\"sourceHeaders\":[{\"name\":\"Authorization\",\"value\":\"Bearer 0b85429a-9548-4634-8d56-2787a191df81\",\"masked\":false}]}"
   ignoreSSLErrors = true
   labels = [ "plan" ]
-  requestScript = <<EOFSCRIBE
-function parseObjectProperties (obj, parse) {
-  for (var k in obj) {
-    if (typeof obj[k] === 'object' && obj[k] !== null) {
-      parseObjectProperties(obj[k], parse)
-    } else {
-      parse(k, obj[k])
-    }
-  }
-}
-console.log('---------Start Req Plan Input_206137------')
-parseObjectProperties(input, function(k, prop) {
-console.log(k + ': ' + prop)
-})
-console.log('---------Stop Req Plan Input_206137------')
-
-console.log('---------Start Req Plan Data_206137------')
-parseObjectProperties(data, function(k, prop) {
-console.log(k + ': ' + prop)
-})
-console.log('---------Stop Req Req Plan Data_206137------')
-
-results=[
-  {name:"layoutId",value: "1155"},
-  {name:"zoneId",value: "6"},
-  {name:"siteId",value: "2"},
-  {name:"resourcePoolId",value: "pool-81"},
-  {name:"max",value: 700}
-]
-EOFSCRIBE
-  sourceUrl = "https://10.32.23.86/api/instances/service-plans"
+  sourceUrl = "https://10.32.23.86/api/service-plans"
   translationScript = <<EOFSCRIBE
 for(var x=0;x < data.plans.length; x++) {
 	results.push({name: data.plans[x].name, value: data.plans[x].id})
