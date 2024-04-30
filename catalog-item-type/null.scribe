@@ -1,14 +1,14 @@
 resource "catalog-item-type" "null" {
-  name = "AT-API Select List"
-  uuid = "718feee5-f47a-4112-a6a0-a5170ec21dcb"
-  dateCreated = "2023-12-04T12:11:07.000Z"
+  name = "AT-AZ-206137"
+  uuid = "c97f5935-c45f-4e7c-955e-fc3cf59bff76"
+  dateCreated = "2024-04-29T11:24:09.000Z"
+  description = "Unisys-206137"
   formType = "optionTypes"
-  lastUpdated = "2023-12-04T12:11:07.000Z"
+  lastUpdated = "2024-04-30T12:54:21.000Z"
   optionTypes = [
-    { code = "group" },
-    { code = "cloud" },
-    { code = "resourcepool" },
+    { code = "app_name" },
+    { code = "network" },
     { code = "servicePlans" }
   ]
-  refType = "InstanceType"
+  refType = "AppTemplate"
 }
