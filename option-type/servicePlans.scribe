@@ -8,7 +8,7 @@ resource "option-type" "servicePlans" {
   fieldLabel = "plan"
   fieldName = "servicePlans"
   labels = [ "servicePlans" ]
-  optionList = { name = "at-servicePlans(REST)" }
+  optionList = { name = "AT-ServicePlans(REST)" }
   optionSource = "list"
   type = "select"
 }

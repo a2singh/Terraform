@@ -1,0 +1,13 @@
+resource "option-type-list" "AT-ServicePlans(REST)" {
+  name = "AT-ServicePlans(REST)"
+  uuid = "f5511b70-7246-4f28-9f51-e1d5429dd78f"
+  config = "{\"sourceHeaders\":[{\"name\":\"Authorization\",\"value\":\"Bearer 0b85429a-9548-4634-8d56-2787a191df81\",\"masked\":false}]}"
+  ignoreSSLErrors = true
+  labels = [ "servicePlans" ]
+  sourceUrl = "https://10.32.23.86/api/service-plans?max=700&offset=0&sort=name&direction=asc&includeZones=true"
+  translationScript = <<EOFSCRIBE
+for(var x=0;x < data.servicePlans.length; x++) {
+	results.push({name: data.servicePlans[x].name, value: data.servicePlans[x].id})
+}
+EOFSCRIBE
+}
