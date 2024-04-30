@@ -1,14 +1,9 @@
 resource "catalog-item-type" "null" {
-  name = "AT-AZ-206137"
-  uuid = "c97f5935-c45f-4e7c-955e-fc3cf59bff76"
-  dateCreated = "2024-04-29T11:24:09.000Z"
-  description = "Unisys-206137"
+  name = "AT-Kajal-Catalog"
+  uuid = "f5b794c5-48a6-43be-8ff7-5ab087740554"
+  dateCreated = "2024-04-01T12:13:39.000Z"
   formType = "optionTypes"
-  lastUpdated = "2024-04-30T12:54:21.000Z"
-  optionTypes = [
-    { code = "app_name" },
-    { code = "network" },
-    { code = "servicePlans" }
-  ]
-  refType = "AppTemplate"
+  lastUpdated = "2024-04-01T12:13:39.000Z"
+  optionTypes = [ { code = "Select_Instance" } ]
+  refType = "OperationalWorkflow"
 }
