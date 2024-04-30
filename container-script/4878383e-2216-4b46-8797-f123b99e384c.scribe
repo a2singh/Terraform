@@ -1,0 +1,16 @@
+resource "container-script" "4878383e-2216-4b46-8797-f123b99e384c" {
+  code = "4878383e-2216-4b46-8797-f123b99e384c"
+  name = "postgres install standalone"
+  uuid = "74cd43dd-3a5f-4ec2-ab63-54329abdd5b3"
+  dateCreated = "2024-04-30T12:49:02.000Z"
+  lastUpdated = "2024-04-30T12:49:02.000Z"
+  script = <<EOFSCRIBE
+PGPass="<%=cypher.read('secret/postgres')%>" apt update
+apt install -y postgresql postgresql-client systemctl stop postgresql.service
+systemctl start postgresql.service systemctl enable postgresql.service
+echo "listen_addresses = '*'" >> /etc/postgresql/12/main/postgresql.conf echo "host all all 0.0.0.0/0 md5" >> /etc/postgresql/12/main/pg_hba.conf systemctl restart postgresql.service
+sudo -u postgres psql template1 -c "CREATE USER admin WITH SUPERUSER PASSWORD '$PGPass';"
+EOFSCRIBE
+  scriptPhase = "start"
+  sudoUser = true
+}
