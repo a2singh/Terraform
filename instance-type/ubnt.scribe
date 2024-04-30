@@ -1,9 +1,8 @@
 resource "instance-type" "ubnt" {
   code = "ubnt"
-  name = "az Ubuntu"
+  name = "AT-AZ-Ubuntu"
   uuid = "3b6ed7fc-05a7-4fb4-8221-2be2a9180211"
   category = "os"
   deploymentService = ""
   environmentPrefix = "AZ_UBUNTU"
-  layouts = [ { code = "c24ee400-ae34-41d4-81a8-368991b35f5a" } ]
 }
