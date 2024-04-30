@@ -9,7 +9,7 @@ resource "task-set" "AT-API Select List-204781" {
     { code = "group" },
     { code = "cloud" },
     { code = "resourcepool" },
-    { code = "plan" }
+    { code = "servicePlans" }
   ]
   taskSetType = "operation"
   visibility = "public"
