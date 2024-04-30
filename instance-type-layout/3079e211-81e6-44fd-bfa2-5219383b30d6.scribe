@@ -1,0 +1,12 @@
+resource "instance-type-layout" "3079e211-81e6-44fd-bfa2-5219383b30d6" {
+  code = "3079e211-81e6-44fd-bfa2-5219383b30d6"
+  name = "Postgres Standalone Layout"
+  uuid = "772ef0e2-909d-451c-9af6-cfe518871255"
+  actions = [ { code = "generic-add-node" } ]
+  hasAutoScale = true
+  instanceType = { code = "13.1" }
+  instanceVersion = "13.1"
+  memoryRequirement = 1073741824
+  provisionType = { code = "vmware" }
+  workloads = [ { code = "a285b24f-0d2a-47f2-a218-5a16d392cb0b" } ]
+}

@@ -5,4 +5,5 @@ resource "instance-type" "13.1" {
   category = "sql"
   deploymentService = ""
   environmentPrefix = "_POSTGRES_STANDALONE"
+  hasAutoScale = true
 }

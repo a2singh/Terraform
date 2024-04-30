@@ -1,0 +1,17 @@
+resource "container-type" "a285b24f-0d2a-47f2-a218-5a16d392cb0b" {
+  code = "a285b24f-0d2a-47f2-a218-5a16d392cb0b"
+  name = "Postgres Standalone Node"
+  uuid = "6bf04bdf-fdb7-4d51-a52f-7c27a305d068"
+  actions = [ { code = "generic-remove-node" } ]
+  containerVersion = "7.5"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  repositoryImage = ""
+  scripts = [ { code = "4878383e-2216-4b46-8797-f123b99e384c" } ]
+  serverType = "vm"
+  shortName = "pgStandaloneNode"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "vmware.vsphere.image.morpheus.centos.7.5" }
+}
