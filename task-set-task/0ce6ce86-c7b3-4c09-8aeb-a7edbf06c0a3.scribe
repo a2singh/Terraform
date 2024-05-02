@@ -1,0 +1,4 @@
+resource "task-set-task" "0ce6ce86-c7b3-4c09-8aeb-a7edbf06c0a3" {
+  uuid = "0ce6ce86-c7b3-4c09-8aeb-a7edbf06c0a3"
+  task = { code = "emailtask" }
+}

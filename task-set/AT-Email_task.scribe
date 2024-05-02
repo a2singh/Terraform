@@ -1,0 +1,7 @@
+resource "task-set" "AT-Email_task" {
+  name = "AT-Email_task"
+  uuid = "b1cb47be-cfd1-472d-abf2-d4b723ca7b1c"
+  dateCreated = "2024-05-02T14:16:04.000Z"
+  lastUpdated = "2024-05-02T14:16:04.000Z"
+  taskSetTasks = [ { uuid = "0ce6ce86-c7b3-4c09-8aeb-a7edbf06c0a3" } ]
+}
