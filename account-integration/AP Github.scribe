@@ -1,0 +1,9 @@
+resource "account-integration" "AP Github" {
+  name = "AP Github"
+  uuid = "9882e01c-d9cf-4139-aa59-933f4e832401"
+  category = "cm-server"
+  config = { cacheEnabled = "on", defaultBranch = "" }
+  integrationType = { code = "github" }
+  serviceFlag = true
+  type = "github"
+}

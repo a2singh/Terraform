@@ -1,0 +1,16 @@
+resource "code-repository" "ansible" {
+  name = "ansible"
+  uuid = "ef247fd8-e972-4ab7-885f-451fbc833c67"
+  codeLanguage = "Shell"
+  dateCreated = "2023-10-25T09:56:23.000Z"
+  defaultBranch = "main"
+  displayName = "a2singh/ansible"
+  externalId = "504004613"
+  integration = { name = "AP Github" }
+  lastUpdated = "2024-04-16T06:03:19.000Z"
+  orgId = "87903560"
+  orgName = "a2singh"
+  privateRepo = false
+  repoSize = 33
+  serviceUrl = "https://github.com/a2singh/ansible"
+}

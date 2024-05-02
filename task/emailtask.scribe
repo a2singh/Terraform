@@ -1,0 +1,23 @@
+resource "task" "emailtask" {
+  code = "emailtask"
+  name = "AT-Email_Task"
+  uuid = "9f8539cd-afea-4819-9656-743cddd42977"
+  dateCreated = "2024-05-02T13:48:14.000Z"
+  executeTarget = "local"
+  lastUpdated = "2024-05-02T13:57:36.000Z"
+  options = [
+    {
+      optionType = { code = "emailSubject" }
+      value = "Intance Provisioned successfully"
+    },
+    {
+      optionType = { code = "emailAddress" }
+      value = "asingh2@morpheusdata.com"
+    },
+    {
+      content = { uuid = "df36d440-2caa-49f2-adf9-aa982e44f457" }
+      optionType = { code = "emailBody" }
+    }
+  ]
+  taskType = { code = "email" }
+}

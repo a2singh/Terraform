@@ -1,0 +1,9 @@
+resource "file-content" "df36d440-2caa-49f2-adf9-aa982e44f457" {
+  uuid = "df36d440-2caa-49f2-adf9-aa982e44f457"
+  contentPath = ""
+  contentRef = ""
+  dateCreated = "2024-05-02T13:48:14.000Z"
+  lastUpdated = "2024-05-02T13:57:36.000Z"
+  repository = { name = "ansible" }
+  sourceType = "repository"
+}
