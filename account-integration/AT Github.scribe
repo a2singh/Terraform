@@ -1,0 +1,8 @@
+resource "account-integration" "AT Github" {
+  name = "AT Github"
+  uuid = "195b4cdc-2d9f-46d4-8942-3c7e26548c83"
+  category = "cm-server"
+  config = { cacheEnabled = "on" }
+  integrationType = { code = "github" }
+  type = "github"
+}
