@@ -5,5 +5,4 @@ resource "instance-type" "ubnt" {
   category = "os"
   deploymentService = ""
   environmentPrefix = "AZ_UBUNTU"
-  layouts = [ { code = "c24ee400-ae34-41d4-81a8-368991b35f5a" } ]
 }
