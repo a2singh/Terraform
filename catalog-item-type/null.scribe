@@ -1,8 +1,8 @@
 resource "catalog-item-type" "null" {
-  name = "206011"
-  uuid = "fde9dcd8-f17a-4045-9ac8-e6ec680adace"
-  dateCreated = "2024-04-12T07:58:31.000Z"
+  name = "AP test workflow"
+  uuid = "c976730a-beae-4687-9ef2-f4db94a8441e"
+  dateCreated = "2024-02-27T10:20:27.000Z"
   formType = "form"
-  lastUpdated = "2024-04-12T07:58:31.000Z"
-  refType = "AppTemplate"
+  lastUpdated = "2024-04-08T13:46:24.000Z"
+  refType = "OperationalWorkflow"
 }
