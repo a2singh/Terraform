@@ -1,0 +1,10 @@
+resource "instance-type" "azubuntu" {
+  code = "azubuntu"
+  name = "Azure Ubuntu 22.04"
+  uuid = "facb2efc-3e7e-4903-98eb-257049aab3c4"
+  category = "os"
+  deploymentService = "defaultDeployService"
+  environmentPrefix = "AZURE-UBUNTU"
+  hasDeployment = true
+  hasSettings = true
+}
