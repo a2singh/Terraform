@@ -3,7 +3,11 @@ resource "task-set" "AT Select Instance" {
   uuid = "f1dfe280-54f7-43f1-a0a7-05be0c6c4844"
   allowCustomConfig = true
   dateCreated = "2024-02-26T12:06:51.000Z"
-  lastUpdated = "2024-03-19T09:55:40.000Z"
-  optionTypes = [ { code = "api_instance_list" } ]
+  lastUpdated = "2024-05-16T13:04:26.000Z"
+  optionTypes = [
+    { code = "morphgroup" },
+    { code = "morphcloud" },
+    { code = "servicePlans" }
+  ]
   taskSetType = "operation"
 }
