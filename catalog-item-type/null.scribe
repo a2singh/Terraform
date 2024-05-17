@@ -1,14 +1,9 @@
 resource "catalog-item-type" "null" {
-  name = "AT-Unisys-206137"
-  uuid = "c97f5935-c45f-4e7c-955e-fc3cf59bff76"
-  dateCreated = "2024-04-29T11:24:09.000Z"
-  description = "AppBlueprint Catalog"
-  formType = "optionTypes"
-  lastUpdated = "2024-05-03T06:01:52.000Z"
-  optionTypes = [
-    { code = "app_name" },
-    { code = "network" },
-    { code = "servicePlans" }
-  ]
-  refType = "AppTemplate"
+  name = "DELETE ME"
+  uuid = "60e242bc-9dca-4350-8eeb-371011e17544"
+  dateCreated = "2024-01-12T11:09:12.000Z"
+  formType = "form"
+  lastUpdated = "2024-01-12T11:33:46.000Z"
+  refType = "InstanceType"
+  visibility = "public"
 }
