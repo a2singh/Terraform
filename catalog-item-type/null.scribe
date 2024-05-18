@@ -1,7 +1,9 @@
 resource "catalog-item-type" "null" {
-  name = "test-workflow"
-  uuid = "f52157de-50ea-4045-8615-f5897567e238"
-  dateCreated = "2024-02-12T13:16:38.000Z"
-  lastUpdated = "2024-02-12T13:16:38.000Z"
-  refType = "OperationalWorkflow"
+  name = "velanTest"
+  uuid = "1f2df8fa-c475-42aa-892a-195868eb1cc1"
+  dateCreated = "2023-10-31T13:39:24.000Z"
+  featured = true
+  formType = "form"
+  lastUpdated = "2023-10-31T13:39:24.000Z"
+  refType = "InstanceType"
 }
