@@ -1,7 +1,14 @@
 resource "catalog-item-type" "null" {
-  name = "ap-tag"
-  uuid = "436754af-d3e4-40f1-b6ad-3868d9fcfb13"
-  dateCreated = "2024-05-01T07:27:25.000Z"
-  lastUpdated = "2024-05-01T07:27:25.000Z"
+  name = "AT-API Select List"
+  uuid = "718feee5-f47a-4112-a6a0-a5170ec21dcb"
+  dateCreated = "2023-12-04T12:11:07.000Z"
+  formType = "optionTypes"
+  lastUpdated = "2023-12-04T12:11:07.000Z"
+  optionTypes = [
+    { code = "group" },
+    { code = "cloud" },
+    { code = "resourcepool" },
+    { code = "servicePlans" }
+  ]
   refType = "InstanceType"
 }
