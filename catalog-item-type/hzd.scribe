@@ -3,6 +3,7 @@ resource "catalog-item-type" "hzd" {
   name = "HZD 205351"
   uuid = "4e003202-291e-46f7-b94c-428005cb46b4"
   dateCreated = "2024-02-09T13:18:02.000Z"
+  form = { code = "domainid" }
   formType = "form"
   lastUpdated = "2024-02-09T13:34:49.000Z"
   refType = "InstanceType"

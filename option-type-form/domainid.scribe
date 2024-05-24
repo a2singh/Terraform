@@ -1,0 +1,121 @@
+resource "option-type-form" "domainid" {
+  code = "domainid"
+  name = "Domain ID FORM"
+  uuid = "bb6afe62-dc27-4dd8-ab85-947d05e953fd"
+  config = {
+    enableVar = ""
+    form = ""
+    formField = ""
+    formOptions = ""
+    formType = ""
+  }
+  description = "205351"
+  options = [
+    {
+      code = "group"
+      name = "ATGroup"
+      uuid = "c0a52553-271a-4ae9-984c-ccd1ebca7393"
+      description = "AT Group"
+      fieldContext = "config.customOptions"
+      fieldLabel = "Group"
+      fieldName = "group"
+      labels = [ "group" ]
+      optionList = { name = "at group" }
+      optionSource = "list"
+      type = "select"
+    },
+    {
+      code = "cloud"
+      name = "ATCloud"
+      uuid = "7623753e-c120-4afa-b909-be0f83070e1d"
+      dependsOnCode = "group"
+      description = "AT Cloud"
+      fieldContext = "config.customOptions"
+      fieldLabel = "cloud"
+      fieldName = "cloud"
+      labels = [ "cloud" ]
+      optionList = { name = "at cloud" }
+      optionSource = "list"
+      type = "select"
+      visibleOnCode = "false"
+    },
+    {
+      code = "apdomain"
+      name = "ap domain"
+      uuid = "87bc1c32-eff2-4461-ac96-8026c509331f"
+      displayValueOnDetails = true
+      fieldContext = "config.customOptions"
+      fieldLabel = "Domain"
+      fieldName = "apdomain"
+      optionList = { name = "ap domain" }
+      optionSource = "list"
+      required = true
+      type = "select"
+    },
+    {
+      code = "d4c96065-7f93-40ad-bad8-bdee44544b50"
+      name = "d4c96065-7f93-40ad-bad8-bdee44544b50"
+      uuid = "c880f30f-561e-4d75-a087-33cc2acbe1ae"
+      config = {
+        cloudField = "cloud"
+        cloudFieldType = "field"
+        cloudId = ""
+        groupField = "group"
+        groupFieldType = "field"
+        groupId = ""
+        instanceTypeCode = ""
+        instanceTypeFieldCode = ""
+        instanceTypeFieldType = "field"
+      }
+      displayOrder = 3
+      fieldContext = "config.customOptions"
+      fieldLabel = "layout"
+      fieldName = "layout"
+      formField = true
+      required = true
+      type = "layout"
+    },
+    {
+      code = "resourcepool"
+      name = "ATResource Pool"
+      uuid = "7833e009-7d1a-453b-b87b-11a1edb3a5a1"
+      dependsOnCode = "cloud"
+      description = "AT Resource Pool"
+      fieldContext = "config.customOptions"
+      fieldLabel = "Resource Pool"
+      fieldName = "resourcepool"
+      labels = [ "resourcepool" ]
+      optionList = { name = "at resourcepool" }
+      optionSource = "list"
+      required = true
+      type = "select"
+    },
+    {
+      code = "network"
+      name = "network"
+      uuid = "87c55338-674a-4ad5-b182-2b367c32309d"
+      description = "AT Network"
+      fieldContext = "config.customOptions"
+      fieldLabel = "Network"
+      fieldName = "network"
+      labels = [ "network" ]
+      optionList = { name = "at network(rest)" }
+      optionSource = "list"
+      type = "select"
+    },
+    {
+      code = "servicePlans"
+      name = "servicePlans"
+      uuid = "6c0f0d7e-f81f-4137-9519-a715a9fb72e9"
+      dependsOnCode = "app_name"
+      description = "AT Service Plan"
+      fieldContext = "config.customOptions"
+      fieldLabel = "plan"
+      fieldName = "servicePlans"
+      labels = [ "servicePlans" ]
+      optionList = { name = "AT-ServicePlans(REST)" }
+      optionSource = "list"
+      type = "select"
+    }
+  ]
+}
