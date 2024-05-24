@@ -1,0 +1,31 @@
+resource "container-type" "kubernetes-ubuntu-22_04-digitalocean-amd64" {
+  code = "kubernetes-ubuntu-22_04-digitalocean-amd64"
+  name = "DigitalOcean Kubernetes Cluster on Ubuntu 22.04"
+  uuid = "8e450110-fbd2-4867-aa5c-d89b164a0709"
+  category = "kubernetes"
+  checkTypeCode = "vmCheck"
+  cloneType = "ubuntu"
+  containerPorts = [ { code = "ubuntu.22" } ]
+  containerVersion = "22.04"
+  imageCode = "digitalocean morpheus kubernetes on ubuntu 22.04"
+  logTypeCode = "ubuntu"
+  mountLogs = "/var/log"
+  providerType = "digitalocean"
+  provisionType = { code = "digitalocean" }
+  scripts = [
+    { code = "setup-disks-v1" },
+    { code = "kube-ubuntu-22-setup-script-v1" },
+    { code = "kube-adm-master-setup-script-v1" },
+    { code = "kubernetes-ectd-encrypt-install-master-script-v1" }
+  ]
+  serverType = "vm"
+  shortName = "kubernetes-ubuntu"
+  showServerLogs = true
+  statTypeCode = "server"
+  templates = [
+    { code = "do-kubeadm-cluster-master-init" },
+    { code = "kubernetes-etcd-encrypt-install-master" },
+    { code = "replace-external-ip" }
+  ]
+  virtualImage = { code = "digitalocean.image.morpheus.ubuntu.22.04" }
+}
