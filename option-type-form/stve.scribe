@@ -1,0 +1,91 @@
+resource "option-type-form" "stve" {
+  code = "stve"
+  name = "Steve"
+  uuid = "3e22499c-b6d3-4ece-bdf1-5ee8cb76cb97"
+  config = {
+    enableVar = ""
+    form = ""
+    formField = ""
+    formOptions = ""
+    formType = ""
+  }
+  options = [
+    {
+      code = "1b6fd297-773b-45c3-a6ed-fb367648beb9"
+      name = "1b6fd297-773b-45c3-a6ed-fb367648beb9"
+      uuid = "771ec815-57ef-4501-bfad-ee87e4858de5"
+      config = { addon = "", addonPosition = "" }
+      defaultValue = "2"
+      fieldContext = "config.customOptions"
+      fieldLabel = "Group"
+      fieldName = "input1"
+      formField = true
+      refCode = "1b6fd297-773b-45c3-a6ed-fb367648beb9"
+      type = "group"
+    },
+    {
+      code = "cbca6ea0-c034-4874-afcf-a04978ba48ff"
+      name = "cbca6ea0-c034-4874-afcf-a04978ba48ff"
+      uuid = "d65506eb-bbaa-47f4-a64d-de82003bd301"
+      config = {
+        addonPosition = ""
+        cloudType = ""
+        filterResource = false
+        group = [
+          {
+            name = "Group"
+            id = "1b6fd297-773b-45c3-a6ed-fb367648beb9"
+            type = "group"
+            value = "1b6fd297-773b-45c3-a6ed-fb367648beb9"
+          }
+        ]
+        instanceType = ""
+        instanceTypeFieldCode = ""
+      }
+      displayOrder = 1
+      fieldContext = "config.customOptions"
+      fieldLabel = "Cloud"
+      fieldName = "input2"
+      formField = true
+      refCode = "cbca6ea0-c034-4874-afcf-a04978ba48ff"
+      type = "cloud"
+    },
+    {
+      code = "6961d538-4d80-4659-994a-33a630ff9062"
+      name = "6961d538-4d80-4659-994a-33a630ff9062"
+      uuid = "ca6e2bba-7245-42c2-8bfe-d9201c3bfa6d"
+      config = {
+        addon = ""
+        addonPosition = ""
+        cloudField = [
+          {
+            name = "Cloud"
+            id = 2247
+            type = "cloud"
+            value = "cbca6ea0-c034-4874-afcf-a04978ba48ff"
+          }
+        ]
+        diskField = ""
+        groupField = [
+          {
+            name = "Group"
+            id = 2246
+            type = "group"
+            value = "1b6fd297-773b-45c3-a6ed-fb367648beb9"
+          }
+        ]
+        layoutField = ""
+        planField = ""
+        poolField = ""
+        showPricing = false
+      }
+      displayOrder = 2
+      fieldContext = "config.customOptions"
+      fieldLabel = "Network"
+      fieldName = "input3"
+      formField = true
+      refCode = "6961d538-4d80-4659-994a-33a630ff9062"
+      type = "plan"
+    }
+  ]
+}
