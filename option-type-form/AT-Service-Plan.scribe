@@ -1,0 +1,94 @@
+resource "option-type-form" "AT-Service-Plan" {
+  code = "AT-Service-Plan"
+  name = "AT-Service-Plan"
+  uuid = "b64f28c1-105b-4234-89b4-805e77cb43b9"
+  config = {
+    enableVar = ""
+    form = ""
+    formField = ""
+    formOptions = ""
+    formType = ""
+  }
+  field-groups = [
+    {
+      code = "f9d259ef-d4c4-49b9-aa31-8ba8a29cfe5d"
+      name = "new fieldgroup"
+      collapsible = false
+      defaultCollapsed = false
+    }
+  ]
+  options = [
+    {
+      code = "plan"
+      name = "AT Service plan Manual"
+      uuid = "4f68c9da-dafb-4821-ac1a-f949cc9b0ad3"
+      description = "AT Service Plan Manual"
+      fieldContext = "config.customOptions"
+      fieldLabel = "Service plan"
+      fieldName = "plan"
+      labels = [ "serviceplanmanual" ]
+      noBlank = true
+      optionList = { name = "Service plan Manual-AT" }
+      optionSource = "list"
+      required = true
+      type = "select"
+    },
+    {
+      code = "a66508b5-1553-41ee-b860-a734e59f2181"
+      name = "a66508b5-1553-41ee-b860-a734e59f2181"
+      uuid = "f0583b26-46d7-49bf-9ae2-e9979236a90a"
+      config = {
+        addon = ""
+        addonPosition = ""
+        display = ""
+        lockDisplay = false
+      }
+      displayOrder = 1
+      fieldContext = "config.customOptions"
+      fieldLabel = "Max Memory"
+      fieldName = "maxMemory"
+      formField = true
+      refCode = "a66508b5-1553-41ee-b860-a734e59f2181"
+      type = "byteSize"
+    },
+    {
+      code = "dd1eec72-9521-4a1e-8378-9cf04f76a93a"
+      name = "dd1eec72-9521-4a1e-8378-9cf04f76a93a"
+      uuid = "16783fde-a8eb-4c22-8576-3ad67dbc3fbc"
+      config = { addonPosition = "", step = 1 }
+      displayOrder = 2
+      fieldContext = "config.customOptions"
+      fieldLabel = "Max CPU"
+      fieldName = "maxCpu"
+      formField = true
+      refCode = "dd1eec72-9521-4a1e-8378-9cf04f76a93a"
+      type = "number"
+    },
+    {
+      code = "15f2af28-213b-48a3-9eaf-a6bf70f932d2"
+      name = "15f2af28-213b-48a3-9eaf-a6bf70f932d2"
+      uuid = "e9698e26-689f-4472-8630-cc79926c3d7b"
+      config = { addonPosition = "" }
+      displayOrder = 3
+      fieldContext = "config.customOptions"
+      fieldLabel = "Storage"
+      fieldName = "input4"
+      formField = true
+      helpBlockFieldCode = "gomorpheus.label.values"
+      refCode = "15f2af28-213b-48a3-9eaf-a6bf70f932d2"
+    },
+    {
+      code = "network"
+      name = "network"
+      uuid = "87c55338-674a-4ad5-b182-2b367c32309d"
+      description = "AT Network"
+      fieldContext = "config.customOptions"
+      fieldLabel = "Network"
+      fieldName = "network"
+      labels = [ "network" ]
+      optionList = { name = "at network(rest)" }
+      optionSource = "list"
+      type = "select"
+    }
+  ]
+}
