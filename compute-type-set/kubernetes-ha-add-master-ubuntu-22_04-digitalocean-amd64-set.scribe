@@ -1,0 +1,11 @@
+resource "compute-type-set" "kubernetes-ha-add-master-ubuntu-22_04-digitalocean-amd64-set" {
+  code = "kubernetes-ha-add-master-ubuntu-22_04-digitalocean-amd64-set"
+  name = "kubernetes master"
+  category = "ubuntu"
+  computeServerType = { code = "digitalOceanKubeMaster" }
+  forceNameIndex = true
+  nameSuffix = "-master"
+  nodeType = "master"
+  priorityOrder = 1
+  workloadType = { code = "kubernetes-ha-add-master-ubuntu-22_04-digitalocean-amd64" }
+}
