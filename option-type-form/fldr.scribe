@@ -1,0 +1,77 @@
+resource "option-type-form" "fldr" {
+  code = "fldr"
+  name = "Folder"
+  uuid = "1166e217-cf14-4751-99a6-ed4f725e42bb"
+  config = {
+    enableVar = ""
+    form = ""
+    formField = ""
+    formOptions = ""
+    formType = ""
+  }
+  options = [
+    {
+      code = "f2f43e81-5c9d-413e-a5d4-9a022abb6ec2"
+      name = "f2f43e81-5c9d-413e-a5d4-9a022abb6ec2"
+      uuid = "fb92437a-2c7a-453e-8603-b1f93ba86274"
+      config = { addon = "", addonPosition = "" }
+      defaultValue = "2"
+      fieldContext = "config.customOptions"
+      fieldLabel = "Groups"
+      fieldName = "group"
+      formField = true
+      refCode = "f2f43e81-5c9d-413e-a5d4-9a022abb6ec2"
+      type = "group"
+    },
+    {
+      code = "6a735789-60a0-4e48-9087-943b7c25af1a"
+      name = "6a735789-60a0-4e48-9087-943b7c25af1a"
+      uuid = "9aeaace5-87c1-4e16-87ea-782c47cf394a"
+      config = {
+        cloudType = ""
+        filterResource = false
+        group = "f2f43e81-5c9d-413e-a5d4-9a022abb6ec2"
+        groupFieldType = "field"
+        groupId = ""
+        instanceTypeCode = ""
+        instanceTypeFieldCode = ""
+        instanceTypeFieldType = "field"
+      }
+      displayOrder = 1
+      fieldContext = "config.customOptions"
+      fieldLabel = "Clouds"
+      fieldName = "cloud"
+      formField = true
+      refCode = "6a735789-60a0-4e48-9087-943b7c25af1a"
+      type = "cloud"
+    },
+    {
+      code = "9858c04c-ddd3-4c0f-a5de-b1cb12e4c93a"
+      name = "9858c04c-ddd3-4c0f-a5de-b1cb12e4c93a"
+      uuid = "fb112c82-22f0-4110-82d2-b167f5edd267"
+      config = {
+        addon = ""
+        addonPosition = ""
+        cloudField = "6a735789-60a0-4e48-9087-943b7c25af1a"
+        cloudFieldType = "field"
+        cloudId = ""
+        groupField = "f2f43e81-5c9d-413e-a5d4-9a022abb6ec2"
+        groupFieldType = "field"
+        groupId = ""
+        layoutField = "01582c84-dcb5-4c61-a5aa-e313a9f97429"
+        layoutFieldType = "field"
+        layoutId = ""
+        planField = "06a46d3d-c628-48f6-8453-fb851ff7eb9c"
+        planFieldType = "field"
+        planId = ""
+      }
+      displayOrder = 2
+      fieldContext = "config.customOptions"
+      fieldLabel = "pools"
+      fieldName = "pool"
+      formField = true
+      refCode = "9858c04c-ddd3-4c0f-a5de-b1cb12e4c93a"
+      type = "resourcePool"
+    }
+  ]
+}
