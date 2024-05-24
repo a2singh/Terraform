@@ -4,6 +4,7 @@ resource "catalog-item-type" "206011" {
   uuid = "ae88c3bb-b4ac-48dc-a298-b14fe2f5dbca"
   dateCreated = "2024-04-12T07:34:02.000Z"
   description = "Fujitsu Services GmbH-206011"
+  form = { code = "206011" }
   formType = "form"
   lastUpdated = "2024-05-01T07:47:35.000Z"
   refType = "AppTemplate"

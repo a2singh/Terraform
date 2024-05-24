@@ -1,0 +1,85 @@
+resource "option-type-form" "206011" {
+  code = "206011"
+  name = "FORM-206011"
+  uuid = "92757a11-c58c-4249-b55e-cbada1f4581d"
+  config = {
+    enableVar = ""
+    form = ""
+    formField = ""
+    formOptions = ""
+    formType = ""
+  }
+  description = "Fujitsu Services GmbH"
+  options = [
+    {
+      code = "group"
+      name = "ATGroup"
+      uuid = "c0a52553-271a-4ae9-984c-ccd1ebca7393"
+      description = "AT Group"
+      fieldContext = "config.customOptions"
+      fieldLabel = "Group"
+      fieldName = "group"
+      labels = [ "group" ]
+      optionList = { name = "at group" }
+      optionSource = "list"
+      type = "select"
+    },
+    {
+      code = "cloud"
+      name = "ATCloud"
+      uuid = "7623753e-c120-4afa-b909-be0f83070e1d"
+      dependsOnCode = "group"
+      description = "AT Cloud"
+      fieldContext = "config.customOptions"
+      fieldLabel = "cloud"
+      fieldName = "cloud"
+      labels = [ "cloud" ]
+      optionList = { name = "at cloud" }
+      optionSource = "list"
+      type = "select"
+      visibleOnCode = "false"
+    },
+    {
+      code = "servicePlans"
+      name = "servicePlans"
+      uuid = "6c0f0d7e-f81f-4137-9519-a715a9fb72e9"
+      dependsOnCode = "app_name"
+      description = "AT Service Plan"
+      fieldContext = "config.customOptions"
+      fieldLabel = "plan"
+      fieldName = "servicePlans"
+      labels = [ "servicePlans" ]
+      optionList = { name = "AT-ServicePlans(REST)" }
+      optionSource = "list"
+      type = "select"
+    },
+    {
+      code = "resourcepool"
+      name = "ATResource Pool"
+      uuid = "7833e009-7d1a-453b-b87b-11a1edb3a5a1"
+      dependsOnCode = "cloud"
+      description = "AT Resource Pool"
+      fieldContext = "config.customOptions"
+      fieldLabel = "Resource Pool"
+      fieldName = "resourcepool"
+      labels = [ "resourcepool" ]
+      optionList = { name = "at resourcepool" }
+      optionSource = "list"
+      required = true
+      type = "select"
+    },
+    {
+      code = "network"
+      name = "network"
+      uuid = "87c55338-674a-4ad5-b182-2b367c32309d"
+      description = "AT Network"
+      fieldContext = "config.customOptions"
+      fieldLabel = "Network"
+      fieldName = "network"
+      labels = [ "network" ]
+      optionList = { name = "at network(rest)" }
+      optionSource = "list"
+      type = "select"
+    }
+  ]
+}
