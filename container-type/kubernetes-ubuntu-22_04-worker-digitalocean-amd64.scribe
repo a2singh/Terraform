@@ -1,0 +1,25 @@
+resource "container-type" "kubernetes-ubuntu-22_04-worker-digitalocean-amd64" {
+  code = "kubernetes-ubuntu-22_04-worker-digitalocean-amd64"
+  name = "DigitalOcean Kubernetes Worker on Ubuntu 22.04"
+  uuid = "9dd8bec8-190e-43a9-a8dd-aa2bd4205924"
+  category = "kubernetes"
+  checkTypeCode = "vmCheck"
+  cloneType = "ubuntu"
+  containerPorts = [ { code = "ubuntu.22" } ]
+  containerVersion = "22.04"
+  imageCode = "digitalocean morpheus kubernetes on ubuntu 22.04"
+  logTypeCode = "ubuntu"
+  mountLogs = "/var/log"
+  providerType = "digitalocean"
+  provisionType = { code = "digitalocean" }
+  scripts = [
+    { code = "setup-disks-v1" },
+    { code = "kube-ubuntu-22-setup-script-v1" },
+    { code = "kubernetes-worker-join-v1" }
+  ]
+  serverType = "vm"
+  shortName = "kubernetes-worker-ubuntu"
+  showServerLogs = true
+  statTypeCode = "server"
+  virtualImage = { code = "digitalocean.image.morpheus.ubuntu.22.04" }
+}
