@@ -1,0 +1,155 @@
+resource "option-type-form" "dg-form" {
+  code = "dg-form"
+  name = "dg-form"
+  uuid = "57d197b5-5bac-4fd0-b74e-9010c5047156"
+  config = {
+    enableVar = ""
+    form = ""
+    formField = ""
+    formOptions = ""
+    formType = ""
+  }
+  options = [
+    {
+      code = "b2e12f04-7313-4898-8e6f-62e97d3e1035"
+      name = "b2e12f04-7313-4898-8e6f-62e97d3e1035"
+      uuid = "822ece28-b91e-4ca4-9651-794157cc09aa"
+      config = { addon = "", addonPosition = "" }
+      defaultValue = "2"
+      fieldContext = "config.customOptions"
+      fieldLabel = "group"
+      fieldName = "group"
+      formField = true
+      type = "group"
+    },
+    {
+      code = "53937ba1-d56c-4f8d-9521-b4f74a398996"
+      name = "53937ba1-d56c-4f8d-9521-b4f74a398996"
+      uuid = "94bcfd8d-dd9c-4b79-b9e2-981bdfd0f54b"
+      config = {
+        cloudType = ""
+        filterResource = false
+        group = "b2e12f04-7313-4898-8e6f-62e97d3e1035"
+        groupFieldType = "field"
+        groupId = ""
+        instanceTypeCode = ""
+        instanceTypeFieldCode = ""
+        instanceTypeFieldType = "field"
+      }
+      displayOrder = 1
+      fieldContext = "config.customOptions"
+      fieldLabel = "cloud"
+      fieldName = "cloud"
+      formField = true
+      type = "cloud"
+    },
+    {
+      code = "6bbb5fa9-8412-4c9c-865e-a7cca122e68f"
+      name = "6bbb5fa9-8412-4c9c-865e-a7cca122e68f"
+      uuid = "c4634c90-eb56-40d1-bbab-4b093bb5473f"
+      config = {
+        addonPosition = ""
+        cloudField = "53937ba1-d56c-4f8d-9521-b4f74a398996"
+        cloudFieldType = "field"
+        cloudId = ""
+        groupField = "b2e12f04-7313-4898-8e6f-62e97d3e1035"
+        groupFieldType = "field"
+        groupId = ""
+        instanceTypeCode = ""
+        instanceTypeFieldCode = ""
+        instanceTypeFieldType = "field"
+      }
+      displayOrder = 2
+      fieldContext = "config.customOptions"
+      fieldLabel = "layout"
+      fieldName = "layout"
+      formField = true
+      type = "layout"
+    },
+    {
+      code = "199c78fa-e527-4bc1-aab2-4007300584bb"
+      name = "199c78fa-e527-4bc1-aab2-4007300584bb"
+      uuid = "059685fe-5e09-4cad-9dd0-3d814618d2d3"
+      config = {
+        cloudField = "53937ba1-d56c-4f8d-9521-b4f74a398996"
+        cloudFieldType = "field"
+        cloudId = ""
+        groupField = "b2e12f04-7313-4898-8e6f-62e97d3e1035"
+        groupFieldType = "field"
+        groupId = ""
+        layoutField = "6bbb5fa9-8412-4c9c-865e-a7cca122e68f"
+        layoutFieldType = "field"
+        layoutId = ""
+        planField = "8d43a41a-4e1b-4396-b9aa-5c92f3df4c63"
+        planFieldType = "field"
+        planId = ""
+      }
+      displayOrder = 3
+      fieldContext = "config.customOptions"
+      fieldLabel = "pool"
+      fieldName = "pool"
+      formField = true
+      type = "resourcePool"
+    },
+    {
+      code = "8d43a41a-4e1b-4396-b9aa-5c92f3df4c63"
+      name = "8d43a41a-4e1b-4396-b9aa-5c92f3df4c63"
+      uuid = "cdfcd997-cdce-4345-8e58-37b8d39532cb"
+      config = {
+        cloudField = "53937ba1-d56c-4f8d-9521-b4f74a398996"
+        cloudFieldType = "field"
+        cloudId = ""
+        defaultValue = ""
+        diskField = ""
+        groupField = "b2e12f04-7313-4898-8e6f-62e97d3e1035"
+        groupFieldType = "field"
+        groupId = ""
+        layoutField = "6bbb5fa9-8412-4c9c-865e-a7cca122e68f"
+        layoutFieldType = "field"
+        layoutId = ""
+        poolField = ""
+        poolFieldType = "field"
+        poolId = ""
+        showPricing = false
+      }
+      displayOrder = 4
+      fieldContext = "config.customOptions"
+      fieldLabel = "plan"
+      fieldName = "plan"
+      formField = true
+      type = "plan"
+    },
+    {
+      code = "79f0d73a-788a-4abf-acb9-2ec95d6cf8e1"
+      name = "79f0d73a-788a-4abf-acb9-2ec95d6cf8e1"
+      uuid = "8d3c19ab-8e5c-40fa-875e-f462f7f95f29"
+      config = {
+        cloudField = "53937ba1-d56c-4f8d-9521-b4f74a398996"
+        cloudFieldType = "field"
+        cloudId = ""
+        defaultValue = ""
+        enableDatastoreSelection = true
+        enableDiskTypeSelection = true
+        enableStorageTypeSelection = true
+        groupField = "b2e12f04-7313-4898-8e6f-62e97d3e1035"
+        groupFieldType = "field"
+        groupId = ""
+        layoutField = ""
+        layoutFieldType = "field"
+        layoutId = ""
+        planField = ""
+        planFieldType = "field"
+        planId = ""
+        poolField = ""
+        poolFieldType = "field"
+        poolId = ""
+      }
+      displayOrder = 5
+      fieldContext = "config.customOptions"
+      fieldLabel = "disk"
+      fieldName = "disk"
+      formField = true
+      type = "diskManager"
+    }
+  ]
+}
