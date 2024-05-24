@@ -1,0 +1,106 @@
+resource "option-type-form" "test" {
+  code = "test"
+  name = "test"
+  uuid = "c3f7a1dc-b19e-4235-a0c5-d857ad83a712"
+  config = {
+    enableVar = ""
+    form = ""
+    formField = ""
+    formOptions = ""
+    formType = ""
+  }
+  field-groups = [
+    {
+      code = "fb147b9a-6814-4f30-a66e-cad3148de743"
+      name = "new fieldgroup"
+      collapsible = false
+      defaultCollapsed = false
+    }
+  ]
+  options = [
+    {
+      code = "a5c65ffd-651f-4835-93d3-4defed8e7eb2"
+      name = "a5c65ffd-651f-4835-93d3-4defed8e7eb2"
+      uuid = "f696ffc9-a89c-426d-bdfa-1a886b90528e"
+      config = {
+        addon = ""
+        addonPosition = ""
+        cloudField = ""
+        cloudFieldType = "field"
+        cloudId = ""
+        defaultValue = ""
+        diskField = ""
+        groupField = ""
+        groupFieldType = "field"
+        groupId = ""
+        layoutField = ""
+        layoutFieldType = "field"
+        layoutId = ""
+        poolField = ""
+        poolFieldType = "field"
+        poolId = ""
+        showPricing = false
+      }
+      fieldContext = "config.customOptions"
+      fieldLabel = "groups"
+      fieldName = "groups"
+      formField = true
+      refCode = "a5c65ffd-651f-4835-93d3-4defed8e7eb2"
+      type = "group"
+    },
+    {
+      code = "829f375a-7f93-40cc-893b-79b9ee80cbda"
+      name = "829f375a-7f93-40cc-893b-79b9ee80cbda"
+      uuid = "70912fa5-edb6-47ff-9ebd-6f9c0562add4"
+      config = {
+        addonPosition = ""
+        cloudType = ""
+        filterResource = false
+        group = "a5c65ffd-651f-4835-93d3-4defed8e7eb2"
+        groupFieldType = "field"
+        groupId = ""
+        instanceTypeCode = ""
+        instanceTypeFieldCode = ""
+        instanceTypeFieldType = "field"
+      }
+      displayOrder = 1
+      fieldContext = "config.customOptions"
+      fieldLabel = "Clouds"
+      fieldName = "cloud"
+      formField = true
+      refCode = "829f375a-7f93-40cc-893b-79b9ee80cbda"
+      type = "cloud"
+    },
+    {
+      code = "f87b0faa-84f6-434e-a51c-10f0cdccb438"
+      name = "f87b0faa-84f6-434e-a51c-10f0cdccb438"
+      uuid = "9b57e63f-51d6-4c1e-9b94-8473677c529c"
+      config = {
+        addon = ""
+        addonPosition = ""
+        cloudField = "829f375a-7f93-40cc-893b-79b9ee80cbda"
+        cloudFieldType = "field"
+        cloudId = ""
+        defaultValue = ""
+        diskField = ""
+        groupField = "a5c65ffd-651f-4835-93d3-4defed8e7eb2"
+        groupFieldType = "field"
+        groupId = ""
+        layoutField = "3730c70b-40fc-486d-a76e-f33fe2faf9a8"
+        layoutFieldType = "field"
+        layoutId = ""
+        poolField = "d40dc4b2-d9cd-48c5-b36c-9b4f9e3f501c"
+        poolFieldType = "field"
+        poolId = ""
+        showPricing = false
+      }
+      displayOrder = 2
+      fieldContext = "config.customOptions"
+      fieldLabel = "Plan"
+      fieldName = "plans"
+      formField = true
+      refCode = "f87b0faa-84f6-434e-a51c-10f0cdccb438"
+      type = "plan"
+    }
+  ]
+}
