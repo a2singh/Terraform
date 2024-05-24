@@ -1,0 +1,66 @@
+resource "option-type-form" "at.test.01" {
+  code = "at.test.01"
+  name = "AT-Jump Server Form"
+  uuid = "8727fc56-156c-48c2-ab7c-ebd951922c4a"
+  config = {
+    enableVar = ""
+    form = ""
+    formField = ""
+    formOptions = ""
+    formType = ""
+  }
+  options = [
+    {
+      code = "0f593537-fcca-44c5-9b22-4eec261216dc"
+      name = "0f593537-fcca-44c5-9b22-4eec261216dc"
+      uuid = "01d9931e-a619-4002-ad39-b5703020b8c9"
+      config = { addon = "", addonPosition = "" }
+      fieldContext = "config.customOptions"
+      fieldLabel = "Group"
+      fieldName = "atgroup"
+      formField = true
+      refCode = "0f593537-fcca-44c5-9b22-4eec261216dc"
+      type = "group"
+    },
+    {
+      code = "f0913479-4588-4e2a-97ac-696278fd03b6"
+      name = "f0913479-4588-4e2a-97ac-696278fd03b6"
+      uuid = "07777f67-b805-4518-bb56-85ef649f1e88"
+      config = {
+        addonPosition = ""
+        cloudType = ""
+        filterResource = false
+        group = [
+          {
+            name = "Group"
+            id = 2222
+            type = "group"
+            value = "0f593537-fcca-44c5-9b22-4eec261216dc"
+          }
+        ]
+        instanceType = ""
+        instanceTypeFieldCode = ""
+      }
+      displayOrder = 1
+      fieldContext = "config.customOptions"
+      fieldLabel = "Cloud"
+      fieldName = "atcloud"
+      formField = true
+      refCode = "f0913479-4588-4e2a-97ac-696278fd03b6"
+      type = "cloud"
+    },
+    {
+      code = "network"
+      name = "network"
+      uuid = "87c55338-674a-4ad5-b182-2b367c32309d"
+      description = "AT Network"
+      fieldContext = "config.customOptions"
+      fieldLabel = "Network"
+      fieldName = "network"
+      labels = [ "network" ]
+      optionList = { name = "at network(rest)" }
+      optionSource = "list"
+      type = "select"
+    }
+  ]
+}
