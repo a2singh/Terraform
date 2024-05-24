@@ -1,0 +1,258 @@
+resource "option-type-form" "datagroup" {
+  code = "datagroup"
+  name = "DataGroup FORM"
+  uuid = "bdcfe663-5d5d-4a8d-aff3-97177abf56ae"
+  config = {
+    enableVar = ""
+    form = ""
+    formField = ""
+    formOptions = ""
+    formType = ""
+  }
+  options = [
+    {
+      code = "e58893c5-17f2-455e-8def-8bd3199cabc2"
+      name = "ATService Plan"
+      uuid = "e58893c5-17f2-455e-8def-8bd3199cabc2"
+      config = {
+        addonPosition = ""
+        cloudField = "7ed72d59-fbed-4c62-b8ad-c17edb21702d"
+        cloudFieldType = "field"
+        cloudId = ""
+        defaultValue = ""
+        diskField = ""
+        groupField = "0b37ec63-6d94-4bde-9abd-67ac4a226e8d"
+        groupFieldType = "field"
+        groupId = ""
+        layoutField = "dda47ffb-4e54-4372-9919-9d0b798e15fe"
+        layoutFieldType = "field"
+        layoutId = ""
+        poolField = "aed2a814-02f6-4036-91f1-c862bbbe7117"
+        poolFieldType = "field"
+        poolId = ""
+        showPricing = false
+      }
+      defaultValue = "qa"
+      dependsOnCode = "atcloud"
+      fieldContext = "config.customOptions"
+      fieldLabel = "environment"
+      fieldName = "environment"
+      formField = true
+      optionList = { name = "at service plan" }
+      optionSource = "list"
+      refCode = "e58893c5-17f2-455e-8def-8bd3199cabc2"
+      type = "environment"
+    },
+    {
+      code = "0b37ec63-6d94-4bde-9abd-67ac4a226e8d"
+      name = "0b37ec63-6d94-4bde-9abd-67ac4a226e8d"
+      uuid = "5f173a78-b492-4a0d-9dda-674456ba7509"
+      config = { addon = "", addonPosition = "" }
+      defaultValue = "2"
+      displayOrder = 1
+      fieldContext = "config.customOptions"
+      fieldLabel = "group"
+      fieldName = "group"
+      formField = true
+      refCode = "0b37ec63-6d94-4bde-9abd-67ac4a226e8d"
+      type = "group"
+    },
+    {
+      code = "7ed72d59-fbed-4c62-b8ad-c17edb21702d"
+      name = "ATCloud"
+      uuid = "7ed72d59-fbed-4c62-b8ad-c17edb21702d"
+      config = {
+        addon = ""
+        addonPosition = ""
+        cloudType = ""
+        filterResource = false
+        group = "0b37ec63-6d94-4bde-9abd-67ac4a226e8d"
+        groupFieldType = "field"
+        groupId = ""
+        instanceTypeCode = ""
+        instanceTypeFieldCode = ""
+        instanceTypeFieldType = "field"
+      }
+      defaultValue = "3"
+      displayOrder = 2
+      fieldContext = "config.customOptions"
+      fieldLabel = "Cloud"
+      fieldName = "atcloud"
+      formField = true
+      optionList = { name = "at cloud" }
+      optionSource = "list"
+      refCode = "7ed72d59-fbed-4c62-b8ad-c17edb21702d"
+      type = "cloud"
+    },
+    {
+      code = "b59b776e-ba14-4dcb-9ac2-c9967f0ad738"
+      name = "b59b776e-ba14-4dcb-9ac2-c9967f0ad738"
+      uuid = "0b5bfd4c-e8bc-4fd6-a1d8-468d8b6d3aea"
+      config = {
+        addon = ""
+        addonPosition = ""
+        cloudField = "7ed72d59-fbed-4c62-b8ad-c17edb21702d"
+        cloudFieldType = "field"
+        cloudId = ""
+        groupField = "0b37ec63-6d94-4bde-9abd-67ac4a226e8d"
+        groupFieldType = "field"
+        groupId = ""
+        instanceTypeCode = ""
+        instanceTypeFieldCode = ""
+        instanceTypeFieldType = "field"
+      }
+      displayOrder = 3
+      fieldContext = "config.customOptions"
+      fieldLabel = "layout"
+      fieldName = "layout"
+      formField = true
+      refCode = "b59b776e-ba14-4dcb-9ac2-c9967f0ad738"
+      type = "layout"
+    },
+    {
+      code = "atresourcepool"
+      name = "ATResource Pool"
+      uuid = "da0b9d84-9a34-4036-8510-d1316cef0d05"
+      config = {
+        addon = ""
+        addonPosition = ""
+        cloudField = "7ed72d59-fbed-4c62-b8ad-c17edb21702d"
+        cloudFieldType = "field"
+        cloudId = ""
+        defaultValue = ""
+        groupField = "0b37ec63-6d94-4bde-9abd-67ac4a226e8d"
+        groupFieldType = "field"
+        groupId = ""
+        layoutField = "b59b776e-ba14-4dcb-9ac2-c9967f0ad738"
+        layoutFieldType = "field"
+        layoutId = ""
+        multiSelect = false
+        planField = "atserviceplan"
+        planFieldType = "field"
+        planId = ""
+        sortable = ""
+      }
+      displayOrder = 4
+      fieldContext = "config.customOptions"
+      fieldLabel = "Resourcepool"
+      fieldName = "resourcepool"
+      formField = true
+      optionList = { name = "at resourcepool" }
+      optionSource = "list"
+      refCode = "atresourcepool"
+      type = "resourcePool"
+    },
+    {
+      code = "atserviceplan"
+      name = "ATService Plan"
+      uuid = "f71b8bfc-e381-454a-9252-1f7aef7ee575"
+      config = {
+        addon = ""
+        addonPosition = ""
+        cloudField = "7ed72d59-fbed-4c62-b8ad-c17edb21702d"
+        cloudFieldType = "field"
+        cloudId = ""
+        defaultValue = ""
+        diskField = ""
+        groupField = "0b37ec63-6d94-4bde-9abd-67ac4a226e8d"
+        groupFieldType = "field"
+        groupId = ""
+        layoutField = "b59b776e-ba14-4dcb-9ac2-c9967f0ad738"
+        layoutFieldType = "field"
+        layoutId = ""
+        multiSelect = false
+        poolField = "atresourcepool"
+        poolFieldType = "field"
+        poolId = ""
+        showPricing = false
+        sortable = ""
+      }
+      description = "atserviceplan"
+      displayOrder = 5
+      fieldContext = "config.customOptions"
+      fieldLabel = "Service Plan"
+      fieldName = "serviceplan"
+      formField = true
+      optionList = { name = "at service plan" }
+      optionSource = "list"
+      refCode = "atserviceplan"
+      type = "plan"
+    },
+    {
+      code = "network"
+      name = "Network"
+      uuid = "e92aedd9-aaed-4ff0-8a95-8ac5013fd816"
+      config = {
+        addon = ""
+        addonPosition = ""
+        cloudField = ""
+        cloudFieldType = "field"
+        cloudId = ""
+        defaultValue = ""
+        enableIPModeSelection = true
+        groupField = ""
+        groupFieldType = "field"
+        groupId = ""
+        layoutField = ""
+        layoutFieldType = "field"
+        layoutId = ""
+        multiSelect = false
+        planField = ""
+        planFieldType = "field"
+        planId = ""
+        poolField = ""
+        poolFieldType = "field"
+        poolId = ""
+        showNetworkTypeSelection = true
+        sortable = ""
+      }
+      defaultValue = "275"
+      displayOrder = 6
+      fieldContext = "config.customOptions"
+      fieldLabel = "network"
+      fieldName = "network"
+      formField = true
+      optionList = { name = "at network" }
+      optionSource = "list"
+      refCode = "network"
+      type = "networkManager"
+    },
+    {
+      code = "908769b0-27e6-4e1f-976d-93522b8da2dd"
+      name = "908769b0-27e6-4e1f-976d-93522b8da2dd"
+      uuid = "c9cf7d20-cd64-46e9-a378-f0a4807f4be9"
+      config = {
+        addon = ""
+        addonPosition = ""
+        cloudField = "7ed72d59-fbed-4c62-b8ad-c17edb21702d"
+        cloudFieldType = "cloud"
+        cloudId = ""
+      }
+      displayOrder = 7
+      fieldContext = "config.customOptions"
+      fieldLabel = "Virtual Image"
+      fieldName = "virtualImage"
+      formField = true
+      refCode = "908769b0-27e6-4e1f-976d-93522b8da2dd"
+      type = "virtual-image"
+    },
+    {
+      code = "64f58d37-7684-4165-ac05-891040cf4e29"
+      name = "64f58d37-7684-4165-ac05-891040cf4e29"
+      uuid = "2108e7b5-532e-414e-bfc3-cfa2004048fe"
+      config = {
+        addonPosition = ""
+        cloudField = "7ed72d59-fbed-4c62-b8ad-c17edb21702d"
+        cloudFieldType = "field"
+        cloudId = ""
+      }
+      displayOrder = 8
+      fieldContext = "config.customOptions"
+      fieldLabel = "Instance Type"
+      fieldName = "instanceType"
+      formField = true
+      refCode = "64f58d37-7684-4165-ac05-891040cf4e29"
+      type = "instances-input"
+    }
+  ]
+}
