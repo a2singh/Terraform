@@ -25,12 +25,12 @@ resource "option-type-form" "205560" {
     },
     {
       code = "servicePlans"
-      name = "servicePlans"
+      name = "AT ServicePlans"
       uuid = "6c0f0d7e-f81f-4137-9519-a715a9fb72e9"
       dependsOnCode = "app_name"
       description = "AT Service Plan"
       fieldContext = "config.customOptions"
-      fieldLabel = "plan"
+      fieldLabel = "ServicePlan"
       fieldName = "servicePlans"
       labels = [ "servicePlans" ]
       optionList = { name = "AT-ServicePlans(REST)" }
@@ -39,7 +39,7 @@ resource "option-type-form" "205560" {
     },
     {
       code = "ram"
-      name = "ATRAM"
+      name = "AT RAM"
       uuid = "495f8bce-d6f4-42d2-b7a1-40160e1bc98d"
       defaultValue = "8"
       description = "AT RAM"
@@ -52,7 +52,7 @@ resource "option-type-form" "205560" {
     },
     {
       code = "cpu"
-      name = "ATCPU"
+      name = "AT CPU"
       uuid = "a8255a4c-8174-44e2-a383-54879447a537"
       defaultValue = "2"
       description = "AT CPU"
