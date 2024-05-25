@@ -1,0 +1,16 @@
+resource "option-type-list" "at folder" {
+  name = "at folder"
+  uuid = "0b3464b9-34ca-4ec8-85de-aeadf3b7a25b"
+  config = "{\"sourceHeaders\":[{\"name\":\"Authorization\",\"value\":\"Bearer a9b01a8d-299c-4b43-b7f9-b6c1c26fde3a\",\"masked\":false}]}"
+  ignoreSSLErrors = true
+  realTime = true
+  requestScript = "results.push({name:\"zoneId\",value:input.morphcloud});"
+  sourceUrl = "https://10.32.23.86/api/options/vmware/vmwareFolders"
+  translationScript = <<EOFSCRIBE
+var i=0;
+results = [];
+for(i; i<data.data.length; i++) {
+results.push({name: data.data[i].name, value: data.data[i].value});
+}
+EOFSCRIBE
+}
