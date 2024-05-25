@@ -1,0 +1,10 @@
+resource "option-type" "instanceName" {
+  code = "instanceName"
+  name = "AT Instance name"
+  uuid = "8cecf9bd-20ad-4ad3-bfde-ef884b600ca4"
+  description = "AT Instance name"
+  fieldContext = "config.customOptions"
+  fieldLabel = "instanceName"
+  fieldName = "instanceName"
+  labels = [ "instanceName" ]
+}
