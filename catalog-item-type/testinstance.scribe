@@ -10,7 +10,7 @@ resource "catalog-item-type" "testinstance" {
     { code = "group" },
     { code = "cloud" },
     { code = "servicePlans" },
-    { code = "resourcepool" },
+    { code = "resourcePool" },
     { code = "network" }
   ]
   refType = "InstanceType"
