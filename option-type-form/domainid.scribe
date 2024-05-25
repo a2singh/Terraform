@@ -13,7 +13,7 @@ resource "option-type-form" "domainid" {
   options = [
     {
       code = "group"
-      name = "ATGroup"
+      name = "AT Group"
       uuid = "c0a52553-271a-4ae9-984c-ccd1ebca7393"
       description = "AT Group"
       fieldContext = "config.customOptions"
@@ -26,7 +26,7 @@ resource "option-type-form" "domainid" {
     },
     {
       code = "cloud"
-      name = "ATCloud"
+      name = "AT Cloud"
       uuid = "7623753e-c120-4afa-b909-be0f83070e1d"
       dependsOnCode = "group"
       description = "AT Cloud"
@@ -76,14 +76,14 @@ resource "option-type-form" "domainid" {
       type = "layout"
     },
     {
-      code = "resourcepool"
-      name = "ATResource Pool"
+      code = "resourcePool"
+      name = "AT ResourcePool"
       uuid = "7833e009-7d1a-453b-b87b-11a1edb3a5a1"
       dependsOnCode = "cloud"
       description = "AT Resource Pool"
       fieldContext = "config.customOptions"
       fieldLabel = "Resource Pool"
-      fieldName = "resourcepool"
+      fieldName = "resourcePool"
       labels = [ "resourcepool" ]
       optionList = { name = "at resourcepool" }
       optionSource = "list"
@@ -92,11 +92,11 @@ resource "option-type-form" "domainid" {
     },
     {
       code = "network"
-      name = "network"
+      name = "AT Network"
       uuid = "87c55338-674a-4ad5-b182-2b367c32309d"
       description = "AT Network"
       fieldContext = "config.customOptions"
-      fieldLabel = "Network"
+      fieldLabel = "network"
       fieldName = "network"
       labels = [ "network" ]
       optionList = { name = "at network(rest)" }
@@ -105,12 +105,12 @@ resource "option-type-form" "domainid" {
     },
     {
       code = "servicePlans"
-      name = "servicePlans"
+      name = "AT ServicePlans"
       uuid = "6c0f0d7e-f81f-4137-9519-a715a9fb72e9"
       dependsOnCode = "app_name"
       description = "AT Service Plan"
       fieldContext = "config.customOptions"
-      fieldLabel = "plan"
+      fieldLabel = "ServicePlan"
       fieldName = "servicePlans"
       labels = [ "servicePlans" ]
       optionList = { name = "AT-ServicePlans(REST)" }
