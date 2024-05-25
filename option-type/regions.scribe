@@ -1,11 +1,13 @@
 resource "option-type" "regions" {
   code = "regions"
-  name = "Regions"
+  name = "AT Regions"
   uuid = "9d88ac39-656e-43dd-bd49-d9123a80f4fa"
+  description = "AT Regions"
   fieldContext = "config.customOptions"
   fieldLabel = "Region"
   fieldName = "regions"
-  optionList = { name = "regions" }
+  labels = [ "AT Regions" ]
+  optionList = { name = "at regions" }
   optionSource = "list"
   type = "select"
 }
