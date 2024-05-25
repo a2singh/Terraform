@@ -1,6 +1,6 @@
 resource "option-type" "cpu" {
   code = "cpu"
-  name = "ATCPU"
+  name = "AT CPU"
   uuid = "a8255a4c-8174-44e2-a383-54879447a537"
   defaultValue = "2"
   description = "AT CPU"
