@@ -1,6 +1,6 @@
 resource "option-type" "ram" {
   code = "ram"
-  name = "AT RAM"
+  name = "ATRAM"
   uuid = "495f8bce-d6f4-42d2-b7a1-40160e1bc98d"
   defaultValue = "8"
   description = "AT RAM"
