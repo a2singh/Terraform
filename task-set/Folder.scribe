@@ -7,7 +7,7 @@ resource "task-set" "Folder" {
     { code = "morphgroup" },
     { code = "morphcloud" },
     { code = "resourcePool" },
-    { code = "folder" }
+    { code = "Folder" }
   ]
   taskSetType = "operation"
 }
