@@ -1,10 +1,10 @@
 resource "option-type" "network" {
   code = "network"
-  name = "network"
+  name = "AT Network"
   uuid = "87c55338-674a-4ad5-b182-2b367c32309d"
   description = "AT Network"
   fieldContext = "config.customOptions"
-  fieldLabel = "Network"
+  fieldLabel = "network"
   fieldName = "network"
   labels = [ "network" ]
   optionList = { name = "at network(rest)" }
