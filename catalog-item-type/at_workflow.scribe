@@ -3,7 +3,6 @@ resource "catalog-item-type" "at.workflow" {
   name = "AT Workflow Type List"
   uuid = "c0f419cd-fa91-48b4-93fa-e192a065e105"
   dateCreated = "2024-02-27T12:01:30.000Z"
-  form = { code = "205560" }
   formType = "form"
   lastUpdated = "2024-02-27T12:01:30.000Z"
   refType = "OperationalWorkflow"
