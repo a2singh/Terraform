@@ -1,6 +1,6 @@
 resource "option-type" "group" {
   code = "group"
-  name = "AT Group"
+  name = "ATGroup"
   uuid = "c0a52553-271a-4ae9-984c-ccd1ebca7393"
   description = "AT Group"
   fieldContext = "config.customOptions"
