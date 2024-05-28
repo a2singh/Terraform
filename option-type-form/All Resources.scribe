@@ -16,6 +16,7 @@ resource "option-type-form" "All Resources" {
       name = "421e4ace-a79d-444c-9306-da432773de20"
       uuid = "f4c6f2a1-d72a-4253-be0a-dc232fb24863"
       config = { addon = "", addonPosition = "" }
+      defaultValue = "32"
       fieldContext = "config.customOptions"
       fieldLabel = "Group"
       fieldName = "group"
