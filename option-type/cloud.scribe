@@ -1,6 +1,6 @@
 resource "option-type" "cloud" {
   code = "cloud"
-  name = "ATCloud"
+  name = "AT Cloud"
   uuid = "7623753e-c120-4afa-b909-be0f83070e1d"
   dependsOnCode = "group"
   description = "AT Cloud"

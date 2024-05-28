@@ -8,7 +8,7 @@ resource "task-set" "AT-API Select List-204781" {
   optionTypes = [
     { code = "group" },
     { code = "cloud" },
-    { code = "resourcepool" },
+    { code = "resourcePool" },
     { code = "servicePlans" }
   ]
   taskSetType = "operation"

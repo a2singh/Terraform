@@ -1,11 +1,11 @@
 resource "option-type" "servicePlans" {
   code = "servicePlans"
-  name = "servicePlans"
+  name = "AT ServicePlans"
   uuid = "6c0f0d7e-f81f-4137-9519-a715a9fb72e9"
   dependsOnCode = "app_name"
   description = "AT Service Plan"
   fieldContext = "config.customOptions"
-  fieldLabel = "plan"
+  fieldLabel = "ServicePlan"
   fieldName = "servicePlans"
   labels = [ "servicePlans" ]
   optionList = { name = "AT-ServicePlans(REST)" }
