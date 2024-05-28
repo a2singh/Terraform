@@ -3,7 +3,6 @@ resource "catalog-item-type" "atform" {
   name = "AT-DataGroup_FORM"
   uuid = "5eaa0c30-646a-49f6-8b4a-b53e7c59e37f"
   dateCreated = "2023-12-05T07:41:38.000Z"
-  form = { code = "datagroup" }
   formType = "form"
   lastUpdated = "2023-12-06T22:26:24.000Z"
   refType = "InstanceType"
