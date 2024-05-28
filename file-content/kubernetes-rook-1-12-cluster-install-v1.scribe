@@ -243,8 +243,6 @@ spec:
   storage: # cluster level storage configuration and selection
     useAllNodes: true
     useAllDevices: true
-    # devices:
-    #   - name: /dev/sdb
     #deviceFilter:
     config:
       # crushRoot: "custom-root" # specify a non-default root label for the CRUSH map
@@ -313,5 +311,5 @@ spec:
 
 EOFSCRIBE
   dateCreated = "2023-11-29T10:37:30.000Z"
-  lastUpdated = "2024-05-24T19:26:43.000Z"
+  lastUpdated = "2023-11-29T10:37:30.000Z"
 }

@@ -1144,8 +1144,8 @@ metadata:
     app.kubernetes.io/part-of: container-object-storage-interface
     app.kubernetes.io/component: driver-ceph
     app.kubernetes.io/name: cosi-driver-ceph
-imagePullSecrets:
-  - name: default-docker-secret
+# imagePullSecrets:
+#   - name: my-registry-secret
 ---
 # Service account for the job that reports the Ceph version in an image
 apiVersion: v1
@@ -1157,8 +1157,8 @@ metadata:
     operator: rook
     storage-backend: ceph
     app.kubernetes.io/part-of: rook-ceph-operator
-imagePullSecrets:
-  - name: default-docker-secret
+# imagePullSecrets:
+#   - name: my-registry-secret
 ---
 # Service account for Ceph mgrs
 apiVersion: v1
@@ -1170,8 +1170,8 @@ metadata:
     operator: rook
     storage-backend: ceph
     app.kubernetes.io/part-of: rook-ceph-operator
-imagePullSecrets:
-  - name: default-docker-secret
+# imagePullSecrets:
+#   - name: my-registry-secret
 ---
 # Service account for Ceph OSDs
 apiVersion: v1
@@ -1183,8 +1183,8 @@ metadata:
     operator: rook
     storage-backend: ceph
     app.kubernetes.io/part-of: rook-ceph-operator
-imagePullSecrets:
-  - name: default-docker-secret
+# imagePullSecrets:
+#   - name: my-registry-secret
 ---
 # Service account for job that purges OSDs from a Rook-Ceph cluster
 apiVersion: v1
@@ -1192,8 +1192,8 @@ kind: ServiceAccount
 metadata:
   name: rook-ceph-purge-osd
   namespace: rook-ceph # namespace:cluster
-imagePullSecrets:
-  - name: default-docker-secret
+# imagePullSecrets:
+#   - name: my-registry-secret
 ---
 # Service account for RGW server
 apiVersion: v1
@@ -1205,8 +1205,8 @@ metadata:
     operator: rook
     storage-backend: ceph
     app.kubernetes.io/part-of: rook-ceph-operator
-imagePullSecrets:
-  - name: default-docker-secret
+# imagePullSecrets:
+#   - name: my-registry-secret
 ---
 # Service account for the Rook-Ceph operator
 apiVersion: v1
@@ -1218,8 +1218,8 @@ metadata:
     operator: rook
     storage-backend: ceph
     app.kubernetes.io/part-of: rook-ceph-operator
-imagePullSecrets:
-  - name: default-docker-secret
+# imagePullSecrets:
+#   - name: my-registry-secret
 ---
 # Service account for the CephFS CSI driver
 apiVersion: v1
@@ -1227,8 +1227,8 @@ kind: ServiceAccount
 metadata:
   name: rook-csi-cephfs-plugin-sa
   namespace: rook-ceph # namespace:operator
-imagePullSecrets:
-  - name: default-docker-secret
+# imagePullSecrets:
+#   - name: my-registry-secret
 ---
 # Service account for the CephFS CSI provisioner
 apiVersion: v1
@@ -1236,8 +1236,8 @@ kind: ServiceAccount
 metadata:
   name: rook-csi-cephfs-provisioner-sa
   namespace: rook-ceph # namespace:operator
-imagePullSecrets:
-  - name: default-docker-secret
+# imagePullSecrets:
+#   - name: my-registry-secret
 ---
 # Service account for the RBD CSI driver
 apiVersion: v1
@@ -1245,8 +1245,8 @@ kind: ServiceAccount
 metadata:
   name: rook-csi-rbd-plugin-sa
   namespace: rook-ceph # namespace:operator
-imagePullSecrets:
-  - name: default-docker-secret
+# imagePullSecrets:
+#   - name: my-registry-secret
 ---
 # Service account for the RBD CSI provisioner
 apiVersion: v1
@@ -1254,10 +1254,10 @@ kind: ServiceAccount
 metadata:
   name: rook-csi-rbd-provisioner-sa
   namespace: rook-ceph # namespace:operator
-imagePullSecrets:
-  - name: default-docker-secret
+# imagePullSecrets:
+#   - name: my-registry-secret
 
 EOFSCRIBE
   dateCreated = "2023-11-29T10:37:30.000Z"
-  lastUpdated = "2024-05-24T19:26:43.000Z"
+  lastUpdated = "2023-11-29T10:37:30.000Z"
 }
