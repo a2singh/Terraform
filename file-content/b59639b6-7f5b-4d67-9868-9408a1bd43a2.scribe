@@ -1,0 +1,10 @@
+resource "file-content" "b59639b6-7f5b-4d67-9868-9408a1bd43a2" {
+  uuid = "b59639b6-7f5b-4d67-9868-9408a1bd43a2"
+  content = <<EOFSCRIBE
+#!/bin/bash
+ 
+ln -s /var/log/morpheus/morpheus-ui /opt/morpheus/.local/customerlog
+EOFSCRIBE
+  dateCreated = "2024-05-31T14:23:13.000Z"
+  lastUpdated = "2024-05-31T14:23:13.000Z"
+}
