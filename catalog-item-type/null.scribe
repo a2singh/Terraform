@@ -1,9 +1,14 @@
 resource "catalog-item-type" "null" {
-  name = "AT-Kajal-Catalog"
-  uuid = "f5b794c5-48a6-43be-8ff7-5ab087740554"
-  dateCreated = "2024-04-01T12:13:39.000Z"
+  name = "AT-Service_Plan"
+  uuid = "b9499060-bfbf-4d29-8af6-3e3e17016fb7"
+  dateCreated = "2023-10-20T07:53:48.000Z"
   formType = "optionTypes"
-  lastUpdated = "2024-04-01T12:13:39.000Z"
-  optionTypes = [ { code = "Select_Instance" } ]
-  refType = "OperationalWorkflow"
+  lastUpdated = "2023-11-09T07:15:44.000Z"
+  optionTypes = [
+    { code = "cpu" },
+    { code = "ram" },
+    { code = "plan" },
+    { code = "environment" }
+  ]
+  refType = "InstanceType"
 }
