@@ -7,4 +7,5 @@ resource "instance-type" "azubuntu" {
   environmentPrefix = "AZURE-UBUNTU"
   hasDeployment = true
   hasSettings = true
+  layouts = [ { code = "b6668bff-f0b2-471e-904c-6f359bc8565c" } ]
 }
