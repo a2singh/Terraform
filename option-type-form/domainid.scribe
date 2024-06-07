@@ -16,6 +16,7 @@ resource "option-type-form" "domainid" {
       name = "AT Group"
       uuid = "c0a52553-271a-4ae9-984c-ccd1ebca7393"
       description = "AT Group"
+      exportMeta = true
       fieldContext = "config.customOptions"
       fieldLabel = "Group"
       fieldName = "group"
