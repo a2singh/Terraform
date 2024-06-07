@@ -1,0 +1,15 @@
+resource "container-type" "b9ad799a-ad3b-4bc4-91b1-4037737afc00" {
+  code = "b9ad799a-ad3b-4bc4-91b1-4037737afc00"
+  name = "Windows 2019 Server"
+  uuid = "2153b669-9ee8-4dc1-b6af-313915022279"
+  containerVersion = "latest"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "windows2019"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "vmware.vsphere.image.9.vm-66404" }
+}
