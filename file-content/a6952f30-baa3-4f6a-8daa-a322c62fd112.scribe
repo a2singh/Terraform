@@ -1,0 +1,50 @@
+resource "file-content" "a6952f30-baa3-4f6a-8daa-a322c62fd112" {
+  uuid = "a6952f30-baa3-4f6a-8daa-a322c62fd112"
+  content = <<EOFSCRIBE
+It seems like you copied the explanation text along with the script, causing a syntax error because Python doesn't understand plain text comments within the code. Let's focus only on the Python script without any additional comments or explanations:
+
+```python
+import paramiko
+
+def update_hostname(hostname):
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    
+    try:
+        # Connect to the VM
+        ssh.connect('10.32.23.130', username='asingh', password='Welcome2022!')
+        
+        # Execute commands to update hostname
+        commands = [
+            f"sudo hostnamectl set-hostname {hostname}",
+            "sudo systemctl restart systemd-hostnamed"
+        ]
+        
+        for cmd in commands:
+            stdin, stdout, stderr = ssh.exec_command(cmd)
+            output = stdout.read().decode()
+            errors = stderr.read().decode()
+            
+            if output:
+                print(output)
+            if errors:
+                print(errors)
+        
+        print("Hostname updated successfully.")
+        
+    except Exception as e:
+        print(f"Error: {e}")
+        
+    finally:
+        ssh.close()
+
+# Replace 'your_vm_ip', 'your_username', and 'your_password' with actual VM details
+# Replace 'new_hostname' with the desired hostname
+update_hostname('newhost')
+```
+
+This version of the script should execute without syntax errors. Let me know if you need further assistance!
+EOFSCRIBE
+  dateCreated = "2024-06-07T14:36:14.000Z"
+  lastUpdated = "2024-06-07T14:46:55.000Z"
+}

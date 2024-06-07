@@ -1,0 +1,14 @@
+resource "task" "Update hostname" {
+  name = "Update hostname"
+  uuid = "486a0f5d-7855-41b7-9a09-c2d4f017b495"
+  dateCreated = "2024-06-07T14:36:14.000Z"
+  executeTarget = "local"
+  lastUpdated = "2024-06-07T14:46:55.000Z"
+  options = [
+    {
+      content = { uuid = "a6952f30-baa3-4f6a-8daa-a322c62fd112" }
+      optionType = { code = "pythonScript" }
+    }
+  ]
+  taskType = { code = "jythonTask" }
+}
