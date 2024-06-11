@@ -1,0 +1,11 @@
+resource "instance-type" "atwindows" {
+  code = "atwindows"
+  name = "AT Windows Server"
+  uuid = "9679d38d-d4be-4505-9d7a-f6dd66a9aad3"
+  category = "os"
+  deploymentService = "defaultDeployService"
+  environmentPrefix = "AT_WINDOWS_SERVER_"
+  hasAutoScale = true
+  hasDeployment = true
+  hasSettings = true
+}

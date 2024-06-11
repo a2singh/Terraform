@@ -1,0 +1,13 @@
+resource "instance-type-layout" "200275b7-90ca-4709-b131-abaddb052813" {
+  code = "200275b7-90ca-4709-b131-abaddb052813"
+  name = "Windows Server 2019"
+  uuid = "4db5d762-61a3-4f92-bf20-dda50e9de2cd"
+  actions = [ { code = "generic-add-node" } ]
+  hasAutoScale = true
+  instanceType = { code = "atwindows" }
+  instanceVersion = "latest"
+  memoryRequirement = 0
+  provisionType = { code = "vmware" }
+  supportsConvertToManaged = true
+  workloads = [ { code = "ec713df9-2e62-47a1-999e-1762051f2fbf" } ]
+}
