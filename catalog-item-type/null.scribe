@@ -1,10 +1,9 @@
 resource "catalog-item-type" "null" {
-  name = "ap sg form"
-  uuid = "e5b0eb9e-7209-4810-94e8-282b66362367"
-  dateCreated = "2024-06-14T05:45:35.000Z"
-  form = { code = "aws" }
-  formConfig = "{\"optOut\":{\"04a6a33a-bb10-4b63-91e8-39d1fb4e56ee\":false,\"24a92509-7df1-4296-8b7a-316fc8273bd9\":false,\"72fc4860-1614-47c1-9bcc-605189762a07\":false,\"f8977b16-32f0-4b5d-a04e-865eab301492\":false,\"67e3912f-1734-4e6a-93d6-df9b65f2da6c\":false}}"
+  name = "AP test workflow"
+  uuid = "c976730a-beae-4687-9ef2-f4db94a8441e"
+  dateCreated = "2024-02-27T10:20:27.000Z"
+  form = { code = "All Resources" }
   formType = "form"
-  lastUpdated = "2024-06-14T05:45:35.000Z"
-  refType = "InstanceType"
+  lastUpdated = "2024-04-08T13:46:24.000Z"
+  refType = "OperationalWorkflow"
 }
