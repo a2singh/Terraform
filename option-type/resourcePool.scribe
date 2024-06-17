@@ -1,15 +1,12 @@
 resource "option-type" "resourcePool" {
   code = "resourcePool"
-  name = "AT ResourcePool"
-  uuid = "7833e009-7d1a-453b-b87b-11a1edb3a5a1"
-  dependsOnCode = "cloud"
-  description = "AT Resource Pool"
+  name = "vCenter ResourcePool"
+  uuid = "99442a4d-218b-4f55-b098-b20fc957234e"
+  dependsOnCode = "morphcloud"
   fieldContext = "config.customOptions"
-  fieldLabel = "Resource Pool"
+  fieldLabel = "vCenter ResourcePool"
   fieldName = "resourcePool"
-  labels = [ "resourcepool" ]
-  optionList = { name = "at resourcepool" }
+  optionList = { name = "API Resource Pool" }
   optionSource = "list"
-  required = true
   type = "select"
 }
