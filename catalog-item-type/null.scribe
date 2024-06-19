@@ -1,14 +1,14 @@
 resource "catalog-item-type" "null" {
-  name = "AT-Service_Plan"
-  uuid = "b9499060-bfbf-4d29-8af6-3e3e17016fb7"
-  dateCreated = "2023-10-20T07:53:48.000Z"
+  name = "AT-Unisys-206137"
+  uuid = "c97f5935-c45f-4e7c-955e-fc3cf59bff76"
+  dateCreated = "2024-04-29T11:24:09.000Z"
+  description = "AppBlueprint Catalog"
   formType = "optionTypes"
-  lastUpdated = "2023-11-09T07:15:44.000Z"
+  lastUpdated = "2024-05-03T06:01:52.000Z"
   optionTypes = [
-    { code = "cpu" },
-    { code = "ram" },
-    { code = "plan" },
-    { code = "environment" }
+    { code = "app_name" },
+    { code = "network" },
+    { code = "servicePlans" }
   ]
-  refType = "InstanceType"
+  refType = "AppTemplate"
 }
