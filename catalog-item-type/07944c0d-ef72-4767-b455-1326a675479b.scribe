@@ -1,0 +1,414 @@
+resource "catalog-item-type" "07944c0d-ef72-4767-b455-1326a675479b" {
+  name = "multiple disk issue"
+  uuid = "07944c0d-ef72-4767-b455-1326a675479b"
+  config = {
+    name = "singh"
+    backup = {
+      createBackup = false
+      jobAction = "new"
+      jobRetentionCount = 3
+      providerBackupType = -1
+      veeamManagedServer = ""
+    }
+    cloud = { name = "AT VMware Cloud", id = 14 }
+    config = {
+      createUser = true
+      hostId = null
+      isEC2 = false
+      isVpcSelectable = true
+      nestedVirtualization = null
+      noAgent = false
+      poolProviderType = null
+      resourcePoolId = "pool-373"
+      smbiosAssetTag = null
+      vmwareFolderId = "/"
+    }
+    copies = 1
+    defaultExpandAdvanced = false
+    group = { name = "All Groups", id = "2" }
+    hideLock = true
+    hostName = "singh"
+    instance = { userGroup = { id = "" } }
+    layout = { code = "fad6c6e8-91e1-4e30-8110-59da516d0111", id = 1127 }
+    networkInterfaces = [
+      {
+        network = {
+          hasPool = false
+          id = "network-448"
+          idName = "VLAN0002 - Internal Server 2"
+        }
+        networkInterfaceTypeId = 4
+        networkInterfaceTypeIdName = "VMXNET 3"
+        primaryInterface = true
+        showNetworkDhcpLabel = true
+        showNetworkPoolLabel = false
+      }
+    ]
+    plan = { code = "custom.vmware", id = 5468 }
+    servicePlanOptions = {
+      coresPerSocket = 1
+      forPlan = 5468
+      maxCores = 1
+      maxMemory = 17179869184
+      maxMemory-display = "GB"
+    }
+    showScale = false
+    storageControllers = [
+      {
+        name = "SCSI controller 1"
+        category = "scsi"
+        active = true
+        busNumber = "1"
+        displayOrder = 0
+        editable = false
+        id = 17732
+        maxDevices = 65
+        removable = false
+        reservedUnitNumber = 7
+        typeId = 4
+        typeName = "SCSI LSI Logic Parallel"
+        unitNumber = "4"
+      },
+      {
+        name = "IDE 0"
+        category = "ide"
+        active = true
+        busNumber = "0"
+        displayOrder = 1
+        editable = false
+        id = 17729
+        maxDevices = 2
+        removable = false
+        reservedUnitNumber = -1
+        typeId = 2
+        typeName = "IDE"
+        unitNumber = "null"
+      },
+      {
+        name = "IDE 1"
+        category = "ide"
+        active = true
+        busNumber = "1"
+        displayOrder = 2
+        editable = false
+        id = 17730
+        maxDevices = 2
+        removable = false
+        reservedUnitNumber = -1
+        typeId = 2
+        typeName = "IDE"
+        unitNumber = "null"
+      },
+      {
+        name = "SCSI controller 2"
+        category = "scsi"
+        active = true
+        busNumber = "2"
+        displayOrder = 3
+        editable = false
+        id = 17733
+        maxDevices = 65
+        removable = false
+        reservedUnitNumber = 7
+        typeId = 4
+        typeName = "SCSI LSI Logic Parallel"
+        unitNumber = "5"
+      },
+      {
+        name = "SCSI controller 0"
+        category = "scsi"
+        active = true
+        busNumber = "0"
+        displayOrder = 4
+        editable = false
+        id = 17731
+        maxDevices = 65
+        removable = false
+        reservedUnitNumber = 7
+        typeId = 4
+        typeName = "SCSI LSI Logic Parallel"
+        unitNumber = "3"
+      }
+    ]
+    templateParameter = null
+    type = "1.1"
+    version = "1.3"
+    volumes = [
+      {
+        name = "root"
+        uuid = "42014e9e-6d61-4b7a-ae6c-be9063c65cec"
+        configurableIOPS = false
+        controllerId = 18276
+        controllerMountPoint = "18276:0:4:0"
+        datastoreId = "autoCluster"
+        displayOrder = 0
+        externalId = "2000"
+        id = 9240
+        internalId = "[ESXi-ContentLibrary] dg-scsi-mismatch/dg-scsi-mismatch.vmdk"
+        maxIOPS = null
+        maxStorage = 21474836480
+        minStorage = 21474836480
+        planResizable = true
+        readonlyName = false
+        resizeable = true
+        rootVolume = true
+        size = 20
+        storageType = 1
+        typeId = 1
+        uniqueId = null
+        unitNumber = "0"
+        vId = 1403
+        virtualImageId = 1403
+        volumeCustomizable = true
+      },
+      {
+        name = "data 1"
+        uuid = "86544f9c-4dfa-4d4c-a21e-03788637e3e1"
+        configurableIOPS = false
+        controllerId = 18276
+        controllerMountPoint = "18276:0:4:1"
+        datastoreId = "autoCluster"
+        displayOrder = 1
+        externalId = "2001"
+        id = 9241
+        internalId = "[ESXi-ContentLibrary] dg-scsi-mismatch/dg-scsi-mismatch_1.vmdk"
+        maxIOPS = null
+        maxStorage = 42949672960
+        minStorage = 42949672960
+        planResizable = true
+        readonlyName = false
+        resizeable = true
+        rootVolume = false
+        size = 40
+        storageType = 1
+        typeId = 1
+        uniqueId = null
+        unitNumber = "1"
+        vId = 1403
+        virtualImageId = 1403
+        volumeCustomizable = true
+      },
+      {
+        name = "data 2"
+        uuid = "632187c9-b53e-47b8-81e6-1fd038699ded"
+        configurableIOPS = false
+        controllerId = 18276
+        controllerMountPoint = "18276:0:4:2"
+        datastoreId = "autoCluster"
+        displayOrder = 2
+        externalId = "2002"
+        id = 9242
+        internalId = "[ESXi-ContentLibrary] dg-scsi-mismatch/dg-scsi-mismatch_2.vmdk"
+        maxIOPS = null
+        maxStorage = 5368709120
+        minStorage = 5368709120
+        planResizable = true
+        readonlyName = false
+        resizeable = true
+        rootVolume = false
+        size = 10
+        storageType = 1
+        typeId = 1
+        uniqueId = null
+        unitNumber = "2"
+        vId = 1403
+        virtualImageId = 1403
+        volumeCustomizable = true
+      },
+      {
+        name = "data 3"
+        uuid = "44f20d2f-eaef-4cfb-a6b3-12d93df7612e"
+        configurableIOPS = false
+        controllerId = 18276
+        controllerMountPoint = "18276:0:4:3"
+        datastoreId = "autoCluster"
+        displayOrder = 3
+        externalId = "2003"
+        id = 9243
+        internalId = "[ESXi-ContentLibrary] dg-scsi-mismatch/dg-scsi-mismatch_3.vmdk"
+        maxIOPS = null
+        maxStorage = 5368709120
+        minStorage = 5368709120
+        planResizable = true
+        readonlyName = false
+        resizeable = true
+        rootVolume = false
+        size = 10
+        storageType = 1
+        typeId = 1
+        uniqueId = null
+        unitNumber = "3"
+        vId = 1403
+        virtualImageId = 1403
+        volumeCustomizable = true
+      },
+      {
+        name = "data 4"
+        uuid = "582d3454-d4a1-4f2c-8fb2-2dcd3c71cc4d"
+        configurableIOPS = false
+        controllerId = 18277
+        controllerMountPoint = "18277:1:4:0"
+        datastoreId = "autoCluster"
+        displayOrder = 4
+        externalId = "2016"
+        id = 9244
+        internalId = "[ESXi-ContentLibrary] dg-scsi-mismatch/dg-scsi-mismatch_6.vmdk"
+        maxIOPS = null
+        maxStorage = 2147483648
+        minStorage = 2147483648
+        planResizable = true
+        readonlyName = false
+        resizeable = true
+        rootVolume = false
+        size = 10
+        storageType = 1
+        typeId = 1
+        uniqueId = null
+        unitNumber = "0"
+        vId = 1403
+        virtualImageId = 1403
+        volumeCustomizable = true
+      },
+      {
+        name = "data 5"
+        uuid = "9a1c9464-8121-446d-9143-cff054146e98"
+        configurableIOPS = false
+        controllerId = 18277
+        controllerMountPoint = "18277:1:4:1"
+        datastoreId = "autoCluster"
+        displayOrder = 5
+        externalId = "2017"
+        id = 9245
+        internalId = "[ESXi-ContentLibrary] dg-scsi-mismatch/dg-scsi-mismatch_7.vmdk"
+        maxIOPS = null
+        maxStorage = 2147483648
+        minStorage = 2147483648
+        planResizable = true
+        readonlyName = false
+        resizeable = true
+        rootVolume = false
+        size = 10
+        storageType = 1
+        typeId = 1
+        uniqueId = null
+        unitNumber = "1"
+        vId = 1403
+        virtualImageId = 1403
+        volumeCustomizable = true
+      },
+      {
+        name = "data 6"
+        uuid = "52481933-3ec8-49f2-b5bf-acb4f17630b2"
+        configurableIOPS = false
+        controllerId = 18277
+        controllerMountPoint = "18277:1:4:2"
+        datastoreId = "autoCluster"
+        displayOrder = 6
+        externalId = "2018"
+        id = 9246
+        internalId = "[ESXi-ContentLibrary] dg-scsi-mismatch/dg-scsi-mismatch_8.vmdk"
+        maxIOPS = null
+        maxStorage = 2147483648
+        minStorage = 2147483648
+        planResizable = true
+        readonlyName = false
+        resizeable = true
+        rootVolume = false
+        size = 10
+        storageType = 1
+        typeId = 1
+        uniqueId = null
+        unitNumber = "2"
+        vId = 1403
+        virtualImageId = 1403
+        volumeCustomizable = true
+      },
+      {
+        name = "data 7"
+        uuid = "8d363542-0077-46b4-9a80-630c044ff8b9"
+        configurableIOPS = false
+        controllerId = 18277
+        controllerMountPoint = "18277:1:4:3"
+        datastoreId = "autoCluster"
+        displayOrder = 7
+        externalId = "2019"
+        id = 9247
+        internalId = "[ESXi-ContentLibrary] dg-scsi-mismatch/dg-scsi-mismatch_9.vmdk"
+        maxIOPS = null
+        maxStorage = 2147483648
+        minStorage = 2147483648
+        planResizable = true
+        readonlyName = false
+        resizeable = true
+        rootVolume = false
+        size = 10
+        storageType = 1
+        typeId = 1
+        uniqueId = null
+        unitNumber = "3"
+        vId = 1403
+        virtualImageId = 1403
+        volumeCustomizable = true
+      },
+      {
+        name = "data 8"
+        uuid = "9dc3299c-57ea-4fa1-8994-94c9675f789c"
+        configurableIOPS = false
+        controllerId = 18278
+        controllerMountPoint = "18278:2:4:0"
+        datastoreId = "autoCluster"
+        displayOrder = 8
+        externalId = "2032"
+        id = 9248
+        internalId = "[ESXi-ContentLibrary] dg-scsi-mismatch/dg-scsi-mismatch_4.vmdk"
+        maxIOPS = null
+        maxStorage = 10737418240
+        minStorage = 10737418240
+        planResizable = true
+        readonlyName = false
+        resizeable = true
+        rootVolume = false
+        size = 10
+        storageType = 1
+        typeId = 1
+        uniqueId = null
+        unitNumber = "0"
+        vId = 1403
+        virtualImageId = 1403
+        volumeCustomizable = true
+      },
+      {
+        name = "data 9"
+        uuid = "637b8458-e0a2-4f57-81ec-e07a9193a93a"
+        configurableIOPS = false
+        controllerId = 18278
+        controllerMountPoint = "18278:2:4:1"
+        datastoreId = "autoCluster"
+        displayOrder = 9
+        externalId = "2033"
+        id = 9249
+        internalId = "[ESXi-ContentLibrary] dg-scsi-mismatch/dg-scsi-mismatch_5.vmdk"
+        maxIOPS = null
+        maxStorage = 10737418240
+        minStorage = 10737418240
+        planResizable = true
+        readonlyName = false
+        resizeable = true
+        rootVolume = false
+        size = 10
+        storageType = 1
+        typeId = 1
+        uniqueId = null
+        unitNumber = "1"
+        vId = 1403
+        virtualImageId = 1403
+        volumeCustomizable = true
+      }
+    ]
+  }
+  dateCreated = "2024-02-19T08:35:01.000Z"
+  form = { code = "All Resources" }
+  formType = "form"
+  lastUpdated = "2024-02-19T08:35:01.000Z"
+  refType = "InstanceType"
+}
