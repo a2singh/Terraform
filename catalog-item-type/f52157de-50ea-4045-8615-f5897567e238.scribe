@@ -1,0 +1,12 @@
+resource "catalog-item-type" "f52157de-50ea-4045-8615-f5897567e238" {
+  name = "test-workflow"
+  uuid = "f52157de-50ea-4045-8615-f5897567e238"
+  config = {
+    config = ""
+    context = ""
+    workflowUuid = "9c79a7a3-008c-4e6c-9411-43dd3bff97cf"
+  }
+  dateCreated = "2024-02-12T13:16:38.000Z"
+  lastUpdated = "2024-02-12T13:16:38.000Z"
+  refType = "OperationalWorkflow"
+}
