@@ -1,0 +1,106 @@
+resource "catalog-item-type" "7a40ca88-1095-4f92-aff6-ad925604cbea" {
+  name = "dg-form"
+  uuid = "7a40ca88-1095-4f92-aff6-ad925604cbea"
+  config = {
+    name = "AT-$${account.take(5).toUpperCase()}-$${sequence+100}"
+    backup = {
+      createBackup = false
+      jobAction = "new"
+      jobRetentionCount = 3
+      providerBackupType = -1
+      veeamManagedServer = ""
+    }
+    cloud = { name = "AP VMware", id = 11 }
+    config = {
+      createUser = false
+      hostId = null
+      isEC2 = false
+      isVpcSelectable = true
+      nestedVirtualization = null
+      noAgent = false
+      poolProviderType = null
+      resourcePoolId = "pool-447"
+      smbiosAssetTag = null
+      vmwareFolderId = "/"
+    }
+    copies = 1
+    defaultExpandAdvanced = false
+    group = { name = "All Groups", id = "2" }
+    hideLock = true
+    hostName = "AT-$${account.take(5).toUpperCase()}-$${sequence+100}"
+    instance = { powerScheduleType = "1", userGroup = { id = "" } }
+    layout = { code = "vmware-centos-9-stream-single", id = 351 }
+    networkInterfaces = [
+      {
+        ipMode = ""
+        network = {
+          hasPool = false
+          id = "network-509"
+          idName = "VLAN0002 - Internal Server 2"
+        }
+        primaryInterface = true
+        showNetworkDhcpLabel = true
+        showNetworkPoolLabel = false
+      }
+    ]
+    plan = { code = "at.customplan", id = 7595 }
+    ports = [
+      {
+        code = "centos.22"
+        name = "SSH"
+        externalPort = 22
+        id = 12
+        internalPort = 22
+        loadBalance = false
+        loadBalancePort = null
+        loadBalanceProtocol = null
+        shortName = "ssh"
+        sortOrder = 1
+        visible = true
+      }
+    ]
+    servicePlanOptions = {
+      coresPerSocket = 2
+      forPlan = 7595
+      maxCores = 2
+      maxMemory = 2147483648
+    }
+    showScale = false
+    type = "centos"
+    version = "9-stream"
+    volumes = [
+      {
+        name = "root"
+        uuid = "4998ccc7-3c90-4388-a0ac-9f3f5c9c2205"
+        configurableIOPS = false
+        controllerId = 22744
+        controllerMountPoint = "22744:0:4:0"
+        datastoreId = "autoCluster"
+        displayOrder = 0
+        externalId = "2000"
+        id = 11807
+        internalId = "[esxi-local-06] Morpheus CentOS 9-stream 20230822/Morpheus CentOS 9-stream 20230822.vmdk"
+        maxIOPS = null
+        maxStorage = 5242880000
+        minStorage = 5242880000
+        planResizable = true
+        readonlyName = false
+        resizeable = true
+        rootVolume = true
+        size = 10
+        storageType = 1
+        typeId = 1
+        uniqueId = null
+        unitNumber = "0"
+        vId = 258
+        virtualImageId = 258
+        volumeCustomizable = true
+      }
+    ]
+  }
+  dateCreated = "2024-04-08T13:25:36.000Z"
+  form = { code = "dg-form" }
+  formType = "form"
+  lastUpdated = "2024-04-08T13:25:36.000Z"
+  refType = "InstanceType"
+}
