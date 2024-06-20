@@ -1,0 +1,139 @@
+resource "catalog-item-type" "37b47e6f-0c7a-45e6-951a-1d6f8c94e7e8" {
+  name = "205649-ap"
+  uuid = "37b47e6f-0c7a-45e6-951a-1d6f8c94e7e8"
+  config = {
+    name = "ap-205649"
+    backup = {
+      createBackup = false
+      jobAction = "new"
+      jobRetentionCount = 3
+      providerBackupType = -1
+      veeamManagedServer = ""
+    }
+    cloud = { name = "AT VMware Cloud", id = 14 }
+    config = {
+      createUser = true
+      hostId = null
+      isEC2 = false
+      isVpcSelectable = true
+      nestedVirtualization = null
+      noAgent = true
+      poolProviderType = null
+      resourcePoolId = "pool-602"
+      smbiosAssetTag = null
+      vmwareFolderId = "/"
+    }
+    copies = 1
+    defaultExpandAdvanced = false
+    group = { name = "All Groups", id = "2" }
+    hideLock = true
+    hostName = "ap-205649"
+    instance = { userGroup = { id = "" } }
+    layout = { code = "vmware-centos-7.5-single", id = 308 }
+    networkInterfaces = [
+      {
+        network = {
+          hasPool = false
+          id = "network-448"
+          idName = "VLAN0002 - Internal Server 2"
+        }
+        networkInterfaceTypeId = 4
+        networkInterfaceTypeIdName = "VMXNET 3"
+        primaryInterface = true
+        showNetworkDhcpLabel = true
+        showNetworkPoolLabel = false
+      }
+    ]
+    plan = { code = "vm-1024", id = 248 }
+    showScale = false
+    storageControllers = [
+      {
+        name = "SCSI 0"
+        category = "scsi"
+        active = true
+        busNumber = "0"
+        displayOrder = 0
+        editable = false
+        id = 52
+        maxDevices = 16
+        removable = false
+        reservedUnitNumber = 7
+        typeId = 4
+        typeName = "SCSI LSI Logic Parallel"
+        unitNumber = null
+      },
+      {
+        name = "IDE 1"
+        category = "ide"
+        active = true
+        busNumber = "1"
+        displayOrder = 1
+        editable = false
+        id = 54
+        maxDevices = 2
+        removable = false
+        reservedUnitNumber = -1
+        typeId = 2
+        typeName = "IDE"
+        unitNumber = null
+      },
+      {
+        name = "IDE 0"
+        category = "ide"
+        active = true
+        busNumber = "0"
+        displayOrder = 2
+        editable = false
+        id = 53
+        maxDevices = 2
+        removable = false
+        reservedUnitNumber = -1
+        typeId = 2
+        typeName = "IDE"
+        unitNumber = null
+      }
+    ]
+    templateParameter = null
+    type = "centos"
+    version = "9-stream"
+    volumes = [
+      {
+        name = "root"
+        uuid = "f36bc494-c4ab-44ef-890c-8a275ff5bac6"
+        configurableIOPS = false
+        controllerId = 18296
+        controllerMountPoint = "18296:0:4:0"
+        datastoreId = "auto"
+        displayOrder = 0
+        externalId = "2000"
+        id = 9255
+        internalId = "[ESXi-DC2-DEMO-LUN02] Morpheus CentOS 7.5 v4/Morpheus CentOS 7.5 v4.vmdk"
+        maxIOPS = null
+        maxStorage = 10737418240
+        minStorage = 5368709120
+        planResizable = true
+        readonlyName = false
+        resizeable = true
+        rootVolume = true
+        size = 10
+        storageType = 1
+        typeId = 1
+        uniqueId = null
+        unitNumber = "0"
+        vId = 210
+        virtualImageId = 210
+        volumeCustomizable = true
+      }
+    ]
+  }
+  dateCreated = "2024-03-18T11:32:43.000Z"
+  formType = "optionTypes"
+  lastUpdated = "2024-03-21T11:34:59.000Z"
+  optionTypes = [
+    { code = "morphgroup" },
+    { code = "morphcloud" },
+    { code = "resourcePool" }
+  ]
+  refType = "InstanceType"
+  visibility = "public"
+}
