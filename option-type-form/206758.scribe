@@ -15,9 +15,10 @@ resource "option-type-form" "206758" {
       name = "88be8fca-eeed-4ed7-8625-271fccd3998e"
       uuid = "77bfc6cc-a64f-4e04-9b32-89e463ddc327"
       config = { addon = "", addonPosition = "" }
+      defaultValue = "2"
       fieldContext = "config.customOptions"
       fieldLabel = "group"
-      fieldName = "group"
+      fieldName = "testGroups"
       formField = true
       refCode = "88be8fca-eeed-4ed7-8625-271fccd3998e"
       type = "group"
@@ -39,17 +40,39 @@ resource "option-type-form" "206758" {
       displayOrder = 1
       fieldContext = "config.customOptions"
       fieldLabel = "cloud"
-      fieldName = "cloud"
+      fieldName = "testClouds"
       formField = true
       refCode = "dd7ad1b2-aac1-4fed-bd52-8849b75dbef9"
       type = "cloud"
+    },
+    {
+      code = "13ee87f3-55d2-440b-9b77-ca3fbb9cf5eb"
+      name = "13ee87f3-55d2-440b-9b77-ca3fbb9cf5eb"
+      uuid = "cb12da57-5427-4414-aa7a-f5b61f0551fe"
+      config = {
+        cloudField = ""
+        cloudFieldType = "field"
+        cloudId = ""
+        groupField = ""
+        groupFieldType = "field"
+        groupId = ""
+        instanceTypeCode = ""
+        instanceTypeFieldCode = ""
+        instanceTypeFieldType = "field"
+      }
+      displayOrder = 2
+      fieldContext = "config.customOptions"
+      fieldLabel = "layouts"
+      fieldName = "testLayouts"
+      formField = true
+      type = "layout"
     },
     {
       code = "a55d13b3-9b53-413b-bb02-567d26f438f1"
       name = "a55d13b3-9b53-413b-bb02-567d26f438f1"
       uuid = "7fd631dc-8a01-4a7c-a615-bc75b114b7fd"
       config = { addon = "", addonPosition = "" }
-      displayOrder = 2
+      displayOrder = 3
       fieldContext = "config.customOptions"
       fieldLabel = "environment"
       fieldName = "environment"
@@ -80,10 +103,10 @@ resource "option-type-form" "206758" {
         poolId = ""
         showPricing = false
       }
-      displayOrder = 3
+      displayOrder = 4
       fieldContext = "config.customOptions"
       fieldLabel = "service plan"
-      fieldName = "serviceplan"
+      fieldName = "testPlans"
       formField = true
       refCode = "f2733ba3-67e7-445c-ba4c-6fbf9edc5508"
       type = "plan"
@@ -106,11 +129,11 @@ resource "option-type-form" "206758" {
         planFieldType = "field"
         planId = ""
       }
-      displayOrder = 4
+      displayOrder = 5
       excludeFromSearch = true
       fieldContext = "config.customOptions"
       fieldLabel = "resourcepool"
-      fieldName = "resourcepool"
+      fieldName = "testPools"
       formField = true
       refCode = "236aa426-2553-4569-8573-65f19465729a"
       type = "resourcePool"
@@ -130,18 +153,18 @@ resource "option-type-form" "206758" {
         groupField = "88be8fca-eeed-4ed7-8625-271fccd3998e"
         groupFieldType = "field"
         groupId = ""
-        layoutField = null
+        layoutField = ""
         layoutFieldType = "value"
-        layoutId = "308"
+        layoutId = 308
         poolField = "236aa426-2553-4569-8573-65f19465729a"
         poolFieldType = "field"
         poolId = ""
         showNetworkTypeSelection = false
       }
-      displayOrder = 5
+      displayOrder = 6
       fieldContext = "config.customOptions"
       fieldLabel = "network"
-      fieldName = "network"
+      fieldName = "testNetworks"
       formField = true
       refCode = "4d15f802-98ef-416e-a02c-1b2b88dc3841"
       type = "networkManager"
@@ -163,9 +186,9 @@ resource "option-type-form" "206758" {
         groupId = ""
         imageField = ""
         imageId = ""
-        layoutField = null
+        layoutField = ""
         layoutFieldType = "value"
-        layoutId = "308"
+        layoutId = 308
         planField = "f2733ba3-67e7-445c-ba4c-6fbf9edc5508"
         planFieldType = "field"
         planId = ""
@@ -174,10 +197,10 @@ resource "option-type-form" "206758" {
         poolId = ""
         virtualImageFieldType = "field"
       }
-      displayOrder = 6
+      displayOrder = 7
       fieldContext = "config.customOptions"
       fieldLabel = "disk"
-      fieldName = "disk"
+      fieldName = "testDisks"
       formField = true
       refCode = "92f75d5b-5dd7-440c-a9e5-d33ba2b7242f"
       type = "diskManager"
