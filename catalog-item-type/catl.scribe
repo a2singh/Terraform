@@ -2,6 +2,109 @@ resource "catalog-item-type" "catl" {
   code = "catl"
   name = "205067-C"
   uuid = "c6ee33d0-5fbb-4ce6-88ca-cc2f47560b39"
+  config = {
+    name = "205067-1"
+    backup = {
+      createBackup = false
+      jobAction = "new"
+      jobRetentionCount = 3
+      providerBackupType = -1
+      veeamManagedServer = ""
+    }
+    cloud = { name = "AP VMware", id = 11 }
+    config = {
+      createUser = true
+      isEC2 = false
+      isVpcSelectable = true
+      nestedVirtualization = null
+      noAgent = false
+      poolProviderType = null
+      resourcePoolId = "pool-221"
+      smbiosAssetTag = null
+      vmwareFolderId = "/"
+    }
+    copies = 1
+    defaultExpandAdvanced = false
+    group = { name = "All Groups", id = "2" }
+    hideLock = true
+    hostName = "205067-1"
+    instance = { userGroup = { id = "" } }
+    layout = { code = "vmware-centos-9-stream-single", id = 351 }
+    networkInterfaces = [
+      {
+        ipMode = ""
+        network = {
+          hasPool = false
+          id = "network-318"
+          idName = "VLAN0002 - Internal Server 2"
+        }
+        primaryInterface = true
+        showNetworkDhcpLabel = true
+        showNetworkPoolLabel = false
+      }
+    ]
+    plan = { code = "custom.vmware", id = 5468 }
+    ports = [
+      {
+        code = "centos.22"
+        name = "SSH"
+        externalPort = 22
+        id = 12
+        internalPort = 22
+        loadBalance = false
+        loadBalancePort = null
+        loadBalanceProtocol = null
+        shortName = "ssh"
+        sortOrder = 1
+        visible = true
+      }
+    ]
+    showScale = false
+    type = "centos"
+    version = "9-stream"
+    volumes = [
+      {
+        name = "root"
+        uuid = "fb3104d1-cd32-4958-902c-ff2e225e2238"
+        configurableIOPS = false
+        controllerId = 13376
+        controllerMountPoint = "13376:0:4:0"
+        datastoreId = "autoCluster"
+        displayOrder = 0
+        externalId = "2000"
+        id = 6021
+        internalId = "[esxi-local-06] Morpheus CentOS 9-stream 20230822/Morpheus CentOS 9-stream 20230822.vmdk"
+        maxIOPS = null
+        maxStorage = 343597383680
+        minStorage = 5242880000
+        planResizable = true
+        readonlyName = false
+        resizeable = true
+        rootVolume = true
+        size = 320
+        storageType = 1
+        typeId = 1
+        uniqueId = null
+        unitNumber = "0"
+        vId = 258
+        virtualImageId = 258
+        volumeCustomizable = true
+      },
+      {
+        name = "data-1"
+        controllerMountPoint = "13376:0:4:1"
+        datastoreId = "autoCluster"
+        maxIOPS = null
+        maxStorage = 0
+        minStorage = 0
+        readonlyName = false
+        rootVolume = false
+        size = 320
+        storageType = 1
+        volumeCustomizable = true
+      }
+    ]
+  }
   dateCreated = "2024-01-11T07:05:33.000Z"
   form = { code = "All Resources" }
   formType = "form"
