@@ -2,6 +2,75 @@ resource "catalog-item-type" "atform" {
   code = "atform"
   name = "AT-DataGroup_FORM"
   uuid = "5eaa0c30-646a-49f6-8b4a-b53e7c59e37f"
+  config = {
+    name = "at-test"
+    backup = {
+      createBackup = false
+      jobAction = "new"
+      jobRetentionCount = 3
+      providerBackupType = -1
+      veeamManagedServer = ""
+    }
+    cloud = { name = "AT-VMware", id = 3 }
+    config = {
+      createUser = false
+      executeMode = "executeHost"
+      expose = 8080
+      hostId = null
+      isEC2 = false
+      isVpcSelectable = true
+      nestedVirtualization = null
+      noAgent = false
+      poolProviderType = null
+      resourcePoolId = "pool-162"
+      smbiosAssetTag = null
+      template = 697
+      vmwareFolderId = "/"
+    }
+    configEnabled = true
+    copies = 1
+    defaultExpandAdvanced = false
+    group = { name = "All Groups", id = "2" }
+    hideLock = true
+    hostName = "at-test"
+    instance = { configEnabled = false, userGroup = { id = "" } }
+    layout = { code = "vmware-1.0-single", id = 139 }
+    networkInterfaces = [
+      {
+        ipMode = ""
+        network = {
+          hasPool = false
+          id = "network-275"
+          idName = "VLAN0002 - Internal Server 2"
+        }
+        networkInterfaceTypeId = 4
+        networkInterfaceTypeIdName = "VMXNET 3"
+        primaryInterface = true
+        showNetworkDhcpLabel = true
+        showNetworkPoolLabel = false
+      }
+    ]
+    plan = { code = "vm-1024", id = 248 }
+    showScale = false
+    type = "vmware"
+    version = "1.0"
+    volumes = [
+      {
+        name = "root"
+        controllerMountPoint = "9860:0:4:0"
+        datastoreId = "auto"
+        maxIOPS = null
+        maxStorage = 10737418240
+        minStorage = 5368709120
+        readonlyName = false
+        rootVolume = true
+        size = 10
+        storageType = 1
+        vId = 697
+        volumeCustomizable = false
+      }
+    ]
+  }
   dateCreated = "2023-12-05T07:41:38.000Z"
   form = { code = "datagroup" }
   formType = "form"
