@@ -1,6 +1,6 @@
 resource "catalog-item-type" "at206758" {
   code = "at206758"
-  name = "AT-206758"
+  name = "AT206758"
   uuid = "b1c928c9-913f-4326-a17c-92afa002ce61"
   config = {
     name = "$${userInitials.toUpperCase()}$${tenant.take(5).toUpperCase()}$${platform.take(3).toUpperCase()}VM$${sequence+10}"
@@ -122,7 +122,7 @@ resource "catalog-item-type" "at206758" {
         readonlyName = false
         resizeable = true
         rootVolume = true
-        size = 10
+        size = "<%=customOptions.testDisks%>0"
         storageType = 1
         typeId = 1
         uniqueId = null
@@ -136,6 +136,6 @@ resource "catalog-item-type" "at206758" {
   dateCreated = "2024-06-20T10:12:59.000Z"
   form = { code = "206758" }
   formType = "form"
-  lastUpdated = "2024-06-20T10:12:59.000Z"
+  lastUpdated = "2024-06-20T12:39:24.000Z"
   refType = "InstanceType"
 }
