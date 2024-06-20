@@ -1,0 +1,146 @@
+resource "catalog-item-type" "b9499060-bfbf-4d29-8af6-3e3e17016fb7" {
+  name = "AT-Service_Plan"
+  uuid = "b9499060-bfbf-4d29-8af6-3e3e17016fb7"
+  config = {
+    name = "AT-Custom-Instance01"
+    backup = {
+      createBackup = false
+      jobAction = "new"
+      jobRetentionCount = 3
+      providerBackupType = -1
+      veeamManagedServer = ""
+    }
+    cloud = { name = "AT-VMware Cloud", id = 3 }
+    config = {
+      createUser = true
+      hostId = null
+      isEC2 = false
+      isVpcSelectable = true
+      nestedVirtualization = null
+      noAgent = true
+      poolProviderType = null
+      resourcePoolId = "pool-24"
+      smbiosAssetTag = null
+      vmwareFolderId = "/"
+    }
+    copies = 1
+    defaultExpandAdvanced = false
+    environment = "2"
+    group = { name = "All Groups", id = "2" }
+    hideLock = true
+    hostName = "AT-Custom-Instance01"
+    instance = { userGroup = { id = "" } }
+    layout = { code = "e57439e0-f8f5-4849-a2e6-317249e58430", id = 1115 }
+    networkInterfaces = [
+      {
+        ipMode = ""
+        network = {
+          hasPool = false
+          id = "network-48"
+          idName = "VLAN0002 - Internal Server 2"
+        }
+        networkInterfaceTypeId = 4
+        networkInterfaceTypeIdName = "VMXNET 3"
+        primaryInterface = true
+        showNetworkDhcpLabel = true
+        showNetworkPoolLabel = false
+      }
+    ]
+    plan = { id = "<%=customOptions.plan%>" }
+    servicePlanOptions = {
+      coresPerSocket = 1
+      forPlan = 1052
+      maxCores = "<%=customOptions.cpu ?: 0%>"
+      maxMemory = "<%=if (customOptions?.ram && customOptions?.ram != ''){customOptions?.ram?.toLong() * 1024 * 1024 * 1024} else {0}%>"
+    }
+    showScale = false
+    storageControllers = [
+      {
+        name = "IDE 0"
+        category = "ide"
+        active = true
+        busNumber = "0"
+        displayOrder = 0
+        editable = false
+        id = 23
+        maxDevices = 2
+        removable = false
+        reservedUnitNumber = -1
+        typeId = 2
+        typeName = "IDE"
+        unitNumber = null
+      },
+      {
+        name = "SCSI 0"
+        category = "scsi"
+        active = true
+        busNumber = "0"
+        displayOrder = 1
+        editable = false
+        id = 22
+        maxDevices = 16
+        removable = false
+        reservedUnitNumber = 7
+        typeId = 4
+        typeName = "SCSI LSI Logic Parallel"
+        unitNumber = null
+      },
+      {
+        name = "IDE 1"
+        category = "ide"
+        active = true
+        busNumber = "1"
+        displayOrder = 2
+        editable = false
+        id = 24
+        maxDevices = 2
+        removable = false
+        reservedUnitNumber = -1
+        typeId = 2
+        typeName = "IDE"
+        unitNumber = null
+      }
+    ]
+    type = "atcent"
+    version = "7.5"
+    volumes = [
+      {
+        name = "root"
+        uuid = "cd5de9a7-d126-4a1d-8d5c-70b4abcd873e"
+        configurableIOPS = false
+        controllerId = 3202
+        controllerMountPoint = "3202:0:4:0"
+        datastoreId = "auto"
+        displayOrder = 0
+        externalId = "2000"
+        id = 1270
+        internalId = "[ESXi-DC2-DEMO-LUN02] Morpheus CentOS 7.5 v4/Morpheus CentOS 7.5 v4.vmdk"
+        maxIOPS = null
+        maxStorage = 5368709120
+        minStorage = 5368709120
+        planResizable = true
+        readonlyName = false
+        resizeable = true
+        rootVolume = true
+        size = 100
+        storageType = 1
+        typeId = 1
+        uniqueId = null
+        unitNumber = "0"
+        vId = 210
+        virtualImageId = 210
+        volumeCustomizable = true
+      }
+    ]
+  }
+  dateCreated = "2023-10-20T07:53:48.000Z"
+  formType = "optionTypes"
+  lastUpdated = "2023-11-09T07:15:44.000Z"
+  optionTypes = [
+    { code = "cpu" },
+    { code = "ram" },
+    { code = "plan" },
+    { code = "environment" }
+  ]
+  refType = "InstanceType"
+}
