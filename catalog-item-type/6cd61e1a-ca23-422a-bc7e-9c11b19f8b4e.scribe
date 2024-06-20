@@ -1,0 +1,1018 @@
+resource "catalog-item-type" "6cd61e1a-ca23-422a-bc7e-9c11b19f8b4e" {
+  name = "ap-cent-app-cat"
+  uuid = "6cd61e1a-ca23-422a-bc7e-9c11b19f8b4e"
+  config = {
+    appSpec = <<EOFSCRIBE
+id: 29
+tiers:
+  App:
+    instances:
+      - instance:
+          type: centos
+          cloud: DG Azure
+          layout:
+            id: 305
+            code: centos-azure-7.6-single
+          instance:
+            powerScheduleType: 1
+          name: test1
+          userGroup:
+            id: ''
+        cloud:
+          id: 6
+        userRemovedFields:
+          - instance.backup
+          - backup.commvaultClient
+          - backup.commvaultBackupSet
+          - backup.commvaultStoragePolicy
+          - config.poolProviderType
+        backup:
+          veeamManagedServer: ''
+          createBackup: false
+          jobAction: new
+          jobRetentionCount: 3
+          enabled: true
+          providerBackupType: -1
+          showScheduledBackupWarning: false
+        networkInterfaces:
+          - ipMode: ''
+            primaryInterface: true
+            network:
+              subnet: subnet-7
+              idName: default
+              displayName: rmg-ops - default
+              id: subnet-7
+        workflow:
+          taskSetId: ''
+        provisionType:
+          mapPorts: false
+          exportServer: false
+          resizeCopiesVolumes: false
+          customOptionTypes:
+            - dependsOnCode: null
+              optionSource: null
+              code: provisionType.azure.custom.containerType.statTypeCode
+              fieldName: statTypeCode
+              excludeFromSearch: false
+              advanced: false
+              defaultValue: azure
+              fieldContext: containerType
+              displayOrder: 6
+              description: null
+              showOnCreate: true
+              creatable: true
+              type: hidden
+              fieldClass: null
+              required: false
+              enabled: true
+              wrapperClass: null
+              optionSourceType: null
+              maxVal: null
+              minVal: null
+              showOnEdit: true
+              fieldLabel: Stat Type Code
+              isLocked: false
+              helpBlockFieldCode: null
+              fieldInput: null
+              id: 296
+              placeHolder: null
+              visibleOnCode: null
+              verifyPattern: null
+              localCredential: false
+              fieldCode: gomorpheus.optiontype.StatTypeCode
+              editable: false
+              optionList: null
+              contextualDefault: false
+              fieldGroup: Azure Options
+              exportMeta: false
+              requireOnCode: null
+              formField: false
+              isHidden: false
+              helpBlock: ''
+              fieldAddOn: null
+              name: stat type code
+              fieldComponent: null
+              displayValueOnDetails: false
+              noBlank: false
+            - dependsOnCode: null
+              optionSource: null
+              code: provisionType.azure.custom.containerType.serverType
+              fieldName: serverType
+              excludeFromSearch: false
+              advanced: false
+              defaultValue: vm
+              fieldContext: containerType
+              displayOrder: 8
+              description: null
+              showOnCreate: true
+              creatable: true
+              type: hidden
+              fieldClass: null
+              required: false
+              enabled: true
+              wrapperClass: null
+              optionSourceType: null
+              maxVal: null
+              minVal: null
+              showOnEdit: true
+              fieldLabel: Server Type
+              isLocked: false
+              helpBlockFieldCode: null
+              fieldInput: null
+              id: 298
+              placeHolder: null
+              visibleOnCode: null
+              verifyPattern: null
+              localCredential: false
+              fieldCode: gomorpheus.optiontype.ServerType
+              editable: false
+              optionList: null
+              contextualDefault: false
+              fieldGroup: Azure Options
+              exportMeta: false
+              requireOnCode: null
+              formField: false
+              isHidden: false
+              helpBlock: ''
+              fieldAddOn: null
+              name: server type
+              fieldComponent: null
+              displayValueOnDetails: false
+              noBlank: false
+            - dependsOnCode: null
+              optionSource: null
+              code: provisionType.azure.custom.containerType.mountLogs
+              fieldName: mountLogs
+              excludeFromSearch: false
+              advanced: false
+              defaultValue: null
+              fieldContext: containerType
+              displayOrder: 2
+              description: null
+              showOnCreate: true
+              creatable: true
+              type: text
+              fieldClass: null
+              required: false
+              enabled: true
+              wrapperClass: null
+              optionSourceType: null
+              maxVal: null
+              minVal: null
+              showOnEdit: true
+              fieldLabel: Log Folder
+              isLocked: false
+              helpBlockFieldCode: null
+              fieldInput: null
+              id: 293
+              placeHolder: null
+              visibleOnCode: null
+              verifyPattern: null
+              localCredential: false
+              fieldCode: gomorpheus.optiontype.LogFolder
+              editable: false
+              optionList: null
+              contextualDefault: false
+              fieldGroup: Azure Options
+              exportMeta: false
+              requireOnCode: null
+              formField: false
+              isHidden: false
+              helpBlock: ''
+              fieldAddOn: null
+              name: mount logs
+              fieldComponent: null
+              displayValueOnDetails: false
+              noBlank: false
+            - dependsOnCode: null
+              optionSource: null
+              code: provisionType.azure.custom.containerType.mountData
+              fieldName: mountData
+              excludeFromSearch: false
+              advanced: false
+              defaultValue: null
+              fieldContext: containerType
+              displayOrder: 3
+              description: null
+              showOnCreate: true
+              creatable: true
+              type: text
+              fieldClass: null
+              required: false
+              enabled: true
+              wrapperClass: null
+              optionSourceType: null
+              maxVal: null
+              minVal: null
+              showOnEdit: true
+              fieldLabel: Deploy Folder
+              isLocked: false
+              helpBlockFieldCode: null
+              fieldInput: null
+              id: 294
+              placeHolder: null
+              visibleOnCode: null
+              verifyPattern: null
+              localCredential: false
+              fieldCode: gomorpheus.optiontype.DeployFolder
+              editable: false
+              optionList: null
+              contextualDefault: false
+              fieldGroup: Azure Options
+              exportMeta: false
+              requireOnCode: null
+              formField: false
+              isHidden: false
+              helpBlock: '(Optional) If using deployment services, this mount point will be replaced with the contents of said deployments.'
+              fieldAddOn: null
+              name: mount data
+              fieldComponent: null
+              displayValueOnDetails: false
+              noBlank: false
+            - dependsOnCode: null
+              optionSource: null
+              code: provisionType.azure.custom.containerType.logTypeCode
+              fieldName: logTypeCode
+              excludeFromSearch: false
+              advanced: false
+              defaultValue: azure
+              fieldContext: containerType
+              displayOrder: 7
+              description: null
+              showOnCreate: true
+              creatable: true
+              type: hidden
+              fieldClass: null
+              required: false
+              enabled: true
+              wrapperClass: null
+              optionSourceType: null
+              maxVal: null
+              minVal: null
+              showOnEdit: true
+              fieldLabel: Log Type Code
+              isLocked: false
+              helpBlockFieldCode: null
+              fieldInput: null
+              id: 297
+              placeHolder: null
+              visibleOnCode: null
+              verifyPattern: null
+              localCredential: false
+              fieldCode: gomorpheus.optiontype.LogTypeCode
+              editable: false
+              optionList: null
+              contextualDefault: false
+              fieldGroup: Azure Options
+              exportMeta: false
+              requireOnCode: null
+              formField: false
+              isHidden: false
+              helpBlock: ''
+              fieldAddOn: null
+              name: log type code
+              fieldComponent: null
+              displayValueOnDetails: false
+              noBlank: false
+            - dependsOnCode: null
+              optionSource: azureVirtualImages
+              code: provisionType.azure.custom.containerType.virtualImageId
+              fieldName: virtualImageId
+              excludeFromSearch: false
+              advanced: false
+              defaultValue: null
+              fieldContext: containerType
+              displayOrder: 1
+              description: null
+              showOnCreate: true
+              creatable: true
+              type: select
+              fieldClass: null
+              required: true
+              enabled: true
+              wrapperClass: null
+              optionSourceType: azure
+              maxVal: null
+              minVal: null
+              showOnEdit: true
+              fieldLabel: Virtual Image
+              isLocked: false
+              helpBlockFieldCode: null
+              fieldInput: null
+              id: 292
+              placeHolder: null
+              visibleOnCode: null
+              verifyPattern: null
+              localCredential: false
+              fieldCode: gomorpheus.optiontype.VirtualImage
+              editable: false
+              optionList: null
+              contextualDefault: false
+              fieldGroup: Azure Options
+              exportMeta: false
+              requireOnCode: null
+              formField: false
+              isHidden: false
+              helpBlock: ''
+              fieldAddOn: null
+              name: virtual image
+              fieldComponent: null
+              displayValueOnDetails: false
+              noBlank: false
+            - dependsOnCode: null
+              optionSource: null
+              code: provisionType.azure.custom.instanceTypeLayout.description
+              fieldName: description
+              excludeFromSearch: false
+              advanced: false
+              defaultValue: This will provision a single vm container
+              fieldContext: instanceTypeLayout
+              displayOrder: 9
+              description: null
+              showOnCreate: true
+              creatable: true
+              type: hidden
+              fieldClass: null
+              required: false
+              enabled: true
+              wrapperClass: null
+              optionSourceType: null
+              maxVal: null
+              minVal: null
+              showOnEdit: true
+              fieldLabel: Layout Description
+              isLocked: false
+              helpBlockFieldCode: null
+              fieldInput: null
+              id: 299
+              placeHolder: null
+              visibleOnCode: null
+              verifyPattern: null
+              localCredential: false
+              fieldCode: gomorpheus.optiontype.LayoutDescription
+              editable: false
+              optionList: null
+              contextualDefault: false
+              fieldGroup: Azure Options
+              exportMeta: false
+              requireOnCode: null
+              formField: false
+              isHidden: false
+              helpBlock: ''
+              fieldAddOn: null
+              name: layout description
+              fieldComponent: null
+              displayValueOnDetails: false
+              noBlank: false
+            - dependsOnCode: null
+              optionSource: null
+              code: provisionType.azure.custom.instanceType.backupType
+              fieldName: backupType
+              excludeFromSearch: false
+              advanced: false
+              defaultValue: azureSnapshot
+              fieldContext: instanceType
+              displayOrder: 4
+              description: null
+              showOnCreate: true
+              creatable: true
+              type: hidden
+              fieldClass: null
+              required: false
+              enabled: true
+              wrapperClass: null
+              optionSourceType: null
+              maxVal: null
+              minVal: null
+              showOnEdit: true
+              fieldLabel: Backup Type
+              isLocked: false
+              helpBlockFieldCode: null
+              fieldInput: null
+              id: 295
+              placeHolder: null
+              visibleOnCode: null
+              verifyPattern: null
+              localCredential: false
+              fieldCode: gomorpheus.optiontype.BackupType
+              editable: false
+              optionList: null
+              contextualDefault: false
+              fieldGroup: Azure Options
+              exportMeta: false
+              requireOnCode: null
+              formField: false
+              isHidden: false
+              helpBlock: ''
+              fieldAddOn: null
+              name: backup type
+              fieldComponent: null
+              displayValueOnDetails: false
+              noBlank: false
+          code: azure
+          hasSecurityGroups: true
+          aclEnabled: false
+          hostNetwork: true
+          hasSocketRange: false
+          description: null
+          hasDatastore: true
+          hasVolumes: true
+          optionTypes:
+            - dependsOnCode: null
+              optionSource: null
+              code: provisionType.general.noAgent
+              fieldName: noAgent
+              excludeFromSearch: false
+              advanced: false
+              defaultValue: null
+              fieldContext: config
+              displayOrder: 4
+              description: null
+              showOnCreate: true
+              creatable: true
+              type: checkbox
+              fieldClass: null
+              required: false
+              enabled: true
+              wrapperClass: null
+              optionSourceType: null
+              maxVal: null
+              minVal: null
+              showOnEdit: true
+              fieldLabel: Skip Agent Install
+              isLocked: false
+              helpBlockFieldCode: null
+              fieldInput: null
+              id: 183
+              placeHolder: null
+              visibleOnCode: null
+              verifyPattern: null
+              localCredential: false
+              fieldCode: gomorpheus.optiontype.SkipAgentInstall
+              editable: false
+              optionList: null
+              contextualDefault: false
+              fieldGroup: Advanced Options
+              exportMeta: false
+              requireOnCode: null
+              formField: false
+              isHidden: false
+              helpBlock: Skipping Agent installation will result in a lack of logging and guest operating system statistics. Automation scripts may also be adversely affected.
+              fieldAddOn: null
+              name: skip agent install
+              fieldComponent: null
+              displayValueOnDetails: false
+              noBlank: false
+            - dependsOnCode: null
+              optionSource: azureRegions
+              code: provisionType.azure.azureRegion
+              fieldName: azureRegion
+              excludeFromSearch: false
+              advanced: false
+              defaultValue: null
+              fieldContext: config
+              displayOrder: 101
+              description: null
+              showOnCreate: true
+              creatable: true
+              type: select
+              fieldClass: null
+              required: false
+              enabled: true
+              wrapperClass: null
+              optionSourceType: azure
+              maxVal: null
+              minVal: null
+              showOnEdit: true
+              fieldLabel: Region
+              isLocked: false
+              helpBlockFieldCode: null
+              fieldInput: null
+              id: 287
+              placeHolder: null
+              visibleOnCode: null
+              verifyPattern: null
+              localCredential: false
+              fieldCode: gomorpheus.optiontype.Region
+              editable: false
+              optionList: null
+              contextualDefault: false
+              fieldGroup: Options
+              exportMeta: false
+              requireOnCode: null
+              formField: false
+              isHidden: false
+              helpBlock: ''
+              fieldAddOn: null
+              name: region
+              fieldComponent: null
+              displayValueOnDetails: false
+              noBlank: true
+            - dependsOnCode: provisionType.azure.azureRegion
+              optionSource: azureSecurityGroups
+              code: provisionType.azure.azuresecurityGroupId
+              fieldName: azuresecurityGroupId
+              excludeFromSearch: false
+              advanced: false
+              defaultValue: null
+              fieldContext: config
+              displayOrder: 102
+              description: null
+              showOnCreate: true
+              creatable: true
+              type: select
+              fieldClass: null
+              required: false
+              enabled: true
+              wrapperClass: null
+              optionSourceType: azure
+              maxVal: null
+              minVal: null
+              showOnEdit: true
+              fieldLabel: Security Group
+              isLocked: false
+              helpBlockFieldCode: null
+              fieldInput: null
+              id: 285
+              placeHolder: null
+              visibleOnCode: null
+              verifyPattern: null
+              localCredential: false
+              fieldCode: gomorpheus.optiontype.SecurityGroup
+              editable: false
+              optionList: null
+              contextualDefault: false
+              fieldGroup: Options
+              exportMeta: false
+              requireOnCode: null
+              formField: false
+              isHidden: false
+              helpBlock: ''
+              fieldAddOn: null
+              name: security group
+              fieldComponent: null
+              displayValueOnDetails: false
+              noBlank: false
+            - dependsOnCode: null
+              optionSource: azureAvailabilityOptions
+              code: provisionType.azure.availabilityOptions
+              fieldName: availabilityOptions
+              excludeFromSearch: false
+              advanced: false
+              defaultValue: null
+              fieldContext: config
+              displayOrder: 105
+              description: null
+              showOnCreate: true
+              creatable: true
+              type: select
+              fieldClass: null
+              required: false
+              enabled: true
+              wrapperClass: null
+              optionSourceType: azure
+              maxVal: null
+              minVal: null
+              showOnEdit: true
+              fieldLabel: Availability Options
+              isLocked: false
+              helpBlockFieldCode: null
+              fieldInput: null
+              id: 288
+              placeHolder: null
+              visibleOnCode: null
+              verifyPattern: null
+              localCredential: false
+              fieldCode: gomorpheus.optiontype.AvailabilityOptions
+              editable: false
+              optionList: null
+              contextualDefault: false
+              fieldGroup: Options
+              exportMeta: false
+              requireOnCode: null
+              formField: false
+              isHidden: false
+              helpBlock: ''
+              fieldAddOn: null
+              name: availability options
+              fieldComponent: null
+              displayValueOnDetails: false
+              noBlank: true
+            - dependsOnCode: null
+              optionSource: azureAvailabilityZone
+              code: provisionType.azure.availabilityZone
+              fieldName: availabilityZone
+              excludeFromSearch: false
+              advanced: false
+              defaultValue: null
+              fieldContext: config
+              displayOrder: 106
+              description: null
+              showOnCreate: true
+              creatable: true
+              type: select
+              fieldClass: null
+              required: false
+              enabled: true
+              wrapperClass: null
+              optionSourceType: azure
+              maxVal: null
+              minVal: null
+              showOnEdit: true
+              fieldLabel: Availability Zone
+              isLocked: false
+              helpBlockFieldCode: null
+              fieldInput: null
+              id: 289
+              placeHolder: null
+              visibleOnCode: 'config.availabilityOptions:zone'
+              verifyPattern: null
+              localCredential: false
+              fieldCode: gomorpheus.optiontype.AvailabilityZone
+              editable: false
+              optionList: null
+              contextualDefault: false
+              fieldGroup: Options
+              exportMeta: false
+              requireOnCode: null
+              formField: false
+              isHidden: false
+              helpBlock: ''
+              fieldAddOn: null
+              name: availability zone
+              fieldComponent: null
+              displayValueOnDetails: false
+              noBlank: true
+            - dependsOnCode: null
+              optionSource: computeSets
+              code: provisionType.azure.availabilitySet
+              fieldName: availabilitySet
+              excludeFromSearch: false
+              advanced: false
+              defaultValue: null
+              fieldContext: config
+              displayOrder: 107
+              description: null
+              showOnCreate: true
+              creatable: true
+              type: select
+              fieldClass: null
+              required: false
+              enabled: true
+              wrapperClass: null
+              optionSourceType: null
+              maxVal: null
+              minVal: null
+              showOnEdit: true
+              fieldLabel: Availability Set
+              isLocked: false
+              helpBlockFieldCode: null
+              fieldInput: null
+              id: 290
+              placeHolder: null
+              visibleOnCode: 'config.availabilityOptions:set'
+              verifyPattern: null
+              localCredential: false
+              fieldCode: gomorpheus.optiontype.AvailabilitySet
+              editable: false
+              optionList: null
+              contextualDefault: false
+              fieldGroup: Options
+              exportMeta: false
+              requireOnCode: null
+              formField: false
+              isHidden: false
+              helpBlock: ''
+              fieldAddOn: null
+              name: availability set
+              fieldComponent: null
+              displayValueOnDetails: false
+              noBlank: true
+            - dependsOnCode: null
+              optionSource: null
+              code: provisionType.azure.azurefloatingIp
+              fieldName: azurefloatingIp
+              excludeFromSearch: false
+              advanced: false
+              defaultValue: 'on'
+              fieldContext: config
+              displayOrder: 108
+              description: null
+              showOnCreate: true
+              creatable: true
+              type: checkbox
+              fieldClass: null
+              required: false
+              enabled: true
+              wrapperClass: null
+              optionSourceType: null
+              maxVal: null
+              minVal: null
+              showOnEdit: true
+              fieldLabel: Assign Public IP
+              isLocked: false
+              helpBlockFieldCode: null
+              fieldInput: null
+              id: 291
+              placeHolder: null
+              visibleOnCode: null
+              verifyPattern: null
+              localCredential: false
+              fieldCode: gomorpheus.optiontype.AssignPublicIp
+              editable: false
+              optionList: null
+              contextualDefault: false
+              fieldGroup: Options
+              exportMeta: false
+              requireOnCode: null
+              formField: false
+              isHidden: false
+              helpBlock: ''
+              fieldAddOn: null
+              name: assign public ip
+              fieldComponent: null
+              displayValueOnDetails: false
+              noBlank: false
+            - dependsOnCode: null
+              optionSource: bootDiagnostics
+              code: provisionType.azure.boot.diagnostics
+              fieldName: bootDiagnostics
+              excludeFromSearch: false
+              advanced: false
+              defaultValue: null
+              fieldContext: config
+              displayOrder: 110
+              description: null
+              showOnCreate: true
+              creatable: true
+              type: select
+              fieldClass: null
+              required: false
+              enabled: true
+              wrapperClass: null
+              optionSourceType: azure
+              maxVal: null
+              minVal: null
+              showOnEdit: true
+              fieldLabel: Boot Diagnostics
+              isLocked: false
+              helpBlockFieldCode: null
+              fieldInput: null
+              id: 300
+              placeHolder: null
+              visibleOnCode: null
+              verifyPattern: null
+              localCredential: false
+              fieldCode: gomorpheus.optiontype.BootDiagnostics
+              editable: false
+              optionList: null
+              contextualDefault: false
+              fieldGroup: Options
+              exportMeta: false
+              requireOnCode: null
+              formField: false
+              isHidden: false
+              helpBlock: ''
+              fieldAddOn: null
+              name: boot diagnostics
+              fieldComponent: null
+              displayValueOnDetails: false
+              noBlank: false
+            - dependsOnCode: null
+              optionSource: null
+              code: provisionType.azure.os.guest.dignostics
+              fieldName: osGuestDiagnostics
+              excludeFromSearch: false
+              advanced: false
+              defaultValue: 'off'
+              fieldContext: config
+              displayOrder: 115
+              description: null
+              showOnCreate: true
+              creatable: true
+              type: checkbox
+              fieldClass: null
+              required: false
+              enabled: true
+              wrapperClass: null
+              optionSourceType: null
+              maxVal: null
+              minVal: null
+              showOnEdit: true
+              fieldLabel: OS Guest Diagnostics
+              isLocked: false
+              helpBlockFieldCode: null
+              fieldInput: null
+              id: 301
+              placeHolder: null
+              visibleOnCode: null
+              verifyPattern: null
+              localCredential: false
+              fieldCode: gomorpheus.optiontype.OsGuestDiagnostics
+              editable: false
+              optionList: null
+              contextualDefault: false
+              fieldGroup: Options
+              exportMeta: false
+              requireOnCode: null
+              formField: false
+              isHidden: false
+              helpBlock: ''
+              fieldAddOn: null
+              name: os guest diagnostics
+              fieldComponent: null
+              displayValueOnDetails: false
+              noBlank: false
+            - dependsOnCode: null
+              optionSource: datastore
+              code: provisionType.azure.diagnostics.storage.account
+              fieldName: diagnosticsStorageAccount
+              excludeFromSearch: false
+              advanced: false
+              defaultValue: null
+              fieldContext: config
+              displayOrder: 120
+              description: null
+              showOnCreate: true
+              creatable: true
+              type: select
+              fieldClass: null
+              required: false
+              enabled: true
+              wrapperClass: null
+              optionSourceType: null
+              maxVal: null
+              minVal: null
+              showOnEdit: true
+              fieldLabel: Diagnostics Storage Account
+              isLocked: false
+              helpBlockFieldCode: null
+              fieldInput: null
+              id: 302
+              placeHolder: null
+              visibleOnCode: 'config.bootDiagnostics:enable_custom_storage,config.osGuestDiagnostics:on'
+              verifyPattern: null
+              localCredential: false
+              fieldCode: gomorpheus.optiontype.DiagnosticsStorageAccount
+              editable: false
+              optionList: null
+              contextualDefault: false
+              fieldGroup: Options
+              exportMeta: false
+              requireOnCode: null
+              formField: false
+              isHidden: false
+              helpBlock: ''
+              fieldAddOn: null
+              name: diagnostics storage account
+              fieldComponent: null
+              displayValueOnDetails: false
+              noBlank: false
+          rootStorageTypes:
+            - code: azure-managed-ssd
+              name: Azure Disk SSD
+              displayOrder: 3
+              customSize: true
+              customSizeOptions: null
+              id: 40
+              customLabel: true
+              defaultType: false
+            - code: azure-managed
+              name: Azure Disk HDD
+              displayOrder: 2
+              customSize: true
+              customSizeOptions: null
+              id: 39
+              customLabel: true
+              defaultType: false
+            - code: azure-managed-premium-ssd
+              name: Azure Premium Disk SSD
+              displayOrder: 4
+              customSize: true
+              customSizeOptions: null
+              id: 41
+              customLabel: true
+              defaultType: false
+            - code: azure-basic
+              name: Azure Volume
+              displayOrder: 1
+              customSize: true
+              customSizeOptions: null
+              id: 38
+              customLabel: true
+              defaultType: true
+          zonePoolRequired: true
+          hasParameters: false
+          managed: true
+          hostType: vm
+          addVolumes: true
+          disableRootDatastore: false
+          hasSnapshots: false
+          id: 2
+          storageTypes:
+            - code: azure-managed-ssd
+              name: Azure Disk SSD
+              displayOrder: 3
+              customSize: true
+              customSizeOptions: null
+              id: 40
+              customLabel: true
+              defaultType: false
+            - code: azure-managed
+              name: Azure Disk HDD
+              displayOrder: 2
+              customSize: true
+              customSizeOptions: null
+              id: 39
+              customLabel: true
+              defaultType: false
+            - code: azure-managed-premium-ssd
+              name: Azure Premium Disk SSD
+              displayOrder: 4
+              customSize: true
+              customSizeOptions: null
+              id: 41
+              customLabel: true
+              defaultType: false
+            - code: azure-basic
+              name: Azure Volume
+              displayOrder: 1
+              customSize: true
+              customSizeOptions: null
+              id: 38
+              customLabel: true
+              defaultType: true
+          hasNetworks: true
+          hasFolders: false
+          supportsAutoDatastore: false
+          hasPreview: false
+          multiTenant: false
+          maxNetworks: 0
+          hasSpecTemplates: false
+          maxDisk: null
+          rootDiskResizable: true
+          hasState: false
+          minDisk: 1
+          canEnforceTags: true
+          lvmSupported: true
+          viewSet: azureCustom
+          hostDiskMode: lvm
+          rootDiskSizeKnown: false
+          planRequiresPool: true
+          hasZonePools: true
+          rootDiskCustomizable: true
+          serverType: vm
+          hasRefresh: false
+          name: Azure
+          customSupported: true
+          hasCoresPerSocketRange: false
+          customizeVolume: true
+        volumes:
+          - size: 32
+            maxIOPS: null
+            name: root
+            rootVolume: true
+            storageType: 39
+            datastoreId: 51
+            maxStorage: 34359738368
+        config:
+          availabilitySet: ''
+          azureRegion: ''
+          resourcePoolId: pool-81
+          azuresecurityGroupId: 79
+          azurefloatingIp: 'on'
+          osGuestDiagnostics: 'off'
+          availabilityOptions: ''
+          availabilityZone: 1
+          noAgent: false
+        plan:
+          id: 2407
+          code: azure.plan.centralus.Basic_A1
+        group:
+          id: 2
+        ports:
+          - name: ''
+            port: ''
+            lb: ''
+    tierIndex: 1
+defaultCloud:
+  id: 6
+name: "<%=customOptions.app_name%>",
+group:
+  id: 2
+environment: "<%=customOptions.environment%>",
+type: morpheus
+
+EOFSCRIBE
+  }
+  dateCreated = "2024-04-26T12:45:39.000Z"
+  formType = "optionTypes"
+  lastUpdated = "2024-04-26T13:01:58.000Z"
+  optionTypes = [
+    { code = "app_name" },
+    { code = "network" },
+    { code = "servicePlans" },
+    { code = "environment" }
+  ]
+  refType = "AppTemplate"
+}
