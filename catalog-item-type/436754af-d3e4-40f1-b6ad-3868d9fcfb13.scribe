@@ -1,0 +1,130 @@
+resource "catalog-item-type" "436754af-d3e4-40f1-b6ad-3868d9fcfb13" {
+  name = "ap-tag"
+  uuid = "436754af-d3e4-40f1-b6ad-3868d9fcfb13"
+  config = {
+    name = "at-mo-$${type.take(4)}-$${zone.code.take(3)}-$${sequence+100}"
+    backup = {
+      createBackup = false
+      jobAction = "new"
+      jobRetentionCount = 3
+      providerBackupType = -1
+      veeamManagedServer = ""
+    }
+    cloud = { name = "AT VMware Cloud", id = 14 }
+    config = {
+      createUser = true
+      expose = 8080
+      hostId = null
+      isEC2 = false
+      isVpcSelectable = true
+      nestedVirtualization = null
+      noAgent = false
+      poolProviderType = null
+      resourcePoolId = "pool-602"
+      smbiosAssetTag = null
+      template = 210
+      vmwareFolderId = "/"
+    }
+    copies = 1
+    defaultExpandAdvanced = true
+    group = { name = "All Groups", id = "2" }
+    hideLock = true
+    hostName = "at-mo-$${type.take(4)}-$${zone.code.take(3)}-$${sequence+100}"
+    instance = { powerScheduleType = "1", userGroup = { id = "" } }
+    layout = { code = "vmware-1.0-single", id = 139 }
+    metadata = [
+      {
+        name = "application-name"
+        listId = ""
+        strict = false
+        strictValue = ""
+        value = "aaaaa"
+      }
+    ]
+    networkInterfaces = [
+      {
+        ipMode = ""
+        network = {
+          hasPool = false
+          id = "network-448"
+          idName = "VLAN0002 - Internal Server 2"
+        }
+        networkInterfaceTypeId = 4
+        networkInterfaceTypeIdName = "VMXNET 3"
+        primaryInterface = true
+        showNetworkDhcpLabel = true
+        showNetworkPoolLabel = false
+      }
+    ]
+    plan = { code = "vm-1024", id = 248 }
+    showScale = false
+    storageControllers = [
+      {
+        name = "SCSI 0"
+        category = "scsi"
+        active = true
+        busNumber = "0"
+        displayOrder = 0
+        editable = false
+        id = 22
+        maxDevices = 16
+        removable = false
+        reservedUnitNumber = 7
+        typeId = 4
+        typeName = "SCSI LSI Logic Parallel"
+        unitNumber = null
+      },
+      {
+        name = "IDE 1"
+        category = "ide"
+        active = true
+        busNumber = "1"
+        displayOrder = 1
+        editable = false
+        id = 24
+        maxDevices = 2
+        removable = false
+        reservedUnitNumber = -1
+        typeId = 2
+        typeName = "IDE"
+        unitNumber = null
+      },
+      {
+        name = "IDE 0"
+        category = "ide"
+        active = true
+        busNumber = "0"
+        displayOrder = 2
+        editable = false
+        id = 23
+        maxDevices = 2
+        removable = false
+        reservedUnitNumber = -1
+        typeId = 2
+        typeName = "IDE"
+        unitNumber = null
+      }
+    ]
+    type = "vmware"
+    version = "1.0"
+    volumes = [
+      {
+        name = "root"
+        controllerMountPoint = "18296:0:4:0"
+        datastoreId = "auto"
+        maxIOPS = null
+        maxStorage = 10737418240
+        minStorage = 5368709120
+        readonlyName = false
+        rootVolume = true
+        size = 10
+        storageType = 1
+        vId = 210
+        volumeCustomizable = true
+      }
+    ]
+  }
+  dateCreated = "2024-05-01T07:27:25.000Z"
+  lastUpdated = "2024-05-01T07:27:25.000Z"
+  refType = "InstanceType"
+}
