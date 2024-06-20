@@ -1,0 +1,85 @@
+resource "catalog-item-type" "c97f5935-c45f-4e7c-955e-fc3cf59bff76" {
+  name = "AT-Unisys-206137"
+  uuid = "c97f5935-c45f-4e7c-955e-fc3cf59bff76"
+  config = {
+    appSpec = <<EOFSCRIBE
+id: 28
+tiers:
+  App01:
+    instances:
+      - instance:
+          type: ubnt
+          cloud: DG Azure
+          instance:
+            powerScheduleType: 1
+          layout:
+            id: 1155
+            code: c24ee400-ae34-41d4-81a8-368991b35f5a
+        cloud:
+          id: 6
+        userRemovedFields:
+          - instance.backup
+          - config.poolProviderType
+          - backup.commvaultClient
+          - backup.commvaultBackupSet
+          - backup.commvaultStoragePolicy
+        config:
+          noAgent: true
+          azurefloatingIp: 'on'
+          osGuestDiagnostics: 'off'
+          azureRegion: ''
+          availabilityOptions: ''
+          availabilityZone: 1
+          availabilitySet: ''
+          resourcePoolId: pool-81
+          azuresecurityGroupId: 79
+        ports:
+          - name: ''
+            port: ''
+            lb: ''
+        networkInterfaces:
+          - primaryInterface: true
+            network:
+              id: '<%=customOptions.network%>'
+              subnet: subnet-7
+              idName: default
+              displayName: rmg-ops - default
+        workflow:
+          taskSetId: ''
+        volumes:
+          - rootVolume: true
+            name: root
+            maxStorage: 34359738368
+            size: 32
+            storageType: 40
+            maxIOPS: null
+            datastoreId: 51
+        backup:
+          veeamManagedServer: ''
+          jobAction: new
+          providerBackupType: -1
+        plan:
+          id: '<%=customOptions.servicePlans%>'
+    tierIndex: 1
+defaultCloud:
+  id: 6
+  code: ''
+name: '<%=customOptions.app_name%>'
+group:
+  id: 2
+  code: ''
+type: morpheus
+
+EOFSCRIBE
+  }
+  dateCreated = "2024-04-29T11:24:09.000Z"
+  description = "AppBlueprint Catalog"
+  formType = "optionTypes"
+  lastUpdated = "2024-05-03T06:01:52.000Z"
+  optionTypes = [
+    { code = "app_name" },
+    { code = "network" },
+    { code = "servicePlans" }
+  ]
+  refType = "AppTemplate"
+}
