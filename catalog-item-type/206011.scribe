@@ -2,6 +2,95 @@ resource "catalog-item-type" "206011" {
   code = "206011"
   name = "AT-FujitsuServices-206011"
   uuid = "ae88c3bb-b4ac-48dc-a298-b14fe2f5dbca"
+  config = {
+    appSpec = <<EOFSCRIBE
+id: 16
+tiers:
+  AT MorphApp 01:
+    instances:
+      - instance:
+          type: centos
+          configEnabled: false
+          instance:
+            powerScheduleType: 1
+          name: AT-MorphApp-Instance-01
+          description: Fujitsu Services GmbH-206011
+          userGroup:
+            id: ''
+          powerScheduleType: ''
+          cloud: <%=customOptions.cloud%>
+          layout:
+            id: 308
+            code: vmware-centos-7.5-single
+        cloud: {}
+        userRemovedFields:
+          - instance.backup
+          - backup.commvaultClient
+          - backup.commvaultBackupSet
+          - backup.commvaultStoragePolicy
+          - virtualImage
+          - layout
+          - loadbalancer
+          - securityGroups
+        backup:
+          veeamManagedServer: ''
+          createBackup: false
+          jobAction: new
+          jobRetentionCount: 3
+          enabled: true
+          providerBackupType: -1
+          showScheduledBackupWarning: false
+        workflow:
+          taskSetId: 5
+        config:
+          executeMode: executeHost
+          vmwareFolderId: /
+          noAgent: true
+          resourcePoolId: <%=customOptions.resourcepool%>
+        group: <%=customOptions.group%>
+        networkInterfaces:
+          - primaryInterface: true
+            network: <%=customOptions.network%>
+            networkInterfaceTypeId: 4
+            networkInterfaceTypeIdName: VMXNET 3
+        plan: <%=customOptions.serviceplan%>
+        servicePlanOptions:
+          maxMemory: 2147483648
+          maxC ores: 2
+          coresPerSocket: 2
+          forPlan: 7595
+        volumes:
+          - id: 9255
+            name: root
+            controllerId: 18296
+            controllerMountPoint: '18296:0:4:0'
+            resizeable: true
+            planResizable: true
+            rootVolume: true
+            unitNumber: '0'
+            typeId: 1
+            configurableIOPS: false
+            maxStorage: 5368709120
+            displayOrder: 0
+            maxIOPS: null
+            uuid: f36bc494-c4ab-44ef-890c-8a275ff5bac6
+            uniqueId: null
+            externalId: '2000'
+            internalId: '[ESXi-DC2-DEMO-LUN02] Morpheus CentOS 7.5 v4/Morpheus CentOS 7.5 v4.vmdk'
+            virtualImageId: 210
+            size: 10
+            minStorage: 5368709120
+            storageType: 1
+            datastoreId: auto
+    tierIndex: 1
+name: AT-Fujitsu-206011
+group:
+  id: 2
+  code: ''
+type: morpheus
+
+EOFSCRIBE
+  }
   dateCreated = "2024-04-12T07:34:02.000Z"
   description = "Fujitsu Services GmbH-206011"
   form = { code = "206011" }
