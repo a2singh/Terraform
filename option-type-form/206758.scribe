@@ -20,6 +20,7 @@ resource "option-type-form" "206758" {
       fieldLabel = "group"
       fieldName = "group"
       formField = true
+      refCode = "88be8fca-eeed-4ed7-8625-271fccd3998e"
       type = "group"
     },
     {
@@ -41,29 +42,21 @@ resource "option-type-form" "206758" {
       fieldLabel = "cloud"
       fieldName = "cloud"
       formField = true
+      refCode = "dd7ad1b2-aac1-4fed-bd52-8849b75dbef9"
       type = "cloud"
     },
     {
-      code = "d2d59f8d-6b39-46fb-9372-f941ea3fd37c"
-      name = "d2d59f8d-6b39-46fb-9372-f941ea3fd37c"
-      uuid = "52e1e887-a974-4947-9240-72750141e818"
-      config = {
-        cloudField = "dd7ad1b2-aac1-4fed-bd52-8849b75dbef9"
-        cloudFieldType = "field"
-        cloudId = ""
-        groupField = "88be8fca-eeed-4ed7-8625-271fccd3998e"
-        groupFieldType = "field"
-        groupId = ""
-        instanceTypeCode = ""
-        instanceTypeFieldCode = ""
-        instanceTypeFieldType = "field"
-      }
+      code = "a55d13b3-9b53-413b-bb02-567d26f438f1"
+      name = "a55d13b3-9b53-413b-bb02-567d26f438f1"
+      uuid = "7fd631dc-8a01-4a7c-a615-bc75b114b7fd"
+      config = { addon = "", addonPosition = "" }
       displayOrder = 2
       fieldContext = "config.customOptions"
-      fieldLabel = "layout"
-      fieldName = "layout"
+      fieldLabel = "environment"
+      fieldName = "environment"
       formField = true
-      type = "layout"
+      refCode = "a55d13b3-9b53-413b-bb02-567d26f438f1"
+      type = "environment"
     },
     {
       code = "f2733ba3-67e7-445c-ba4c-6fbf9edc5508"
@@ -74,12 +67,12 @@ resource "option-type-form" "206758" {
         cloudFieldType = "field"
         cloudId = ""
         defaultValue = ""
-        diskField = ""
+        diskField = "92f75d5b-5dd7-440c-a9e5-d33ba2b7242f"
         groupField = "88be8fca-eeed-4ed7-8625-271fccd3998e"
         groupFieldType = "field"
         groupId = ""
-        layoutField = "d2d59f8d-6b39-46fb-9372-f941ea3fd37c"
-        layoutFieldType = "field"
+        layoutField = null
+        layoutFieldType = "value"
         layoutId = ""
         poolField = "236aa426-2553-4569-8573-65f19465729a"
         poolFieldType = "field"
@@ -91,6 +84,7 @@ resource "option-type-form" "206758" {
       fieldLabel = "service plan"
       fieldName = "serviceplan"
       formField = true
+      refCode = "f2733ba3-67e7-445c-ba4c-6fbf9edc5508"
       type = "plan"
     },
     {
@@ -117,7 +111,39 @@ resource "option-type-form" "206758" {
       fieldLabel = "resourcepool"
       fieldName = "resourcepool"
       formField = true
+      refCode = "236aa426-2553-4569-8573-65f19465729a"
       type = "resourcePool"
+    },
+    {
+      code = "4d15f802-98ef-416e-a02c-1b2b88dc3841"
+      name = "4d15f802-98ef-416e-a02c-1b2b88dc3841"
+      uuid = "2bcf560d-40a8-4be1-a29b-f46e99285786"
+      config = {
+        addon = ""
+        addonPosition = ""
+        cloudField = "dd7ad1b2-aac1-4fed-bd52-8849b75dbef9"
+        cloudFieldType = "field"
+        cloudId = ""
+        defaultValue = ""
+        enableIPModeSelection = false
+        groupField = "88be8fca-eeed-4ed7-8625-271fccd3998e"
+        groupFieldType = "field"
+        groupId = ""
+        layoutField = "d2d59f8d-6b39-46fb-9372-f941ea3fd37c"
+        layoutFieldType = "field"
+        layoutId = ""
+        poolField = "236aa426-2553-4569-8573-65f19465729a"
+        poolFieldType = "field"
+        poolId = ""
+        showNetworkTypeSelection = false
+      }
+      displayOrder = 5
+      fieldContext = "config.customOptions"
+      fieldLabel = "network"
+      fieldName = "network"
+      formField = true
+      refCode = "4d15f802-98ef-416e-a02c-1b2b88dc3841"
+      type = "networkManager"
     },
     {
       code = "92f75d5b-5dd7-440c-a9e5-d33ba2b7242f"
@@ -134,6 +160,8 @@ resource "option-type-form" "206758" {
         groupField = "88be8fca-eeed-4ed7-8625-271fccd3998e"
         groupFieldType = "field"
         groupId = ""
+        imageField = ""
+        imageId = ""
         layoutField = "d2d59f8d-6b39-46fb-9372-f941ea3fd37c"
         layoutFieldType = "field"
         layoutId = ""
@@ -143,12 +171,14 @@ resource "option-type-form" "206758" {
         poolField = "236aa426-2553-4569-8573-65f19465729a"
         poolFieldType = "field"
         poolId = ""
+        virtualImageFieldType = "field"
       }
-      displayOrder = 5
+      displayOrder = 6
       fieldContext = "config.customOptions"
       fieldLabel = "disk"
       fieldName = "disk"
       formField = true
+      refCode = "92f75d5b-5dd7-440c-a9e5-d33ba2b7242f"
       type = "diskManager"
     }
   ]

@@ -1,0 +1,11 @@
+resource "catalog-item-type" "206758" {
+  code = "206758"
+  name = "Mr. Cooper 206758"
+  uuid = "38dd89f9-e092-4af8-8c60-a3474f60eb85"
+  dateCreated = "2024-06-20T08:02:24.000Z"
+  form = { code = "206758" }
+  formConfig = "{\"optOut\":{\"f2733ba3-67e7-445c-ba4c-6fbf9edc5508\":false}}"
+  formType = "form"
+  lastUpdated = "2024-06-20T08:30:08.000Z"
+  refType = "InstanceType"
+}
