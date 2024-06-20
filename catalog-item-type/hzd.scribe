@@ -2,6 +2,88 @@ resource "catalog-item-type" "hzd" {
   code = "hzd"
   name = "HZD 205351"
   uuid = "4e003202-291e-46f7-b94c-428005cb46b4"
+  config = {
+    name = "AT-$${account.take(2).toUpperCase()}-$${type.take(4).toUpperCase()}-$${cloudCode.take(2).toUpperCase()}-$${sequence+100}"
+    backup = {
+      createBackup = false
+      jobAction = "new"
+      jobRetentionCount = 3
+      providerBackupType = -1
+      veeamManagedServer = ""
+    }
+    cloud = { id = "<%=customOptions.cloud%>" }
+    config = {
+      createUser = true
+      executeMode = "executeHost"
+      hostId = null
+      isEC2 = false
+      isVpcSelectable = true
+      nestedVirtualization = null
+      noAgent = true
+      poolProviderType = null
+      resourcePoolId = "pool-447"
+      smbiosAssetTag = null
+      vmwareFolderId = "/"
+    }
+    configEnabled = true
+    copies = 1
+    defaultExpandAdvanced = false
+    group = { id = "<%=customOptions.group%>" }
+    hideLock = true
+    hostName = "AT-$${account.take(2).toUpperCase()}-$${type.take(4).toUpperCase()}-$${cloudCode.take(2).toUpperCase()}-$${sequence+100}"
+    instance = {
+      configEnabled = false
+      networkDomain = { id = "<%=customOptions.apdomain%>" }
+      userGroup = { id = "" }
+    }
+    layout = { code = "vmware-centos-7.5-single", id = 308 }
+    networkInterfaces = [
+      {
+        network = {
+          hasPool = false
+          id = "network-509"
+          idName = "VLAN0002 - Internal Server 2"
+        }
+        primaryInterface = true
+        showNetworkDhcpLabel = true
+        showNetworkPoolLabel = false
+      }
+    ]
+    plan = { code = "vm-1024", id = 248 }
+    showScale = false
+    templateParameter = null
+    type = "centos"
+    version = "9-stream"
+    volumes = [
+      {
+        name = "root"
+        uuid = "0f513dae-0187-4e13-98ae-d969c6364a61"
+        configurableIOPS = false
+        controllerId = 22871
+        controllerMountPoint = "22871:0:4:0"
+        datastoreId = "auto"
+        displayOrder = 0
+        externalId = "2000"
+        id = 11852
+        internalId = "[ESXi-DC2-DEMO-LUN02] Morpheus CentOS 7.5 v4/Morpheus CentOS 7.5 v4.vmdk"
+        maxIOPS = null
+        maxStorage = 5368709120
+        minStorage = 5368709120
+        planResizable = true
+        readonlyName = false
+        resizeable = true
+        rootVolume = true
+        size = 10
+        storageType = 1
+        typeId = 1
+        uniqueId = null
+        unitNumber = "0"
+        vId = 210
+        virtualImageId = 210
+        volumeCustomizable = true
+      }
+    ]
+  }
   dateCreated = "2024-02-09T13:18:02.000Z"
   form = { code = "domainid" }
   formType = "form"
