@@ -1,0 +1,14 @@
+resource "catalog-item-type" "f5b794c5-48a6-43be-8ff7-5ab087740554" {
+  name = "AT-Kajal-Catalog"
+  uuid = "f5b794c5-48a6-43be-8ff7-5ab087740554"
+  config = {
+    config = ""
+    context = ""
+    workflowUuid = "6d6481b3-8386-4446-8110-23d0d143a4b8"
+  }
+  dateCreated = "2024-04-01T12:13:39.000Z"
+  formType = "optionTypes"
+  lastUpdated = "2024-04-01T12:13:39.000Z"
+  optionTypes = [ { code = "Select_Instance" } ]
+  refType = "OperationalWorkflow"
+}
