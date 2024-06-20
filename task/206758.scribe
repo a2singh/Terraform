@@ -4,7 +4,7 @@ resource "task" "206758" {
   uuid = "bca0089d-77e3-4ebe-a8d7-47e3c39100a2"
   dateCreated = "2024-06-20T10:30:39.000Z"
   executeTarget = "local"
-  lastUpdated = "2024-06-20T10:58:17.000Z"
+  lastUpdated = "2024-06-20T11:03:05.000Z"
   options = [
     {
       optionType = { code = "winrm.powershellVersion" }

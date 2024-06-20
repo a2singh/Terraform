@@ -8,19 +8,7 @@ $WaitTime = 5
 $MorpheusCartUri = 'https://10.32.23.86/api/catalog/cart/items?validate=false'
 
 # Ignore SSL certificate errors (not recommended for production)
-Add-Type @"
-using System.Net;
-using System.Security.Cryptography.X509Certificates;
-
-public class TrustAllCertsPolicy : ICertificatePolicy {
-    public bool CheckValidationResult(
-        ServicePoint srvPoint, X509Certificate certificate,
-        WebRequest request, int certificateProblem) {
-        return true;
-    }
-}
-"@
-[System.Net.ServicePointManager]::CertificatePolicy = New-Object TrustAllCertsPolicy
+[System.Net.ServicePointManager]::ServerCertificateValidationCallback = { $true }
 
 <#
 #region Authentication
@@ -76,5 +64,5 @@ Write-Host $responsecart_checkout.success
 
 EOFSCRIBE
   dateCreated = "2024-06-20T10:30:39.000Z"
-  lastUpdated = "2024-06-20T10:58:17.000Z"
+  lastUpdated = "2024-06-20T11:03:05.000Z"
 }
