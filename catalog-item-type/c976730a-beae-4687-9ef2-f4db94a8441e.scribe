@@ -1,0 +1,14 @@
+resource "catalog-item-type" "c976730a-beae-4687-9ef2-f4db94a8441e" {
+  name = "AP test workflow"
+  uuid = "c976730a-beae-4687-9ef2-f4db94a8441e"
+  config = {
+    config = ""
+    context = ""
+    workflowUuid = "9c79a7a3-008c-4e6c-9411-43dd3bff97cf"
+  }
+  dateCreated = "2024-02-27T10:20:27.000Z"
+  form = { code = "All Resources" }
+  formType = "form"
+  lastUpdated = "2024-04-08T13:46:24.000Z"
+  refType = "OperationalWorkflow"
+}
