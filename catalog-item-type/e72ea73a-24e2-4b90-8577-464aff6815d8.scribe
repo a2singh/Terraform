@@ -1,0 +1,91 @@
+resource "catalog-item-type" "e72ea73a-24e2-4b90-8577-464aff6815d8" {
+  name = "Recharge Price"
+  uuid = "e72ea73a-24e2-4b90-8577-464aff6815d8"
+  config = {
+    name = "singh"
+    backup = {
+      createBackup = false
+      jobAction = "new"
+      jobRetentionCount = 3
+      veeamManagedServer = ""
+    }
+    cloud = { name = "<%=customOptions.cloud%>", id = 3 }
+    config = {
+      createUser = true
+      hostId = null
+      isEC2 = false
+      isVpcSelectable = true
+      nestedVirtualization = null
+      noAgent = true
+      poolProviderType = null
+      resourcePoolId = "pool-24"
+      smbiosAssetTag = null
+      vmwareFolderId = "/"
+    }
+    copies = 1
+    defaultExpandAdvanced = false
+    group = { id = "<%=customOptions.group%>" }
+    hideLock = true
+    hostName = "singh"
+    instance = { userGroup = { id = "" } }
+    layout = { code = "488e6802-9160-4321-9140-b6ba3cbc288a", id = 1113 }
+    networkInterfaces = [
+      {
+        network = {
+          hasPool = false
+          id = "network-48"
+          idName = "VLAN0002 - Internal Server 2"
+        }
+        networkInterfaceTypeId = 4
+        networkInterfaceTypeIdName = "VMXNET 3"
+        primaryInterface = true
+        showNetworkDhcpLabel = true
+        showNetworkPoolLabel = false
+      }
+    ]
+    plan = { code = "atcustomplan", id = 1052 }
+    ports = [
+      {
+        code = "centos.22"
+        name = "SSH"
+        externalPort = 22
+        id = 12
+        internalPort = 22
+        loadBalance = false
+        loadBalancePort = null
+        loadBalanceProtocol = null
+        shortName = "ssh"
+        sortOrder = 1
+        visible = true
+      }
+    ]
+    servicePlanOptions = {
+      coresPerSocket = 1
+      forPlan = 1052
+      maxCores = 2
+      maxMemory = 2147483648
+    }
+    showScale = false
+    type = "OS"
+    version = "7.5"
+    volumes = [
+      {
+        name = "root"
+        datastoreId = "auto"
+        maxIOPS = null
+        maxStorage = 107374182400
+        readonlyName = false
+        rootVolume = true
+        size = 100
+        storageType = 1
+        vId = 212
+        volumeCustomizable = false
+      }
+    ]
+  }
+  dateCreated = "2023-11-02T06:30:27.000Z"
+  form = { code = "All Resources" }
+  formType = "form"
+  lastUpdated = "2023-11-03T11:18:18.000Z"
+  refType = "InstanceType"
+}
