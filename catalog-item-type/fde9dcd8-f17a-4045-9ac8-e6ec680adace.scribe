@@ -1,0 +1,87 @@
+resource "catalog-item-type" "fde9dcd8-f17a-4045-9ac8-e6ec680adace" {
+  name = "206011"
+  uuid = "fde9dcd8-f17a-4045-9ac8-e6ec680adace"
+  config = {
+    appSpec = <<EOFSCRIBE
+id: 14
+tiers:
+  App:
+    instances:
+      - instance:
+          type: centos
+          cloud: AP VMware
+          name: ap-n-206011
+          instance:
+            powerScheduleType: 1
+          configEnabled: false
+          layout:
+            id: 308
+            code: vmware-centos-7.5-single
+        cloud:
+          id: 11
+        userRemovedFields:
+          - instance.backup
+          - backup.commvaultClient
+          - backup.commvaultStoragePolicy
+          - backup.commvaultBackupSet
+          - virtualImage
+        config:
+          noAgent: true
+          vmwareFolderId: /
+          executeMode: executeHost
+          resourcePoolId: pool-447
+        networkInterfaces:
+          - primaryInterface: true
+            network:
+              id: network-509
+              idName: VLAN0002 - Internal Server 2
+        plan:
+          id: 248
+          code: vm-1024
+        workflow:
+          taskSetId: ''
+        backup:
+          veeamManagedServer: ''
+          jobAction: new
+          providerBackupType: -1
+        volumes:
+          - id: 11852
+            name: root
+            controllerId: 22871
+            controllerMountPoint: '22871:0:4:0'
+            resizeable: true
+            planResizable: true
+            rootVolume: true
+            unitNumber: '0'
+            typeId: 1
+            configurableIOPS: false
+            maxStorage: 10737418240
+            displayOrder: 0
+            maxIOPS: null
+            uuid: 0f513dae-0187-4e13-98ae-d969c6364a61
+            uniqueId: null
+            externalId: '2000'
+            internalId: '[ESXi-DC2-DEMO-LUN02] Morpheus CentOS 7.5 v4/Morpheus CentOS 7.5 v4.vmdk'
+            virtualImageId: 210
+            size: 10
+            minStorage: 5368709120
+            storageType: 1
+            datastoreId: autoCluster
+    tierIndex: 1
+defaultCloud:
+  id: 11
+  code: ''
+name: ap-206011
+group:
+  id: 2
+  code: ''
+type: morpheus
+
+EOFSCRIBE
+  }
+  dateCreated = "2024-04-12T07:58:31.000Z"
+  form = { code = "All Resources" }
+  formType = "form"
+  lastUpdated = "2024-04-12T07:58:31.000Z"
+  refType = "AppTemplate"
+}
