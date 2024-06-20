@@ -1,0 +1,18 @@
+resource "catalog-item-type" "4d5d31bf-3837-4821-b129-7de31eac81e8" {
+  name = "new cat"
+  uuid = "4d5d31bf-3837-4821-b129-7de31eac81e8"
+  config = {
+    config = ""
+    context = ""
+    workflowUuid = "aa43338b-3971-44a7-acb8-744395137a90"
+  }
+  dateCreated = "2024-02-06T15:05:59.000Z"
+  formType = "optionTypes"
+  lastUpdated = "2024-02-06T15:05:59.000Z"
+  optionTypes = [
+    { code = "serviceList" },
+    { code = "serviceStatus" },
+    { code = "api_instance_list" }
+  ]
+  refType = "OperationalWorkflow"
+}
