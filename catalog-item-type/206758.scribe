@@ -1,11 +1,148 @@
 resource "catalog-item-type" "206758" {
   code = "206758"
-  name = "Mr. Cooper 206758"
-  uuid = "38dd89f9-e092-4af8-8c60-a3474f60eb85"
-  dateCreated = "2024-06-20T08:02:24.000Z"
+  name = "206758"
+  uuid = "6256a016-4ca9-43b2-9982-bdd3074779fe"
+  config = {
+    name = "$${userInitials.toUpperCase()}$${tenant.take(5).toUpperCase()}$${platform.take(3).toUpperCase()}VM$${sequence+10}"
+    backup = {
+      backupRepository = ""
+      commvaultBackupSet = 6328
+      commvaultClient = 6326
+      commvaultStoragePolicy = 6330
+      createBackup = true
+      jobAction = "new"
+      jobRetentionCount = null
+      jobSchedule = 2
+      providerBackupType = -1
+      veeamManagedServer = ""
+    }
+    cloud = { id = "<%=customOptions.cloud%>" }
+    config = {
+      createUser = true
+      hostId = null
+      isEC2 = false
+      isVpcSelectable = true
+      nestedVirtualization = null
+      noAgent = true
+      poolProviderType = null
+      resourcePoolId = "<%=customOptions.resourcepool%>"
+      smbiosAssetTag = null
+      vmwareFolderId = "/"
+    }
+    copies = 1
+    defaultExpandAdvanced = false
+    environment = "<%=customOptions.environment%>"
+    group = { id = "<%=customOptions.group%>" }
+    hideLock = true
+    hostName = "$${userInitials.toUpperCase()}$${tenant.take(5).toUpperCase()}$${platform.take(3).toUpperCase()}VM$${sequence+10}"
+    instance = { userGroup = { id = "" } }
+    layout = { code = "vmware-centos-7.5-single", id = 308 }
+    networkInterfaces = [
+      {
+        network = {
+          hasPool = false
+          id = "<%=customOptions.network%>"
+          idName = "VLAN0002 - Internal Server 2"
+        }
+        networkInterfaceTypeId = 4
+        networkInterfaceTypeIdName = "VMXNET 3"
+        primaryInterface = true
+        showNetworkDhcpLabel = true
+        showNetworkPoolLabel = false
+      }
+    ]
+    plan = { code = "custom.vmware", id = "<%=customOptions.serviceplan%>" }
+    servicePlanOptions = {
+      coresPerSocket = 2
+      forPlan = 5468
+      maxCores = 2
+      maxMemory = 2147483648
+    }
+    showScale = false
+    storageControllers = [
+      {
+        name = "IDE 1"
+        category = "ide"
+        active = true
+        busNumber = "1"
+        displayOrder = 0
+        editable = false
+        id = 54
+        maxDevices = 2
+        removable = false
+        reservedUnitNumber = -1
+        typeId = 2
+        typeName = "IDE"
+        unitNumber = null
+      },
+      {
+        name = "IDE 0"
+        category = "ide"
+        active = true
+        busNumber = "0"
+        displayOrder = 1
+        editable = false
+        id = 53
+        maxDevices = 2
+        removable = false
+        reservedUnitNumber = -1
+        typeId = 2
+        typeName = "IDE"
+        unitNumber = null
+      },
+      {
+        name = "SCSI 0"
+        category = "scsi"
+        active = true
+        busNumber = "0"
+        displayOrder = 2
+        editable = false
+        id = 52
+        maxDevices = 16
+        removable = false
+        reservedUnitNumber = 7
+        typeId = 4
+        typeName = "SCSI LSI Logic Parallel"
+        unitNumber = null
+      }
+    ]
+    templateParameter = null
+    type = "centos"
+    version = "9-stream"
+    volumes = [
+      {
+        name = "root"
+        uuid = "3f199d88-1f64-4421-98c0-189d4fe8f806"
+        configurableIOPS = false
+        controllerId = 35375
+        controllerMountPoint = "35375:0:4:0"
+        datastoreId = "auto"
+        displayOrder = 0
+        externalId = "2000"
+        id = "<%=customOptions.disk%>"
+        internalId = "[ESXi-DC2-DEMO-LUN02] Morpheus CentOS 7.5 v4/Morpheus CentOS 7.5 v4.vmdk"
+        maxIOPS = null
+        maxStorage = 10737418240
+        minStorage = 5368709120
+        planResizable = true
+        readonlyName = false
+        resizeable = true
+        rootVolume = true
+        size = 10
+        storageType = 1
+        typeId = 1
+        uniqueId = null
+        unitNumber = "0"
+        vId = 210
+        virtualImageId = 210
+        volumeCustomizable = true
+      }
+    ]
+  }
+  dateCreated = "2024-06-20T09:52:30.000Z"
+  description = "Mr. Cooper"
   form = { code = "206758" }
-  formConfig = "{\"optOut\":{\"f2733ba3-67e7-445c-ba4c-6fbf9edc5508\":false}}"
   formType = "form"
-  lastUpdated = "2024-06-20T08:30:08.000Z"
+  lastUpdated = "2024-06-20T09:59:40.000Z"
   refType = "InstanceType"
 }
