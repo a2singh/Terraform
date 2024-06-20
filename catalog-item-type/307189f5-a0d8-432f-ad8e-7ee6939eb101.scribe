@@ -1,0 +1,82 @@
+resource "catalog-item-type" "307189f5-a0d8-432f-ad8e-7ee6939eb101" {
+  name = "AP-DISK-TEST"
+  uuid = "307189f5-a0d8-432f-ad8e-7ee6939eb101"
+  config = {
+    name = "test"
+    backup = {
+      createBackup = false
+      jobAction = "new"
+      jobRetentionCount = 3
+      providerBackupType = -1
+      veeamManagedServer = ""
+    }
+    cloud = { id = "<%=customOptions.cloud%>" }
+    config = {
+      createUser = false
+      hostId = null
+      isEC2 = false
+      isVpcSelectable = true
+      nestedVirtualization = null
+      noAgent = false
+      poolProviderType = null
+      resourcePoolId = "<%=customOptions.pool%>"
+      smbiosAssetTag = null
+      vmwareFolderId = "/"
+    }
+    copies = 1
+    defaultExpandAdvanced = false
+    group = { id = "<%=customOptions.group%>" }
+    hideLock = true
+    hostName = "test"
+    instance = { userGroup = { id = "" } }
+    layout = { id = "<%=customOptions.layout%>" }
+    networkInterfaces = [
+      {
+        ipMode = ""
+        network = {
+          hasPool = false
+          id = "<%=customOptions.network%>"
+          idName = "VLAN0002 - Internal Server 2"
+        }
+        networkInterfaceTypeId = 4
+        networkInterfaceTypeIdName = "VMXNET 3"
+        primaryInterface = true
+        showNetworkDhcpLabel = true
+        showNetworkPoolLabel = false
+      }
+    ]
+    plan = { id = "<%=customOptions.servicePlan%>" }
+    servicePlanOptions = {
+      coresPerSocket = "<%=customOptions.serviceplan.maxCoresPerSocket%>"
+      forPlan = 1039
+      maxCores = "<%=customOptions.serviceplan.maxCores%>"
+      maxMemory = "<%=customOptions.ram.toLong() * 1024 * 1024 * 1024%>"
+    }
+    showScale = false
+    type = "cent"
+    version = "7.5"
+    volumes = [
+      {
+        name = "root"
+        datastoreId = "auto"
+        maxIOPS = null
+        maxStorage = "<%=customOptions.disk%>"
+        readonlyName = false
+        rootVolume = true
+        size = 100
+        storageType = 1
+        vId = 212
+        volumeCustomizable = false
+      }
+    ]
+  }
+  darkIconPath = "https://10.32.23.86/storage/logos/uploads/CatalogItemType/5/logo/AP-DISK-TEST_original.png"
+  dateCreated = "2023-10-17T18:41:49.000Z"
+  form = { code = "All Resources" }
+  formType = "form"
+  iconPath = "/branding/140x40/centos.svg"
+  lastUpdated = "2024-05-03T12:45:09.000Z"
+  logoSettings = "{\"type\":\"custom\"}"
+  refType = "InstanceType"
+  visibility = "public"
+}
