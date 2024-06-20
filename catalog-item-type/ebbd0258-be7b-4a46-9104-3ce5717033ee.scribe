@@ -1,0 +1,19 @@
+resource "catalog-item-type" "ebbd0258-be7b-4a46-9104-3ce5717033ee" {
+  name = "Get Server info"
+  uuid = "ebbd0258-be7b-4a46-9104-3ce5717033ee"
+  config = {
+    config = ""
+    context = "instance"
+    workflowUuid = "aa43338b-3971-44a7-acb8-744395137a90"
+  }
+  dateCreated = "2024-02-06T07:23:13.000Z"
+  featured = true
+  formType = "optionTypes"
+  lastUpdated = "2024-02-20T11:42:28.000Z"
+  optionTypes = [
+    { code = "morph_instance_list" },
+    { code = "serviceList" },
+    { code = "serviceStatus" }
+  ]
+  refType = "OperationalWorkflow"
+}
