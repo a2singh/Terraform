@@ -2,6 +2,148 @@ resource "catalog-item-type" "at.morphe" {
   code = "at.morphe"
   name = "AT_Morphe_Ubuntu"
   uuid = "06a7198a-937d-4fe8-a530-1cc80b4db9a3"
+  config = {
+    name = "AT_Morphe_Ubuntu"
+    backup = {
+      createBackup = false
+      jobAction = "new"
+      jobRetentionCount = 3
+      providerBackupType = -1
+      veeamManagedServer = ""
+    }
+    cloud = { name = "AT VMware", id = 3 }
+    config = {
+      createUser = true
+      executeMode = "executeHost"
+      hostId = null
+      isEC2 = false
+      isVpcSelectable = true
+      nestedVirtualization = null
+      noAgent = true
+      poolProviderType = null
+      resourcePoolId = "pool-162"
+      smbiosAssetTag = null
+      vmwareFolderId = "/"
+    }
+    configEnabled = true
+    copies = 1
+    defaultExpandAdvanced = false
+    group = { name = "All Groups", id = "2" }
+    hideLock = true
+    hostName = "AT_Morphe_Ubuntu"
+    instance = { configEnabled = false, userGroup = { id = "" } }
+    layout = { code = "vmware-ubuntu-18.04-single", id = 117 }
+    networkInterfaces = [
+      {
+        ipMode = ""
+        network = {
+          hasPool = false
+          id = "network-275"
+          idName = "VLAN0002 - Internal Server 2"
+        }
+        networkInterfaceTypeId = 4
+        networkInterfaceTypeIdName = "VMXNET 3"
+        primaryInterface = true
+        showNetworkDhcpLabel = true
+        showNetworkPoolLabel = false
+      }
+    ]
+    plan = { code = "vm-2048", id = 249 }
+    ports = [
+      {
+        code = "ubuntu.22"
+        name = "SSH"
+        externalPort = 22
+        id = 9
+        internalPort = 22
+        loadBalance = false
+        loadBalancePort = null
+        loadBalanceProtocol = null
+        shortName = "ssh"
+        sortOrder = 1
+        visible = true
+      }
+    ]
+    showScale = false
+    storageControllers = [
+      {
+        name = "SCSI 0"
+        category = "scsi"
+        active = true
+        busNumber = "0"
+        displayOrder = 0
+        editable = false
+        id = 19
+        maxDevices = 16
+        removable = false
+        reservedUnitNumber = 7
+        typeId = 4
+        typeName = "SCSI LSI Logic Parallel"
+        unitNumber = null
+      },
+      {
+        name = "IDE 1"
+        category = "ide"
+        active = true
+        busNumber = "1"
+        displayOrder = 1
+        editable = false
+        id = 21
+        maxDevices = 2
+        removable = false
+        reservedUnitNumber = -1
+        typeId = 2
+        typeName = "IDE"
+        unitNumber = null
+      },
+      {
+        name = "IDE 0"
+        category = "ide"
+        active = true
+        busNumber = "0"
+        displayOrder = 2
+        editable = false
+        id = 20
+        maxDevices = 2
+        removable = false
+        reservedUnitNumber = -1
+        typeId = 2
+        typeName = "IDE"
+        unitNumber = null
+      }
+    ]
+    type = "ubuntu"
+    version = "18.04"
+    volumes = [
+      {
+        name = "root"
+        uuid = "7c96b214-077a-4fc7-8172-6f9ffa2d6f63"
+        configurableIOPS = false
+        controllerId = 19
+        controllerMountPoint = "19:0:4:0"
+        datastoreId = "auto"
+        displayOrder = 0
+        externalId = null
+        id = 8
+        internalId = null
+        maxIOPS = null
+        maxStorage = 21474836480
+        minStorage = 2147483648
+        planResizable = true
+        readonlyName = false
+        resizeable = true
+        rootVolume = true
+        size = 20
+        storageType = 1
+        typeId = 43
+        uniqueId = "vmware.morpheus.ubuntu.18.04.volume.0"
+        unitNumber = "0"
+        vId = 1292
+        virtualImageId = 1292
+        volumeCustomizable = true
+      }
+    ]
+  }
   dateCreated = "2024-01-04T10:29:19.000Z"
   lastUpdated = "2024-01-04T10:31:25.000Z"
   refType = "InstanceType"
