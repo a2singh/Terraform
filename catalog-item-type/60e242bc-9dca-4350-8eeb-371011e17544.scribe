@@ -1,0 +1,85 @@
+resource "catalog-item-type" "60e242bc-9dca-4350-8eeb-371011e17544" {
+  name = "DELETE ME"
+  uuid = "60e242bc-9dca-4350-8eeb-371011e17544"
+  config = {
+    name = "delete me"
+    backup = {
+      createBackup = false
+      jobAction = "new"
+      jobRetentionCount = 3
+      providerBackupType = -1
+      veeamManagedServer = ""
+    }
+    cloud = { name = "VMware Cloud", id = 14 }
+    config = {
+      createUser = true
+      isEC2 = false
+      isVpcSelectable = true
+      nestedVirtualization = null
+      noAgent = false
+      poolProviderType = null
+      resourcePoolId = "pool-373"
+      smbiosAssetTag = null
+      vmwareFolderId = "/"
+    }
+    copies = 1
+    defaultExpandAdvanced = false
+    group = { name = "New group", id = "9" }
+    hideLock = true
+    hostName = "delete me"
+    instance = { userGroup = { id = "" } }
+    layout = { code = "vmware-centos-7.5-single", id = 308 }
+    networkInterfaces = [
+      {
+        network = {
+          hasPool = false
+          id = "network-448"
+          idName = "VLAN0002 - Internal Server 2"
+        }
+        primaryInterface = true
+        showNetworkDhcpLabel = true
+        showNetworkPoolLabel = false
+      }
+    ]
+    plan = { code = "vm-512", id = 247 }
+    showScale = false
+    templateParameter = null
+    type = "centos"
+    version = "9-stream"
+    volumes = [
+      {
+        name = "root"
+        uuid = "f36bc494-c4ab-44ef-890c-8a275ff5bac6"
+        configurableIOPS = false
+        controllerId = 18296
+        controllerMountPoint = "18296:0:4:0"
+        datastoreId = "auto"
+        displayOrder = 0
+        externalId = "2000"
+        id = 9255
+        internalId = "[ESXi-DC2-DEMO-LUN02] Morpheus CentOS 7.5 v4/Morpheus CentOS 7.5 v4.vmdk"
+        maxIOPS = null
+        maxStorage = 10737418240
+        minStorage = 5368709120
+        planResizable = true
+        readonlyName = false
+        resizeable = true
+        rootVolume = true
+        size = 10
+        storageType = 1
+        typeId = 1
+        uniqueId = null
+        unitNumber = "0"
+        vId = 210
+        virtualImageId = 210
+        volumeCustomizable = true
+      }
+    ]
+  }
+  dateCreated = "2024-01-12T11:09:12.000Z"
+  form = { code = "All Resources" }
+  formType = "form"
+  lastUpdated = "2024-01-12T11:33:46.000Z"
+  refType = "InstanceType"
+  visibility = "public"
+}
