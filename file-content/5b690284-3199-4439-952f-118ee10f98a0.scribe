@@ -1,0 +1,80 @@
+resource "file-content" "5b690284-3199-4439-952f-118ee10f98a0" {
+  uuid = "5b690284-3199-4439-952f-118ee10f98a0"
+  content = <<EOFSCRIBE
+# Time to wait between each request (in seconds)
+$WaitTime = 5
+
+# Morpheus API endpoint for cart items
+$MorpheusCartUri = 'https://10.32.23.86/api/catalog/cart/items?validate=false'
+
+# Ignore SSL certificate errors (not recommended for production)
+Add-Type @"
+using System.Net;
+using System.Security.Cryptography.X509Certificates;
+
+public class TrustAllCertsPolicy : ICertificatePolicy {
+    public bool CheckValidationResult(
+        ServicePoint srvPoint, X509Certificate certificate,
+        WebRequest request, int certificateProblem) {
+        return true;
+    }
+}
+"@
+[System.Net.ServicePointManager]::CertificatePolicy = New-Object TrustAllCertsPolicy
+
+<#
+#region Authentication
+# To get your Token for the first time 
+$body = @{
+    'username' = 'asingh'
+    'password' = 'Morpheus#0121'
+}
+$keys = Invoke-RestMethod -Uri "https://10.32.23.86/oauth/token?grant_type=password&scope=write&client_id=morph-api" -Method Post -Body $body
+# Token can be used for one year.
+$accessToken = $keys.access_token
+# Header
+$headers = @{"Authorization" = "Bearer $accessToken" }
+#endregion
+#>
+
+# Data for OS validation
+$OsValidationData = @(
+    @{
+        "type" = @{
+            "name" = "AT-206758"
+        }
+        "config" = @{
+            "group" = "2"
+            "cloud" = "34"
+            "resourcePoolId" = "pool-921"
+            "hostname" = "ASMORPHLINVM23"
+            "environment" = "test"
+            "plan" = "248"
+            "network" = "network-860"
+            "maxStorage" = "200"
+        }
+    }
+)
+ 
+# Iterate through the OS validation data and add each to the cart
+$OsValidationData | ForEach-Object {
+    $Result = $null
+    $DeploymentName = $_.type.name
+    $Body = "{`"item`":$($_ | ConvertTo-Json -Compress)}"
+
+    Write-Host "Deploying $DeploymentName to cart started..."
+
+    $Result = Invoke-RestMethod -Uri $MorpheusCartUri -Method POST -Headers $headers -ContentType 'application/json' -Body $Body
+    Write-Host "Deploying the $DeploymentName to cart completed!"
+    Write-Host $Result
+    Start-Sleep -Seconds $WaitTime
+}
+
+# Checkout the cart so the VM in the cart will start provisioning.
+$responsecart_checkout = Invoke-RestMethod -Uri 'https://10.32.23.86/api/catalog/checkout' -Method POST -Headers $headers
+Write-Host $responsecart_checkout.success
+
+EOFSCRIBE
+  dateCreated = "2024-06-20T10:30:39.000Z"
+  lastUpdated = "2024-06-20T10:58:17.000Z"
+}
