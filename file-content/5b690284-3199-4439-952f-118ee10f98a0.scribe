@@ -29,19 +29,41 @@ $headers = @{"Authorization" = "Bearer $accessToken" }
 $OsValidationData = @(
     @{
         "type" = @{
-            "name" = "AT-206758"
+            "name" = "AT206758"
         }
-        "config" = @{
-            "group" = "2"
-            "cloud" = "34"
-            "resourcePoolId" = "pool-921"
-            "hostname" = "ASMORPHLINVM23"
-            "environment" = "test"
-            "plan" = "248"
-            "network" = "network-860"
-            "maxStorage" = "200"
+        "config" = 
+           "customOptions" = {
+                "testGroups" = "2",
+                "testClouds" = "14",
+                "testLayouts" = "308",
+                "testPools" = "pool-921",
+                "testPlans" = {
+                    "id" = "248",
+                },
+                "testDisks"= [
+                    {
+                        "rootVolume" = true,
+                        "name" = "root",
+                        "size" = "60",
+                        "storageType" = "1",
+                        "datastoreId" = "auto"
+                    }
+                ],
+                "testNetworks" = [
+                    {
+                        "primaryInterface" = true,
+                        "networkInterfaceTypeId" = "4",
+                        "network" = {
+                            "id" = "network-860",
+                            "pool" = {
+                            "id" = ""
+                            }
+                        }
+                    }
+                ],
+            }
+          }
         }
-    }
 )
  
 # Iterate through the OS validation data and add each to the cart
@@ -64,5 +86,5 @@ Write-Host $responsecart_checkout.success
 
 EOFSCRIBE
   dateCreated = "2024-06-20T10:30:39.000Z"
-  lastUpdated = "2024-06-20T11:03:05.000Z"
+  lastUpdated = "2024-06-21T10:25:36.000Z"
 }
