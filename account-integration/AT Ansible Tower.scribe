@@ -4,5 +4,6 @@ resource "account-integration" "AT Ansible Tower" {
   integrationType = { code = "ansibleTower" }
   serviceUrl = "https://tower.prod.dc2.den.morpheusdata.com"
   serviceVersion = "v2"
+  statusMessage = "unable to reach tower"
   type = "ansibleTower"
 }
