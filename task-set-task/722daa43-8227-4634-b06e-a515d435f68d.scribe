@@ -1,0 +1,4 @@
+resource "task-set-task" "722daa43-8227-4634-b06e-a515d435f68d" {
+  uuid = "722daa43-8227-4634-b06e-a515d435f68d"
+  task = { code = "AT-Task" }
+}
