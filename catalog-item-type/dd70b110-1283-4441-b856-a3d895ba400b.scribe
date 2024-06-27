@@ -124,7 +124,9 @@ resource "catalog-item-type" "dd70b110-1283-4441-b856-a3d895ba400b" {
     ]
   }
   dateCreated = "2024-06-27T13:08:11.000Z"
-  lastUpdated = "2024-06-27T13:08:11.000Z"
+  form = { code = "206835" }
+  formType = "form"
+  lastUpdated = "2024-06-27T14:34:30.000Z"
   refType = "InstanceType"
   visibility = "public"
 }
