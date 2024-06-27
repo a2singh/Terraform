@@ -1,0 +1,130 @@
+resource "catalog-item-type" "dd70b110-1283-4441-b856-a3d895ba400b" {
+  name = "206835_VMware"
+  uuid = "dd70b110-1283-4441-b856-a3d895ba400b"
+  config = {
+    name = "$${userInitials.toUpperCase()}$${tenant.take(5).toUpperCase()}$${platform.take(3).toUpperCase()}VM$${sequence+10}"
+    backup = {
+      backupRepository = 7
+      createBackup = true
+      jobAction = "clone"
+      jobRetentionCount = null
+      jobSchedule = 2
+      providerBackupType = -1
+      veeamManagedServer = "70986669-d32d-4120-bde9-903a19e7a0e1:af151f37-1a61-4702-9576-5081956ba423"
+    }
+    cloud = { name = "AP VMware", id = 11 }
+    config = {
+      createUser = true
+      hostId = null
+      isEC2 = false
+      isVpcSelectable = true
+      nestedVirtualization = null
+      noAgent = true
+      poolProviderType = null
+      resourcePoolId = "pool-807"
+      smbiosAssetTag = null
+      vmwareFolderId = "/"
+    }
+    copies = 1
+    defaultExpandAdvanced = true
+    group = { name = "All Groups", id = "2" }
+    hideLock = true
+    hostName = "$${userInitials.toUpperCase()}$${tenant.take(5).toUpperCase()}$${platform.take(3).toUpperCase()}VM$${sequence+10}"
+    instance = { userGroup = { id = "" } }
+    layout = { code = "a4c9ff47-a889-4c85-b27d-40325a0d1022", id = 1162 }
+    metadata = [
+      {
+        name = "Instance Owner"
+        listId = ""
+        strict = true
+        strictValue = ""
+        value = "apsingh"
+      },
+      {
+        name = "Instance Type"
+        listId = ""
+        strict = true
+        strictValue = ""
+        value = "vmware"
+      },
+      {
+        name = "App Version"
+        listId = ""
+        strict = true
+        strictValue = ""
+        value = "7.0.3"
+      },
+      {
+        name = "CaseID "
+        listId = ""
+        strict = true
+        strictValue = ""
+        value = "206835"
+      },
+      {
+        name = "Cost Center"
+        listId = ""
+        strict = true
+        strictValue = ""
+        value = "app"
+      },
+      {
+        name = "Selected Cloud"
+        listId = ""
+        strict = true
+        strictValue = ""
+        value = "AP VMware"
+      }
+    ]
+    networkInterfaces = [
+      {
+        ipMode = ""
+        network = {
+          hasPool = false
+          id = "network-509"
+          idName = "VLAN0002 - Internal Server 2"
+        }
+        primaryInterface = true
+        showNetworkDhcpLabel = true
+        showNetworkPoolLabel = false
+      }
+    ]
+    plan = { code = "vm-512", id = 247 }
+    showScale = false
+    type = "206825"
+    version = "latest"
+    volumes = [
+      {
+        name = "root"
+        uuid = "c9332331-89a5-458e-906f-faa83113c367"
+        configurableIOPS = false
+        controllerId = 40
+        controllerMountPoint = "40:0:4:0"
+        datastoreId = "auto"
+        displayOrder = 0
+        externalId = null
+        id = 15
+        internalId = null
+        maxIOPS = null
+        maxStorage = 10737418240
+        minStorage = 2147483648
+        planResizable = true
+        readonlyName = false
+        resizeable = true
+        rootVolume = true
+        size = 10
+        storageType = 1
+        typeId = 43
+        uniqueId = "esxi.image.morpheus.centos.7.5.volume.0"
+        unitNumber = null
+        vId = 211
+        virtualImageId = 211
+        volumeCustomizable = true
+      }
+    ]
+  }
+  dateCreated = "2024-06-27T13:08:11.000Z"
+  lastUpdated = "2024-06-27T13:08:11.000Z"
+  refType = "InstanceType"
+  visibility = "public"
+}
