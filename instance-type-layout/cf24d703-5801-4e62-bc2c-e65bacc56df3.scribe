@@ -1,0 +1,12 @@
+resource "instance-type-layout" "cf24d703-5801-4e62-bc2c-e65bacc56df3" {
+  code = "cf24d703-5801-4e62-bc2c-e65bacc56df3"
+  name = "azure"
+  uuid = "35950941-052c-47a9-b92a-05e959022f5c"
+  actions = [ { code = "generic-add-node" } ]
+  hasAutoScale = true
+  instanceType = { code = "206825" }
+  instanceVersion = "latest"
+  memoryRequirement = 0
+  provisionType = { code = "azure" }
+  workloads = [ { code = "62c7e70b-3e8a-413c-96b2-fb8c84d06c89" } ]
+}

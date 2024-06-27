@@ -1,0 +1,15 @@
+resource "container-type" "62c7e70b-3e8a-413c-96b2-fb8c84d06c89" {
+  code = "62c7e70b-3e8a-413c-96b2-fb8c84d06c89"
+  name = "ubuntu 18.04"
+  uuid = "1d3da9da-741d-494d-98c5-3b7f440687f4"
+  containerVersion = "18.04"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "azure" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "ubuntu18.04"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { uuid = "6818ee69-faa5-4260-ad2f-bb9c572afa96" }
+}
