@@ -9,6 +9,7 @@ resource "option-type-form" "206835" {
     formOptions = ""
     formType = "static"
   }
+  description = "Mr. Cooper"
   field-groups = [
     {
       code = "54b9b7b5-60af-4a4c-9588-0d66250a48be"
@@ -21,58 +22,86 @@ resource "option-type-form" "206835" {
           name = "93b71ed7-d19f-4973-989f-d99420f41096"
           uuid = "0d353258-8613-48b5-89ac-7e2c6c4a6298"
           config = { addon = "", addonPosition = "" }
+          defaultValue = "703"
+          exportMeta = true
           fieldContext = "config.customOptions"
-          fieldLabel = "Input 6"
-          fieldName = "input6"
+          fieldLabel = "App Version"
+          fieldName = "appVersion"
           formField = true
+          refCode = "93b71ed7-d19f-4973-989f-d99420f41096"
+          required = true
         },
         {
           code = "f8388314-aa00-4915-8e9a-5735f450d612"
           name = "f8388314-aa00-4915-8e9a-5735f450d612"
           uuid = "6139c556-b818-4a56-b8f2-09e69a3a23c1"
+          defaultValue = "206835"
           displayOrder = 1
+          exportMeta = true
           fieldContext = "config.customOptions"
-          fieldLabel = "Input 7"
-          fieldName = "input7"
+          fieldLabel = "Case ID"
+          fieldName = "caseId"
           formField = true
+          refCode = "f8388314-aa00-4915-8e9a-5735f450d612"
+          required = true
         },
         {
           code = "016baf76-9860-4418-93c4-42f08d2f2a18"
           name = "016baf76-9860-4418-93c4-42f08d2f2a18"
           uuid = "cb936a36-436e-4834-8d56-554ed2def418"
+          defaultValue = "Azure Cloud"
           displayOrder = 2
+          exportMeta = true
           fieldContext = "config.customOptions"
-          fieldLabel = "Input 8"
-          fieldName = "input8"
+          fieldLabel = "Selected Cloud"
+          fieldName = "selectedCloud"
           formField = true
+          refCode = "016baf76-9860-4418-93c4-42f08d2f2a18"
+          required = true
         },
         {
           code = "87a212fe-4ff3-40ec-b47c-ddaf6db1f2cf"
           name = "87a212fe-4ff3-40ec-b47c-ddaf6db1f2cf"
           uuid = "c9030eda-f441-4e6a-b707-c8908763a207"
+          defaultValue = "atul singh"
           displayOrder = 3
+          exportMeta = true
           fieldContext = "config.customOptions"
-          fieldLabel = "Input 9"
-          fieldName = "input9"
+          fieldLabel = "Instance Owner"
+          fieldName = "instanceOwner"
           formField = true
+          refCode = "87a212fe-4ff3-40ec-b47c-ddaf6db1f2cf"
+          required = true
         },
         {
           code = "9859288d-ac73-4f90-a3c8-298192e7dce2"
           name = "9859288d-ac73-4f90-a3c8-298192e7dce2"
           uuid = "97c3d417-0c01-4fd7-a605-a1301787cd1d"
+          defaultValue = "Azure Instance"
           displayOrder = 4
+          exportMeta = true
           fieldContext = "config.customOptions"
-          fieldLabel = "Input 10"
-          fieldName = "input10"
+          fieldLabel = "Instance Type"
+          fieldName = "instanceType"
           formField = true
+          refCode = "9859288d-ac73-4f90-a3c8-298192e7dce2"
+          required = true
+        },
+        {
+          code = "3e51efbf-ebb8-4a7b-a3e9-4fc98b9fe270"
+          name = "3e51efbf-ebb8-4a7b-a3e9-4fc98b9fe270"
+          uuid = "c8bb4933-4faa-4ee2-8441-ec65efbe63f2"
+          defaultValue = "Mr. Cooper"
+          displayOrder = 5
+          exportMeta = true
+          fieldContext = "config.customOptions"
+          fieldLabel = "Customer Name"
+          fieldName = "customerName"
+          formField = true
+          refCode = "3e51efbf-ebb8-4a7b-a3e9-4fc98b9fe270"
+          required = true
         }
       ]
-    },
-    {
-      code = "0a09d57f-3974-47ca-8310-6d9890cf8747"
-      name = "new fieldgroup"
-      collapsible = false
-      defaultCollapsed = false
     }
   ]
   options = [
@@ -81,11 +110,12 @@ resource "option-type-form" "206835" {
       name = "f3568dfb-ae4f-4ff6-a91a-27d7527be791"
       uuid = "bda8b9c9-5d85-4dc6-9306-7da20101f8ae"
       config = { addon = "", addonPosition = "" }
-      defaultValue = "2"
+      defaultValue = "9"
       fieldContext = "config.customOptions"
       fieldLabel = "Group"
       fieldName = "apGroup"
       formField = true
+      refCode = "f3568dfb-ae4f-4ff6-a91a-27d7527be791"
       type = "group"
     },
     {
@@ -102,11 +132,13 @@ resource "option-type-form" "206835" {
         instanceTypeFieldCode = ""
         instanceTypeFieldType = "field"
       }
+      defaultValue = "31"
       displayOrder = 1
       fieldContext = "config.customOptions"
       fieldLabel = "Cloud"
       fieldName = "apCloud"
       formField = true
+      refCode = "74b6b6a7-75fa-4b47-a3f4-e163f6b39ed3"
       type = "cloud"
     },
     {
@@ -132,6 +164,7 @@ resource "option-type-form" "206835" {
       fieldLabel = "Resource Pool"
       fieldName = "apResourcePool"
       formField = true
+      refCode = "7d5786b5-4365-4a82-9569-ebebc19cca5b"
       type = "resourcePool"
     },
     {
@@ -160,6 +193,7 @@ resource "option-type-form" "206835" {
       fieldLabel = "Plan"
       fieldName = "apPlan"
       formField = true
+      refCode = "d065aa5e-1e35-4361-b5c5-5506bf2fe8a7"
       type = "plan"
     },
     {
@@ -188,6 +222,7 @@ resource "option-type-form" "206835" {
       fieldLabel = "Network"
       fieldName = "apNetwork"
       formField = true
+      refCode = "8e3c7694-e6af-4a96-bddb-4cd36e5ce3a7"
       type = "networkManager"
     }
   ]
