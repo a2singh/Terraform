@@ -1,0 +1,17 @@
+resource "container-type" "10572e25-7af5-4872-a8ed-0bae6ccf7af7" {
+  code = "10572e25-7af5-4872-a8ed-0bae6ccf7af7"
+  name = "206825"
+  uuid = "7fdb6347-0771-412c-a21c-d9189194df08"
+  actions = [ { code = "generic-remove-node" } ]
+  containerVersion = "latest"
+  entryPoint = ""
+  labels = [ "206825" ]
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "206825"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "esxi.image.morpheus.centos.7.5" }
+}

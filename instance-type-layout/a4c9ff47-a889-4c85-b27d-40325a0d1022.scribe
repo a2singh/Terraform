@@ -1,0 +1,14 @@
+resource "instance-type-layout" "a4c9ff47-a889-4c85-b27d-40325a0d1022" {
+  code = "a4c9ff47-a889-4c85-b27d-40325a0d1022"
+  name = "206825"
+  uuid = "4d915575-b685-460d-b997-7dfed0360c8f"
+  actions = [ { code = "generic-add-node" } ]
+  hasAutoScale = true
+  instanceType = { code = "206825" }
+  instanceVersion = "latest"
+  labels = [ "206825" ]
+  memoryRequirement = 0
+  provisionType = { code = "vmware" }
+  supportsConvertToManaged = true
+  workloads = [ { code = "10572e25-7af5-4872-a8ed-0bae6ccf7af7" } ]
+}
