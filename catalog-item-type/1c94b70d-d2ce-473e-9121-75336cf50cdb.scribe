@@ -1,0 +1,120 @@
+resource "catalog-item-type" "1c94b70d-d2ce-473e-9121-75336cf50cdb" {
+  name = "206835_Azure"
+  uuid = "1c94b70d-d2ce-473e-9121-75336cf50cdb"
+  config = {
+    name = "$${userInitials.toUpperCase()}$${tenant.take(5).toUpperCase()}$${platform.take(3).toUpperCase()}VM$${sequence+10}"
+    backup = {
+      createBackup = true
+      jobAction = "new"
+      jobRetentionCount = null
+      jobSchedule = 2
+      providerBackupType = -1
+      veeamManagedServer = ""
+    }
+    cloud = { name = "AT Azure Cloud", id = 31 }
+    config = {
+      availabilityOptions = ""
+      availabilitySet = ""
+      availabilityZone = 1
+      azureRegion = ""
+      azurefloatingIp = "on"
+      azuresecurityGroupId = 516
+      bootDiagnostics = null
+      createUser = true
+      diagnosticsStorageAccount = null
+      isEC2 = false
+      isVpcSelectable = true
+      noAgent = true
+      osGuestDiagnostics = "off"
+      poolProviderType = null
+      resourcePoolId = "pool-874"
+    }
+    copies = 1
+    defaultExpandAdvanced = true
+    group = { name = "All Groups", id = "2" }
+    hideLock = true
+    hostName = "$${userInitials.toUpperCase()}$${tenant.take(5).toUpperCase()}$${platform.take(3).toUpperCase()}VM$${sequence+10}"
+    instance = { userGroup = { id = "" } }
+    layout = { code = "cf24d703-5801-4e62-bc2c-e65bacc56df3", id = 1163 }
+    metadata = [
+      {
+        name = "Instance Owner"
+        listId = ""
+        strict = true
+        strictValue = ""
+        value = "apsingh"
+      },
+      {
+        name = "Instance Type"
+        listId = ""
+        strict = true
+        strictValue = ""
+        value = "azure"
+      },
+      {
+        name = "App Version"
+        listId = ""
+        strict = false
+        strictValue = ""
+        value = "7.0.3"
+      },
+      {
+        name = "CaseID "
+        listId = ""
+        strict = true
+        strictValue = ""
+        value = "206835"
+      },
+      {
+        name = "Cost Center"
+        listId = ""
+        strict = true
+        strictValue = ""
+        value = "app"
+      },
+      {
+        name = "Selected Cloud"
+        listId = ""
+        strict = true
+        strictValue = ""
+        value = "AT Azure"
+      }
+    ]
+    networkInterfaces = [
+      {
+        ipMode = ""
+        network = {
+          displayName = "at-vnet-eus2 - default"
+          hasPool = ""
+          id = "subnet-93"
+          idName = "default"
+          subnet = "subnet-93"
+        }
+        primaryInterface = true
+        showNetworkDhcpLabel = true
+        showNetworkPoolLabel = false
+      }
+    ]
+    plan = { code = "azure.plan.eastus2.Standard_B2ms", id = 4381 }
+    showScale = false
+    type = "206825"
+    version = "latest"
+    volumes = [
+      {
+        name = "root"
+        maxIOPS = null
+        maxStorage = 34359738368
+        readonlyName = false
+        rootVolume = true
+        size = 32
+        storageType = 40
+        vId = 2194
+        volumeCustomizable = true
+      }
+    ]
+  }
+  dateCreated = "2024-06-27T13:06:45.000Z"
+  lastUpdated = "2024-06-27T13:07:01.000Z"
+  refType = "InstanceType"
+  visibility = "public"
+}
