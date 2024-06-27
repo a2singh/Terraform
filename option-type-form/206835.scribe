@@ -1,0 +1,194 @@
+resource "option-type-form" "206835" {
+  code = "206835"
+  name = "206835"
+  uuid = "342315ad-b284-42d5-90b6-25388cc302d8"
+  config = {
+    enableVar = false
+    form = ""
+    formField = ""
+    formOptions = ""
+    formType = "static"
+  }
+  field-groups = [
+    {
+      code = "54b9b7b5-60af-4a4c-9588-0d66250a48be"
+      name = "Metadata Tags"
+      collapsible = false
+      defaultCollapsed = false
+      options = [
+        {
+          code = "93b71ed7-d19f-4973-989f-d99420f41096"
+          name = "93b71ed7-d19f-4973-989f-d99420f41096"
+          uuid = "0d353258-8613-48b5-89ac-7e2c6c4a6298"
+          config = { addon = "", addonPosition = "" }
+          fieldContext = "config.customOptions"
+          fieldLabel = "Input 6"
+          fieldName = "input6"
+          formField = true
+        },
+        {
+          code = "f8388314-aa00-4915-8e9a-5735f450d612"
+          name = "f8388314-aa00-4915-8e9a-5735f450d612"
+          uuid = "6139c556-b818-4a56-b8f2-09e69a3a23c1"
+          displayOrder = 1
+          fieldContext = "config.customOptions"
+          fieldLabel = "Input 7"
+          fieldName = "input7"
+          formField = true
+        },
+        {
+          code = "016baf76-9860-4418-93c4-42f08d2f2a18"
+          name = "016baf76-9860-4418-93c4-42f08d2f2a18"
+          uuid = "cb936a36-436e-4834-8d56-554ed2def418"
+          displayOrder = 2
+          fieldContext = "config.customOptions"
+          fieldLabel = "Input 8"
+          fieldName = "input8"
+          formField = true
+        },
+        {
+          code = "87a212fe-4ff3-40ec-b47c-ddaf6db1f2cf"
+          name = "87a212fe-4ff3-40ec-b47c-ddaf6db1f2cf"
+          uuid = "c9030eda-f441-4e6a-b707-c8908763a207"
+          displayOrder = 3
+          fieldContext = "config.customOptions"
+          fieldLabel = "Input 9"
+          fieldName = "input9"
+          formField = true
+        },
+        {
+          code = "9859288d-ac73-4f90-a3c8-298192e7dce2"
+          name = "9859288d-ac73-4f90-a3c8-298192e7dce2"
+          uuid = "97c3d417-0c01-4fd7-a605-a1301787cd1d"
+          displayOrder = 4
+          fieldContext = "config.customOptions"
+          fieldLabel = "Input 10"
+          fieldName = "input10"
+          formField = true
+        }
+      ]
+    },
+    {
+      code = "0a09d57f-3974-47ca-8310-6d9890cf8747"
+      name = "new fieldgroup"
+      collapsible = false
+      defaultCollapsed = false
+    }
+  ]
+  options = [
+    {
+      code = "f3568dfb-ae4f-4ff6-a91a-27d7527be791"
+      name = "f3568dfb-ae4f-4ff6-a91a-27d7527be791"
+      uuid = "bda8b9c9-5d85-4dc6-9306-7da20101f8ae"
+      config = { addon = "", addonPosition = "" }
+      defaultValue = "2"
+      fieldContext = "config.customOptions"
+      fieldLabel = "Group"
+      fieldName = "apGroup"
+      formField = true
+      type = "group"
+    },
+    {
+      code = "74b6b6a7-75fa-4b47-a3f4-e163f6b39ed3"
+      name = "74b6b6a7-75fa-4b47-a3f4-e163f6b39ed3"
+      uuid = "ccef8bdd-1152-41f0-ae0d-a4d59eeb3805"
+      config = {
+        cloudType = ""
+        filterResource = false
+        group = "f3568dfb-ae4f-4ff6-a91a-27d7527be791"
+        groupFieldType = "field"
+        groupId = ""
+        instanceTypeCode = ""
+        instanceTypeFieldCode = ""
+        instanceTypeFieldType = "field"
+      }
+      displayOrder = 1
+      fieldContext = "config.customOptions"
+      fieldLabel = "Cloud"
+      fieldName = "apCloud"
+      formField = true
+      type = "cloud"
+    },
+    {
+      code = "7d5786b5-4365-4a82-9569-ebebc19cca5b"
+      name = "7d5786b5-4365-4a82-9569-ebebc19cca5b"
+      uuid = "cd9f5b18-6b77-4605-8ba0-8cedf34bc1b9"
+      config = {
+        cloudField = "74b6b6a7-75fa-4b47-a3f4-e163f6b39ed3"
+        cloudFieldType = "field"
+        cloudId = ""
+        groupField = "f3568dfb-ae4f-4ff6-a91a-27d7527be791"
+        groupFieldType = "field"
+        groupId = ""
+        layoutField = ""
+        layoutFieldType = "field"
+        layoutId = ""
+        planField = ""
+        planFieldType = "field"
+        planId = ""
+      }
+      displayOrder = 2
+      fieldContext = "config.customOptions"
+      fieldLabel = "Resource Pool"
+      fieldName = "apResourcePool"
+      formField = true
+      type = "resourcePool"
+    },
+    {
+      code = "d065aa5e-1e35-4361-b5c5-5506bf2fe8a7"
+      name = "d065aa5e-1e35-4361-b5c5-5506bf2fe8a7"
+      uuid = "a4db33c6-14c2-4d9d-bfa6-9dd726cd9915"
+      config = {
+        cloudField = "74b6b6a7-75fa-4b47-a3f4-e163f6b39ed3"
+        cloudFieldType = "field"
+        cloudId = ""
+        defaultValue = ""
+        diskField = ""
+        groupField = "f3568dfb-ae4f-4ff6-a91a-27d7527be791"
+        groupFieldType = "field"
+        groupId = ""
+        layoutField = ""
+        layoutFieldType = "field"
+        layoutId = ""
+        poolField = "7d5786b5-4365-4a82-9569-ebebc19cca5b"
+        poolFieldType = "field"
+        poolId = ""
+        showPricing = false
+      }
+      displayOrder = 3
+      fieldContext = "config.customOptions"
+      fieldLabel = "Plan"
+      fieldName = "apPlan"
+      formField = true
+      type = "plan"
+    },
+    {
+      code = "8e3c7694-e6af-4a96-bddb-4cd36e5ce3a7"
+      name = "8e3c7694-e6af-4a96-bddb-4cd36e5ce3a7"
+      uuid = "1b5c7b58-a87f-4712-a2f6-c6f99ad8e710"
+      config = {
+        cloudField = "74b6b6a7-75fa-4b47-a3f4-e163f6b39ed3"
+        cloudFieldType = "field"
+        cloudId = ""
+        defaultValue = ""
+        enableIPModeSelection = true
+        groupField = "f3568dfb-ae4f-4ff6-a91a-27d7527be791"
+        groupFieldType = "field"
+        groupId = ""
+        layoutField = ""
+        layoutFieldType = "field"
+        layoutId = ""
+        poolField = "7d5786b5-4365-4a82-9569-ebebc19cca5b"
+        poolFieldType = "field"
+        poolId = ""
+        showNetworkTypeSelection = true
+      }
+      displayOrder = 4
+      fieldContext = "config.customOptions"
+      fieldLabel = "Network"
+      fieldName = "apNetwork"
+      formField = true
+      type = "networkManager"
+    }
+  ]
+}
