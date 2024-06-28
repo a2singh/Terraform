@@ -1,0 +1,135 @@
+resource "option-type-form" "206835-copy" {
+  code = "206835-copy"
+  name = "206835_Mr. Cooper"
+  uuid = "3c73a7f4-8a67-468f-bd80-87a6db46c384"
+  config = {
+    enableVar = false
+    form = ""
+    formField = ""
+    formOptions = ""
+    formType = "static"
+  }
+  description = "Mr. Cooper"
+  options = [
+    {
+      code = "f3568dfb-ae4f-4ff6-a91a-27d7527be791"
+      name = "f3568dfb-ae4f-4ff6-a91a-27d7527be791"
+      uuid = "ff730591-4477-44fb-a3fb-cb1ff1392aa3"
+      config = { addon = "", addonPosition = "" }
+      defaultValue = "9"
+      fieldContext = "config.customOptions"
+      fieldLabel = "Group"
+      fieldName = "apGroup"
+      formField = true
+      refCode = "f3568dfb-ae4f-4ff6-a91a-27d7527be791"
+      type = "group"
+    },
+    {
+      code = "74b6b6a7-75fa-4b47-a3f4-e163f6b39ed3"
+      name = "74b6b6a7-75fa-4b47-a3f4-e163f6b39ed3"
+      uuid = "3cefce70-21a1-46c2-842c-6a8be4f3634a"
+      config = {
+        cloudType = ""
+        filterResource = false
+        group = "f3568dfb-ae4f-4ff6-a91a-27d7527be791"
+        groupFieldType = "field"
+        groupId = ""
+        instanceTypeCode = ""
+        instanceTypeFieldCode = ""
+        instanceTypeFieldType = "field"
+      }
+      defaultValue = "31"
+      displayOrder = 1
+      fieldContext = "config.customOptions"
+      fieldLabel = "Cloud"
+      fieldName = "apCloud"
+      formField = true
+      refCode = "74b6b6a7-75fa-4b47-a3f4-e163f6b39ed3"
+      type = "cloud"
+    },
+    {
+      code = "7d5786b5-4365-4a82-9569-ebebc19cca5b"
+      name = "7d5786b5-4365-4a82-9569-ebebc19cca5b"
+      uuid = "bdba6c51-dd35-4467-8d23-d655b38d3dbe"
+      config = {
+        cloudField = "74b6b6a7-75fa-4b47-a3f4-e163f6b39ed3"
+        cloudFieldType = "field"
+        cloudId = ""
+        groupField = "f3568dfb-ae4f-4ff6-a91a-27d7527be791"
+        groupFieldType = "field"
+        groupId = ""
+        layoutField = ""
+        layoutFieldType = "field"
+        layoutId = ""
+        planField = ""
+        planFieldType = "field"
+        planId = ""
+      }
+      displayOrder = 2
+      fieldContext = "config.customOptions"
+      fieldLabel = "Resource Pool"
+      fieldName = "apResourcePool"
+      formField = true
+      refCode = "7d5786b5-4365-4a82-9569-ebebc19cca5b"
+      type = "resourcePool"
+    },
+    {
+      code = "d065aa5e-1e35-4361-b5c5-5506bf2fe8a7"
+      name = "d065aa5e-1e35-4361-b5c5-5506bf2fe8a7"
+      uuid = "a12aa15f-2957-448e-bc46-c3b4e61a0fb1"
+      config = {
+        cloudField = "74b6b6a7-75fa-4b47-a3f4-e163f6b39ed3"
+        cloudFieldType = "field"
+        cloudId = ""
+        defaultValue = ""
+        diskField = ""
+        groupField = "f3568dfb-ae4f-4ff6-a91a-27d7527be791"
+        groupFieldType = "field"
+        groupId = ""
+        layoutField = ""
+        layoutFieldType = "field"
+        layoutId = ""
+        poolField = "7d5786b5-4365-4a82-9569-ebebc19cca5b"
+        poolFieldType = "field"
+        poolId = ""
+        showPricing = false
+      }
+      displayOrder = 3
+      fieldContext = "config.customOptions"
+      fieldLabel = "Plan"
+      fieldName = "apPlan"
+      formField = true
+      refCode = "d065aa5e-1e35-4361-b5c5-5506bf2fe8a7"
+      type = "plan"
+    },
+    {
+      code = "8e3c7694-e6af-4a96-bddb-4cd36e5ce3a7"
+      name = "8e3c7694-e6af-4a96-bddb-4cd36e5ce3a7"
+      uuid = "9fffec7e-01fb-4a91-8d01-cc6aacd9a583"
+      config = {
+        cloudField = "74b6b6a7-75fa-4b47-a3f4-e163f6b39ed3"
+        cloudFieldType = "field"
+        cloudId = ""
+        defaultValue = ""
+        enableIPModeSelection = true
+        groupField = "f3568dfb-ae4f-4ff6-a91a-27d7527be791"
+        groupFieldType = "field"
+        groupId = ""
+        layoutField = ""
+        layoutFieldType = "field"
+        layoutId = ""
+        poolField = "7d5786b5-4365-4a82-9569-ebebc19cca5b"
+        poolFieldType = "field"
+        poolId = ""
+        showNetworkTypeSelection = true
+      }
+      displayOrder = 4
+      fieldContext = "config.customOptions"
+      fieldLabel = "Network"
+      fieldName = "apNetwork"
+      formField = true
+      refCode = "8e3c7694-e6af-4a96-bddb-4cd36e5ce3a7"
+      type = "networkManager"
+    }
+  ]
+}

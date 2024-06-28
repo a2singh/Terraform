@@ -1,0 +1,177 @@
+resource "catalog-item-type" "206835" {
+  code = "206835"
+  name = "206835_Mr. Cooper"
+  uuid = "38816e9d-9891-42f6-9a77-3ecaaf265831"
+  config = {
+    name = "$${userInitials.toUpperCase()}$${tenant.take(5).toUpperCase()}$${platform.take(3).toUpperCase()}VM$${sequence+10}"
+    backup = {
+      createBackup = true
+      jobAction = "new"
+      jobRetentionCount = null
+      jobSchedule = 2
+      providerBackupType = -1
+      veeamManagedServer = ""
+    }
+    cloud = { name = "AT Azure Cloud", id = 31 }
+    config = {
+      availabilityOptions = ""
+      availabilitySet = ""
+      availabilityZone = 1
+      azureMarketplace = null
+      azureRegion = ""
+      azurefloatingIp = "on"
+      azuresecurityGroupId = 516
+      bootDiagnostics = null
+      createUser = true
+      diagnosticsStorageAccount = null
+      expose = 8080
+      isEC2 = false
+      isVpcSelectable = true
+      localImageId = null
+      marketplaceOffer = "Ubuntu Server"
+      marketplacePublisher = "Canonical"
+      marketplaceSku = "16.04-LTS"
+      marketplaceVersion = "16.04.201910110"
+      noAgent = true
+      osGuestDiagnostics = "off"
+      poolProviderType = null
+      resourcePoolId = "pool-874"
+      templateTypeSelect = "marketplace"
+    }
+    copies = 1
+    defaultExpandAdvanced = true
+    environment = "6"
+    group = { name = "All Groups", id = "2" }
+    hideLock = true
+    hostName = "$${userInitials.toUpperCase()}$${tenant.take(5).toUpperCase()}$${platform.take(3).toUpperCase()}VM$${sequence+10}"
+    instance = { userGroup = { id = "" } }
+    layout = { code = "azure-1.0-single", id = 5 }
+    metadata = [
+      {
+        name = "Instance Owner"
+        listId = ""
+        strict = true
+        strictValue = ""
+        value = "atul singh"
+      },
+      {
+        name = "Instance Type"
+        listId = ""
+        strict = true
+        strictValue = ""
+        value = "Azure"
+      },
+      {
+        name = "App Version"
+        listId = ""
+        strict = true
+        strictValue = ""
+        value = "703"
+      },
+      {
+        name = "CaseID "
+        listId = ""
+        strict = true
+        strictValue = ""
+        value = "206835"
+      },
+      {
+        name = "Customer Name"
+        listId = ""
+        strict = true
+        strictValue = ""
+        value = "Mr. Cooper"
+      },
+      {
+        name = "Selected Cloud"
+        listId = ""
+        strict = true
+        strictValue = ""
+        value = "AT Azure Cloud"
+      },
+      {
+        name = "Company"
+        listId = ""
+        strict = true
+        strictValue = ""
+        value = "MorpheusData"
+      },
+      {
+        name = "Company Headquarter "
+        listId = ""
+        strict = true
+        strictValue = ""
+        value = "USA"
+      }
+    ]
+    networkInterfaces = [
+      {
+        network = {
+          displayName = "at-vnet-eus2 - 10.0.1.0-10.0.1.255"
+          hasPool = ""
+          id = "subnet-94"
+          idName = "10.0.1.0-10.0.1.255"
+          subnet = "subnet-94"
+        }
+        networkInterfaceTypeId = 4
+        networkInterfaceTypeIdName = "VMXNET 3"
+        primaryInterface = true
+        showNetworkDhcpLabel = true
+        showNetworkPoolLabel = false
+      }
+    ]
+    plan = { code = "azure.plan.eastus2.Basic_A0", id = 5798 }
+    ports = [
+      {
+        code = "centos.22"
+        name = "SSH"
+        externalPort = 22
+        id = 12
+        internalPort = 22
+        loadBalance = false
+        loadBalancePort = null
+        loadBalanceProtocol = null
+        shortName = "ssh"
+        sortOrder = 1
+        visible = true
+      }
+    ]
+    showScale = false
+    type = "azure"
+    version = "1.0"
+    volumes = [
+      {
+        name = "root"
+        uuid = "9ef6cbb4-d030-4f59-9015-cac2f201f4d8"
+        configurableIOPS = false
+        controllerId = 22
+        controllerMountPoint = "22:0:4:0"
+        displayOrder = 0
+        externalId = null
+        id = 9
+        internalId = null
+        maxIOPS = null
+        maxStorage = 34359738368
+        minStorage = 2147483648
+        planResizable = true
+        readonlyName = false
+        resizeable = true
+        rootVolume = true
+        size = 32
+        storageType = 40
+        typeId = 43
+        uniqueId = "vmware.vsphere.image.morpheus.centos.7.2.volume.0"
+        unitNumber = null
+        vId = 210
+        virtualImageId = 210
+        volumeCustomizable = true
+      }
+    ]
+  }
+  dateCreated = "2024-06-28T07:24:03.000Z"
+  description = "Mr. Cooper"
+  form = { code = "206835-copy" }
+  formType = "form"
+  lastUpdated = "2024-06-28T07:24:03.000Z"
+  refType = "InstanceType"
+}
