@@ -5,5 +5,4 @@ resource "instance-type" "7" {
   category = "os"
   deploymentService = ""
   environmentPrefix = "AP_LB_INSTANCE"
-  layouts = [ { code = "283c927f-ef53-4fda-beb9-d697455ce83d" } ]
 }
