@@ -28,6 +28,8 @@ resource "option-type-form" "206879" {
       name = "d2bc304c-62cc-4487-af58-c6c0535823a3"
       uuid = "d293cdb8-6df7-4656-b2ac-6232598e73d5"
       config = {
+        addon = ""
+        addonPosition = ""
         cloudType = ""
         filterResource = false
         group = "b9d96b22-1a0b-4514-9670-870e02674e23"
@@ -59,7 +61,7 @@ resource "option-type-form" "206879" {
         groupField = "b9d96b22-1a0b-4514-9670-870e02674e23"
         groupFieldType = "field"
         groupId = ""
-        instanceTypeCode = ""
+        instanceTypeCode = "centos"
         instanceTypeFieldCode = ""
         instanceTypeFieldType = "value"
       }
@@ -232,6 +234,7 @@ resource "option-type-form" "206879" {
       fieldLabel = "folder"
       fieldName = "atfolder"
       formField = true
+      refCode = "503210c3-79de-4fcd-8346-06cc35ea0513"
       type = "vmwFolders"
     },
     {
