@@ -87,7 +87,7 @@ resource "option-type-form" "206879" {
         layoutField = "18ea982d-9447-498f-88f4-ae5c77188e94"
         layoutFieldType = "field"
         layoutId = ""
-        planField = ""
+        planField = "65423562-f72e-4793-a8e8-8eaa5e6c3feb"
         planFieldType = "field"
         planId = ""
       }
@@ -108,7 +108,7 @@ resource "option-type-form" "206879" {
         cloudFieldType = "field"
         cloudId = ""
         defaultValue = ""
-        diskField = ""
+        diskField = "64b8a44f-2bcf-4cfd-80a0-455a12616ba4"
         groupField = "b9d96b22-1a0b-4514-9670-870e02674e23"
         groupFieldType = "field"
         groupId = ""
@@ -145,7 +145,7 @@ resource "option-type-form" "206879" {
         groupField = "b9d96b22-1a0b-4514-9670-870e02674e23"
         groupFieldType = "field"
         groupId = ""
-        imageField = ""
+        imageField = "da472959-4ed8-4aae-b31a-68028a6d8280"
         imageId = ""
         layoutField = "18ea982d-9447-498f-88f4-ae5c77188e94"
         layoutFieldType = "field"
@@ -160,7 +160,7 @@ resource "option-type-form" "206879" {
       }
       displayOrder = 5
       fieldContext = "config.customOptions"
-      fieldLabel = "disk"
+      fieldLabel = "Volume"
       fieldName = "atvolume"
       formField = true
       refCode = "64b8a44f-2bcf-4cfd-80a0-455a12616ba4"
