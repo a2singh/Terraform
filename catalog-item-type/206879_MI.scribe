@@ -1,0 +1,351 @@
+resource "catalog-item-type" "206879_MI" {
+  code = "206879_MI"
+  name = "206879_Multi_Instance"
+  uuid = "c16d8090-9392-42de-a16f-73ebf80c1c89"
+  config = {
+    appSpec = <<EOFSCRIBE
+id: 30
+tiers:
+  3_Instnaces:
+    instances:
+      - instance:
+          type: centos
+          cloud: AT VMware Cloud
+          layout:
+            id: 308
+            code: vmware-centos-7.5-single
+          name: '${userInitials.toUpperCase()}${tenant.take(5).toUpperCase()}${platform.take(3).toUpperCase()}VM${sequence+10}'
+          userGroup:
+            id: ''
+        cloud:
+          id: 14
+        userRemovedFields:
+          - instance.backup
+          - backup.commvaultClient
+          - backup.commvaultBackupSet
+          - backup.commvaultStoragePolicy
+          - virtualImage
+        backup:
+          veeamManagedServer: ''
+          createBackup: true
+          jobAction: new
+          jobRetentionCount: null
+          enabled: true
+          providerBackupType: -1
+          showScheduledBackupWarning: false
+        networkInterfaces:
+          - ipMode: ''
+            primaryInterface: true
+            network:
+              idName: VLAN0002 - Internal Server 2
+              id: network-860
+            networkInterfaceTypeId: 4
+            networkInterfaceTypeIdName: VMXNET 3
+        workflow:
+          taskSetId: ''
+        volumes:
+          - maxIOPS: null
+            displayOrder: 0
+            unitNumber: '0'
+            minStorage: 5368709120
+            configurableIOPS: false
+            uuid: 3f199d88-1f64-4421-98c0-189d4fe8f806
+            controllerMountPoint: '35375:0:4:0'
+            internalId: '[ESXi-DC2-DEMO-LUN02] Morpheus CentOS 7.5 v4/Morpheus CentOS 7.5 v4.vmdk'
+            id: 31653
+            datastoreId: autoCluster
+            maxStorage: 10737418240
+            controllerId: 35375
+            externalId: '2000'
+            virtualImageId: 210
+            size: 10
+            name: root
+            planResizable: true
+            rootVolume: true
+            storageType: 1
+            typeId: 1
+            resizeable: true
+            uniqueId: null
+        storageControllers:
+          - editable: false
+            typeName: IDE
+            maxDevices: 2
+            displayOrder: 0
+            active: true
+            unitNumber: null
+            reservedUnitNumber: -1
+            busNumber: '1'
+            removable: false
+            name: IDE 1
+            typeId: 2
+            id: 54
+            category: ide
+          - editable: false
+            typeName: SCSI LSI Logic Parallel
+            maxDevices: 16
+            displayOrder: 1
+            active: true
+            unitNumber: null
+            reservedUnitNumber: 7
+            busNumber: '0'
+            removable: false
+            name: SCSI 0
+            typeId: 4
+            id: 52
+            category: scsi
+          - editable: false
+            typeName: IDE
+            maxDevices: 2
+            displayOrder: 2
+            active: true
+            unitNumber: null
+            reservedUnitNumber: -1
+            busNumber: '0'
+            removable: false
+            name: IDE 0
+            typeId: 2
+            id: 53
+            category: ide
+        config:
+          resourcePoolId: pool-921
+          vmwareFolderId: /
+          noAgent: false
+        plan:
+          id: 248
+          code: vm-1024
+        group:
+          id: 2
+      - instance:
+          type: centos
+          cloud: AT VMware Cloud
+          layout:
+            id: 308
+            code: vmware-centos-7.5-single
+          name: '${userInitials.toUpperCase()}${tenant.take(5).toUpperCase()}${platform.take(3).toUpperCase()}VM${sequence+10}'
+          userGroup:
+            id: ''
+        cloud:
+          id: 14
+        userRemovedFields:
+          - instance.backup
+          - backup.commvaultClient
+          - backup.commvaultBackupSet
+          - backup.commvaultStoragePolicy
+          - virtualImage
+        backup:
+          veeamManagedServer: ''
+          createBackup: true
+          jobAction: new
+          jobRetentionCount: null
+          enabled: true
+          providerBackupType: -1
+          showScheduledBackupWarning: false
+        networkInterfaces:
+          - ipMode: ''
+            primaryInterface: true
+            network:
+              idName: VLAN0002 - Internal Server 2
+              id: network-860
+            networkInterfaceTypeId: 4
+            networkInterfaceTypeIdName: VMXNET 3
+        workflow:
+          taskSetId: ''
+        volumes:
+          - maxIOPS: null
+            displayOrder: 0
+            unitNumber: '0'
+            minStorage: 5368709120
+            configurableIOPS: false
+            uuid: 3f199d88-1f64-4421-98c0-189d4fe8f806
+            controllerMountPoint: '35375:0:4:0'
+            internalId: '[ESXi-DC2-DEMO-LUN02] Morpheus CentOS 7.5 v4/Morpheus CentOS 7.5 v4.vmdk'
+            id: 31653
+            datastoreId: auto
+            maxStorage: 10737418240
+            controllerId: 35375
+            externalId: '2000'
+            virtualImageId: 210
+            size: 10
+            name: root
+            planResizable: true
+            rootVolume: true
+            storageType: 1
+            typeId: 1
+            resizeable: true
+            uniqueId: null
+        storageControllers:
+          - editable: false
+            typeName: IDE
+            maxDevices: 2
+            displayOrder: 0
+            active: true
+            unitNumber: null
+            reservedUnitNumber: -1
+            busNumber: '0'
+            removable: false
+            name: IDE 0
+            typeId: 2
+            id: 53
+            category: ide
+          - editable: false
+            typeName: SCSI LSI Logic Parallel
+            maxDevices: 16
+            displayOrder: 1
+            active: true
+            unitNumber: null
+            reservedUnitNumber: 7
+            busNumber: '0'
+            removable: false
+            name: SCSI 0
+            typeId: 4
+            id: 52
+            category: scsi
+          - editable: false
+            typeName: IDE
+            maxDevices: 2
+            displayOrder: 2
+            active: true
+            unitNumber: null
+            reservedUnitNumber: -1
+            busNumber: '1'
+            removable: false
+            name: IDE 1
+            typeId: 2
+            id: 54
+            category: ide
+        config:
+          resourcePoolId: pool-921
+          vmwareFolderId: /
+          noAgent: false
+        plan:
+          id: 248
+          code: vm-1024
+        group:
+          id: 2
+      - instance:
+          type: centos
+          cloud: AT VMware Cloud
+          layout:
+            id: 308
+            code: vmware-centos-7.5-single
+          name: '${userInitials.toUpperCase()}${tenant.take(5).toUpperCase()}${platform.take(3).toUpperCase()}VM${sequence+10}'
+          userGroup:
+            id: ''
+        cloud:
+          id: 14
+        userRemovedFields:
+          - instance.backup
+          - backup.commvaultClient
+          - backup.commvaultBackupSet
+          - backup.commvaultStoragePolicy
+          - virtualImage
+        backup:
+          veeamManagedServer: ''
+          createBackup: true
+          jobAction: new
+          jobRetentionCount: null
+          enabled: true
+          providerBackupType: -1
+          showScheduledBackupWarning: false
+        networkInterfaces:
+          - ipMode: ''
+            primaryInterface: true
+            network:
+              idName: VLAN0002 - Internal Server 2
+              id: network-860
+            networkInterfaceTypeId: 4
+            networkInterfaceTypeIdName: VMXNET 3
+        workflow:
+          taskSetId: ''
+        volumes:
+          - maxIOPS: null
+            displayOrder: 0
+            unitNumber: '0'
+            minStorage: 5368709120
+            configurableIOPS: false
+            uuid: 3f199d88-1f64-4421-98c0-189d4fe8f806
+            controllerMountPoint: '35375:0:4:0'
+            internalId: '[ESXi-DC2-DEMO-LUN02] Morpheus CentOS 7.5 v4/Morpheus CentOS 7.5 v4.vmdk'
+            id: 31653
+            datastoreId: auto
+            maxStorage: 10737418240
+            controllerId: 35375
+            externalId: '2000'
+            virtualImageId: 210
+            size: 10
+            name: root
+            planResizable: true
+            rootVolume: true
+            storageType: 1
+            typeId: 1
+            resizeable: true
+            uniqueId: null
+        storageControllers:
+          - editable: false
+            typeName: SCSI LSI Logic Parallel
+            maxDevices: 16
+            displayOrder: 0
+            active: true
+            unitNumber: null
+            reservedUnitNumber: 7
+            busNumber: '0'
+            removable: false
+            name: SCSI 0
+            typeId: 4
+            id: 52
+            category: scsi
+          - editable: false
+            typeName: IDE
+            maxDevices: 2
+            displayOrder: 1
+            active: true
+            unitNumber: null
+            reservedUnitNumber: -1
+            busNumber: '0'
+            removable: false
+            name: IDE 0
+            typeId: 2
+            id: 53
+            category: ide
+          - editable: false
+            typeName: IDE
+            maxDevices: 2
+            displayOrder: 2
+            active: true
+            unitNumber: null
+            reservedUnitNumber: -1
+            busNumber: '1'
+            removable: false
+            name: IDE 1
+            typeId: 2
+            id: 54
+            category: ide
+        config:
+          resourcePoolId: pool-921
+          vmwareFolderId: /
+          noAgent: false
+        plan:
+          id: 248
+          code: vm-1024
+        group:
+          id: 2
+    tierIndex: 1
+defaultCloud:
+  id: 14
+  code: ''
+name: ATMORPHAPP001
+group:
+  id: 2
+  code: ''
+environment: Morph Test Machine
+type: morpheus
+
+EOFSCRIBE
+  }
+  dateCreated = "2024-07-01T07:28:27.000Z"
+  description = "CSC New Infrastructure Technology"
+  form = { code = "206879" }
+  formType = "form"
+  lastUpdated = "2024-07-01T10:23:44.000Z"
+  refType = "AppTemplate"
+}
