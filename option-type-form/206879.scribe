@@ -1,0 +1,251 @@
+resource "option-type-form" "206879" {
+  code = "206879"
+  name = "206879_CSCNIT"
+  uuid = "df3e55cb-5701-4574-baf8-7be399d82099"
+  config = {
+    enableVar = false
+    form = ""
+    formField = ""
+    formOptions = ""
+    formType = "static"
+  }
+  options = [
+    {
+      code = "b9d96b22-1a0b-4514-9670-870e02674e23"
+      name = "b9d96b22-1a0b-4514-9670-870e02674e23"
+      uuid = "30a79d8a-6598-4d18-a464-77a837b45006"
+      config = { addon = "", addonPosition = "" }
+      defaultValue = "2"
+      fieldContext = "config.customOptions"
+      fieldLabel = "groups"
+      fieldName = "atgroup"
+      formField = true
+      refCode = "b9d96b22-1a0b-4514-9670-870e02674e23"
+      type = "group"
+    },
+    {
+      code = "d2bc304c-62cc-4487-af58-c6c0535823a3"
+      name = "d2bc304c-62cc-4487-af58-c6c0535823a3"
+      uuid = "d293cdb8-6df7-4656-b2ac-6232598e73d5"
+      config = {
+        cloudType = ""
+        filterResource = false
+        group = "b9d96b22-1a0b-4514-9670-870e02674e23"
+        groupFieldType = "field"
+        groupId = ""
+        instanceTypeCode = ""
+        instanceTypeFieldCode = ""
+        instanceTypeFieldType = "field"
+      }
+      defaultValue = "14"
+      displayOrder = 1
+      fieldContext = "config.customOptions"
+      fieldLabel = "clouds"
+      fieldName = "atcloud"
+      formField = true
+      refCode = "d2bc304c-62cc-4487-af58-c6c0535823a3"
+      type = "cloud"
+    },
+    {
+      code = "18ea982d-9447-498f-88f4-ae5c77188e94"
+      name = "18ea982d-9447-498f-88f4-ae5c77188e94"
+      uuid = "b254fb5d-8298-42ef-9f4a-eb7ceff073c6"
+      config = {
+        addon = ""
+        addonPosition = ""
+        cloudField = "d2bc304c-62cc-4487-af58-c6c0535823a3"
+        cloudFieldType = "field"
+        cloudId = ""
+        groupField = "b9d96b22-1a0b-4514-9670-870e02674e23"
+        groupFieldType = "field"
+        groupId = ""
+        instanceTypeCode = ""
+        instanceTypeFieldCode = ""
+        instanceTypeFieldType = "value"
+      }
+      displayOrder = 2
+      fieldContext = "config.customOptions"
+      fieldLabel = "layout"
+      fieldName = "atlayout"
+      formField = true
+      refCode = "18ea982d-9447-498f-88f4-ae5c77188e94"
+      type = "layout"
+    },
+    {
+      code = "5c00feea-2fad-4c90-95dd-9803e098429e"
+      name = "5c00feea-2fad-4c90-95dd-9803e098429e"
+      uuid = "07a07804-38da-478f-82d6-0cc67c31815b"
+      config = {
+        cloudField = "d2bc304c-62cc-4487-af58-c6c0535823a3"
+        cloudFieldType = "field"
+        cloudId = ""
+        groupField = "b9d96b22-1a0b-4514-9670-870e02674e23"
+        groupFieldType = "field"
+        groupId = ""
+        layoutField = "18ea982d-9447-498f-88f4-ae5c77188e94"
+        layoutFieldType = "field"
+        layoutId = ""
+        planField = ""
+        planFieldType = "field"
+        planId = ""
+      }
+      displayOrder = 3
+      fieldContext = "config.customOptions"
+      fieldLabel = "resource pool"
+      fieldName = "atresourcepool"
+      formField = true
+      refCode = "5c00feea-2fad-4c90-95dd-9803e098429e"
+      type = "resourcePool"
+    },
+    {
+      code = "65423562-f72e-4793-a8e8-8eaa5e6c3feb"
+      name = "65423562-f72e-4793-a8e8-8eaa5e6c3feb"
+      uuid = "809ecdb5-de46-48b9-aa8d-c138ff8605a2"
+      config = {
+        cloudField = "d2bc304c-62cc-4487-af58-c6c0535823a3"
+        cloudFieldType = "field"
+        cloudId = ""
+        defaultValue = ""
+        diskField = ""
+        groupField = "b9d96b22-1a0b-4514-9670-870e02674e23"
+        groupFieldType = "field"
+        groupId = ""
+        layoutField = "18ea982d-9447-498f-88f4-ae5c77188e94"
+        layoutFieldType = "field"
+        layoutId = ""
+        poolField = "5c00feea-2fad-4c90-95dd-9803e098429e"
+        poolFieldType = "field"
+        poolId = ""
+        showPricing = false
+      }
+      displayOrder = 4
+      fieldContext = "config.customOptions"
+      fieldLabel = "plan"
+      fieldName = "plan"
+      formField = true
+      refCode = "65423562-f72e-4793-a8e8-8eaa5e6c3feb"
+      type = "plan"
+    },
+    {
+      code = "64b8a44f-2bcf-4cfd-80a0-455a12616ba4"
+      name = "64b8a44f-2bcf-4cfd-80a0-455a12616ba4"
+      uuid = "75d3edde-39ed-4c76-a259-bfaacb4ca178"
+      config = {
+        addon = ""
+        addonPosition = ""
+        cloudField = "d2bc304c-62cc-4487-af58-c6c0535823a3"
+        cloudFieldType = "field"
+        cloudId = ""
+        defaultValue = ""
+        enableDatastoreSelection = false
+        enableDiskTypeSelection = false
+        enableStorageTypeSelection = false
+        groupField = "b9d96b22-1a0b-4514-9670-870e02674e23"
+        groupFieldType = "field"
+        groupId = ""
+        imageField = ""
+        imageId = ""
+        layoutField = "18ea982d-9447-498f-88f4-ae5c77188e94"
+        layoutFieldType = "field"
+        layoutId = ""
+        planField = "65423562-f72e-4793-a8e8-8eaa5e6c3feb"
+        planFieldType = "field"
+        planId = ""
+        poolField = "5c00feea-2fad-4c90-95dd-9803e098429e"
+        poolFieldType = "field"
+        poolId = ""
+        virtualImageFieldType = "field"
+      }
+      displayOrder = 5
+      fieldContext = "config.customOptions"
+      fieldLabel = "disk"
+      fieldName = "atvolume"
+      formField = true
+      refCode = "64b8a44f-2bcf-4cfd-80a0-455a12616ba4"
+      type = "diskManager"
+    },
+    {
+      code = "a4e84df1-c528-48e0-803f-5ddea67a3142"
+      name = "a4e84df1-c528-48e0-803f-5ddea67a3142"
+      uuid = "e5e63498-aa7d-4ead-be8e-9393fcb0bd4f"
+      config = {
+        cloudField = "d2bc304c-62cc-4487-af58-c6c0535823a3"
+        cloudFieldType = "field"
+        cloudId = ""
+        defaultValue = ""
+        enableIPModeSelection = false
+        groupField = "b9d96b22-1a0b-4514-9670-870e02674e23"
+        groupFieldType = "field"
+        groupId = ""
+        layoutField = "18ea982d-9447-498f-88f4-ae5c77188e94"
+        layoutFieldType = "field"
+        layoutId = ""
+        poolField = "5c00feea-2fad-4c90-95dd-9803e098429e"
+        poolFieldType = "field"
+        poolId = ""
+        showNetworkTypeSelection = false
+      }
+      displayOrder = 6
+      fieldContext = "config.customOptions"
+      fieldLabel = "network"
+      fieldName = "atnetwork"
+      formField = true
+      refCode = "a4e84df1-c528-48e0-803f-5ddea67a3142"
+      type = "networkManager"
+    },
+    {
+      code = "da472959-4ed8-4aae-b31a-68028a6d8280"
+      name = "da472959-4ed8-4aae-b31a-68028a6d8280"
+      uuid = "3d8799dc-0cf6-4d9b-9ce8-4a93c63806c3"
+      config = {
+        addon = ""
+        addonPosition = ""
+        cloudField = "d2bc304c-62cc-4487-af58-c6c0535823a3"
+        cloudFieldType = "cloud"
+        cloudId = ""
+      }
+      displayOrder = 7
+      fieldContext = "config.customOptions"
+      fieldLabel = "image"
+      fieldName = "atimage"
+      formField = true
+      refCode = "da472959-4ed8-4aae-b31a-68028a6d8280"
+      type = "virtual-image"
+    },
+    {
+      code = "503210c3-79de-4fcd-8346-06cc35ea0513"
+      name = "503210c3-79de-4fcd-8346-06cc35ea0513"
+      uuid = "51920024-b224-4464-a31c-9740ece53e25"
+      config = {
+        cloudField = "d2bc304c-62cc-4487-af58-c6c0535823a3"
+        cloudFieldType = "field"
+        cloudId = ""
+        groupField = "b9d96b22-1a0b-4514-9670-870e02674e23"
+        groupFieldType = "field"
+        groupId = ""
+        planField = "65423562-f72e-4793-a8e8-8eaa5e6c3feb"
+        planFieldType = "field"
+        planId = ""
+      }
+      displayOrder = 8
+      fieldContext = "config.customOptions"
+      fieldLabel = "folder"
+      fieldName = "atfolder"
+      formField = true
+      type = "vmwFolders"
+    },
+    {
+      code = "8d545d15-843c-4047-b03a-b5c59f773816"
+      name = "8d545d15-843c-4047-b03a-b5c59f773816"
+      uuid = "e90810a1-3965-460b-b515-08cfe23a9b91"
+      config = { addon = "", addonPosition = "" }
+      displayOrder = 9
+      fieldContext = "config.customOptions"
+      fieldLabel = "environment"
+      fieldName = "atenvironment"
+      formField = true
+      refCode = "8d545d15-843c-4047-b03a-b5c59f773816"
+      type = "environment"
+    }
+  ]
+}
