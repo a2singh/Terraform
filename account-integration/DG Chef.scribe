@@ -1,0 +1,74 @@
+resource "account-integration" "DG Chef" {
+  name = "DG Chef"
+  uuid = "701ebb6b-9079-46a8-b567-2c2525ce08f3"
+  config = {
+    chefUser = "morpheus"
+    databag = [ { key = "", path = "/etc/chef/databag_secret" } ]
+    org = "morpheus-qa"
+    orgKey = <<EOFSCRIBE
+-----BEGIN RSA PRIVATE KEY-----
+MIIEowIBAAKCAQEAxcvYsl2zNIHFB1qgst10l15IL5tNeEstA4zy22OlXE/D5vlb
+ykqTfOtGe9683Tzq/VDjHubJAlmNNWIvKdEmHc40IROjN57unJfhQFzf9PDaDg8C
+yWlx/pMGOGznxBwp8DFkMBJSYaStFUZ3r4X9jLIASLc4GQC/XA5udQaFaoE/Aia5
+lryu2+R2We61rydSF4AMVfXhiKKCfkVpenBb/Dcq8+5KQbC+fjN80MCEvV4aMuOq
+yxi5IyYMUoZa+qoAtTf0z+uZNVqVzMElqKaZ/+R9akhl409FGjjwIWiDvl2HfyO7
+x8wbLUCsHrTQhJblA+ru90oxp6pbLUb9kJMdnwIDAQABAoIBAHGrj3IZ9SXkufVa
++OUx7ZIb5cIuLxxFn63dr6ezIVHmqT+w6DZeG1p733rKa6F9I9LGTG/y02vdSRB3
+x4DxqEUSvtSPc4pAdQJbKmERvscGL1pK+CAF0DQsDDQbKiqCwPs/d0NFFED3IV0L
+rTaa+zaDCTTAzqVXz6E4zfPE9qFYdtKFsOlAjbavYlqNsxNoOfxMecgBV9vitzA4
+BoSo0+af1NZhdqBEiPqAwWqxZfrkkyhVb85P3x3RWEQtQ20zxi4JEV3JXJ/vsNEq
+HiSFJDU7PWRwNdc+17M5xzpmoTXNAfiBEZE2ON3+yXl4vP/on8Zt/mGFUrCUlPfR
+ECB3VuECgYEA/v8KOR+w/FyrzIIgGMy83QCxaNuf+PxRC3KI3r8YLb0QI+aw6iSU
+e8KJBfit0BcZgcAFeUj3mCuxTvdTGsDmQHtBPnMdo2nFuUzr47m0ghe9L7oc2O+L
+SwplCg53Xt6df0ss6Fwi49an6+hH/6JqZCzJPWvHTuiBeDIi7J/lNPECgYEAxpMq
+gfstt5KiHR2lq2OGboGDFolJ1LEyDFhWrpo0xUhPW8h/l8wtDEK7uQERWTSw6gIL
+lyW7RV/GbUoWlxG96NjpqL34ou+xRKcSwX2aC5n9iaeRUm7EthVWQfTN84DsCAeS
+Z5pKaoodSqCfMWls73MWGxEY3N/px0ewmpXHO48CgYAUJp1tNDbtSnl9GM9mhk9q
+e5KJgcmbiHzzFaMBT0Ke4rDy1Vknt6pQOWhQo31A04J9gWotUnnWeaVyYxMbKyFG
++TaHs9skvcgVQ6HkhhlgqnWV3vRGpG9yh6jCabA/PAJgO9WZqyZKsPzmJJ4D8pbL
+wcpJY0oFz1Pj5rphzqTzUQKBgCSOeTfepubxrriPea1YsCnt29UtRxNJ373YEXUp
+XGepTTrHaX3nj69/JZIEeU4j3iHmaH3V62j1HdGG3yvGj2CrdjCjcH+GgurxmwlV
+9yMFoWBTIfS8AajHus5/o96dMFa2FiTOib6dWJEhis0M7IoUdNBc0GfxLNeMAh4j
+Tr9PAoGBANUjhu2v4Rj08riF28T44dQN1jdax0GW5uFPyrUvm7DHF/MgNT6oVx3l
+N+6yX+z9Mx46Izt7ISxWvv/zv/rkrMkQ9X+SUX0nvWuhmA67akiTAEni2evTNnyw
+aaaM+feypgtVo5niadrfUeJ3YtL62/0SLEnOm/x/9SJv6BE+v5+4
+-----END RSA PRIVATE KEY-----
+EOFSCRIBE
+    useFqdn = null
+    userKey = <<EOFSCRIBE
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEAzjx9lS6aAr88ehR6puDIBCdBF9b7K2+cqVASwZdrBX5kOF9f
+q84xuA21Y/DLVvRxVKheQb/45dhoiBrqeprDVPrbrszg2rGDvUS/iyK95L2nQxA8
+yriIMs7PWnRn9woAsq93+HQdR0jCyqabBwbdLOyazJ0ceV6kyIGnFxdxbfjcPGgV
+Kz6ttbp0dnTEVlAE0GoyJTkuL1Zi+aTPf4WnSUbtdL+P/0gblT6JWR6mEb3qbY1k
+0NWIYZ9HWk45M0F61aCUR+kx4pltlhT72CvRECxQ8asnXPQYrHySHGNqJgJfoWNo
+fj0+id3ipYSe/pj7Jd5aGdW9fwEKW6DoyHeHfwIDAQABAoIBAQCZ2OQx+n6nV/OM
+emR4wqxS9NmJKDVcVLmAUJx9UDBk+8FVkEg1SO8sBwXulP2LU3SLm8IcuFG7XHG2
+PqX2aicW6MAiqPGAEvZcpcFh0LvpvFTfIWjILVpk1IQ4TSgVUJ/urBkJ/cytlajC
+NgDmAAfUcHiV9Qn9vE2eyaFVB4b1al1IYzxIJqjyvr6XeL7fpQqrQEwWhCOSAKAj
+cJSqEfKyO0Rl66xib3BhYSesuuq1kQa+lwdRm840/W82A0elbZykg1ymcDebPb7o
+0o2Ap65lgw3mNFSD9x83TQbuKrvyRfzQijmq4rx24C3Azak0I0PwSXy25yLcZK2g
+KeHbuS/pAoGBAPf3Ud4wgFNPao6tCaXAjwql8f4E0XlPqgp5VZv/4eJKZ3Zskt6C
+rstFBZeYf/qGFG8ru5zkwauOC+E7ZCEauqSaSu3ut6MQZXRwNZBI7wn6DIO1lMKl
+k+x4I12YTTCL9J6sjGwktUsxCoUl/jX6RzmEt5uC+Gsi+trB9P7Q4QhDAoGBANTr
+DjMbl2zx127+aJaoX+4lnZmQ8DfAF32/Pcd+1IK9NZF4I0w1uc0PV1tWvNhK+pCT
+iK6Ug8EBvcfoQ+pAyaRQH3PkWFfjrhw/3RKTvV3TA0WbSyq2MbRPjiYQB7Li2DeB
+MIQLQYZpdUp2z0DJezOh6IwOdVboNtTgRp3ZLh4VAoGBAPBbdanwTZNzuZBPPrjC
+bGUf8fAOb5YtmF/KuScb47Lb+GocWEkDV7eFUiReGD+Y1BnmxFcSjoBikjViwm4s
+YJrJTLRR3wNbE1zIn8MaT0rWbGcHDgmXQknHMlC5HqleIGHmU79H3cvi35Ws/DsK
+PRwN/4PocjA3mf2OYJLXminNAoGAHMWGrbFUzQwBKKaIS5OFIxFCMrY7P81dX0iw
+eHzTCre2vWmWm33HFca070rRSgkXwuGs3qqDA1nQ42qngsgud128YlTA+19w77BR
+l2kPddZF4uoRRjxIiy0U8F/KKoos3ZM/kxhSSm+FwgI8D20qkNeYLRTnFk9a2XlV
+EY9/g+ECgYBz/vI+qTg+0u7RjP2w949o6jM0HrNP5N0wca2s9zCJNlNypf+NhwQw
+ph0dCSRXALOHMpzFQgrLvTidSPtp0X76+3IwQntuD5BY6MLFHtyguzEAa+V9mfjX
+lSZrzUUcPtkBvHbHSXGIS+XrVyqRGjGYh7cPJOhAlz57LSS2LZqKCA==
+-----END RSA PRIVATE KEY-----
+EOFSCRIBE
+    windowsInstallUrl = ""
+  }
+  integrationType = { code = "chef" }
+  serviceUrl = "https://chef.bertramlabs.com"
+  serviceVersion = "14.13.11"
+  serviceWindowsVersion = "14.13.11"
+  type = "chef"
+}

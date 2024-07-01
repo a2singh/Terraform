@@ -1,0 +1,5 @@
+resource "task-set-task" "81035db7-d157-4058-b8cc-dd019f72877b" {
+  uuid = "81035db7-d157-4058-b8cc-dd019f72877b"
+  task = { name = "DG | Chef | Create Chef User" }
+  taskPhase = "provision"
+}

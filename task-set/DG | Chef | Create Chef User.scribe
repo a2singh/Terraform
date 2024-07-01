@@ -1,0 +1,8 @@
+resource "task-set" "DG | Chef | Create Chef User" {
+  name = "DG | Chef | Create Chef User"
+  uuid = "3d449826-36ea-4fa2-87ea-5265704a3799"
+  dateCreated = "2024-07-01T22:19:12.000Z"
+  lastUpdated = "2024-07-01T22:19:12.000Z"
+  taskSetTasks = [ { uuid = "81035db7-d157-4058-b8cc-dd019f72877b" } ]
+  visibility = "public"
+}

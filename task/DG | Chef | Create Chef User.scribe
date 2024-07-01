@@ -1,0 +1,28 @@
+resource "task" "DG | Chef | Create Chef User" {
+  name = "DG | Chef | Create Chef User"
+  uuid = "269a820a-f62a-4891-b2da-a490f381bf8c"
+  dateCreated = "2024-07-01T22:18:51.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2024-07-01T22:18:51.000Z"
+  options = [
+    {
+      optionType = { code = "chefServerId" }
+      value = { name = "DG Chef" }
+    },
+    {
+      optionType = { code = "chefDataKeyPath" }
+      value = "/etc/chef/databag_secret"
+    },
+    { optionType = { code = "chefEnv" }, value = "_default" },
+    {
+      optionType = { code = "chefRunList" }
+      value = "role[morph-qa-role]"
+    },
+    {
+      optionType = { code = "chefAttributes" }
+      value = "{\"hello\":\"world\"}"
+    }
+  ]
+  taskType = { code = "chefTask" }
+  visibility = "public"
+}
