@@ -65,6 +65,7 @@ resource "option-type-form" "206758" {
       fieldLabel = "layouts"
       fieldName = "testLayouts"
       formField = true
+      refCode = "13ee87f3-55d2-440b-9b77-ca3fbb9cf5eb"
       type = "layout"
     },
     {
@@ -148,7 +149,7 @@ resource "option-type-form" "206758" {
         cloudField = "dd7ad1b2-aac1-4fed-bd52-8849b75dbef9"
         cloudFieldType = "field"
         cloudId = ""
-        defaultValue = ""
+        defaultValue = "10"
         enableIPModeSelection = false
         groupField = "88be8fca-eeed-4ed7-8625-271fccd3998e"
         groupFieldType = "field"
@@ -174,10 +175,12 @@ resource "option-type-form" "206758" {
       name = "92f75d5b-5dd7-440c-a9e5-d33ba2b7242f"
       uuid = "cf95549f-b403-498f-8105-0c75f3acd24c"
       config = {
+        addon = ""
+        addonPosition = ""
         cloudField = "dd7ad1b2-aac1-4fed-bd52-8849b75dbef9"
         cloudFieldType = "field"
         cloudId = ""
-        defaultValue = ""
+        defaultValue = "100"
         enableDatastoreSelection = false
         enableDiskTypeSelection = false
         enableStorageTypeSelection = false
