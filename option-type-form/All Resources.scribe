@@ -9,7 +9,6 @@ resource "option-type-form" "All Resources" {
     formOptions = ""
     formType = ""
   }
-  labels = [ "Amit" ]
   options = [
     {
       code = "421e4ace-a79d-444c-9306-da432773de20"
@@ -251,6 +250,8 @@ resource "option-type-form" "All Resources" {
         groupField = "421e4ace-a79d-444c-9306-da432773de20"
         groupFieldType = "field"
         groupId = ""
+        imageField = ""
+        imageId = ""
         layoutField = "c0d7f244-7fed-4e8c-a0a8-363e1f3db8f4"
         layoutFieldType = "field"
         layoutId = ""
@@ -260,6 +261,7 @@ resource "option-type-form" "All Resources" {
         poolField = "0bb3ebc8-cf06-4e03-bb40-aec56b45f5ac"
         poolFieldType = "field"
         poolId = ""
+        virtualImageFieldType = "field"
       }
       displayOrder = 5
       fieldContext = "config.customOptions"
@@ -279,17 +281,7 @@ resource "option-type-form" "All Resources" {
         cloudField = "d71b6adf-42cb-455d-b3c8-92d188688635"
         cloudFieldType = "field"
         cloudId = ""
-        defaultValue = <<EOFSCRIBE
-[
- {
-  "primaryInterface": true,
-  "displayOrder": 1,
-  "network": {
-   "id": "network-318"
-  }
- }
-]
-EOFSCRIBE
+        defaultValue = "100,"
         enableIPModeSelection = false
         groupField = "421e4ace-a79d-444c-9306-da432773de20"
         groupFieldType = "field"
