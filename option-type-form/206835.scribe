@@ -201,10 +201,18 @@ resource "option-type-form" "206835" {
       name = "8e3c7694-e6af-4a96-bddb-4cd36e5ce3a7"
       uuid = "1b5c7b58-a87f-4712-a2f6-c6f99ad8e710"
       config = {
+        addon = ""
+        addonPosition = ""
         cloudField = "74b6b6a7-75fa-4b47-a3f4-e163f6b39ed3"
         cloudFieldType = "field"
         cloudId = ""
-        defaultValue = ""
+        defaultValue = <<EOFSCRIBE
+[
+  "network": {
+   "id": "",
+  }
+]
+EOFSCRIBE
         enableIPModeSelection = true
         groupField = "f3568dfb-ae4f-4ff6-a91a-27d7527be791"
         groupFieldType = "field"
