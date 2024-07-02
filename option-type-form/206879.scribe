@@ -171,11 +171,13 @@ resource "option-type-form" "206879" {
       name = "a4e84df1-c528-48e0-803f-5ddea67a3142"
       uuid = "e5e63498-aa7d-4ead-be8e-9393fcb0bd4f"
       config = {
+        addon = ""
+        addonPosition = ""
         cloudField = "d2bc304c-62cc-4487-af58-c6c0535823a3"
         cloudFieldType = "field"
         cloudId = ""
         defaultValue = ""
-        enableIPModeSelection = false
+        enableIPModeSelection = true
         groupField = "b9d96b22-1a0b-4514-9670-870e02674e23"
         groupFieldType = "field"
         groupId = ""
@@ -185,7 +187,7 @@ resource "option-type-form" "206879" {
         poolField = "5c00feea-2fad-4c90-95dd-9803e098429e"
         poolFieldType = "field"
         poolId = ""
-        showNetworkTypeSelection = false
+        showNetworkTypeSelection = true
       }
       displayOrder = 6
       fieldContext = "config.customOptions"
