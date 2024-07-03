@@ -1,18 +1,138 @@
 resource "catalog-item-type" "206917" {
   code = "206917"
-  name = "206917-Aria S.P.A"
-  uuid = "217955de-60ac-49de-963f-821d05446e29"
-  dateCreated = "2024-07-03T08:58:37.000Z"
-  description = "Case : Group permission issue"
-  formType = "optionTypes"
-  lastUpdated = "2024-07-03T09:00:12.000Z"
-  optionTypes = [
-    { code = "group" },
-    { code = "cloud" },
-    { code = "environment" },
-    { code = "resourcePool" },
-    { code = "servicePlans" },
-    { code = "network" }
-  ]
+  name = "AT-206917"
+  uuid = "5b9d5b11-aafb-483a-825e-0fd510146741"
+  config = {
+    name = "$${userInitials.toUpperCase()}$${tenant.take(5).toUpperCase()}$${platform.take(3).toUpperCase()}VM$${sequence+10}"
+    backup = {
+      createBackup = true
+      jobAction = "new"
+      jobRetentionCount = null
+      jobSchedule = 2
+      providerBackupType = 13
+      veeamManagedServer = ""
+    }
+    cloud = { name = "AT VMware Cloud", id = 14 }
+    config = {
+      createUser = true
+      hostId = null
+      isEC2 = false
+      isVpcSelectable = true
+      nestedVirtualization = null
+      noAgent = false
+      poolProviderType = null
+      resourcePoolId = "pool-921"
+      smbiosAssetTag = null
+      vmwareFolderId = "/"
+    }
+    copies = 1
+    defaultExpandAdvanced = false
+    environment = "6"
+    group = { name = "All Groups", id = "2" }
+    hideLock = true
+    hostName = "$${userInitials.toUpperCase()}$${tenant.take(5).toUpperCase()}$${platform.take(3).toUpperCase()}VM$${sequence+10}"
+    instance = { userGroup = { id = "" } }
+    layout = { code = "vmware-centos-7.5-single", id = 308 }
+    networkInterfaces = [
+      {
+        network = {
+          hasPool = false
+          id = "network-860"
+          idName = "VLAN0002 - Internal Server 2"
+        }
+        networkInterfaceTypeId = 4
+        networkInterfaceTypeIdName = "VMXNET 3"
+        primaryInterface = true
+        showNetworkDhcpLabel = true
+        showNetworkPoolLabel = false
+      }
+    ]
+    plan = { code = "vm-1024", id = 248 }
+    showScale = false
+    storageControllers = [
+      {
+        name = "SCSI 0"
+        category = "scsi"
+        active = true
+        busNumber = "0"
+        displayOrder = 0
+        editable = false
+        id = 52
+        maxDevices = 16
+        removable = false
+        reservedUnitNumber = 7
+        typeId = 4
+        typeName = "SCSI LSI Logic Parallel"
+        unitNumber = null
+      },
+      {
+        name = "IDE 1"
+        category = "ide"
+        active = true
+        busNumber = "1"
+        displayOrder = 1
+        editable = false
+        id = 54
+        maxDevices = 2
+        removable = false
+        reservedUnitNumber = -1
+        typeId = 2
+        typeName = "IDE"
+        unitNumber = null
+      },
+      {
+        name = "IDE 0"
+        category = "ide"
+        active = true
+        busNumber = "0"
+        displayOrder = 2
+        editable = false
+        id = 53
+        maxDevices = 2
+        removable = false
+        reservedUnitNumber = -1
+        typeId = 2
+        typeName = "IDE"
+        unitNumber = null
+      }
+    ]
+    templateParameter = null
+    type = "centos"
+    version = "9-stream"
+    volumes = [
+      {
+        name = "root"
+        uuid = "3f199d88-1f64-4421-98c0-189d4fe8f806"
+        configurableIOPS = false
+        controllerId = 35375
+        controllerMountPoint = "35375:0:4:0"
+        datastoreId = "auto"
+        displayOrder = 0
+        externalId = "2000"
+        id = 31653
+        internalId = "[ESXi-DC2-DEMO-LUN02] Morpheus CentOS 7.5 v4/Morpheus CentOS 7.5 v4.vmdk"
+        maxIOPS = null
+        maxStorage = 10737418240
+        minStorage = 5368709120
+        planResizable = true
+        readonlyName = false
+        resizeable = true
+        rootVolume = true
+        size = 10
+        storageType = 1
+        typeId = 1
+        uniqueId = null
+        unitNumber = "0"
+        vId = 210
+        virtualImageId = 210
+        volumeCustomizable = true
+      }
+    ]
+  }
+  dateCreated = "2024-07-03T09:12:39.000Z"
+  description = "Group permission issue"
+  form = { code = "206917" }
+  formType = "form"
+  lastUpdated = "2024-07-03T09:12:39.000Z"
   refType = "InstanceType"
 }
