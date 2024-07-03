@@ -1,0 +1,18 @@
+resource "catalog-item-type" "206917" {
+  code = "206917"
+  name = "206917-Aria S.P.A"
+  uuid = "217955de-60ac-49de-963f-821d05446e29"
+  dateCreated = "2024-07-03T08:58:37.000Z"
+  description = "Case : Group permission issue"
+  formType = "optionTypes"
+  lastUpdated = "2024-07-03T09:00:12.000Z"
+  optionTypes = [
+    { code = "group" },
+    { code = "cloud" },
+    { code = "environment" },
+    { code = "resourcePool" },
+    { code = "servicePlans" },
+    { code = "network" }
+  ]
+  refType = "InstanceType"
+}
