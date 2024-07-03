@@ -1,0 +1,37 @@
+resource "option-type-form" "dg206917" {
+  code = "dg206917"
+  name = "dg206917"
+  uuid = "cb9cf037-0925-4d35-8a97-dd01ad9901c0"
+  config = {
+    enableVar = false
+    form = ""
+    formField = ""
+    formOptions = ""
+    formType = "static"
+  }
+  options = [
+    {
+      code = "morphgroup"
+      name = "morphgroup"
+      uuid = "288745e7-09a7-4bd0-be7d-a9443d9d75be"
+      fieldContext = "config.customOptions"
+      fieldLabel = "Groups"
+      fieldName = "morphgroup"
+      optionList = { name = "morphgroup" }
+      optionSource = "list"
+      type = "select"
+    },
+    {
+      code = "morphcloud"
+      name = "morphcloud"
+      uuid = "f3ba0ef0-aaf4-4b58-b201-f47a23585993"
+      dependsOnCode = "morphgroup"
+      fieldContext = "config.customOptions"
+      fieldLabel = "Cloud"
+      fieldName = "morphcloud"
+      optionList = { name = "morphcloud" }
+      optionSource = "list"
+      type = "select"
+    }
+  ]
+}

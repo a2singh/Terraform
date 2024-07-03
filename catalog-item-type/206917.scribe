@@ -131,8 +131,8 @@ resource "catalog-item-type" "206917" {
   }
   dateCreated = "2024-07-03T09:12:39.000Z"
   description = "Group permission issue"
-  form = { code = "206917" }
+  form = { code = "dg206917" }
   formType = "form"
-  lastUpdated = "2024-07-03T09:12:39.000Z"
+  lastUpdated = "2024-07-03T10:49:49.000Z"
   refType = "InstanceType"
 }
