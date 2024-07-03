@@ -1,0 +1,8 @@
+resource "task-set" "206917" {
+  name = "206917"
+  uuid = "2aaa456d-8eba-4aa9-8b3d-b2e099468450"
+  dateCreated = "2024-07-03T09:02:40.000Z"
+  lastUpdated = "2024-07-03T09:04:04.000Z"
+  optionTypes = [ { code = "cloud" } ]
+  taskSetType = "operation"
+}
