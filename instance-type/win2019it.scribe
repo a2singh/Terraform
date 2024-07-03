@@ -7,7 +7,6 @@ resource "instance-type" "win2019it" {
   environmentPrefix = "Win_Proximus"
   hasAutoScale = true
   hasDeployment = true
-  layouts = [ { code = "cd22f4bf-5b39-48e2-be17-016f1f616f92" } ]
   optionTypes = [ { code = "app_name" } ]
   visibility = "public"
 }
