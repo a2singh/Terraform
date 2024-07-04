@@ -34,13 +34,19 @@ tiers:
           providerBackupType: -1
           showScheduledBackupWarning: false
         networkInterfaces:
-          - ipMode: ''
-            primaryInterface: true
+          - primaryInterface: true
             network:
-              idName: VLAN0002 - Internal Server 2
               id: '<%=customOptions.vm1network%>'
+              idName: VLAN0002 - Internal Server 2
+              pool:
+                id: 24
+                name: AT Morph IPv4 Pool
+            ipMode: ''
             networkInterfaceTypeId: 4
             networkInterfaceTypeIdName: VMXNET 3
+            ipAddress: 10.32.22.20
+            ipAddressName: ''
+            displayName: ''
         workflow:
           taskSetId: ''
         volumes:
@@ -109,12 +115,15 @@ tiers:
         config:
           resourcePoolId: pool-921
           vmwareFolderId: /
-          noAgent: false
+          noAgent: true
         plan:
           id: 248
           code: vm-1024
-        group:
-          id: 2
+        group: {}
+        ports:
+          - name: ''
+            port: ''
+            lb: ''
       - instance:
           type: centos
           cloud: AT VMware Cloud
@@ -141,11 +150,14 @@ tiers:
           providerBackupType: -1
           showScheduledBackupWarning: false
         networkInterfaces:
-          - ipMode: ''
-            primaryInterface: true
+          - primaryInterface: true
             network:
-              idName: VLAN0002 - Internal Server 2
               id: '<%=customOptions.vm2network%>'
+              idName: VLAN0002 - Internal Server 2
+              pool:
+                id: 24
+                name: AT Morph IPv4 Pool
+            ipMode: ''
             networkInterfaceTypeId: 4
             networkInterfaceTypeIdName: VMXNET 3
         workflow:
@@ -216,12 +228,15 @@ tiers:
         config:
           resourcePoolId: pool-921
           vmwareFolderId: /
-          noAgent: false
+          noAgent: true
         plan:
           id: 248
           code: vm-1024
-        group:
-          id: 2
+        group: {}
+        ports:
+          - name: ''
+            port: ''
+            lb: ''
       - instance:
           type: centos
           cloud: AT VMware Cloud
@@ -248,11 +263,14 @@ tiers:
           providerBackupType: -1
           showScheduledBackupWarning: false
         networkInterfaces:
-          - ipMode: ''
-            primaryInterface: true
+          - primaryInterface: true
             network:
-              idName: VLAN0002 - Internal Server 2
               id: '<%=customOptions.vm3network%>'
+              idName: VLAN0002 - Internal Server 2
+              pool:
+                id: 24
+                name: AT Morph IPv4 Pool
+            ipMode: ''
             networkInterfaceTypeId: 4
             networkInterfaceTypeIdName: VMXNET 3
         workflow:
@@ -327,8 +345,11 @@ tiers:
         plan:
           id: 248
           code: vm-1024
-        group:
-          id: 2
+        group: {}
+        ports:
+          - name: ''
+            port: ''
+            lb: ''
     tierIndex: 1
 defaultCloud:
   id: 14
@@ -345,7 +366,8 @@ EOFSCRIBE
   dateCreated = "2024-07-01T07:28:27.000Z"
   description = "CSC New Infrastructure Technology"
   form = { code = "206879" }
+  formConfig = "{\"optOut\":{\"6849a8ca-d5d6-4622-8f73-e42278752d59\":false}}"
   formType = "form"
-  lastUpdated = "2024-07-04T08:44:15.000Z"
+  lastUpdated = "2024-07-04T11:25:42.000Z"
   refType = "AppTemplate"
 }
