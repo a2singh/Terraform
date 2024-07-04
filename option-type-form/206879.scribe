@@ -49,6 +49,20 @@ resource "option-type-form" "206879" {
       type = "cloud"
     },
     {
+      code = "8d545d15-843c-4047-b03a-b5c59f773816"
+      name = "8d545d15-843c-4047-b03a-b5c59f773816"
+      uuid = "e90810a1-3965-460b-b515-08cfe23a9b91"
+      config = { addon = "", addonPosition = "" }
+      defaultValue = "morphtest"
+      displayOrder = 2
+      fieldContext = "config.customOptions"
+      fieldLabel = "environment"
+      fieldName = "atenvironment"
+      formField = true
+      refCode = "8d545d15-843c-4047-b03a-b5c59f773816"
+      type = "environment"
+    },
+    {
       code = "18ea982d-9447-498f-88f4-ae5c77188e94"
       name = "18ea982d-9447-498f-88f4-ae5c77188e94"
       uuid = "b254fb5d-8298-42ef-9f4a-eb7ceff073c6"
@@ -65,7 +79,7 @@ resource "option-type-form" "206879" {
         instanceTypeFieldCode = ""
         instanceTypeFieldType = "value"
       }
-      displayOrder = 2
+      displayOrder = 3
       fieldContext = "config.customOptions"
       fieldLabel = "layout"
       fieldName = "atlayout"
@@ -91,7 +105,7 @@ resource "option-type-form" "206879" {
         planFieldType = "field"
         planId = ""
       }
-      displayOrder = 3
+      displayOrder = 4
       fieldContext = "config.customOptions"
       fieldLabel = "resource pool"
       fieldName = "atresourcepool"
@@ -104,10 +118,21 @@ resource "option-type-form" "206879" {
       name = "65423562-f72e-4793-a8e8-8eaa5e6c3feb"
       uuid = "809ecdb5-de46-48b9-aa8d-c138ff8605a2"
       config = {
+        addon = ""
+        addonPosition = ""
         cloudField = "d2bc304c-62cc-4487-af58-c6c0535823a3"
         cloudFieldType = "field"
         cloudId = ""
-        defaultValue = ""
+        defaultValue = <<EOFSCRIBE
+{
+ "id": 248,
+ "code": "vm-1024",
+ "maxMemory": 1073741824,
+ "maxCores": 1,
+ "coresPerSocket": 1,
+ "maxCoresPerSocket": 1
+}
+EOFSCRIBE
         diskField = "64b8a44f-2bcf-4cfd-80a0-455a12616ba4"
         groupField = "b9d96b22-1a0b-4514-9670-870e02674e23"
         groupFieldType = "field"
@@ -120,7 +145,7 @@ resource "option-type-form" "206879" {
         poolId = ""
         showPricing = false
       }
-      displayOrder = 4
+      displayOrder = 5
       fieldContext = "config.customOptions"
       fieldLabel = "plan"
       fieldName = "plan"
@@ -158,7 +183,7 @@ resource "option-type-form" "206879" {
         poolId = ""
         virtualImageFieldType = "field"
       }
-      displayOrder = 5
+      displayOrder = 6
       fieldContext = "config.customOptions"
       fieldLabel = "Volume"
       fieldName = "atvolume"
@@ -189,68 +214,73 @@ resource "option-type-form" "206879" {
         poolId = ""
         showNetworkTypeSelection = true
       }
-      displayOrder = 6
+      displayOrder = 7
       fieldContext = "config.customOptions"
-      fieldLabel = "network"
-      fieldName = "atnetwork"
+      fieldLabel = "Instance1 Network"
+      fieldName = "vm1network"
       formField = true
       refCode = "a4e84df1-c528-48e0-803f-5ddea67a3142"
       type = "networkManager"
     },
     {
-      code = "da472959-4ed8-4aae-b31a-68028a6d8280"
-      name = "da472959-4ed8-4aae-b31a-68028a6d8280"
-      uuid = "3d8799dc-0cf6-4d9b-9ce8-4a93c63806c3"
+      code = "f7b3b568-5f6b-4cf6-b067-8f18273224ea"
+      name = "f7b3b568-5f6b-4cf6-b067-8f18273224ea"
+      uuid = "645ce9dc-12f3-401a-b9db-743376571c6a"
       config = {
         addon = ""
         addonPosition = ""
         cloudField = "d2bc304c-62cc-4487-af58-c6c0535823a3"
-        cloudFieldType = "cloud"
+        cloudFieldType = "field"
         cloudId = ""
+        defaultValue = ""
+        enableIPModeSelection = true
+        groupField = "b9d96b22-1a0b-4514-9670-870e02674e23"
+        groupFieldType = "field"
+        groupId = ""
+        layoutField = "18ea982d-9447-498f-88f4-ae5c77188e94"
+        layoutFieldType = "field"
+        layoutId = ""
+        poolField = "5c00feea-2fad-4c90-95dd-9803e098429e"
+        poolFieldType = "field"
+        poolId = ""
+        showNetworkTypeSelection = true
       }
-      displayOrder = 7
+      displayOrder = 8
       fieldContext = "config.customOptions"
-      fieldLabel = "image"
-      fieldName = "atimage"
+      fieldLabel = "Instance2 Network"
+      fieldName = "vm2network"
       formField = true
-      refCode = "da472959-4ed8-4aae-b31a-68028a6d8280"
-      type = "virtual-image"
+      refCode = "f7b3b568-5f6b-4cf6-b067-8f18273224ea"
+      type = "networkManager"
     },
     {
-      code = "503210c3-79de-4fcd-8346-06cc35ea0513"
-      name = "503210c3-79de-4fcd-8346-06cc35ea0513"
-      uuid = "51920024-b224-4464-a31c-9740ece53e25"
+      code = "6849a8ca-d5d6-4622-8f73-e42278752d59"
+      name = "6849a8ca-d5d6-4622-8f73-e42278752d59"
+      uuid = "047c197c-6932-4d26-8492-ae47a2157448"
       config = {
         cloudField = "d2bc304c-62cc-4487-af58-c6c0535823a3"
         cloudFieldType = "field"
         cloudId = ""
+        defaultValue = ""
+        enableIPModeSelection = true
         groupField = "b9d96b22-1a0b-4514-9670-870e02674e23"
         groupFieldType = "field"
         groupId = ""
-        planField = "65423562-f72e-4793-a8e8-8eaa5e6c3feb"
-        planFieldType = "field"
-        planId = ""
+        layoutField = "18ea982d-9447-498f-88f4-ae5c77188e94"
+        layoutFieldType = "field"
+        layoutId = ""
+        poolField = "5c00feea-2fad-4c90-95dd-9803e098429e"
+        poolFieldType = "field"
+        poolId = ""
+        showNetworkTypeSelection = true
       }
-      displayOrder = 8
-      fieldContext = "config.customOptions"
-      fieldLabel = "folder"
-      fieldName = "atfolder"
-      formField = true
-      refCode = "503210c3-79de-4fcd-8346-06cc35ea0513"
-      type = "vmwFolders"
-    },
-    {
-      code = "8d545d15-843c-4047-b03a-b5c59f773816"
-      name = "8d545d15-843c-4047-b03a-b5c59f773816"
-      uuid = "e90810a1-3965-460b-b515-08cfe23a9b91"
-      config = { addon = "", addonPosition = "" }
       displayOrder = 9
       fieldContext = "config.customOptions"
-      fieldLabel = "environment"
-      fieldName = "atenvironment"
+      fieldLabel = "Instance3 Network"
+      fieldName = "vm3network"
       formField = true
-      refCode = "8d545d15-843c-4047-b03a-b5c59f773816"
-      type = "environment"
+      refCode = "6849a8ca-d5d6-4622-8f73-e42278752d59"
+      type = "networkManager"
     }
   ]
 }
