@@ -38,7 +38,7 @@ tiers:
             primaryInterface: true
             network:
               idName: VLAN0002 - Internal Server 2
-              id: network-860
+              id: '<%=customOptions.vm1network%>'
             networkInterfaceTypeId: 4
             networkInterfaceTypeIdName: VMXNET 3
         workflow:
@@ -145,7 +145,7 @@ tiers:
             primaryInterface: true
             network:
               idName: VLAN0002 - Internal Server 2
-              id: network-860
+              id: '<%=customOptions.vm2network%>'
             networkInterfaceTypeId: 4
             networkInterfaceTypeIdName: VMXNET 3
         workflow:
@@ -252,7 +252,7 @@ tiers:
             primaryInterface: true
             network:
               idName: VLAN0002 - Internal Server 2
-              id: network-860
+              id: '<%=customOptions.vm3network%>'
             networkInterfaceTypeId: 4
             networkInterfaceTypeIdName: VMXNET 3
         workflow:
@@ -346,6 +346,6 @@ EOFSCRIBE
   description = "CSC New Infrastructure Technology"
   form = { code = "206879" }
   formType = "form"
-  lastUpdated = "2024-07-01T10:23:44.000Z"
+  lastUpdated = "2024-07-04T08:44:15.000Z"
   refType = "AppTemplate"
 }
