@@ -1,0 +1,5 @@
+resource "task-set-task" "a9c67f34-6084-4369-8272-cfb15fefdaad" {
+  uuid = "a9c67f34-6084-4369-8272-cfb15fefdaad"
+  task = { code = "AT-Task" }
+  taskPhase = "provision"
+}

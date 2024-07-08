@@ -1,0 +1,19 @@
+resource "task" "Email alert" {
+  name = "Email alert"
+  uuid = "0e58e967-92b4-40de-930e-becf6cb5480d"
+  dateCreated = "2024-07-08T18:32:20.000Z"
+  executeTarget = "local"
+  lastUpdated = "2024-07-08T18:32:20.000Z"
+  options = [
+    {
+      optionType = { code = "emailAddress" }
+      value = "asingh@morpheusdata.com"
+    },
+    { optionType = { code = "emailSubject" }, value = "task failed" },
+    {
+      content = { uuid = "df23681b-8cca-4056-a742-d59e3dd6f1ce" }
+      optionType = { code = "emailBody" }
+    }
+  ]
+  taskType = { code = "email" }
+}

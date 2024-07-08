@@ -1,0 +1,5 @@
+resource "file-content" "df23681b-8cca-4056-a742-d59e3dd6f1ce" {
+  uuid = "df23681b-8cca-4056-a742-d59e3dd6f1ce"
+  dateCreated = "2024-07-08T18:32:20.000Z"
+  lastUpdated = "2024-07-08T18:32:20.000Z"
+}

@@ -1,0 +1,5 @@
+resource "task-set-task" "8b66f734-99c0-4b20-8dd0-3503a1988042" {
+  uuid = "8b66f734-99c0-4b20-8dd0-3503a1988042"
+  task = { name = "Email alert" }
+  taskOrder = 1
+}
