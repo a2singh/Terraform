@@ -1,0 +1,21 @@
+resource "file-content" "c7d271b7-e7d0-48aa-8ad2-9c0def42bfb5" {
+  uuid = "c7d271b7-e7d0-48aa-8ad2-9c0def42bfb5"
+  content = <<EOFSCRIBE
+com.morpheus.ComputeZone.withNewSession { session ->
+def grailsApplication = morpheus.provisionService.morpheusComputeService.grailsApplication
+def azureComputeService = grailsApplication.mainContext.getBean('azureComputeService')
+
+// Get the zone object
+def zone = com.morpheus.ComputeZone.get(31)
+
+// Print the value of the 'name' property
+println "Zone name: ${zone.name}"
+
+// Now pass zone to cacheVmSizes if required
+azureComputeService.cacheVmSizes([zone: zone])
+azureComputeService.cacheOfferPricing([zone: zone])
+}
+EOFSCRIBE
+  dateCreated = "2024-07-09T11:41:20.000Z"
+  lastUpdated = "2024-07-09T11:41:20.000Z"
+}

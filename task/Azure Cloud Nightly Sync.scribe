@@ -1,0 +1,14 @@
+resource "task" "Azure Cloud Nightly Sync" {
+  name = "Azure Cloud Nightly Sync"
+  uuid = "e30ebc55-53f0-4e7a-8b2e-a6c1aa759b96"
+  dateCreated = "2024-07-09T11:41:19.000Z"
+  executeTarget = "local"
+  lastUpdated = "2024-07-09T11:41:19.000Z"
+  options = [
+    {
+      content = { uuid = "c7d271b7-e7d0-48aa-8ad2-9c0def42bfb5" }
+      optionType = { code = "groovyScript" }
+    }
+  ]
+  taskType = { code = "groovyTask" }
+}
