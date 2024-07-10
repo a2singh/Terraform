@@ -1,0 +1,6 @@
+resource "file-content" "6c242af2-6db8-4d1f-949e-2983c4ff0510" {
+  uuid = "6c242af2-6db8-4d1f-949e-2983c4ff0510"
+  content = "hostname"
+  dateCreated = "2024-07-10T11:33:11.000Z"
+  lastUpdated = "2024-07-10T11:33:11.000Z"
+}

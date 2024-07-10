@@ -1,0 +1,8 @@
+resource "task-set" "Morpheus Test 206983" {
+  name = "Morpheus Test 206983"
+  uuid = "58885843-4ae0-42cb-b307-894510f1b916"
+  dateCreated = "2024-07-10T11:36:23.000Z"
+  lastUpdated = "2024-07-10T11:36:23.000Z"
+  taskSetTasks = [ { uuid = "490ca493-e565-461e-9499-c89d6a9e0400" } ]
+  taskSetType = "operation"
+}

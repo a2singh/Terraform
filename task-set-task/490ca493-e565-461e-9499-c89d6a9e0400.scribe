@@ -1,0 +1,5 @@
+resource "task-set-task" "490ca493-e565-461e-9499-c89d6a9e0400" {
+  uuid = "490ca493-e565-461e-9499-c89d6a9e0400"
+  task = { code = "206916" }
+  taskPhase = "operation"
+}
