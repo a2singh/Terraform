@@ -1,0 +1,10 @@
+resource "resource-spec-template" "cbfa3cc2-bd8f-42ef-b316-b3fdd23fa382" {
+  name = "EC2 Instance"
+  uuid = "cbfa3cc2-bd8f-42ef-b316-b3fdd23fa382"
+  config = { terraform = { tfVersion = "" } }
+  dateCreated = "2024-07-12T10:47:33.000Z"
+  lastUpdated = "2024-07-12T10:47:33.000Z"
+  template = { uuid = "896f0c6e-71ea-43bf-8b6d-c0ab74f1681b" }
+  templateType = "Terraform"
+  type = { code = "terraform" }
+}
