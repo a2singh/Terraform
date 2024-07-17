@@ -1,0 +1,6 @@
+resource "container-type-set" "olvm-debian-11-set" {
+  code = "olvm-debian-11-set"
+  uuid = "d66289cf-a63e-44d9-909a-1660c0d6ccfb"
+  dynamicCount = true
+  workloadType = { code = "olvm-plugin-debian-11" }
+}
