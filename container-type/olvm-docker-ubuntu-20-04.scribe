@@ -1,0 +1,20 @@
+resource "container-type" "olvm-docker-ubuntu-20-04" {
+  code = "olvm-docker-ubuntu-20-04"
+  name = "Docker Ubuntu 20.04"
+  uuid = "ca2e8bf4-06b9-40bf-b6c0-ae803e3c3aba"
+  category = "ubuntu"
+  checkTypeCode = "vmCheck"
+  cloneType = "ubuntu"
+  containerPorts = [ { code = "ubuntu.22" } ]
+  containerVersion = "20.04"
+  imageCode = "morpheus ubuntu 20.04"
+  logTypeCode = "ubuntu"
+  mountLogs = "/var/log"
+  providerType = "olvm"
+  provisionType = { code = "olvm-provision-standard" }
+  serverType = "vm"
+  shortName = "ubuntu"
+  showServerLogs = true
+  statTypeCode = "server"
+  virtualImage = { code = "olvm.plugin.image.morpheus.ubuntu.20.04.amd64" }
+}
