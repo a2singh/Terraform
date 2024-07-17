@@ -1,0 +1,12 @@
+resource "compute-type-set" "olvm-docker-ubuntu-20-04-set" {
+  code = "olvm-docker-ubuntu-20-04-set"
+  name = "docker host"
+  category = "ubuntu"
+  canAddNodes = true
+  computeServerType = { code = "olvm-linux" }
+  dynamicCount = true
+  installContainerRuntime = true
+  installStorageRuntime = true
+  nodeType = "worker"
+  workloadType = { code = "olvm-docker-ubuntu-20-04" }
+}
