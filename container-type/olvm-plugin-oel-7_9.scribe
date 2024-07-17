@@ -1,0 +1,21 @@
+resource "container-type" "olvm-plugin-oel-7.9" {
+  code = "olvm-plugin-oel-7.9"
+  name = "Oracle Linux 7.9"
+  uuid = "8af9f1a4-9e23-4533-8532-5931cc4583f6"
+  category = "oraclelinux"
+  actions = [ { code = "generic-remove-node" } ]
+  backupType = "olvmSnapshot"
+  checkTypeCode = "containerCheck"
+  cloneType = "oraclelinux"
+  containerPorts = [ { code = "oraclelinux.22" } ]
+  containerVersion = "7.9"
+  logTypeCode = "oraclelinux"
+  mountLogs = "/var/log"
+  providerType = "olvm"
+  provisionType = { code = "olvm-provision-standard" }
+  serverType = "vm"
+  shortName = "oraclelinux"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "olvm.plugin.image.morpheus.oel.7.9.amd64" }
+}
