@@ -1,0 +1,15 @@
+resource "instance-type-layout" "olvm-ubuntu-18.04-single" {
+  code = "olvm-ubuntu-18.04-single"
+  name = "Ubuntu 18.04 VM"
+  uuid = "b9b5eadb-7c8e-4ca9-9598-356031fd3d7b"
+  actions = [ { code = "ubuntu-add-node" } ]
+  description = "This will provision a single vm"
+  hasAutoScale = true
+  instanceType = { code = "ubuntu" }
+  instanceVersion = "18.04"
+  provisionType = { code = "olvm-provision-standard" }
+  serverType = "vm"
+  sortOrder = 21
+  supportsConvertToManaged = true
+  workloads = [ { code = "olvm-ubuntu-18.04-set" } ]
+}
