@@ -1,0 +1,21 @@
+resource "container-type" "olvm-ubuntu-18.04" {
+  code = "olvm-ubuntu-18.04"
+  name = "Ubuntu 18.04"
+  uuid = "75316c5b-8ac0-4bbd-b5ff-7a23be5af643"
+  category = "ubuntu"
+  actions = [ { code = "ubuntu-remove-node" } ]
+  backupType = "olvmSnapshot"
+  checkTypeCode = "containerCheck"
+  cloneType = "ubuntu"
+  containerPorts = [ { code = "ubuntu.22" } ]
+  containerVersion = "18.04"
+  logTypeCode = "ubuntu"
+  mountLogs = "/var/log"
+  providerType = "olvm"
+  provisionType = { code = "olvm-provision-standard" }
+  serverType = "vm"
+  shortName = "ubuntu"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "olvm.plugin.image.morpheus.ubuntu.18.04.amd64" }
+}
