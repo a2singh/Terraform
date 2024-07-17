@@ -1,0 +1,6 @@
+resource "container-type-set" "olvm-centos-7.9-set" {
+  code = "olvm-centos-7.9-set"
+  uuid = "6f49ddcd-80c5-482f-88c4-d360804b629b"
+  dynamicCount = true
+  workloadType = { code = "olvm-plugin-centos-7.9" }
+}
