@@ -1,0 +1,15 @@
+resource "instance-type-layout" "olvm-ubuntu-20.04-single" {
+  code = "olvm-ubuntu-20.04-single"
+  name = "Ubuntu 20.04 VM"
+  uuid = "b7565508-03a0-4cb4-911e-4f7f2f5623f1"
+  actions = [ { code = "ubuntu-add-node" } ]
+  description = "This will provision a single vm"
+  hasAutoScale = true
+  instanceType = { code = "ubuntu" }
+  instanceVersion = "20.04"
+  provisionType = { code = "olvm-provision-standard" }
+  serverType = "vm"
+  sortOrder = 20
+  supportsConvertToManaged = true
+  workloads = [ { code = "olvm-ubuntu-20.04-set" } ]
+}
