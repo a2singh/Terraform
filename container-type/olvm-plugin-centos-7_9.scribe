@@ -1,0 +1,21 @@
+resource "container-type" "olvm-plugin-centos-7.9" {
+  code = "olvm-plugin-centos-7.9"
+  name = "CentOS 7.9"
+  uuid = "fcd8c927-35a0-424a-9658-c4e3d21ff82b"
+  category = "centos"
+  actions = [ { code = "generic-remove-node" } ]
+  backupType = "olvmSnapshot"
+  checkTypeCode = "containerCheck"
+  cloneType = "centos"
+  containerPorts = [ { code = "centos.22" } ]
+  containerVersion = "7.9"
+  logTypeCode = "centos"
+  mountLogs = "/var/log"
+  providerType = "olvm"
+  provisionType = { code = "olvm-provision-standard" }
+  serverType = "vm"
+  shortName = "centos"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "olvm.plugin.image.morpheus.centos.7.9.amd64" }
+}
