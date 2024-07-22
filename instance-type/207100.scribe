@@ -1,0 +1,13 @@
+resource "instance-type" "207100" {
+  code = "207100"
+  name = "HPE GPC CentOS Instance"
+  uuid = "14cfee19-b159-43bb-9c8b-18f4816d4205"
+  category = "os"
+  deploymentService = "defaultDeployService"
+  environmentPrefix = "HPE_GPC_CENTOS_INSTANCE"
+  hasAutoScale = true
+  hasDeployment = true
+  hasSettings = true
+  labels = [ "HPE GPC" ]
+  optionTypes = [ { code = "app_name" } ]
+}

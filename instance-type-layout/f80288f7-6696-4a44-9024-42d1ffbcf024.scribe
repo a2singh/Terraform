@@ -1,0 +1,14 @@
+resource "instance-type-layout" "f80288f7-6696-4a44-9024-42d1ffbcf024" {
+  code = "f80288f7-6696-4a44-9024-42d1ffbcf024"
+  name = "HPE GPC CentOS"
+  uuid = "c9274794-3881-4e0f-81ba-cf7a04f196d8"
+  actions = [ { code = "generic-add-node" } ]
+  hasAutoScale = true
+  instanceType = { code = "207100" }
+  instanceVersion = "7.5"
+  memoryRequirement = 0
+  optionTypes = [ { code = "backup" } ]
+  provisionType = { code = "vmware" }
+  sortOrder = -1
+  workloads = [ { code = "32f97429-e088-49bf-9b70-99713e95abb3" } ]
+}

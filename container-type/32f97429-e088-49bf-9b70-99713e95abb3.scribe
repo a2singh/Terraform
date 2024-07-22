@@ -1,0 +1,16 @@
+resource "container-type" "32f97429-e088-49bf-9b70-99713e95abb3" {
+  code = "32f97429-e088-49bf-9b70-99713e95abb3"
+  name = "AT CentOS 7.5"
+  uuid = "ec6e1f8b-47c4-4c2e-af77-08228c23faf8"
+  containerVersion = "7.5"
+  entryPoint = ""
+  labels = [ "HPE GPC" ]
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "centos"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "vmware.vsphere.image.morpheus.centos.7.5" }
+}
