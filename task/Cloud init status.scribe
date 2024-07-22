@@ -5,11 +5,11 @@ resource "task" "Cloud init status" {
   executeTarget = "local"
   lastUpdated = "2024-02-06T17:47:23.000Z"
   options = [
-    { optionType = { code = "shell.sudo" }, value = "on" },
     {
       content = { uuid = "1d6af224-5785-4dfe-8803-d9583bc91a6e" }
       optionType = { code = "script" }
-    }
+    },
+    { optionType = { code = "shell.sudo" }, value = "on" }
   ]
   taskType = { code = "script" }
 }
