@@ -1,0 +1,13 @@
+resource "option-type" "backup" {
+  code = "backup"
+  name = "HPE_BackupList"
+  uuid = "5a412412-ca5a-410b-8c1b-d4da84ca6224"
+  exportMeta = true
+  fieldContext = "config.customOptions"
+  fieldLabel = "Backup"
+  fieldName = "backup"
+  labels = [ "Backup" ]
+  optionList = { name = "HPE_BackupList" }
+  optionSource = "list"
+  type = "select"
+}

@@ -1,14 +1,13 @@
 resource "instance-type" "atcent" {
   code = "atcent"
-  name = "AT-Custom-CentOS"
+  name = "AT-CentOS Instance"
   uuid = "fda4db95-03d3-42a3-bde8-e1b4dd915e00"
   category = "os"
   deploymentService = "defaultDeployService"
-  environmentPrefix = "AT-CUSTOM-CENTOS"
+  environmentPrefix = "AT-CENTOS_INSTANCE"
   hasAutoScale = true
   hasDeployment = true
   hasSettings = true
   labels = [ "Operating System CentOS" ]
-  layouts = [ { code = "e57439e0-f8f5-4849-a2e6-317249e58430" } ]
-  visibility = "public"
+  optionTypes = [ { code = "backup" } ]
 }

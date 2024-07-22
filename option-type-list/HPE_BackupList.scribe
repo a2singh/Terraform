@@ -1,0 +1,10 @@
+resource "option-type-list" "HPE_BackupList" {
+  name = "HPE_BackupList"
+  uuid = "05cea552-5f33-4a1d-9b5f-f17666c9108a"
+  initialDataset = <<EOFSCRIBE
+[{"name": "Bronze", "value": "bronze"}, 
+{"name": "Silver", "value": "silver"}, 
+{"name": "Gold", "value": "gold"}]
+EOFSCRIBE
+  type = "manual"
+}
