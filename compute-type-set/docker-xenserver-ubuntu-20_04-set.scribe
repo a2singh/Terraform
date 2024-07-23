@@ -1,0 +1,11 @@
+resource "compute-type-set" "docker-xenserver-ubuntu-20.04-set" {
+  code = "docker-xenserver-ubuntu-20.04-set"
+  name = "docker host"
+  category = "ubuntu"
+  canAddNodes = true
+  dynamicCount = true
+  installContainerRuntime = true
+  installStorageRuntime = true
+  nodeType = "worker"
+  workloadType = { code = "docker-xenserver-ubuntu-20.04" }
+}

@@ -1,0 +1,14 @@
+resource "compute-type-layout" "docker-xenserver-ubuntu-20.04-single" {
+  code = "docker-xenserver-ubuntu-20.04-single"
+  name = "XCP-ng Server Docker Host (Ubuntu 20.04)"
+  computeServers = [ { code = "docker-xenserver-ubuntu-20.04-set" } ]
+  computeVersion = "20.04"
+  dateCreated = "2024-07-23T07:47:57.000Z"
+  description = "This will provision a single docker host vm in xenserver"
+  groupType = { code = "docker-cluster" }
+  hasAutoScale = true
+  lastUpdated = "2024-07-23T07:47:57.000Z"
+  memoryRequirement = 1073741824
+  provisionType = { code = "xen" }
+  sortOrder = 5
+}
