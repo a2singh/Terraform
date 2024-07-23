@@ -1,0 +1,20 @@
+resource "container-type" "ubuntu-digitalocean-24.04" {
+  code = "ubuntu-digitalocean-24.04"
+  name = "Ubuntu 24.04"
+  uuid = "86d5530e-7ecd-4c4f-9311-ed6310198b66"
+  category = "ubuntu"
+  actions = [ { code = "generic-remove-node" } ]
+  backupType = "digitaloceanSnapshot"
+  checkTypeCode = "containerCheck"
+  containerPorts = [ { code = "ubuntu.22" } ]
+  containerVersion = "24.04"
+  entryPoint = "/entrypoint.sh"
+  logTypeCode = "ubuntu"
+  mountPoint = "/morpheus"
+  providerType = "digitalocean"
+  provisionType = { code = "digitalocean" }
+  serverType = "vm"
+  shortName = "ubuntu"
+  statTypeCode = "vm"
+  virtualImage = { code = "digitalocean.image.morpheus.ubuntu.24.04" }
+}
