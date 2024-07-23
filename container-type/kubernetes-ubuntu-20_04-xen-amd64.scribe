@@ -1,0 +1,30 @@
+resource "container-type" "kubernetes-ubuntu-20_04-xen-amd64" {
+  code = "kubernetes-ubuntu-20_04-xen-amd64"
+  name = "Xen Kubernetes Cluster on Ubuntu 20.04"
+  uuid = "e1418549-41d1-42f2-8e1a-aa1414baef27"
+  category = "kubernetes"
+  checkTypeCode = "vmCheck"
+  cloneType = "ubuntu"
+  containerPorts = [ { code = "ubuntu.22" } ]
+  containerVersion = "20.04"
+  imageCode = "xen morpheus kubernetes on ubuntu 20.04"
+  logTypeCode = "ubuntu"
+  mountLogs = "/var/log"
+  providerType = "xen"
+  provisionType = { code = "xen" }
+  scripts = [
+    { code = "kube-ubuntu-22-setup-script-v1" },
+    { code = "kube-adm-master-setup-script-v1" },
+    { code = "kubernetes-ectd-encrypt-install-master-script-v1" }
+  ]
+  serverType = "vm"
+  shortName = "kubernetes-ubuntu"
+  showServerLogs = true
+  statTypeCode = "server"
+  templates = [
+    { code = "k8-cypher" },
+    { code = "kubernetes-etcd-encrypt-install-master" },
+    { code = "kubeadm-cluster-master-init" }
+  ]
+  virtualImage = { code = "xen.image.morpheus.ubuntu.20.04-v1.amd64" }
+}
