@@ -1,0 +1,24 @@
+resource "container-type" "kubernetes-ubuntu-20_04-worker-xen-amd64" {
+  code = "kubernetes-ubuntu-20_04-worker-xen-amd64"
+  name = "Xen Kubernetes Worker on Ubuntu 20.04"
+  uuid = "8c194032-5baf-4794-8183-9ca6f4f7aac8"
+  category = "kubernetes"
+  checkTypeCode = "vmCheck"
+  cloneType = "ubuntu"
+  containerPorts = [ { code = "ubuntu.22" } ]
+  containerVersion = "20.04"
+  imageCode = "xen morpheus kubernetes on ubuntu 20.04"
+  logTypeCode = "ubuntu"
+  mountLogs = "/var/log"
+  providerType = "xen"
+  provisionType = { code = "xen" }
+  scripts = [
+    { code = "kube-ubuntu-22-setup-script-v1" },
+    { code = "kubernetes-worker-join-v1" }
+  ]
+  serverType = "vm"
+  shortName = "kubernetes-worker-ubuntu"
+  showServerLogs = true
+  statTypeCode = "server"
+  virtualImage = { code = "xen.image.morpheus.ubuntu.20.04-v1.amd64" }
+}
