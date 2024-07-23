@@ -1,0 +1,8 @@
+resource "compute-type-set" "kubernetes-ubuntu-20_04-xen-amd64-set" {
+  code = "kubernetes-ubuntu-20_04-xen-amd64-set"
+  name = "kubernetes master"
+  category = "ubuntu"
+  nameSuffix = "-master"
+  nodeType = "master"
+  workloadType = { code = "kubernetes-ubuntu-20_04-xen-amd64" }
+}
