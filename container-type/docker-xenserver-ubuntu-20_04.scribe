@@ -1,0 +1,20 @@
+resource "container-type" "docker-xenserver-ubuntu-20.04" {
+  code = "docker-xenserver-ubuntu-20.04"
+  name = "Docker Ubuntu 20.04"
+  uuid = "9b2d0042-40ba-4557-9c5b-083df1c69a00"
+  category = "ubuntu"
+  checkTypeCode = "vmCheck"
+  cloneType = "ubuntu"
+  containerPorts = [ { code = "ubuntu.22" } ]
+  containerVersion = "20.04"
+  imageCode = "morpheus ubuntu 20.04"
+  logTypeCode = "ubuntu"
+  mountLogs = "/var/log"
+  providerType = "xen"
+  provisionType = { code = "xen" }
+  serverType = "vm"
+  shortName = "ubuntu"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "xen.image.morpheus.ubuntu.20.04-v1.amd64" }
+}
