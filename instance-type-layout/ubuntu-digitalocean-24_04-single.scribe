@@ -1,0 +1,15 @@
+resource "instance-type-layout" "ubuntu-digitalocean-24.04-single" {
+  code = "ubuntu-digitalocean-24.04-single"
+  name = "DigitalOcean VM"
+  uuid = "c36f6b9f-846e-44d3-8864-2b037ca8bce4"
+  actions = [ { code = "ubuntu-add-node" } ]
+  description = "This will provision a single vm"
+  hasAutoScale = true
+  instanceType = { code = "ubuntu" }
+  instanceVersion = "24.04"
+  provisionType = { code = "digitalocean" }
+  serverType = "vm"
+  sortOrder = 24
+  supportsConvertToManaged = true
+  workloads = [ { code = "ubuntu-digitalocean-24.04-set" } ]
+}
