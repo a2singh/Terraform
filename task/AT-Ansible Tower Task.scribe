@@ -3,11 +3,11 @@ resource "task" "AT-Ansible Tower Task" {
   uuid = "ca0f661f-894d-4dc7-a743-087712d192dc"
   dateCreated = "2023-11-06T18:22:45.000Z"
   executeTarget = "resource"
-  lastUpdated = "2024-04-12T08:54:26.000Z"
+  lastUpdated = "2024-07-30T09:51:39.000Z"
   options = [
     {
       optionType = { code = "ansibleTowerJobTemplateId" }
-      value = { code = "ansibleTower.jobTemplate.26.24" }
+      value = { code = "ansibleTower.jobTemplate.26.49" }
     },
     {
       optionType = { code = "ansibleTowerIntegrationId" }
@@ -15,7 +15,7 @@ resource "task" "AT-Ansible Tower Task" {
     },
     {
       optionType = { code = "ansibleTowerInventoryId" }
-      value = "25"
+      value = "16"
     },
     {
       optionType = { code = "ansibleTowerExecuteMode" }
