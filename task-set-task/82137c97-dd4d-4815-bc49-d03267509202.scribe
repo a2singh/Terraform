@@ -1,0 +1,6 @@
+resource "task-set-task" "82137c97-dd4d-4815-bc49-d03267509202" {
+  uuid = "82137c97-dd4d-4815-bc49-d03267509202"
+  task = { code = "AT-Task" }
+  taskOrder = 1
+  taskPhase = "operation"
+}
