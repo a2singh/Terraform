@@ -4,5 +4,6 @@ resource "account-integration" "AT Github" {
   category = "cm-server"
   config = { cacheEnabled = "on" }
   integrationType = { code = "github" }
+  statusMessage = "unable to reach github"
   type = "github"
 }
