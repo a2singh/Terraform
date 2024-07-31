@@ -14,5 +14,6 @@ resource "account-integration" "AP Ansible" {
   }
   integrationType = { code = "ansible" }
   serviceUrl = "https://github.com/a2singh/ansible.git"
+  statusMessage = "unable to reach repository"
   type = "ansible"
 }
