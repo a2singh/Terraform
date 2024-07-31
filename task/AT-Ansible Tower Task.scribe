@@ -6,16 +6,16 @@ resource "task" "AT-Ansible Tower Task" {
   lastUpdated = "2024-07-31T05:13:01.000Z"
   options = [
     {
+      optionType = { code = "ansibleTowerIntegrationId" }
+      value = { name = "AT Ansible Tower" }
+    },
+    {
       optionType = { code = "ansibleTowerInventoryId" }
       value = { name = "Microsoft DNS" }
     },
     {
       optionType = { code = "ansibleTowerJobTemplateId" }
       value = { code = "ansibleTower.jobTemplate.26.46" }
-    },
-    {
-      optionType = { code = "ansibleTowerIntegrationId" }
-      value = { name = "AT Ansible Tower" }
     },
     {
       optionType = { code = "ansibleTowerExecuteMode" }
