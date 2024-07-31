@@ -3,7 +3,7 @@ resource "task" "sleep_ task" {
   uuid = "60f91668-7c17-4af6-83cb-a3f606ecfb70"
   dateCreated = "2024-04-16T06:10:38.000Z"
   executeTarget = "resource"
-  lastUpdated = "2024-04-16T06:56:35.000Z"
+  lastUpdated = "2024-07-31T04:43:49.000Z"
   options = [
     {
       optionType = { code = "ansibleTowerIntegrationId" }
@@ -11,7 +11,7 @@ resource "task" "sleep_ task" {
     },
     {
       optionType = { code = "ansibleTowerJobTemplateId" }
-      value = { code = "ansibleTower.jobTemplate.12.55" }
+      value = { code = "ansibleTower.jobTemplate.12.49" }
     },
     {
       optionType = { code = "ansibleTowerInventoryId" }
