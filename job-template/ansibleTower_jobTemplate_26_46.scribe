@@ -1,0 +1,29 @@
+resource "job-template" "ansibleTower.jobTemplate.26.46" {
+  code = "ansibleTower.jobTemplate.26.46"
+  name = "KG-Email"
+  category = "ansibleTower.jobTemplate.26"
+  configRole = "email.yml"
+  configSettings = <<EOFSCRIBE
+---
+extra_var_example: testContent
+EOFSCRIBE
+  configTags = ""
+  credentialId = "16"
+  dateCreated = "2024-04-11T06:45:54.000Z"
+  description = ""
+  externalId = "46"
+  externalType = "run"
+  inventoryId = "35"
+  inventoryName = "KG-Inventory"
+  itemSource = "sync"
+  jobSummary = "KG-Inventory - KG-Project - email.yml"
+  lastUpdated = "2024-04-11T06:57:07.000Z"
+  organizationId = "1"
+  projectId = "37"
+  projectName = "KG-Project"
+  projectType = "git"
+  rawData = "{\"id\":46,\"type\":\"job_template\",\"url\":\"/api/v2/job_templates/46/\",\"related\":{\"created_by\":\"/api/v2/users/4/\",\"modified_by\":\"/api/v2/users/4/\",\"labels\":\"/api/v2/job_templates/46/labels/\",\"inventory\":\"/api/v2/inventories/35/\",\"project\":\"/api/v2/projects/37/\",\"credential\":\"/api/v2/credentials/16/\",\"extra_credentials\":\"/api/v2/job_templates/46/extra_credentials/\",\"credentials\":\"/api/v2/job_templates/46/credentials/\",\"notification_templates_error\":\"/api/v2/job_templates/46/notification_templates_error/\",\"notification_templates_success\":\"/api/v2/job_templates/46/notification_templates_success/\",\"jobs\":\"/api/v2/job_templates/46/jobs/\",\"object_roles\":\"/api/v2/job_templates/46/object_roles/\",\"notification_templates_any\":\"/api/v2/job_templates/46/notification_templates_any/\",\"access_list\":\"/api/v2/job_templates/46/access_list/\",\"launch\":\"/api/v2/job_templates/46/launch/\",\"instance_groups\":\"/api/v2/job_templates/46/instance_groups/\",\"schedules\":\"/api/v2/job_templates/46/schedules/\",\"activity_stream\":\"/api/v2/job_templates/46/activity_stream/\",\"survey_spec\":\"/api/v2/job_templates/46/survey_spec/\",\"copy\":\"/api/v2/job_templates/46/copy/\"},\"summary_fields\":{\"inventory\":{\"id\":35,\"name\":\"KG-Inventory\",\"description\":\"\",\"has_active_failures\":false,\"total_hosts\":0,\"hosts_with_active_failures\":0,\"total_groups\":2,\"groups_with_active_failures\":0,\"has_inventory_sources\":false,\"total_inventory_sources\":0,\"inventory_sources_with_failures\":0,\"organization_id\":1,\"kind\":\"\"},\"project\":{\"id\":37,\"name\":\"KG-Project\",\"description\":\"\",\"status\":\"successful\",\"scm_type\":\"git\"},\"created_by\":{\"id\":4,\"username\":\"admin\",\"first_name\":\"\",\"last_name\":\"\"},\"modified_by\":{\"id\":4,\"username\":\"admin\",\"first_name\":\"\",\"last_name\":\"\"},\"object_roles\":{\"admin_role\":{\"id\":390,\"description\":\"Can manage all aspects of the job template\",\"name\":\"Admin\"},\"execute_role\":{\"id\":389,\"description\":\"May run the job template\",\"name\":\"Execute\"},\"read_role\":{\"id\":388,\"description\":\"May view settings for the job template\",\"name\":\"Read\"}},\"user_capabilities\":{\"edit\":true,\"start\":true,\"copy\":true,\"schedule\":true,\"delete\":true},\"labels\":{\"count\":0,\"results\":[]},\"recent_jobs\":[],\"credentials\":[{\"kind\":\"ssh\",\"credential_type_id\":1,\"description\":\"\",\"id\":16,\"cloud\":false,\"name\":\"kgawronski\"}]},\"created\":\"2023-04-14T13:23:28.799827Z\",\"modified\":\"2023-04-14T14:46:17.653206Z\",\"name\":\"KG-Email\",\"description\":\"\",\"job_type\":\"run\",\"inventory\":35,\"project\":37,\"playbook\":\"email.yml\",\"forks\":0,\"limit\":\"\",\"verbosity\":0,\"extra_vars\":\"---\\nextra_var_example: testContent\",\"job_tags\":\"\",\"force_handlers\":false,\"skip_tags\":\"\",\"start_at_task\":\"\",\"timeout\":0,\"use_fact_cache\":false,\"last_job_run\":\"2023-04-14T14:46:17.600932Z\",\"last_job_failed\":false,\"next_job_run\":null,\"status\":\"successful\",\"host_config_key\":\"\",\"ask_diff_mode_on_launch\":false,\"ask_variables_on_launch\":true,\"ask_limit_on_launch\":true,\"ask_tags_on_launch\":false,\"ask_skip_tags_on_launch\":false,\"ask_job_type_on_launch\":false,\"ask_verbosity_on_launch\":true,\"ask_inventory_on_launch\":true,\"ask_credential_on_launch\":false,\"survey_enabled\":false,\"become_enabled\":false,\"diff_mode\":false,\"allow_simultaneous\":false,\"custom_virtualenv\":null,\"credential\":16,\"vault_credential\":null,\"externalId\":\"46\"}"
+  refId = "26"
+  refType = "AccountIntegration"
+  type = { code = "ansibleTower.job" }
+}

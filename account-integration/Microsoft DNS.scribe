@@ -1,0 +1,16 @@
+resource "account-integration" "Microsoft DNS" {
+  name = "Microsoft DNS"
+  uuid = "e61e2277-dcaa-48f8-9483-201f26fd7700"
+  config = {
+    agentRpc = null
+    inventoryExisting = "on"
+    serviceType = "local"
+    zoneFilter = ""
+  }
+  integrationType = { code = "microsoft.dns" }
+  serviceFlag = false
+  servicePath = ""
+  servicePort = "5985"
+  serviceUrl = "10.32.21.253"
+  type = "microsoft.dns"
+}
