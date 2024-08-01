@@ -1,0 +1,22 @@
+resource "file-content" "6bc18859-fec4-46a0-a4ca-9fd3b0fec734" {
+  uuid = "6bc18859-fec4-46a0-a4ca-9fd3b0fec734"
+  content = <<EOFSCRIBE
+package com.morpheus
+ 
+import org.slf4j.*
+import groovy.util.logging.Slf4j
+import com.morpheus.*
+import grails.util.Holders
+import static groovy.json.JsonOutput.*
+import com.morpheus.MorpheusAccountAccessor
+
+ComputeServer.withNewSession {session ->
+    ComputeServer server=ComputeServer.get(10251)
+	println(server.volumes.each {it.dump()})
+    println(server.each {it.dump()})
+}
+ 
+EOFSCRIBE
+  dateCreated = "2024-08-01T07:51:07.000Z"
+  lastUpdated = "2024-08-01T07:54:43.000Z"
+}
