@@ -3,7 +3,7 @@ resource "task" "serverVolumes" {
   uuid = "1f7a3a66-1ec1-4e0d-b8c1-056c78a27c7f"
   dateCreated = "2024-08-01T07:51:07.000Z"
   executeTarget = "local"
-  lastUpdated = "2024-08-01T07:54:54.000Z"
+  lastUpdated = "2024-08-01T08:18:15.000Z"
   options = [
     {
       content = { uuid = "6bc18859-fec4-46a0-a4ca-9fd3b0fec734" }

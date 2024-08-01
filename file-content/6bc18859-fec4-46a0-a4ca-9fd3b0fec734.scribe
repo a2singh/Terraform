@@ -13,10 +13,9 @@ import com.morpheus.MorpheusAccountAccessor
 ComputeServer.withNewSession {session ->
     ComputeServer server=ComputeServer.get(10251)
 	println(server.volumes.each {it.dump()})
-    println(server.each {it.dump()})
 }
  
 EOFSCRIBE
   dateCreated = "2024-08-01T07:51:07.000Z"
-  lastUpdated = "2024-08-01T07:54:43.000Z"
+  lastUpdated = "2024-08-01T08:18:15.000Z"
 }
