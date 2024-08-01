@@ -251,6 +251,52 @@ EOFSCRIBE
       formField = true
       refCode = "7bd7bdc1-6089-458d-a2b4-fa44d3ff37bb"
       type = "networkManager"
+    },
+    {
+      code = "ba0d7a8f-51b1-4e76-9625-aed8b42a4c33"
+      name = "ba0d7a8f-51b1-4e76-9625-aed8b42a4c33"
+      uuid = "6f235e2e-6b97-4ccc-b4de-bd4d713235fb"
+      config = {
+        addon = ""
+        addonPosition = ""
+        cloudField = "53937ba1-d56c-4f8d-9521-b4f74a398996"
+        cloudFieldType = "field"
+        cloudId = ""
+        defaultValue = <<EOFSCRIBE
+[
+ {
+  "primaryInterface": true,
+  "displayOrder": 0,
+  "ipMode": "",
+  "ipAddress": "",
+  "networkInterfaceTypeId": 4,
+  "network": {
+   "id": "network-862",
+   "pool": {
+    "id": ""
+   }
+  }
+ }
+]
+EOFSCRIBE
+        enableIPModeSelection = false
+        groupField = "b2e12f04-7313-4898-8e6f-62e97d3e1035"
+        groupFieldType = "field"
+        groupId = ""
+        layoutField = "6bbb5fa9-8412-4c9c-865e-a7cca122e68f"
+        layoutFieldType = "field"
+        layoutId = ""
+        poolField = ""
+        poolFieldType = "field"
+        poolId = ""
+        showNetworkTypeSelection = false
+      }
+      displayOrder = 8
+      fieldContext = "config.customOptions"
+      fieldLabel = "Networks-2"
+      fieldName = "networks3"
+      formField = true
+      type = "networkManager"
     }
   ]
 }
