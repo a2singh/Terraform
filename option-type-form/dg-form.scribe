@@ -20,6 +20,7 @@ resource "option-type-form" "dg-form" {
       fieldLabel = "group"
       fieldName = "group"
       formField = true
+      refCode = "b2e12f04-7313-4898-8e6f-62e97d3e1035"
       type = "group"
     },
     {
@@ -27,6 +28,8 @@ resource "option-type-form" "dg-form" {
       name = "53937ba1-d56c-4f8d-9521-b4f74a398996"
       uuid = "94bcfd8d-dd9c-4b79-b9e2-981bdfd0f54b"
       config = {
+        addon = ""
+        addonPosition = ""
         cloudType = ""
         filterResource = false
         group = "b2e12f04-7313-4898-8e6f-62e97d3e1035"
@@ -36,11 +39,13 @@ resource "option-type-form" "dg-form" {
         instanceTypeFieldCode = ""
         instanceTypeFieldType = "field"
       }
+      defaultValue = "14"
       displayOrder = 1
       fieldContext = "config.customOptions"
       fieldLabel = "cloud"
       fieldName = "cloud"
       formField = true
+      refCode = "53937ba1-d56c-4f8d-9521-b4f74a398996"
       type = "cloud"
     },
     {
@@ -55,15 +60,16 @@ resource "option-type-form" "dg-form" {
         groupField = "b2e12f04-7313-4898-8e6f-62e97d3e1035"
         groupFieldType = "field"
         groupId = ""
-        instanceTypeCode = ""
-        instanceTypeFieldCode = ""
-        instanceTypeFieldType = "field"
+        instanceTypeCode = "centos"
+        instanceTypeFieldCode = null
+        instanceTypeFieldType = "value"
       }
       displayOrder = 2
       fieldContext = "config.customOptions"
       fieldLabel = "layout"
       fieldName = "layout"
       formField = true
+      refCode = "6bbb5fa9-8412-4c9c-865e-a7cca122e68f"
       type = "layout"
     },
     {
@@ -89,6 +95,7 @@ resource "option-type-form" "dg-form" {
       fieldLabel = "pool"
       fieldName = "pool"
       formField = true
+      refCode = "199c78fa-e527-4bc1-aab2-4007300584bb"
       type = "resourcePool"
     },
     {
@@ -117,6 +124,7 @@ resource "option-type-form" "dg-form" {
       fieldLabel = "plan"
       fieldName = "plan"
       formField = true
+      refCode = "8d43a41a-4e1b-4396-b9aa-5c92f3df4c63"
       type = "plan"
     },
     {
@@ -149,7 +157,100 @@ resource "option-type-form" "dg-form" {
       fieldLabel = "disk"
       fieldName = "disk"
       formField = true
+      refCode = "79f0d73a-788a-4abf-acb9-2ec95d6cf8e1"
       type = "diskManager"
+    },
+    {
+      code = "9c6d5770-d453-46c4-910b-002774536161"
+      name = "9c6d5770-d453-46c4-910b-002774536161"
+      uuid = "23236a87-137f-44b0-ae7a-9704af413f98"
+      config = {
+        addon = ""
+        addonPosition = ""
+        cloudField = "53937ba1-d56c-4f8d-9521-b4f74a398996"
+        cloudFieldType = "field"
+        cloudId = ""
+        defaultValue = <<EOFSCRIBE
+[
+ {
+  "primaryInterface": true,
+  "displayOrder": 0,
+  "ipMode": "",
+  "ipAddress": "",
+  "networkInterfaceTypeId": "",
+  "network": {
+   "id": "network-860",
+   "pool": {
+    "id": ""
+   }
+  }
+ }
+]
+EOFSCRIBE
+        enableIPModeSelection = false
+        groupField = "b2e12f04-7313-4898-8e6f-62e97d3e1035"
+        groupFieldType = "field"
+        groupId = ""
+        layoutField = "6bbb5fa9-8412-4c9c-865e-a7cca122e68f"
+        layoutFieldType = "field"
+        layoutId = ""
+        poolField = ""
+        poolFieldType = "field"
+        poolId = ""
+        showNetworkTypeSelection = false
+      }
+      displayOrder = 6
+      fieldContext = "config.customOptions"
+      fieldLabel = "Networks"
+      fieldName = "network"
+      formField = true
+      refCode = "9c6d5770-d453-46c4-910b-002774536161"
+      type = "networkManager"
+    },
+    {
+      code = "7bd7bdc1-6089-458d-a2b4-fa44d3ff37bb"
+      name = "7bd7bdc1-6089-458d-a2b4-fa44d3ff37bb"
+      uuid = "2344209b-ee9a-48d0-a463-7292a6161a55"
+      config = {
+        cloudField = "53937ba1-d56c-4f8d-9521-b4f74a398996"
+        cloudFieldType = "field"
+        cloudId = ""
+        defaultValue = <<EOFSCRIBE
+[
+ {
+  "primaryInterface": true,
+  "displayOrder": 0,
+  "ipMode": "",
+  "ipAddress": "",
+  "networkInterfaceTypeId": "",
+  "network": {
+   "id": "network-861",
+   "pool": {
+    "id": ""
+   }
+  }
+ }
+]
+EOFSCRIBE
+        enableIPModeSelection = false
+        groupField = "b2e12f04-7313-4898-8e6f-62e97d3e1035"
+        groupFieldType = "field"
+        groupId = ""
+        layoutField = "6bbb5fa9-8412-4c9c-865e-a7cca122e68f"
+        layoutFieldType = "field"
+        layoutId = ""
+        poolField = ""
+        poolFieldType = "field"
+        poolId = ""
+        showNetworkTypeSelection = false
+      }
+      displayOrder = 7
+      fieldContext = "config.customOptions"
+      fieldLabel = "Network-2"
+      fieldName = "networks"
+      formField = true
+      refCode = "7bd7bdc1-6089-458d-a2b4-fa44d3ff37bb"
+      type = "networkManager"
     }
   ]
 }
