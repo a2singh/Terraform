@@ -9,6 +9,14 @@ resource "option-type-form" "All Resources" {
     formOptions = ""
     formType = ""
   }
+  field-groups = [
+    {
+      code = "cb6f9a31-d864-4197-9a9c-3474325d6dd7"
+      name = "new fieldgroup"
+      collapsible = false
+      defaultCollapsed = false
+    }
+  ]
   options = [
     {
       code = "421e4ace-a79d-444c-9306-da432773de20"
@@ -33,14 +41,7 @@ resource "option-type-form" "All Resources" {
         addonPosition = ""
         cloudType = ""
         filterResource = false
-        group = [
-          {
-            name = "Group"
-            id = 2215
-            type = "group"
-            value = "421e4ace-a79d-444c-9306-da432773de20"
-          }
-        ]
+        group = "421e4ace-a79d-444c-9306-da432773de20"
         groupFieldType = "field"
         groupId = ""
         instanceType = ""
@@ -84,10 +85,10 @@ resource "option-type-form" "All Resources" {
         ]
         groupFieldType = "field"
         groupId = ""
-        instanceTypeCode = ""
+        instanceTypeCode = "centos"
         instanceTypeField = ""
-        instanceTypeFieldCode = ""
-        instanceTypeFieldType = "field"
+        instanceTypeFieldCode = null
+        instanceTypeFieldType = "value"
         multiSelect = false
         sortable = ""
       }
