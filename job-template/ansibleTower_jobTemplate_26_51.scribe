@@ -16,7 +16,7 @@ resource "job-template" "ansibleTower.jobTemplate.26.51" {
   lastExecution = "5349"
   lastResult = "failed"
   lastRun = "2024-05-30T14:14:30.000Z"
-  lastUpdated = "2024-08-02T09:50:09.000Z"
+  lastUpdated = "2024-08-02T10:54:06.000Z"
   organizationId = "1"
   projectId = "4"
   projectName = "Demo Project"
