@@ -1,0 +1,26 @@
+resource "task" "morpheus test tower" {
+  name = "morpheus test tower"
+  uuid = "044710c3-b004-4bec-8b86-110682b55621"
+  dateCreated = "2024-08-02T08:38:45.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2024-08-02T08:38:45.000Z"
+  options = [
+    {
+      optionType = { code = "ansibleTowerIntegrationId" }
+      value = { name = "AT Ansible Tower" }
+    },
+    {
+      optionType = { code = "ansibleTowerJobTemplateId" }
+      value = { code = "ansibleTower.jobTemplate.26.11" }
+    },
+    {
+      optionType = { code = "ansibleTowerInventoryId" }
+      value = "16"
+    },
+    {
+      optionType = { code = "ansibleTowerExecuteMode" }
+      value = "executeHost"
+    }
+  ]
+  taskType = { code = "ansibleTowerTask" }
+}
