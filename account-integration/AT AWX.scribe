@@ -1,0 +1,8 @@
+resource "account-integration" "AT AWX" {
+  name = "AT AWX"
+  uuid = "ce78a4b7-e6d4-43a5-a549-65e5994030c0"
+  integrationType = { code = "ansibleTower" }
+  serviceUrl = "http://labs-awxtower1.prod.dc2.den.morpheusdata.com:32000/"
+  serviceVersion = "v2"
+  type = "ansibleTower"
+}
