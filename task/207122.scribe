@@ -1,0 +1,32 @@
+resource "task" "207122" {
+  code = "207122"
+  name = "207122_HTTP"
+  uuid = "f4797797-e62e-41b8-aeb2-b992b9bfb500"
+  dateCreated = "2024-08-02T12:32:10.000Z"
+  executeTarget = "local"
+  lastUpdated = "2024-08-02T12:36:10.000Z"
+  options = [
+    {
+      optionType = { code = "webUrl" }
+      value = "<%= morpheus.applianceUrl %>api/instances/<%= instance.id %>/wiki"
+    },
+    { optionType = { code = "webMethod" }, value = "PUT" },
+    {
+      optionType = { code = "webHeaders" }
+      value = "[{\"key\":\"Authorization\",\"value\":\"BEARER <%= morpheus.apiAccessToken %>\"},{\"key\":\"Content-Type\",\"value\":\"application/json; charset=ISO-8859-1\"},{\"key\":\"Accept\",\"value\":\"text/plain\"}]"
+    },
+    { optionType = { code = "ignoreSSL" }, value = "on" },
+    {
+      optionType = { code = "webBody" }
+      value = <<EOFSCRIBE
+{
+  "page": {
+    "content": "Tenant: <%= tenant %>,\\nTenantId: <%= tenantId %>,\\nProvisioned by: <%= instance.createdByFirstName %> <%= instance.createdByLastName %>, <%= instance.createdByEmail %>,\\nLabel: <%= instance.tags.replaceAll('"', '\\"') %>"
+
+  }}
+
+EOFSCRIBE
+    }
+  ]
+  taskType = { code = "httpTask" }
+}
