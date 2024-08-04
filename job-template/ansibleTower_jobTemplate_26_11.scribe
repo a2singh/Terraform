@@ -16,7 +16,7 @@ resource "job-template" "ansibleTower.jobTemplate.26.11" {
   lastExecution = "5604"
   lastResult = "successful"
   lastRun = "2024-08-03T06:04:30.000Z"
-  lastUpdated = "2024-08-04T10:55:34.000Z"
+  lastUpdated = "2024-08-04T11:49:45.000Z"
   organizationId = "1"
   projectId = "10"
   projectName = "CentOS httpd"
