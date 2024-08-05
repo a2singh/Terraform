@@ -1,0 +1,10 @@
+resource "task-set" "dev - Tadas debug join" {
+  name = "dev - Tadas debug join"
+  uuid = "7bdd50be-0e17-4873-a7da-ec0583ea107d"
+  dateCreated = "2024-08-05T08:36:30.000Z"
+  description = "DataGroup Test Workflow"
+  lastUpdated = "2024-08-05T08:36:30.000Z"
+  taskSetTasks = [ { uuid = "5a117970-5e66-419a-af42-1017df7abf19" } ]
+  taskSetType = "operation"
+  visibility = "public"
+}

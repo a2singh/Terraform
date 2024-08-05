@@ -1,0 +1,15 @@
+resource "task" "DEV-Linux VM join to AD v2" {
+  name = "DEV-Linux VM join to AD v2"
+  uuid = "ce430b12-311f-4f2a-9f0d-1dcbb0f38d3d"
+  dateCreated = "2024-08-05T08:35:26.000Z"
+  executeTarget = "local"
+  lastUpdated = "2024-08-05T08:35:26.000Z"
+  options = [
+    { optionType = { code = "operationalWorkflowId" }, value = "29" },
+    {
+      optionType = { code = "operationalWorkflowName" }
+      value = "DEV - Linux VM join to AD - combined - v2"
+    }
+  ]
+  taskType = { code = "nestedWorkflow" }
+}
