@@ -1,0 +1,8 @@
+resource "instance-type" "do.1" {
+  code = "do.1"
+  name = "ap docker"
+  uuid = "8ac5b80e-f4c1-436b-99b9-7ef4f8fd7ef9"
+  category = "os"
+  deploymentService = ""
+  environmentPrefix = "AP_DOCKER"
+}

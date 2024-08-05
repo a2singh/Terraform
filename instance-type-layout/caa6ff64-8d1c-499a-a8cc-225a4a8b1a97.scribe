@@ -1,0 +1,10 @@
+resource "instance-type-layout" "caa6ff64-8d1c-499a-a8cc-225a4a8b1a97" {
+  code = "caa6ff64-8d1c-499a-a8cc-225a4a8b1a97"
+  name = "ap docker layout"
+  uuid = "85748039-4dde-4877-bcd5-7fc73caaa224"
+  instanceType = { code = "do.1" }
+  instanceVersion = "7.5"
+  memoryRequirement = 0
+  provisionType = { code = "docker" }
+  workloads = [ { code = "562423fc-92bc-42d1-965e-b1b95b7cfc1a" } ]
+}
