@@ -1,0 +1,9 @@
+resource "task-set" "DEV-LinuxVM Join to AD-Combined-V2" {
+  name = "DEV-LinuxVM Join to AD-Combined-V2"
+  uuid = "955bdd56-e3a1-4800-8d8b-ed595b3681b2"
+  dateCreated = "2024-08-05T07:06:24.000Z"
+  description = "DataGroup Test Workflow"
+  lastUpdated = "2024-08-05T07:06:24.000Z"
+  taskSetType = "operation"
+  visibility = "public"
+}
