@@ -1,0 +1,17 @@
+resource "task" "linuxvm" {
+  code = "linuxvm"
+  name = "DEV-LinuxVM Join to AD V2"
+  uuid = "d8291255-cf94-48ec-8328-8d60a24b1773"
+  dateCreated = "2024-08-05T07:00:44.000Z"
+  executeTarget = "local"
+  labels = [ "DataGroup Test Task" ]
+  lastUpdated = "2024-08-05T07:07:11.000Z"
+  options = [
+    { optionType = { code = "operationalWorkflowId" }, value = "27" },
+    {
+      optionType = { code = "operationalWorkflowName" }
+      value = "DEV-LinuxVM Join to AD-Combined-V2"
+    }
+  ]
+  taskType = { code = "nestedWorkflow" }
+}

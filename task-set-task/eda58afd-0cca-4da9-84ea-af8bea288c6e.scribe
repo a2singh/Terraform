@@ -1,0 +1,5 @@
+resource "task-set-task" "eda58afd-0cca-4da9-84ea-af8bea288c6e" {
+  uuid = "eda58afd-0cca-4da9-84ea-af8bea288c6e"
+  task = { code = "linuxvm" }
+  taskPhase = "operation"
+}
