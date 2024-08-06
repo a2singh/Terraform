@@ -3,21 +3,13 @@ resource "task" "Add Disk" {
   uuid = "19d1554a-b785-41c1-a6d9-f2f689ac7cd8"
   dateCreated = "2024-08-05T18:36:11.000Z"
   executeTarget = "local"
-  lastUpdated = "2024-08-05T18:36:11.000Z"
+  lastUpdated = "2024-08-06T06:04:46.000Z"
   options = [
-    {
-      optionType = { code = "webUrl" }
-      value = "<%=morpheus.applianceUrl%>/api/instances/<%=instance.id%>/resize"
-    },
-    { optionType = { code = "webMethod" }, value = "PUT" },
-    {
-      optionType = { code = "webHeaders" }
-      value = "[{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Authorization\",\"value\":\"Bearer <%=morpheus.apiAccessToken%>\"},{\"key\":\"Accept\",\"value\":\"application/json\"}]"
-    },
-    { optionType = { code = "ignoreSSL" }, value = "on" },
     {
       optionType = { code = "webBody" }
       value = <<EOFSCRIBE
+--add-exports java.base/sun.security.ssl=ALL-UNNAMED
+
 {
   "volumes": [
     {
@@ -31,7 +23,17 @@ resource "task" "Add Disk" {
   "deleteOriginalVolumes": false
 }
 EOFSCRIBE
-    }
+    },
+    {
+      optionType = { code = "webUrl" }
+      value = "<%=morpheus.applianceUrl%>/api/instances/<%=instance.id%>/resize"
+    },
+    { optionType = { code = "webMethod" }, value = "PUT" },
+    {
+      optionType = { code = "webHeaders" }
+      value = "[{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Authorization\",\"value\":\"Bearer <%=morpheus.apiAccessToken%>\"},{\"key\":\"Accept\",\"value\":\"application/json\"}]"
+    },
+    { optionType = { code = "ignoreSSL" }, value = "on" }
   ]
   taskType = { code = "httpTask" }
   visibility = "public"
