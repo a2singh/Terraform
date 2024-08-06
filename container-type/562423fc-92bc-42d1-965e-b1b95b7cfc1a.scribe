@@ -1,14 +1,14 @@
 resource "container-type" "562423fc-92bc-42d1-965e-b1b95b7cfc1a" {
   code = "562423fc-92bc-42d1-965e-b1b95b7cfc1a"
-  name = "ap docker node"
+  name = "ap docker nginx"
   uuid = "dbb17e3b-bd99-4f97-87e3-d0ab02f4308a"
   backupType = "lvmSnapshot"
-  containerVersion = "7.5"
+  containerVersion = "latest"
   entryPoint = ""
   logTypeCode = "docker"
   provisionService = "dockerContainerService"
   provisionType = { code = "docker" }
-  repositoryImage = "centos"
-  shortName = "dckrnode"
+  repositoryImage = "nginx"
+  shortName = "nginx"
   statTypeCode = "container"
 }
