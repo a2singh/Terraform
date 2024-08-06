@@ -1,0 +1,12 @@
+resource "instance-type-layout" "32ff2afe-01c3-41fd-b466-ed9d1cdb09e4" {
+  code = "32ff2afe-01c3-41fd-b466-ed9d1cdb09e4"
+  name = "AT Docker Ubuntu 16.04"
+  uuid = "c9c5261a-2086-459d-88d1-17d1cbc1206f"
+  actions = [ { code = "generic-add-node" } ]
+  hasAutoScale = true
+  instanceType = { code = "atdocker" }
+  instanceVersion = "16.04"
+  memoryRequirement = 0
+  provisionType = { code = "docker" }
+  workloads = [ { code = "808e11d0-8bd1-4011-b5ec-b817c4df8e3c" } ]
+}

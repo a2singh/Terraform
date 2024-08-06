@@ -1,0 +1,17 @@
+resource "container-type" "808e11d0-8bd1-4011-b5ec-b817c4df8e3c" {
+  code = "808e11d0-8bd1-4011-b5ec-b817c4df8e3c"
+  name = "AT Docker Ubuntu 16.04"
+  uuid = "5ee0fac1-8395-4bc5-a800-4e594e0ed8eb"
+  category = "Ubuntu"
+  actions = [ { code = "generic-remove-node" } ]
+  backupType = "lvmSnapshot"
+  containerLogs = [ { uuid = "7064ebb1-5e6b-452c-b074-dfc21d120090" } ]
+  containerVersion = "16.04"
+  entryPoint = ""
+  logTypeCode = "docker"
+  provisionService = "dockerContainerService"
+  provisionType = { code = "docker" }
+  repositoryImage = "Docker Ubuntu 16.04"
+  shortName = "DCNT"
+  statTypeCode = "container"
+}

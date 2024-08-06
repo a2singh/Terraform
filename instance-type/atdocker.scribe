@@ -1,0 +1,11 @@
+resource "instance-type" "atdocker" {
+  code = "atdocker"
+  name = "AT Docker Instance"
+  uuid = "0781b8cf-4e91-4781-86ec-b7623ead9c9f"
+  category = "os"
+  deploymentService = "defaultDeployService"
+  environmentPrefix = "AT_DOCKER_INSTANCE"
+  hasAutoScale = true
+  hasDeployment = true
+  hasSettings = true
+}
