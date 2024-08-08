@@ -3,28 +3,27 @@ resource "catalog-item-type" "atform" {
   name = "AT-DataGroup_FORM"
   uuid = "5eaa0c30-646a-49f6-8b4a-b53e7c59e37f"
   config = {
-    name = "at-test"
+    name = "$${userInitials.toUpperCase()}$${tenant.take(5).toUpperCase()}$${platform.take(3).toUpperCase()}VM$${sequence+10}"
     backup = {
-      createBackup = false
+      createBackup = true
       jobAction = "new"
-      jobRetentionCount = 3
+      jobRetentionCount = null
+      jobSchedule = 2
       providerBackupType = -1
       veeamManagedServer = ""
     }
-    cloud = { name = "AT-VMware", id = 3 }
+    cloud = { name = "AT VMware Cloud", id = 14 }
     config = {
-      createUser = false
+      createUser = true
       executeMode = "executeHost"
-      expose = 8080
       hostId = null
       isEC2 = false
       isVpcSelectable = true
       nestedVirtualization = null
-      noAgent = false
+      noAgent = true
       poolProviderType = null
-      resourcePoolId = "pool-162"
+      resourcePoolId = "pool-980"
       smbiosAssetTag = null
-      template = 697
       vmwareFolderId = "/"
     }
     configEnabled = true
@@ -32,15 +31,15 @@ resource "catalog-item-type" "atform" {
     defaultExpandAdvanced = false
     group = { name = "All Groups", id = "2" }
     hideLock = true
-    hostName = "at-test"
+    hostName = "$${userInitials.toUpperCase()}$${tenant.take(5).toUpperCase()}$${platform.take(3).toUpperCase()}VM$${sequence+10}"
     instance = { configEnabled = false, userGroup = { id = "" } }
-    layout = { code = "vmware-1.0-single", id = 139 }
+    layout = { code = "vmware-centos-9-stream-single", id = 351 }
     networkInterfaces = [
       {
         ipMode = ""
         network = {
           hasPool = false
-          id = "network-275"
+          id = "network-860"
           idName = "VLAN0002 - Internal Server 2"
         }
         networkInterfaceTypeId = 4
@@ -50,30 +49,111 @@ resource "catalog-item-type" "atform" {
         showNetworkPoolLabel = false
       }
     ]
-    plan = { code = "vm-1024", id = 248 }
+    plan = { code = "custom.vmware", id = 5468 }
+    ports = [
+      {
+        code = "centos.22"
+        name = "SSH"
+        externalPort = 22
+        id = 12
+        internalPort = 22
+        loadBalance = false
+        loadBalancePort = null
+        loadBalanceProtocol = null
+        shortName = "ssh"
+        sortOrder = 1
+        visible = true
+      }
+    ]
+    servicePlanOptions = {
+      coresPerSocket = 1
+      forPlan = 5468
+      maxCores = 1
+      maxMemory = 1073741824
+    }
     showScale = false
-    type = "vmware"
-    version = "1.0"
+    storageControllers = [
+      {
+        name = "SCSI 0"
+        category = "scsi"
+        active = true
+        busNumber = "0"
+        displayOrder = 0
+        editable = false
+        id = 52
+        maxDevices = 16
+        removable = false
+        reservedUnitNumber = 7
+        typeId = 4
+        typeName = "SCSI LSI Logic Parallel"
+        unitNumber = null
+      },
+      {
+        name = "IDE 0"
+        category = "ide"
+        active = true
+        busNumber = "0"
+        displayOrder = 1
+        editable = false
+        id = 53
+        maxDevices = 2
+        removable = false
+        reservedUnitNumber = -1
+        typeId = 2
+        typeName = "IDE"
+        unitNumber = null
+      },
+      {
+        name = "IDE 1"
+        category = "ide"
+        active = true
+        busNumber = "1"
+        displayOrder = 2
+        editable = false
+        id = 54
+        maxDevices = 2
+        removable = false
+        reservedUnitNumber = -1
+        typeId = 2
+        typeName = "IDE"
+        unitNumber = null
+      }
+    ]
+    type = "centos"
+    version = "9-stream"
     volumes = [
       {
         name = "root"
-        controllerMountPoint = "9860:0:4:0"
+        uuid = "fb3e03d7-276f-4f85-a5a9-d25709d117a8"
+        configurableIOPS = false
+        controllerId = 52
+        controllerMountPoint = "52:0:4:0"
         datastoreId = "auto"
+        displayOrder = 0
+        externalId = null
+        id = 19
+        internalId = null
         maxIOPS = null
-        maxStorage = 10737418240
+        maxStorage = 5368709120
         minStorage = 5368709120
+        planResizable = true
         readonlyName = false
+        resizeable = true
         rootVolume = true
-        size = 10
+        size = 5
         storageType = 1
-        vId = 697
-        volumeCustomizable = false
+        typeId = 43
+        uniqueId = "vmware.vsphere.image.morpheus.centos.9-stream.volume.0"
+        unitNumber = null
+        vId = 2709
+        virtualImageId = 2709
+        volumeCustomizable = true
       }
     ]
   }
   dateCreated = "2023-12-05T07:41:38.000Z"
   form = { code = "datagroup" }
   formType = "form"
-  lastUpdated = "2023-12-06T22:26:24.000Z"
+  lastUpdated = "2024-08-08T07:49:32.000Z"
   refType = "InstanceType"
 }
