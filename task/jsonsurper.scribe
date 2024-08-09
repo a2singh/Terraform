@@ -1,0 +1,14 @@
+resource "task" "jsonsurper" {
+  name = "jsonsurper"
+  uuid = "05a497a9-2c57-4b0d-9649-43f8c6acdd46"
+  dateCreated = "2024-08-09T10:52:42.000Z"
+  executeTarget = "local"
+  lastUpdated = "2024-08-09T11:00:03.000Z"
+  options = [
+    {
+      content = { uuid = "fb08085f-d51d-4d52-86ef-ff3ee56e1aa1" }
+      optionType = { code = "groovyScript" }
+    }
+  ]
+  taskType = { code = "groovyTask" }
+}

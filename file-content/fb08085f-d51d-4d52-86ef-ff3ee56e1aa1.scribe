@@ -1,0 +1,26 @@
+resource "file-content" "fb08085f-d51d-4d52-86ef-ff3ee56e1aa1" {
+  uuid = "fb08085f-d51d-4d52-86ef-ff3ee56e1aa1"
+  content = <<EOFSCRIBE
+import groovy.json.JsonSlurper
+import groovy.json.JsonParserType
+
+// Example JSON string (usually you would get this from somewhere else)
+def jsonString = '{"label": {"env": "<%= morpheus.morpheusUser %>", "app": "nginx"}}'
+
+// Create a JsonSlurper with a specific parser type
+def slurper = new JsonSlurper(type: JsonParserType.CHAR_BUFFER)
+
+// Parse the JSON string
+def parsedJson = slurper.parseText(jsonString)
+
+// Access parsed data
+def labels = parsedJson.label
+
+return labels
+
+
+
+EOFSCRIBE
+  dateCreated = "2024-08-09T10:52:43.000Z"
+  lastUpdated = "2024-08-09T11:00:03.000Z"
+}
