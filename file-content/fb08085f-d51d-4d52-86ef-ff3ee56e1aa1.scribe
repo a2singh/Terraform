@@ -5,7 +5,7 @@ import groovy.json.JsonSlurper
 import groovy.json.JsonParserType
 
 // Example JSON string (usually you would get this from somewhere else)
-def jsonString = '{"label": {"env": "<%= morpheus.morpheusUser %>", "app": "nginx"}}'
+def jsonString = '{"label": {"env": "${morpheus.morpheusUser}", "app": "nginx"}}'
 
 // Create a JsonSlurper with a specific parser type
 def slurper = new JsonSlurper(type: JsonParserType.CHAR_BUFFER)
@@ -22,5 +22,5 @@ return labels
 
 EOFSCRIBE
   dateCreated = "2024-08-09T10:52:43.000Z"
-  lastUpdated = "2024-08-09T11:00:03.000Z"
+  lastUpdated = "2024-08-09T11:02:33.000Z"
 }
