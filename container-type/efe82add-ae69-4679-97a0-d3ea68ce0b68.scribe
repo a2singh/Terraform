@@ -1,6 +1,6 @@
 resource "container-type" "efe82add-ae69-4679-97a0-d3ea68ce0b68" {
   code = "efe82add-ae69-4679-97a0-d3ea68ce0b68"
-  name = "AT-custom-node"
+  name = "AT CentOS 7.5"
   uuid = "feace3f9-1d0d-4387-8877-8424a3b9047a"
   actions = [ { code = "generic-remove-node" } ]
   containerVersion = "7.5"

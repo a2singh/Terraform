@@ -1,14 +1,13 @@
 resource "instance-type-layout" "e57439e0-f8f5-4849-a2e6-317249e58430" {
   code = "e57439e0-f8f5-4849-a2e6-317249e58430"
-  name = "AT-Custom-CentOS-Layout"
+  name = "AT CentOS 7.5"
   uuid = "2630eb34-37ad-4be6-9642-58c4303ccb2b"
   actions = [ { code = "generic-add-node" } ]
   hasAutoScale = true
-  instanceType = { code = "atcent" }
+  instanceType = { code = "CentOS7.5" }
   instanceVersion = "7.5"
   memoryRequirement = 0
   provisionType = { code = "vmware" }
   supportsConvertToManaged = true
-  taskSets = [ { name = "AT Morph PP Workflow" } ]
   workloads = [ { code = "efe82add-ae69-4679-97a0-d3ea68ce0b68" } ]
 }

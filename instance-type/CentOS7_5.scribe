@@ -1,0 +1,13 @@
+resource "instance-type" "CentOS7.5" {
+  code = "CentOS7.5"
+  name = "AT CentOS 7.5"
+  uuid = "fda4db95-03d3-42a3-bde8-e1b4dd915e00"
+  category = "os"
+  deploymentService = "defaultDeployService"
+  environmentPrefix = "AT-CENTOS_INSTANCE"
+  hasAutoScale = true
+  hasDeployment = true
+  hasSettings = true
+  labels = [ "Operating System CentOS" ]
+  optionTypes = [ { code = "app_name" } ]
+}
