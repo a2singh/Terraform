@@ -1,0 +1,15 @@
+resource "container-type" "92e6bb59-a30e-4dc1-acb4-fd45ee5d5b5c" {
+  code = "92e6bb59-a30e-4dc1-acb4-fd45ee5d5b5c"
+  name = "RHEL"
+  uuid = "f58fd7a9-8a56-4c7c-b32a-eabc3cb85f4a"
+  containerVersion = "latest"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "rhel"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "vmware.vsphere.image.14.vm-200558" }
+}

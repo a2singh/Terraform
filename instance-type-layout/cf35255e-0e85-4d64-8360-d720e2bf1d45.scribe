@@ -1,0 +1,13 @@
+resource "instance-type-layout" "cf35255e-0e85-4d64-8360-d720e2bf1d45" {
+  code = "cf35255e-0e85-4d64-8360-d720e2bf1d45"
+  name = "RHEL"
+  uuid = "95668e63-244c-43d3-9885-1d1e9f0d37d0"
+  actions = [ { code = "generic-add-node" } ]
+  hasAutoScale = true
+  instanceType = { code = "207249" }
+  instanceVersion = "latest"
+  memoryRequirement = 0
+  provisionType = { code = "vmware" }
+  supportsConvertToManaged = true
+  workloads = [ { code = "92e6bb59-a30e-4dc1-acb4-fd45ee5d5b5c" } ]
+}
