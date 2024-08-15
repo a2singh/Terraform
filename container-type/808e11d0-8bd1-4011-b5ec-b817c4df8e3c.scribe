@@ -6,6 +6,10 @@ resource "container-type" "808e11d0-8bd1-4011-b5ec-b817c4df8e3c" {
   actions = [ { code = "generic-remove-node" } ]
   backupType = "lvmSnapshot"
   containerLogs = [ { uuid = "7064ebb1-5e6b-452c-b074-dfc21d120090" } ]
+  containerPorts = [
+    { uuid = "81bdece7-df4a-4ec8-9eb5-8e7ea939c778" },
+    { uuid = "218aae9c-0daf-49ac-867f-8590b996ac2d" }
+  ]
   containerVersion = "latest"
   entryPoint = ""
   logTypeCode = "docker"
