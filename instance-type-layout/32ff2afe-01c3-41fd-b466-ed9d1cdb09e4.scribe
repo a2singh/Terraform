@@ -8,5 +8,5 @@ resource "instance-type-layout" "32ff2afe-01c3-41fd-b466-ed9d1cdb09e4" {
   instanceVersion = "16.04"
   memoryRequirement = 0
   provisionType = { code = "docker" }
-  workloads = [ { code = "808e11d0-8bd1-4011-b5ec-b817c4df8e3c" } ]
+  workloads = [ { code = "nginx-1.14" } ]
 }

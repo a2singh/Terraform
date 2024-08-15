@@ -1,0 +1,5 @@
+resource "container-type-set" "nginx-1.14" {
+  code = "nginx-1.14"
+  uuid = "7bc12356-1b6c-4d73-9932-baef8b75f159"
+  workloadType = { code = "nginx-1.14" }
+}
