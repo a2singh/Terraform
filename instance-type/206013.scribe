@@ -6,4 +6,5 @@ resource "instance-type" "206013" {
   deploymentService = ""
   environmentPrefix = "UBUNTU-206013"
   hasAutoScale = true
+  layouts = [ { code = "506d9bb5-b3ae-415d-84ed-ba5cfe7d99a7" } ]
 }
