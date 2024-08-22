@@ -11,12 +11,12 @@ resource "task" "at" {
       value = { name = "AT Ansible Tower" }
     },
     {
-      optionType = { code = "ansibleTowerJobTemplateId" }
-      value = { code = "ansibleTower.jobTemplate.26.24" }
-    },
-    {
       optionType = { code = "ansibleTowerInventoryId" }
       value = { name = "AT Github" }
+    },
+    {
+      optionType = { code = "ansibleTowerJobTemplateId" }
+      value = { code = "ansibleTower.jobTemplate.26.24" }
     },
     {
       optionType = { code = "ansibleTowerExecuteMode" }
