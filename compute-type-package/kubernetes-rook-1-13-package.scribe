@@ -4,15 +4,15 @@ resource "compute-type-package" "kubernetes-rook-1-13-package" {
   category = "kubernetes.storage"
   dateCreated = "2024-05-24T19:26:43.000Z"
   description = "install rook storage"
-  lastUpdated = "2024-05-24T19:26:43.000Z"
+  lastUpdated = "2024-08-23T09:01:08.000Z"
   packageType = "rook"
   packageVersion = "1.13"
   providerType = "kubernetes"
   sortOrder = 20
   specTemplates = [
     { code = "kubernetes-rook-1-13-resources-v1" },
-    { code = "kubernetes-rook-1-13-common-v1" },
     { code = "kubernetes-rook-1-13-operator-v1" },
+    { code = "kubernetes-rook-1-13-common-v1" },
     { code = "kubernetes-rook-1-13-cluster-v1" },
     { code = "kubernetes-rook-1-13-storage-v1" }
   ]
