@@ -7,8 +7,4 @@ resource "instance-type" "206825" {
   environmentPrefix = "206825"
   hasAutoScale = true
   hasDeployment = true
-  layouts = [
-    { code = "a4c9ff47-a889-4c85-b27d-40325a0d1022" },
-    { code = "cf24d703-5801-4e62-bc2c-e65bacc56df3" }
-  ]
 }
