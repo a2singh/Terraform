@@ -1,0 +1,11 @@
+resource "instance-type" "207630" {
+  code = "207630"
+  name = "HPESK207630"
+  uuid = "9b4eb51b-63bd-4622-9487-1521f5c94ffa"
+  category = "os"
+  deploymentService = "defaultDeployService"
+  environmentPrefix = "HPESK207630"
+  hasAutoScale = true
+  hasDeployment = true
+  hasSettings = true
+}

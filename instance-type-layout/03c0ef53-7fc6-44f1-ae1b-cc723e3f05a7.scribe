@@ -1,0 +1,13 @@
+resource "instance-type-layout" "03c0ef53-7fc6-44f1-ae1b-cc723e3f05a7" {
+  code = "03c0ef53-7fc6-44f1-ae1b-cc723e3f05a7"
+  name = "HPESK207630"
+  uuid = "18711340-4d69-4ebf-aa45-3667f3bc1d57"
+  actions = [ { code = "generic-add-node" } ]
+  hasAutoScale = true
+  instanceType = { code = "207630" }
+  instanceVersion = "HPE_SeongbinLim"
+  memoryRequirement = 0
+  provisionType = { code = "vmware" }
+  supportsConvertToManaged = true
+  workloads = [ { code = "63c6be17-c82a-46b5-a77d-e892b19adaf9" } ]
+}

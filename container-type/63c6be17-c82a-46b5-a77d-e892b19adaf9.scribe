@@ -1,0 +1,15 @@
+resource "container-type" "63c6be17-c82a-46b5-a77d-e892b19adaf9" {
+  code = "63c6be17-c82a-46b5-a77d-e892b19adaf9"
+  name = "HPESK207630"
+  uuid = "ba478eba-b057-4255-98ba-8016b4725651"
+  containerVersion = "7.5"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "207630"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "vmware.vsphere.image.morpheus.centos.7.5" }
+}
