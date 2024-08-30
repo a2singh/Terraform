@@ -1,0 +1,15 @@
+resource "container-type" "755468c6-5485-4ca1-9aab-20d8723344d5" {
+  code = "755468c6-5485-4ca1-9aab-20d8723344d5"
+  name = "HPEGL207628"
+  uuid = "67424dfe-f53b-4272-80f0-7c0eae0ba06a"
+  containerVersion = "2016"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "HPEGL207628"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "vmware.vsphere.image.9.vm-59178" }
+}

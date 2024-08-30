@@ -1,0 +1,11 @@
+resource "instance-type" "207634" {
+  code = "207634"
+  name = "HPEGL207634"
+  uuid = "7d5ae0dc-30d4-49cf-9b09-12041531717e"
+  category = "os"
+  deploymentService = "defaultDeployService"
+  environmentPrefix = "HPEGL207634"
+  hasAutoScale = true
+  hasDeployment = true
+  hasSettings = true
+}

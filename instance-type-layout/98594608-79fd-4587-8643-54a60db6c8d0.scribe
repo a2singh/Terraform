@@ -1,0 +1,12 @@
+resource "instance-type-layout" "98594608-79fd-4587-8643-54a60db6c8d0" {
+  code = "98594608-79fd-4587-8643-54a60db6c8d0"
+  name = "HPEGL207628"
+  uuid = "4194166d-6cc8-428d-acdb-dc6fa91f11ec"
+  actions = [ { code = "generic-add-node" } ]
+  hasAutoScale = true
+  instanceType = { code = "207634" }
+  instanceVersion = "2016"
+  memoryRequirement = 0
+  provisionType = { code = "vmware" }
+  workloads = [ { code = "755468c6-5485-4ca1-9aab-20d8723344d5" } ]
+}
