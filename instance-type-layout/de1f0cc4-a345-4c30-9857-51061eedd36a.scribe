@@ -1,0 +1,13 @@
+resource "instance-type-layout" "de1f0cc4-a345-4c30-9857-51061eedd36a" {
+  code = "de1f0cc4-a345-4c30-9857-51061eedd36a"
+  name = "ACB207628"
+  uuid = "28f474c4-5736-482e-8b4a-01f56e4c3c55"
+  actions = [ { code = "generic-add-node" } ]
+  hasAutoScale = true
+  instanceType = { code = "207628" }
+  instanceVersion = "9"
+  memoryRequirement = 0
+  provisionType = { code = "vmware" }
+  supportsConvertToManaged = true
+  workloads = [ { code = "f0abac5a-fbcc-4066-9314-b602dc7fd44c" } ]
+}

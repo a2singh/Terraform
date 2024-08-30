@@ -1,0 +1,15 @@
+resource "container-type" "f0abac5a-fbcc-4066-9314-b602dc7fd44c" {
+  code = "f0abac5a-fbcc-4066-9314-b602dc7fd44c"
+  name = "ACB207628"
+  uuid = "d85d5106-af90-4fb3-bca8-110b648a7b49"
+  containerVersion = "9"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "ACB207628"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "vmware.vsphere.image.morpheus.centos.9-stream.20230131" }
+}

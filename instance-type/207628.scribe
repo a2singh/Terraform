@@ -1,0 +1,10 @@
+resource "instance-type" "207628" {
+  code = "207628"
+  name = "ACB207628"
+  uuid = "e9a240e2-461e-412b-89ef-095783bc6c98"
+  category = "os"
+  deploymentService = "defaultDeployService"
+  environmentPrefix = "ACB207628"
+  hasAutoScale = true
+  hasDeployment = true
+}
