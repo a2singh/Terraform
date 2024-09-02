@@ -1,0 +1,24 @@
+resource "container-type" "kubernetes-ubuntu-22_04-worker-nutanix-prism-amd64" {
+  code = "kubernetes-ubuntu-22_04-worker-nutanix-prism-amd64"
+  name = "nutanix-prism Kubernetes Worker on Ubuntu 22.04"
+  uuid = "9805e5a0-e914-4d5c-aff4-86960cf5eb58"
+  category = "kubernetes"
+  checkTypeCode = "vmCheck"
+  cloneType = "ubuntu"
+  containerPorts = [ { code = "ubuntu.22" } ]
+  containerVersion = "22.04"
+  imageCode = "nutanix-prism morpheus kubernetes on ubuntu 22.04"
+  logTypeCode = "ubuntu"
+  mountLogs = "/var/log"
+  providerType = "nutanix-prism"
+  provisionType = { code = "nutanix-prism-provision-provider" }
+  scripts = [
+    { code = "kube-ubuntu-22-setup-script-v1" },
+    { code = "kubernetes-worker-join-v1" }
+  ]
+  serverType = "vm"
+  shortName = "kubernetes-worker-ubuntu"
+  showServerLogs = true
+  statTypeCode = "server"
+  virtualImage = { code = "nutanix.prism.image.morpheus.ubuntu.22.04.20230307" }
+}
