@@ -1,0 +1,12 @@
+resource "compute-type-set" "kubernetes-ubuntu-22_04-worker-nutanix-prism-amd64-set" {
+  code = "kubernetes-ubuntu-22_04-worker-nutanix-prism-amd64-set"
+  name = "kubernetes worker"
+  category = "ubuntu"
+  canAddNodes = true
+  dynamicCount = true
+  nameSuffix = "-worker"
+  nodeCount = 3
+  nodeType = "worker"
+  priorityOrder = 1
+  workloadType = { code = "kubernetes-ubuntu-22_04-worker-nutanix-prism-amd64" }
+}
