@@ -9,4 +9,5 @@ resource "instance-type-layout" "de1f0cc4-a345-4c30-9857-51061eedd36a" {
   memoryRequirement = 0
   provisionType = { code = "vmware" }
   supportsConvertToManaged = true
+  workloads = [ { code = "fdc093e7-b6ac-44f1-af59-3cfa8a8e181c" } ]
 }
