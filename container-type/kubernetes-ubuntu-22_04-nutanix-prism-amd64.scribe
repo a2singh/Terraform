@@ -1,0 +1,29 @@
+resource "container-type" "kubernetes-ubuntu-22_04-nutanix-prism-amd64" {
+  code = "kubernetes-ubuntu-22_04-nutanix-prism-amd64"
+  name = "nutanix-prism Kubernetes Cluster on Ubuntu 22.04"
+  uuid = "db44efe4-dae6-4637-88aa-dc0bd618942a"
+  category = "kubernetes"
+  checkTypeCode = "vmCheck"
+  cloneType = "ubuntu"
+  containerPorts = [ { code = "ubuntu.22" } ]
+  containerVersion = "22.04"
+  imageCode = "nutanix-prism morpheus kubernetes on ubuntu 22.04"
+  logTypeCode = "ubuntu"
+  mountLogs = "/var/log"
+  providerType = "nutanix-prism"
+  provisionType = { code = "nutanix-prism-provision-provider" }
+  scripts = [
+    { code = "kube-ubuntu-22-setup-script-v1" },
+    { code = "kube-adm-master-setup-script-v1" },
+    { code = "kubernetes-ectd-encrypt-install-master-script-v1" }
+  ]
+  serverType = "vm"
+  shortName = "kubernetes-ubuntu"
+  showServerLogs = true
+  statTypeCode = "server"
+  templates = [
+    { code = "do-kubeadm-cluster-master-init" },
+    { code = "kubernetes-etcd-encrypt-install-master" }
+  ]
+  virtualImage = { code = "nutanix.prism.image.morpheus.ubuntu.22.04.20230307" }
+}
