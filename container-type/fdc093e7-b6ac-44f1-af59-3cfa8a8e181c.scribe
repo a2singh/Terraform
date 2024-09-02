@@ -11,5 +11,5 @@ resource "container-type" "fdc093e7-b6ac-44f1-af59-3cfa8a8e181c" {
   shortName = "ACB207628"
   showServerLogs = true
   statTypeCode = "vm"
-  virtualImage = { code = "vmware.vsphere.image.morpheus.centos.7.5" }
+  virtualImage = { code = "vmware.vsphere.image.morpheus.oraclelinux.7.20240604" }
 }
