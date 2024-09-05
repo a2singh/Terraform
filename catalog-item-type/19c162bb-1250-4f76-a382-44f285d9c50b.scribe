@@ -1,0 +1,37 @@
+resource "catalog-item-type" "19c162bb-1250-4f76-a382-44f285d9c50b" {
+  name = "Terraform Blueprint Catalog"
+  uuid = "19c162bb-1250-4f76-a382-44f285d9c50b"
+  config = {
+    appSpec = <<EOFSCRIBE
+id: 34
+autoValidate: false
+description: test blueprint
+terraform:
+  refreshMode: manual
+  backendType: internal
+  timeoutMode: one-hour
+  configType: spec
+type: terraform
+image: /assets/branding/90x30/blueprint-terraform-bd2db256993d5bf66a82de44e10d7e8d.svg
+defaultCloud:
+  id: 14
+  code: ''
+needsReset: true
+group:
+  id: 2
+  code: ''
+name: ATMORPHTRF01
+templateParameter:
+  vpc: vpc-33ac354e
+  security_groups: sg-2b299333
+  key_name: MorpheusApp
+  power_schedule: 'on'
+  subnet: us-east-1f
+  region: ''
+
+EOFSCRIBE
+  }
+  dateCreated = "2024-09-05T09:22:18.000Z"
+  lastUpdated = "2024-09-05T09:22:18.000Z"
+  refType = "AppTemplate"
+}
