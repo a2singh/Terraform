@@ -1,0 +1,11 @@
+resource "instance-type" "xenubuntu" {
+  code = "xenubuntu"
+  name = "Xen-Ubuntu"
+  uuid = "e068ad87-f4d8-4bad-9322-61f4c5d094f0"
+  category = "os"
+  deploymentService = "defaultDeployService"
+  environmentPrefix = "XEN-UBUNTU"
+  hasAutoScale = true
+  hasDeployment = true
+  hasSettings = true
+}
