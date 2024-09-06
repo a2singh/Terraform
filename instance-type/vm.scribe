@@ -5,4 +5,5 @@ resource "instance-type" "vm" {
   category = "os"
   deploymentService = ""
   environmentPrefix = "VOLUME_ERROR"
+  layouts = [ { code = "c5d111e0-96d4-4777-8fcc-1e5c487a0816" } ]
 }
