@@ -1,0 +1,10 @@
+resource "instance-type" "xenrocky8" {
+  code = "xenrocky8"
+  name = "Xen_Rocky8"
+  uuid = "2ddf4098-9298-4bae-a9ab-544342293e1c"
+  category = "os"
+  deploymentService = "defaultDeployService"
+  environmentPrefix = "XEN_ROCKY8"
+  hasAutoScale = true
+  hasDeployment = true
+}
