@@ -1,0 +1,11 @@
+resource "instance-type" "centos8" {
+  code = "centos8"
+  name = "Xen_CentOS8"
+  uuid = "2ddf4098-9298-4bae-a9ab-544342293e1c"
+  category = "os"
+  deploymentService = "defaultDeployService"
+  environmentPrefix = "XEN_CENTOS8"
+  hasAutoScale = true
+  hasDeployment = true
+  hasSettings = true
+}

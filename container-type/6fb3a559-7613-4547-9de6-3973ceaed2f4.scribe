@@ -1,0 +1,14 @@
+resource "container-type" "6fb3a559-7613-4547-9de6-3973ceaed2f4" {
+  code = "6fb3a559-7613-4547-9de6-3973ceaed2f4"
+  name = "CentOS8"
+  uuid = "44896680-ab7b-448c-be60-cf454735d6c1"
+  containerVersion = "8"
+  entryPoint = ""
+  logTypeCode = "xen"
+  provisionType = { code = "xen" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "centos8"
+  statTypeCode = "xen"
+  virtualImage = { code = "xenserver.image.42.c2837910-3bca-6d7c-36ba-72b13b0f3b62" }
+}
