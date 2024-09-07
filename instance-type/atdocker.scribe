@@ -8,4 +8,5 @@ resource "instance-type" "atdocker" {
   hasAutoScale = true
   hasDeployment = true
   hasSettings = true
+  layouts = [ { code = "32ff2afe-01c3-41fd-b466-ed9d1cdb09e4" } ]
 }
