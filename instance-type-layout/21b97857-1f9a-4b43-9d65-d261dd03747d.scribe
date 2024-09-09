@@ -1,0 +1,13 @@
+resource "instance-type-layout" "21b97857-1f9a-4b43-9d65-d261dd03747d" {
+  code = "21b97857-1f9a-4b43-9d65-d261dd03747d"
+  name = "Xen_Windows"
+  uuid = "9fa878b9-5c3c-44df-be61-9d0ff996b9fd"
+  actions = [ { code = "generic-add-node" } ]
+  hasAutoScale = true
+  instanceType = { code = "xenwind" }
+  instanceVersion = "latest"
+  memoryRequirement = 0
+  provisionType = { code = "xen" }
+  supportsConvertToManaged = true
+  workloads = [ { code = "f34b710f-e3f9-44d3-8c32-16b828a9c6dc" } ]
+}

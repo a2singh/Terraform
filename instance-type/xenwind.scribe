@@ -1,0 +1,10 @@
+resource "instance-type" "xenwind" {
+  code = "xenwind"
+  name = "Xen_Windows"
+  uuid = "9336684d-2647-4b17-8a4d-43a3abc7dd47"
+  category = "os"
+  deploymentService = "defaultDeployService"
+  environmentPrefix = "XEN_WINDOWS"
+  hasAutoScale = true
+  hasDeployment = true
+}

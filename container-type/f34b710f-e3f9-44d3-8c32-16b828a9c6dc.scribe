@@ -1,0 +1,14 @@
+resource "container-type" "f34b710f-e3f9-44d3-8c32-16b828a9c6dc" {
+  code = "f34b710f-e3f9-44d3-8c32-16b828a9c6dc"
+  name = "Xen_Windows"
+  uuid = "43e829c1-2bb8-40b7-96f1-cbae6dc2ff97"
+  containerVersion = "latest"
+  entryPoint = ""
+  logTypeCode = "xen"
+  provisionType = { code = "xen" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "xenwind"
+  statTypeCode = "xen"
+  virtualImage = { code = "xenserver.image.42.799088a2-fcbc-f7c9-6a75-3d955eac6668" }
+}
