@@ -1,6 +1,6 @@
 resource "instance-type" "centos8" {
   code = "centos8"
-  name = "Xen_CentOS8"
+  name = "Xen_CentOS"
   uuid = "2ddf4098-9298-4bae-a9ab-544342293e1c"
   category = "os"
   deploymentService = "defaultDeployService"
@@ -8,5 +8,4 @@ resource "instance-type" "centos8" {
   hasAutoScale = true
   hasDeployment = true
   hasSettings = true
-  layouts = [ { code = "61f8a5a9-f80f-44a9-a053-5d11354a6dab" } ]
 }
