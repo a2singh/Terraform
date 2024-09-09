@@ -1,0 +1,11 @@
+resource "catalog-item-type" "Morphlab" {
+  code = "Morphlab"
+  name = "Morpheus Lab Catalog"
+  uuid = "da160fca-eaa9-4e05-a37a-d9fac743b510"
+  dateCreated = "2024-09-09T06:28:28.000Z"
+  formType = "optionTypes"
+  lastUpdated = "2024-09-09T06:33:41.000Z"
+  optionTypes = [ { code = "group" }, { code = "cloud" } ]
+  refType = "InstanceType"
+  visibility = "public"
+}
