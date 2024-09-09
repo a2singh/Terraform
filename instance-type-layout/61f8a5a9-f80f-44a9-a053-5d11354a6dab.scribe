@@ -1,13 +1,13 @@
 resource "instance-type-layout" "61f8a5a9-f80f-44a9-a053-5d11354a6dab" {
   code = "61f8a5a9-f80f-44a9-a053-5d11354a6dab"
-  name = "CentOS8"
+  name = "Xen-CentOS"
   uuid = "dd78e397-2bfa-48ac-8926-090cb0520c47"
   actions = [ { code = "generic-add-node" } ]
   hasAutoScale = true
   instanceType = { code = "centos8" }
-  instanceVersion = "8"
+  instanceVersion = "latest"
   memoryRequirement = 0
   provisionType = { code = "xen" }
   supportsConvertToManaged = true
-  workloads = [ { code = "6fb3a559-7613-4547-9de6-3973ceaed2f4" } ]
+  workloads = [ { code = "59a8cb7b-d256-4798-8c2f-53498e743203" } ]
 }
