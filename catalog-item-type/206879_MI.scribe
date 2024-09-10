@@ -11,354 +11,199 @@ tiers:
       - instance:
           type: centos
           cloud: AT VMware Cloud
+          hostName: '${userInitials.toUpperCase()}${tenant.take(3).toUpperCase()}${cloudCode.take(3).toUpperCase()}${sequence}'
           layout:
-            id: 308
-            code: vmware-centos-7.5-single
-          name: '${userInitials.toUpperCase()}${tenant.take(5).toUpperCase()}${platform.take(3).toUpperCase()}VM${sequence+10}'
-          userGroup:
-            id: ''
+            id: 351
+            code: vmware-centos-9-stream-single
         cloud:
           id: 14
         userRemovedFields:
           - instance.backup
-          - backup.commvaultClient
           - backup.commvaultBackupSet
           - backup.commvaultStoragePolicy
-          - virtualImage
-        backup:
-          veeamManagedServer: ''
-          createBackup: true
-          jobAction: new
-          jobRetentionCount: null
-          enabled: true
-          providerBackupType: -1
-          showScheduledBackupWarning: false
+        config:
+          noAgent: true
+          vmwareFolderId: /
+          resourcePoolId: pool-980
+          publicIpType: subnet
         networkInterfaces:
           - primaryInterface: true
             network:
-              id: '<%=customOptions.vm1network%>'
-              idName: VLAN0002 - Internal Server 2
+              id: "<%=customOptions.vm1network%>"
               pool:
                 id: 24
                 name: AT Morph IPv4 Pool
-            ipMode: ''
+            ipMode: static
             networkInterfaceTypeId: 4
             networkInterfaceTypeIdName: VMXNET 3
             ipAddress: 10.32.22.20
             ipAddressName: ''
             displayName: ''
+        plan:
+          id: 5468
+          code: custom.vmware
         workflow:
           taskSetId: ''
+        backup:
+          backupRepository: 1
+          veeamManagedServer: '25e13698-1676-437d-a8a3-3011ab5d27bf:1ed82f7f-02dc-42eb-926b-32e193dfa1a7'
+          jobAction: clone
+          providerBackupType: -1
         volumes:
-          - maxIOPS: null
-            displayOrder: 0
-            unitNumber: '0'
-            minStorage: 5368709120
-            configurableIOPS: false
-            uuid: 3f199d88-1f64-4421-98c0-189d4fe8f806
-            controllerMountPoint: '35375:0:4:0'
-            internalId: '[ESXi-DC2-DEMO-LUN02] Morpheus CentOS 7.5 v4/Morpheus CentOS 7.5 v4.vmdk'
-            id: 31653
-            datastoreId: autoCluster
-            maxStorage: 10737418240
-            controllerId: 35375
-            externalId: '2000'
-            virtualImageId: 210
-            size: 10
+          - rootVolume: true
             name: root
-            planResizable: true
-            rootVolume: true
+            maxStorage: 10737418240
+            size: 10
             storageType: 1
-            typeId: 1
-            resizeable: true
-            uniqueId: null
-        storageControllers:
-          - editable: false
-            typeName: IDE
-            maxDevices: 2
-            displayOrder: 0
-            active: true
-            unitNumber: null
-            reservedUnitNumber: -1
-            busNumber: '1'
-            removable: false
-            name: IDE 1
-            typeId: 2
-            id: 54
-            category: ide
-          - editable: false
-            typeName: SCSI LSI Logic Parallel
-            maxDevices: 16
-            displayOrder: 1
-            active: true
-            unitNumber: null
-            reservedUnitNumber: 7
-            busNumber: '0'
-            removable: false
-            name: SCSI 0
-            typeId: 4
-            id: 52
-            category: scsi
-          - editable: false
-            typeName: IDE
-            maxDevices: 2
-            displayOrder: 2
-            active: true
-            unitNumber: null
-            reservedUnitNumber: -1
-            busNumber: '0'
-            removable: false
-            name: IDE 0
-            typeId: 2
-            id: 53
-            category: ide
-        config:
-          resourcePoolId: pool-921
-          vmwareFolderId: /
-          noAgent: true
-        plan:
-          id: 248
-          code: vm-1024
-        group: {}
-        ports:
-          - name: ''
-            port: ''
-            lb: ''
+            maxIOPS: null
+            controllerMountPoint: '52:0:4:0'
+            minStorage: 5368709120
+            datastoreId: 496
+        group:
+          id: 2
+        servicePlanOptions:
+          maxMemory: 1073741824
+          maxCores: 1
+          coresPerSocket: 1
+          forPlan: 5468
+          maxMemory-display: GB
       - instance:
           type: centos
           cloud: AT VMware Cloud
+          hostName: '${userInitials.toUpperCase()}${tenant.take(3).toUpperCase()}${cloudCode.take(3).toUpperCase()}${sequence}'
           layout:
-            id: 308
-            code: vmware-centos-7.5-single
-          name: '${userInitials.toUpperCase()}${tenant.take(5).toUpperCase()}${platform.take(3).toUpperCase()}VM${sequence+10}'
-          userGroup:
-            id: ''
+            id: 351
+            code: vmware-centos-9-stream-single
         cloud:
           id: 14
         userRemovedFields:
           - instance.backup
-          - backup.commvaultClient
           - backup.commvaultBackupSet
           - backup.commvaultStoragePolicy
-          - virtualImage
-        backup:
-          veeamManagedServer: ''
-          createBackup: true
-          jobAction: new
-          jobRetentionCount: null
-          enabled: true
-          providerBackupType: -1
-          showScheduledBackupWarning: false
+        config:
+          noAgent: true
+          vmwareFolderId: /
+          resourcePoolId: pool-980
         networkInterfaces:
           - primaryInterface: true
             network:
-              id: '<%=customOptions.vm2network%>'
-              idName: VLAN0002 - Internal Server 2
+              id: "<%=customOptions.vm2network%>"
               pool:
                 id: 24
                 name: AT Morph IPv4 Pool
-            ipMode: ''
             networkInterfaceTypeId: 4
             networkInterfaceTypeIdName: VMXNET 3
+            ipMode: static
+            ipAddress: 10.32.22.21
+            ipAddressName: ''
+            displayName: ''
+        plan:
+          id: 5468
+          code: custom.vmware
+        servicePlanOptions:
+          maxMemory: 1073741824
+          maxCores: 1
+          coresPerSocket: 1
+          forPlan: 5468
+          maxMemory-display: GB
         workflow:
           taskSetId: ''
+        backup:
+          backupRepository: 1
+          veeamManagedServer: '25e13698-1676-437d-a8a3-3011ab5d27bf:1ed82f7f-02dc-42eb-926b-32e193dfa1a7'
+          jobAction: clone
+          providerBackupType: -1
         volumes:
-          - maxIOPS: null
-            displayOrder: 0
-            unitNumber: '0'
-            minStorage: 5368709120
-            configurableIOPS: false
-            uuid: 3f199d88-1f64-4421-98c0-189d4fe8f806
-            controllerMountPoint: '35375:0:4:0'
-            internalId: '[ESXi-DC2-DEMO-LUN02] Morpheus CentOS 7.5 v4/Morpheus CentOS 7.5 v4.vmdk'
-            id: 31653
-            datastoreId: auto
-            maxStorage: 10737418240
-            controllerId: 35375
-            externalId: '2000'
-            virtualImageId: 210
-            size: 10
+          - id: 19
             name: root
+            controllerId: 52
+            controllerMountPoint: '52:0:4:0'
+            resizeable: true
             planResizable: true
             rootVolume: true
-            storageType: 1
-            typeId: 1
-            resizeable: true
-            uniqueId: null
-        storageControllers:
-          - editable: false
-            typeName: IDE
-            maxDevices: 2
+            unitNumber: null
+            typeId: 43
+            configurableIOPS: false
+            maxStorage: 10737418240
             displayOrder: 0
-            active: true
-            unitNumber: null
-            reservedUnitNumber: -1
-            busNumber: '0'
-            removable: false
-            name: IDE 0
-            typeId: 2
-            id: 53
-            category: ide
-          - editable: false
-            typeName: SCSI LSI Logic Parallel
-            maxDevices: 16
-            displayOrder: 1
-            active: true
-            unitNumber: null
-            reservedUnitNumber: 7
-            busNumber: '0'
-            removable: false
-            name: SCSI 0
-            typeId: 4
-            id: 52
-            category: scsi
-          - editable: false
-            typeName: IDE
-            maxDevices: 2
-            displayOrder: 2
-            active: true
-            unitNumber: null
-            reservedUnitNumber: -1
-            busNumber: '1'
-            removable: false
-            name: IDE 1
-            typeId: 2
-            id: 54
-            category: ide
-        config:
-          resourcePoolId: pool-921
-          vmwareFolderId: /
-          noAgent: true
-        plan:
-          id: 248
-          code: vm-1024
-        group: {}
-        ports:
-          - name: ''
-            port: ''
-            lb: ''
+            maxIOPS: null
+            uuid: fb3e03d7-276f-4f85-a5a9-d25709d117a8
+            uniqueId: vmware.vsphere.image.morpheus.centos.9-stream.volume.0
+            externalId: null
+            internalId: null
+            virtualImageId: 2709
+            size: 10
+            minStorage: 5368709120
+            storageType: 1
+            datastoreId: 496
       - instance:
           type: centos
           cloud: AT VMware Cloud
+          hostName: '${userInitials.toUpperCase()}${tenant.take(3).toUpperCase()}${cloudCode.take(3).toUpperCase()}${sequence}'
           layout:
-            id: 308
-            code: vmware-centos-7.5-single
-          name: '${userInitials.toUpperCase()}${tenant.take(5).toUpperCase()}${platform.take(3).toUpperCase()}VM${sequence+10}'
-          userGroup:
-            id: ''
+            id: 351
+            code: vmware-centos-9-stream-single
         cloud:
           id: 14
         userRemovedFields:
           - instance.backup
-          - backup.commvaultClient
           - backup.commvaultBackupSet
           - backup.commvaultStoragePolicy
-          - virtualImage
-        backup:
-          veeamManagedServer: ''
-          createBackup: true
-          jobAction: new
-          jobRetentionCount: null
-          enabled: true
-          providerBackupType: -1
-          showScheduledBackupWarning: false
+        config:
+          noAgent: true
+          vmwareFolderId: /
+          resourcePoolId: pool-980
+          publicIpType: subnet
         networkInterfaces:
           - primaryInterface: true
             network:
-              id: '<%=customOptions.vm3network%>'
-              idName: VLAN0002 - Internal Server 2
+              id: "<%=customOptions.vm3network%>"
               pool:
                 id: 24
                 name: AT Morph IPv4 Pool
-            ipMode: ''
+            ipMode: static
             networkInterfaceTypeId: 4
             networkInterfaceTypeIdName: VMXNET 3
+            ipAddress: 10.32.22.22
+            ipAddressName: ''
+            displayName: ''
+        plan:
+          id: 5468
+          code: custom.vmware
         workflow:
           taskSetId: ''
+        backup:
+          backupRepository: 1
+          veeamManagedServer: '25e13698-1676-437d-a8a3-3011ab5d27bf:1ed82f7f-02dc-42eb-926b-32e193dfa1a7'
+          jobAction: clone
+          providerBackupType: -1
         volumes:
-          - maxIOPS: null
-            displayOrder: 0
-            unitNumber: '0'
-            minStorage: 5368709120
-            configurableIOPS: false
-            uuid: 3f199d88-1f64-4421-98c0-189d4fe8f806
-            controllerMountPoint: '35375:0:4:0'
-            internalId: '[ESXi-DC2-DEMO-LUN02] Morpheus CentOS 7.5 v4/Morpheus CentOS 7.5 v4.vmdk'
-            id: 31653
-            datastoreId: auto
-            maxStorage: 10737418240
-            controllerId: 35375
-            externalId: '2000'
-            virtualImageId: 210
-            size: 10
+          - rootVolume: true
             name: root
-            planResizable: true
-            rootVolume: true
+            maxStorage: 10737418240
+            size: 10
             storageType: 1
-            typeId: 1
-            resizeable: true
-            uniqueId: null
-        storageControllers:
-          - editable: false
-            typeName: SCSI LSI Logic Parallel
-            maxDevices: 16
-            displayOrder: 0
-            active: true
-            unitNumber: null
-            reservedUnitNumber: 7
-            busNumber: '0'
-            removable: false
-            name: SCSI 0
-            typeId: 4
-            id: 52
-            category: scsi
-          - editable: false
-            typeName: IDE
-            maxDevices: 2
-            displayOrder: 1
-            active: true
-            unitNumber: null
-            reservedUnitNumber: -1
-            busNumber: '0'
-            removable: false
-            name: IDE 0
-            typeId: 2
-            id: 53
-            category: ide
-          - editable: false
-            typeName: IDE
-            maxDevices: 2
-            displayOrder: 2
-            active: true
-            unitNumber: null
-            reservedUnitNumber: -1
-            busNumber: '1'
-            removable: false
-            name: IDE 1
-            typeId: 2
-            id: 54
-            category: ide
-        config:
-          resourcePoolId: pool-921
-          vmwareFolderId: /
-          noAgent: false
-        plan:
-          id: 248
-          code: vm-1024
-        group: {}
-        ports:
-          - name: ''
-            port: ''
-            lb: ''
+            maxIOPS: null
+            controllerMountPoint: '52:0:4:0'
+            minStorage: 5368709120
+            datastoreId: 496
+        group:
+          id: 2
+        servicePlanOptions:
+          maxMemory: 1073741824
+          maxCores: 1
+          coresPerSocket: 1
+          forPlan: 5468
+          maxMemory-display: GB
     tierIndex: 1
 defaultCloud:
   id: 14
   code: ''
-name: ATMORPHAPP001
+name: 3_Instances
 group:
   id: 2
   code: ''
-environment: Morph Test Machine
+environment: ''
 type: morpheus
 
 EOFSCRIBE
@@ -368,6 +213,6 @@ EOFSCRIBE
   form = { code = "206879" }
   formConfig = "{\"optOut\":{\"6849a8ca-d5d6-4622-8f73-e42278752d59\":false}}"
   formType = "form"
-  lastUpdated = "2024-07-04T11:25:42.000Z"
+  lastUpdated = "2024-09-10T04:54:06.000Z"
   refType = "AppTemplate"
 }
