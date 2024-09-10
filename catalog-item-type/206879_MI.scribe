@@ -28,14 +28,14 @@ tiers:
         networkInterfaces:
           - primaryInterface: true
             network:
-              id: "<%=customOptions.vm1network-network.networkId%>"
+              id: network-860
               pool:
                 id: 24
                 name: AT Morph IPv4 Pool
             networkInterfaceTypeId: 4
             networkInterfaceTypeIdName: VMXNET 3
             ipMode: static
-            ipAddress: 10.32.22.20
+            ipAddress: "<%=customOptions.vm1IP%>"
             ipAddressName: ''
             displayName: ''
         plan:
@@ -97,14 +97,14 @@ tiers:
         networkInterfaces:
           - primaryInterface: true
             network:
-              id: "<%=customOptions.vm2network-network.networkId%>"
+              id: network-860
               pool:
                 id: 24
                 name: AT Morph IPv4 Pool
             networkInterfaceTypeId: 4
             networkInterfaceTypeIdName: VMXNET 3
             ipMode: static
-            ipAddress: 10.32.22.21
+            ipAddress: "<%=customOptions.vm2IP%>"
             ipAddressName: ''
             displayName: ''
         plan:
@@ -166,14 +166,14 @@ tiers:
         networkInterfaces:
           - primaryInterface: true
             network:
-              id: "<%=customOptions.vm3network-network.networkId%>"
+              id: network-860
               pool:
                 id: 24
                 name: AT Morph IPv4 Pool
             networkInterfaceTypeId: 4
             networkInterfaceTypeIdName: VMXNET 3
             ipMode: static
-            ipAddress: 10.32.22.22
+            ipAddress: "<%=customOptions.vm3IP%>"
             ipAddressName: ''
             displayName: ''
         plan:
@@ -231,6 +231,6 @@ EOFSCRIBE
   form = { code = "206879" }
   formConfig = "{\"optOut\":{\"64b8a44f-2bcf-4cfd-80a0-455a12616ba4\":false,\"6849a8ca-d5d6-4622-8f73-e42278752d59\":false,\"a4e84df1-c528-48e0-803f-5ddea67a3142\":false}}"
   formType = "form"
-  lastUpdated = "2024-09-10T05:45:19.000Z"
+  lastUpdated = "2024-09-10T06:06:11.000Z"
   refType = "AppTemplate"
 }
