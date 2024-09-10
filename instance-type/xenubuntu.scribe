@@ -8,4 +8,5 @@ resource "instance-type" "xenubuntu" {
   hasAutoScale = true
   hasDeployment = true
   hasSettings = true
+  layouts = [ { code = "f3e2f9ec-0a26-4915-9e49-a56475dc27f6" } ]
 }
