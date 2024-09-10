@@ -5,9 +5,9 @@ resource "instance-type-layout" "afd799b9-c884-445d-b95d-dba0bd2101bb" {
   actions = [ { code = "generic-add-node" } ]
   hasAutoScale = true
   instanceType = { code = "xenubuntu" }
-  instanceVersion = "22.04"
+  instanceVersion = "16,18,20"
   memoryRequirement = 0
   provisionType = { code = "xen" }
   supportsConvertToManaged = true
-  workloads = [ { code = "bfc986cc-13cd-42e0-948b-2c02513801c1" } ]
+  workloads = [ { code = "1792118c-b58b-4a6d-9ab8-46b3320897d9" } ]
 }
