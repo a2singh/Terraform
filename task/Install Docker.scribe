@@ -1,0 +1,15 @@
+resource "task" "Install Docker" {
+  name = "Install Docker"
+  uuid = "60f03db8-853f-490c-97dc-e4f880dba4be"
+  dateCreated = "2024-09-10T12:11:18.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2024-09-10T12:11:18.000Z"
+  options = [
+    { optionType = { code = "shell.sudo" }, value = "on" },
+    {
+      content = { uuid = "20a9cf79-5a96-4835-b3b5-6f0b8872e696" }
+      optionType = { code = "script" }
+    }
+  ]
+  taskType = { code = "script" }
+}
