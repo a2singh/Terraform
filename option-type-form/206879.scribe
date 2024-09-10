@@ -192,143 +192,44 @@ EOFSCRIBE
       type = "diskManager"
     },
     {
-      code = "a4e84df1-c528-48e0-803f-5ddea67a3142"
-      name = "a4e84df1-c528-48e0-803f-5ddea67a3142"
-      uuid = "e5e63498-aa7d-4ead-be8e-9393fcb0bd4f"
-      config = {
-        addon = ""
-        addonPosition = ""
-        cloudField = "d2bc304c-62cc-4487-af58-c6c0535823a3"
-        cloudFieldType = "field"
-        cloudId = ""
-        defaultValue = <<EOFSCRIBE
-[
- {
-  "primaryInterface": true,
-  "displayOrder": 0,
-  "ipMode": "",
-  "ipAddress": "10.32.22.20",
-  "networkInterfaceTypeId": 4,
-  "network": {
-   "id": "network-860",
-   "pool": {
-    "id": 24
-   }
-  }
- }
-]
-EOFSCRIBE
-        enableIPModeSelection = true
-        groupField = "b9d96b22-1a0b-4514-9670-870e02674e23"
-        groupFieldType = "field"
-        groupId = ""
-        layoutField = "18ea982d-9447-498f-88f4-ae5c77188e94"
-        layoutFieldType = "field"
-        layoutId = ""
-        poolField = "5c00feea-2fad-4c90-95dd-9803e098429e"
-        poolFieldType = "field"
-        poolId = ""
-        showNetworkTypeSelection = true
-      }
+      code = "f7fbeb5a-693c-4116-ad27-8d23132570a5"
+      name = "f7fbeb5a-693c-4116-ad27-8d23132570a5"
+      uuid = "6a07c95a-9e97-4ead-80b3-beff1f61aa85"
+      config = { addon = "", addonPosition = "" }
       displayOrder = 7
       fieldContext = "config.customOptions"
-      fieldLabel = "Instance1 Network"
-      fieldName = "vm1network"
+      fieldLabel = "Instance1 IP"
+      fieldName = "vm1IP"
       formField = true
-      refCode = "a4e84df1-c528-48e0-803f-5ddea67a3142"
-      type = "networkManager"
+      placeHolder = "x.x.x.x"
+      refCode = "f7fbeb5a-693c-4116-ad27-8d23132570a5"
+      verifyPattern = "\\b((25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\.){3}(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\b"
     },
     {
-      code = "f7b3b568-5f6b-4cf6-b067-8f18273224ea"
-      name = "f7b3b568-5f6b-4cf6-b067-8f18273224ea"
-      uuid = "645ce9dc-12f3-401a-b9db-743376571c6a"
-      config = {
-        addon = ""
-        addonPosition = ""
-        cloudField = "d2bc304c-62cc-4487-af58-c6c0535823a3"
-        cloudFieldType = "field"
-        cloudId = ""
-        defaultValue = <<EOFSCRIBE
-[
- {
-  "primaryInterface": true,
-  "displayOrder": 0,
-  "ipMode": "",
-  "ipAddress": "10.32.22.21",
-  "networkInterfaceTypeId": 4,
-  "network": {
-   "id": "network-860",
-   "pool": {
-    "id": 24
-   }
-  }
- }
-]
-EOFSCRIBE
-        enableIPModeSelection = true
-        groupField = "b9d96b22-1a0b-4514-9670-870e02674e23"
-        groupFieldType = "field"
-        groupId = ""
-        layoutField = "18ea982d-9447-498f-88f4-ae5c77188e94"
-        layoutFieldType = "field"
-        layoutId = ""
-        poolField = "5c00feea-2fad-4c90-95dd-9803e098429e"
-        poolFieldType = "field"
-        poolId = ""
-        showNetworkTypeSelection = true
-      }
+      code = "821796c5-5211-40c1-829b-b3f84ccf77cb"
+      name = "821796c5-5211-40c1-829b-b3f84ccf77cb"
+      uuid = "63c20f85-b259-4fe6-8e69-5b687054c0e4"
       displayOrder = 8
       fieldContext = "config.customOptions"
-      fieldLabel = "Instance2 Network"
-      fieldName = "vm2network"
+      fieldLabel = "Instance2 IP"
+      fieldName = "vm2IP"
       formField = true
-      refCode = "f7b3b568-5f6b-4cf6-b067-8f18273224ea"
-      type = "networkManager"
+      placeHolder = "x.x.x.x"
+      refCode = "821796c5-5211-40c1-829b-b3f84ccf77cb"
+      verifyPattern = "\\b((25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\.){3}(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\b"
     },
     {
-      code = "6849a8ca-d5d6-4622-8f73-e42278752d59"
-      name = "6849a8ca-d5d6-4622-8f73-e42278752d59"
-      uuid = "047c197c-6932-4d26-8492-ae47a2157448"
-      config = {
-        cloudField = "d2bc304c-62cc-4487-af58-c6c0535823a3"
-        cloudFieldType = "field"
-        cloudId = ""
-        defaultValue = <<EOFSCRIBE
-[
- {
-  "primaryInterface": true,
-  "displayOrder": 0,
-  "ipMode": "",
-  "ipAddress": "10.32.22.22",
-  "networkInterfaceTypeId": 4,
-  "network": {
-   "id": "network-860",
-   "pool": {
-    "id": 24
-   }
-  }
- }
-]
-EOFSCRIBE
-        enableIPModeSelection = true
-        groupField = "b9d96b22-1a0b-4514-9670-870e02674e23"
-        groupFieldType = "field"
-        groupId = ""
-        layoutField = "18ea982d-9447-498f-88f4-ae5c77188e94"
-        layoutFieldType = "field"
-        layoutId = ""
-        poolField = "5c00feea-2fad-4c90-95dd-9803e098429e"
-        poolFieldType = "field"
-        poolId = ""
-        showNetworkTypeSelection = true
-      }
+      code = "a7b202a4-41f7-425a-9f37-3cd7a3fd81bc"
+      name = "a7b202a4-41f7-425a-9f37-3cd7a3fd81bc"
+      uuid = "4841a18a-9fa2-450b-82fe-290b5814cd80"
       displayOrder = 9
       fieldContext = "config.customOptions"
-      fieldLabel = "Instance3 Network"
-      fieldName = "vm3network"
+      fieldLabel = "Instance3 IP"
+      fieldName = "vm3IP"
       formField = true
-      refCode = "6849a8ca-d5d6-4622-8f73-e42278752d59"
-      type = "networkManager"
+      placeHolder = "x.x.x.x"
+      refCode = "a7b202a4-41f7-425a-9f37-3cd7a3fd81bc"
+      verifyPattern = "\\b((25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\.){3}(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\b"
     }
   ]
 }
