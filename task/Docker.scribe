@@ -1,0 +1,15 @@
+resource "task" "Docker" {
+  name = "Docker"
+  uuid = "383cf0a0-ee52-4269-9123-8cf709bcafe4"
+  dateCreated = "2024-09-10T12:48:07.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2024-09-10T12:48:07.000Z"
+  options = [
+    {
+      content = { uuid = "386869f6-4098-46ee-883e-327a387d80f7" }
+      optionType = { code = "script" }
+    },
+    { optionType = { code = "shell.sudo" }, value = "on" }
+  ]
+  taskType = { code = "script" }
+}
