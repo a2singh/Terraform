@@ -201,7 +201,23 @@ EOFSCRIBE
         cloudField = "d2bc304c-62cc-4487-af58-c6c0535823a3"
         cloudFieldType = "field"
         cloudId = ""
-        defaultValue = ""
+        defaultValue = <<EOFSCRIBE
+[
+ {
+  "primaryInterface": true,
+  "displayOrder": 0,
+  "ipMode": "",
+  "ipAddress": "10.32.22.20",
+  "networkInterfaceTypeId": 4,
+  "network": {
+   "id": "network-860",
+   "pool": {
+    "id": 24
+   }
+  }
+ }
+]
+EOFSCRIBE
         enableIPModeSelection = true
         groupField = "b9d96b22-1a0b-4514-9670-870e02674e23"
         groupFieldType = "field"
@@ -232,7 +248,23 @@ EOFSCRIBE
         cloudField = "d2bc304c-62cc-4487-af58-c6c0535823a3"
         cloudFieldType = "field"
         cloudId = ""
-        defaultValue = ""
+        defaultValue = <<EOFSCRIBE
+[
+ {
+  "primaryInterface": true,
+  "displayOrder": 0,
+  "ipMode": "",
+  "ipAddress": "10.32.22.21",
+  "networkInterfaceTypeId": 4,
+  "network": {
+   "id": "network-860",
+   "pool": {
+    "id": 24
+   }
+  }
+ }
+]
+EOFSCRIBE
         enableIPModeSelection = true
         groupField = "b9d96b22-1a0b-4514-9670-870e02674e23"
         groupFieldType = "field"
@@ -261,7 +293,23 @@ EOFSCRIBE
         cloudField = "d2bc304c-62cc-4487-af58-c6c0535823a3"
         cloudFieldType = "field"
         cloudId = ""
-        defaultValue = ""
+        defaultValue = <<EOFSCRIBE
+[
+ {
+  "primaryInterface": true,
+  "displayOrder": 0,
+  "ipMode": "",
+  "ipAddress": "10.32.22.22",
+  "networkInterfaceTypeId": 4,
+  "network": {
+   "id": "network-860",
+   "pool": {
+    "id": 24
+   }
+  }
+ }
+]
+EOFSCRIBE
         enableIPModeSelection = true
         groupField = "b9d96b22-1a0b-4514-9670-870e02674e23"
         groupFieldType = "field"
