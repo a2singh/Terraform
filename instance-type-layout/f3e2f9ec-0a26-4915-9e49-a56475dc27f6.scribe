@@ -5,7 +5,7 @@ resource "instance-type-layout" "f3e2f9ec-0a26-4915-9e49-a56475dc27f6" {
   actions = [ { code = "generic-add-node" } ]
   hasAutoScale = true
   instanceType = { code = "xenubuntu" }
-  instanceVersion = "latest"
+  instanceVersion = "20.01"
   memoryRequirement = 0
   provisionType = { code = "xen" }
   supportsConvertToManaged = true
