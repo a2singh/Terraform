@@ -1,0 +1,14 @@
+resource "container-type" "d23862e0-2e73-4331-8d57-3288e02ea77b" {
+  code = "d23862e0-2e73-4331-8d57-3288e02ea77b"
+  name = "Xen-CentOS9"
+  uuid = "0e65cf14-5103-4839-95cb-9f85726627cd"
+  containerVersion = "9"
+  entryPoint = ""
+  logTypeCode = "xen"
+  provisionType = { code = "xen" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "centxen"
+  statTypeCode = "xen"
+  virtualImage = { code = "xenserver.image.42.ac110512-5466-b973-9aa2-55de45ded67c" }
+}
