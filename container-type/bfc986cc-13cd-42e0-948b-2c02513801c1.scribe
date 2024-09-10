@@ -1,0 +1,14 @@
+resource "container-type" "bfc986cc-13cd-42e0-948b-2c02513801c1" {
+  code = "bfc986cc-13cd-42e0-948b-2c02513801c1"
+  name = "Xen-Ubuntu"
+  uuid = "c7baaa90-c005-41c6-8434-37e1114f0895"
+  containerVersion = "22.04"
+  entryPoint = ""
+  logTypeCode = "xen"
+  provisionType = { code = "xen" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "ubntxen"
+  statTypeCode = "xen"
+  virtualImage = { code = "scvmm.image.41.8cd49d19-31e8-494a-9524-74811da3bf66" }
+}

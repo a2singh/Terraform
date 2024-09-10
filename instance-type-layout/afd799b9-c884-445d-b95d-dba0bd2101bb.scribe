@@ -1,0 +1,13 @@
+resource "instance-type-layout" "afd799b9-c884-445d-b95d-dba0bd2101bb" {
+  code = "afd799b9-c884-445d-b95d-dba0bd2101bb"
+  name = "Xen-Ubuntu"
+  uuid = "b781e4b6-4a7f-48d5-8eca-800e32dda541"
+  actions = [ { code = "generic-add-node" } ]
+  hasAutoScale = true
+  instanceType = { code = "xenubuntu" }
+  instanceVersion = "22.04"
+  memoryRequirement = 0
+  provisionType = { code = "xen" }
+  supportsConvertToManaged = true
+  workloads = [ { code = "bfc986cc-13cd-42e0-948b-2c02513801c1" } ]
+}
