@@ -1,0 +1,10 @@
+resource "instance-type" "vcenterubnt" {
+  code = "vcenterubnt"
+  name = "VCenter_Ubuntu"
+  uuid = "c67c1a3f-4c6f-4ba8-8bfb-249d3f19af3e"
+  category = "os"
+  deploymentService = "defaultDeployService"
+  environmentPrefix = "VCENTER_UBUNTU"
+  hasAutoScale = true
+  hasDeployment = true
+}

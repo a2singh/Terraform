@@ -1,0 +1,12 @@
+resource "instance-type-layout" "2fccad16-0374-4a59-81e8-6f277ea8262e" {
+  code = "2fccad16-0374-4a59-81e8-6f277ea8262e"
+  name = "Morpheus Ubuntu 20.04 v1"
+  uuid = "0739383e-092b-4b7e-a82c-f87f5cc0dfdd"
+  actions = [ { code = "generic-add-node" } ]
+  hasAutoScale = true
+  instanceType = { code = "vcenterubnt" }
+  instanceVersion = "20.04 v1"
+  memoryRequirement = 0
+  provisionType = { code = "vmware" }
+  supportsConvertToManaged = true
+}
