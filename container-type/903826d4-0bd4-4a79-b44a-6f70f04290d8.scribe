@@ -1,0 +1,14 @@
+resource "container-type" "903826d4-0bd4-4a79-b44a-6f70f04290d8" {
+  code = "903826d4-0bd4-4a79-b44a-6f70f04290d8"
+  name = "Xen-Ubuntu20.04"
+  uuid = "9d8ae47c-5d29-43d6-b87e-9c3b89b6c188"
+  containerVersion = "20.04"
+  entryPoint = ""
+  logTypeCode = "xen"
+  provisionType = { code = "xen" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "xenubuntu20.04"
+  statTypeCode = "xen"
+  virtualImage = { code = "xenserver.image.42.9ae3d0a6-ac4c-731c-63d0-de29113ef830" }
+}
