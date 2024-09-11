@@ -1,0 +1,15 @@
+resource "container-type" "40999769-872f-4c5f-8686-8d439b92340e" {
+  code = "40999769-872f-4c5f-8686-8d439b92340e"
+  name = "Ubuntu 20.04 v1"
+  uuid = "b1eabbbd-2fe6-4ae3-abf6-6f2bff1a6477"
+  containerVersion = "20.04 v1"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "ubnt20.04"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "vmware.fusion.image.morpheus.ubuntu.20.04.4.amd64-v2" }
+}
