@@ -9,6 +9,7 @@ resource "container-type" "1792118c-b58b-4a6d-9ab8-46b3320897d9" {
   repositoryImage = ""
   serverType = "vm"
   shortName = "ubntxen20.04"
+  showServerLogs = true
   statTypeCode = "xen"
   virtualImage = { code = "xenserver.image.42.9ae3d0a6-ac4c-731c-63d0-de29113ef830" }
 }
