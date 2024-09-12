@@ -1,0 +1,13 @@
+resource "instance-type-layout" "158f271b-d260-4b3f-b7a1-96a3e8ee6385" {
+  code = "158f271b-d260-4b3f-b7a1-96a3e8ee6385"
+  name = "NPC-Ubuntu20.04"
+  uuid = "d15613ad-f257-421c-adca-7684cb83a5b3"
+  actions = [ { code = "generic-add-node" } ]
+  hasAutoScale = true
+  instanceType = { code = "npc.ubuntu20.04" }
+  instanceVersion = "20.04 V1"
+  memoryRequirement = 0
+  provisionType = { code = "nutanix-prism-provision-provider" }
+  supportsConvertToManaged = true
+  workloads = [ { code = "c6faf06f-8252-4efe-b88f-f3b892790810" } ]
+}
