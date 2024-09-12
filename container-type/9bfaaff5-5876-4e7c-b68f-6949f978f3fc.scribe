@@ -1,0 +1,16 @@
+resource "container-type" "9bfaaff5-5876-4e7c-b68f-6949f978f3fc" {
+  code = "9bfaaff5-5876-4e7c-b68f-6949f978f3fc"
+  name = "Xen-Ubuntu20.04"
+  uuid = "baa27cf0-102f-4e31-8c8d-1aa18ab4928b"
+  containerLogs = [ { uuid = "b7f7857e-de34-4540-8de0-55e2d64f6681" } ]
+  containerVersion = "20.04"
+  entryPoint = ""
+  logTypeCode = "xen"
+  mountLogs = "/var/log/morpheus-node/morphd/xenlog"
+  provisionType = { code = "xen" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "xenubuntu20.04"
+  statTypeCode = "xen"
+  virtualImage = { code = "xenserver.image.42.9ae3d0a6-ac4c-731c-63d0-de29113ef830" }
+}

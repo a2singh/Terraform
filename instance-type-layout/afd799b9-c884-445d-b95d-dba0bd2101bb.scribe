@@ -9,5 +9,5 @@ resource "instance-type-layout" "afd799b9-c884-445d-b95d-dba0bd2101bb" {
   memoryRequirement = 0
   provisionType = { code = "xen" }
   supportsConvertToManaged = true
-  workloads = [ { code = "903826d4-0bd4-4a79-b44a-6f70f04290d8" } ]
+  workloads = [ { code = "9bfaaff5-5876-4e7c-b68f-6949f978f3fc" } ]
 }

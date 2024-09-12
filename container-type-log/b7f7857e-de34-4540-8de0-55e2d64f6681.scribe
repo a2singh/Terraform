@@ -1,0 +1,6 @@
+resource "container-type-log" "b7f7857e-de34-4540-8de0-55e2d64f6681" {
+  name = "logs"
+  uuid = "b7f7857e-de34-4540-8de0-55e2d64f6681"
+  containerPath = "/var/log/morpheus-node/morphd/xenlog"
+  hostPath = "/var/log/morpheus-node/morphd/xenlog"
+}
