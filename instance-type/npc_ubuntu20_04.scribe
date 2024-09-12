@@ -1,0 +1,11 @@
+resource "instance-type" "npc.ubuntu20.04" {
+  code = "npc.ubuntu20.04"
+  name = "NPC-Ubuntu20.04 V1"
+  uuid = "4cff0726-8cde-4031-897f-6f5e1b0c98b5"
+  category = "os"
+  deploymentService = "defaultDeployService"
+  environmentPrefix = "NPC-UBUNTU20_04_V1"
+  hasAutoScale = true
+  hasDeployment = true
+  hasSettings = true
+}
