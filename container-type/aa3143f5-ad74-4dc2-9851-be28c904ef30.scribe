@@ -1,0 +1,17 @@
+resource "container-type" "aa3143f5-ad74-4dc2-9851-be28c904ef30" {
+  code = "aa3143f5-ad74-4dc2-9851-be28c904ef30"
+  name = "NPC-Ubuntu"
+  uuid = "64cda996-23c6-4984-bfe4-9dd0e3d1af66"
+  checkTypeCode = "vmCheck"
+  containerVersion = "20.04"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "nutanix-prism-provision-provider" }
+  repositoryImage = ""
+  shortName = "ubntnpc"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = {
+    code = "nutanix.prism.image.morpheus.ubuntu.20.04.20240604.ubuntu.20.04"
+  }
+}

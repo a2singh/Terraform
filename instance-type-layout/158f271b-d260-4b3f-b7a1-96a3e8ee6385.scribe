@@ -9,5 +9,5 @@ resource "instance-type-layout" "158f271b-d260-4b3f-b7a1-96a3e8ee6385" {
   memoryRequirement = 0
   provisionType = { code = "nutanix-prism-provision-provider" }
   supportsConvertToManaged = true
-  workloads = [ { code = "c6faf06f-8252-4efe-b88f-f3b892790810" } ]
+  workloads = [ { code = "aa3143f5-ad74-4dc2-9851-be28c904ef30" } ]
 }
