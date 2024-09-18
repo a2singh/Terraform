@@ -1,0 +1,11 @@
+resource "instance-type" "207822" {
+  code = "207822"
+  name = "207822"
+  uuid = "1f9e63af-4a92-49ef-a6be-e306af5fc829"
+  category = "os"
+  deploymentService = "defaultDeployService"
+  environmentPrefix = "207822"
+  hasAutoScale = true
+  hasDeployment = true
+  hasSettings = true
+}

@@ -1,0 +1,15 @@
+resource "container-type" "e1315d59-a8fb-4910-aec3-7240a101f9f1" {
+  code = "e1315d59-a8fb-4910-aec3-7240a101f9f1"
+  name = "207822"
+  uuid = "b561f90e-9a6a-4e9a-a631-21acd0435a87"
+  containerVersion = "2019"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "207822"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "vmware.vsphere.image.9.vm-66404" }
+}
