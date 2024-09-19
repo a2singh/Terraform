@@ -1,10 +1,6 @@
 resource "file-content" "d44ce246-4116-4274-b807-e0a40f41afa6" {
   uuid = "d44ce246-4116-4274-b807-e0a40f41afa6"
-  content = <<EOFSCRIBE
-#!/bin/bash
-echo 'Hello, World!'
-
-EOFSCRIBE
+  content = "atulsingh"
   dateCreated = "2023-10-19T08:57:40.000Z"
-  lastUpdated = "2024-02-16T05:08:42.000Z"
+  lastUpdated = "2024-09-19T13:43:16.000Z"
 }
