@@ -6,12 +6,12 @@ resource "task" "AT test Tower Job" {
   lastUpdated = "2024-09-09T08:35:59.000Z"
   options = [
     {
-      optionType = { code = "ansibleTowerJobTemplateId" }
-      value = { code = "ansibleTower.jobTemplate.26.18" }
-    },
-    {
       optionType = { code = "ansibleTowerIntegrationId" }
       value = { name = "AT Ansible Tower" }
+    },
+    {
+      optionType = { code = "ansibleTowerJobTemplateId" }
+      value = { code = "ansibleTower.jobTemplate.26.18" }
     },
     {
       optionType = { code = "ansibleTowerInventoryId" }
