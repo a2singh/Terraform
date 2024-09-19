@@ -5,4 +5,10 @@ resource "instance-type" "cd204488" {
   category = "cloud"
   deploymentService = ""
   environmentPrefix = "204488"
+  layouts = [
+    { code = "19eb8aa9-20d9-4f1b-a1d9-a6a797bb732b" },
+    { code = "8b26019a-41a4-4647-914b-034c087c5f8c" },
+    { code = "cdfa01dc-6952-4800-b336-5b574b616640" },
+    { code = "f91963bf-e0ca-4d1c-ba5b-8edea6518aec" }
+  ]
 }
