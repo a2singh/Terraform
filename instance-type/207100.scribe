@@ -9,6 +9,5 @@ resource "instance-type" "207100" {
   hasDeployment = true
   hasSettings = true
   labels = [ "HPE GPC" ]
-  layouts = [ { code = "f80288f7-6696-4a44-9024-42d1ffbcf024" } ]
   optionTypes = [ { code = "app_name" } ]
 }
