@@ -7,11 +7,11 @@ resource "task" "AT-Task" {
   labels = [ "Test Task" ]
   lastUpdated = "2024-04-17T08:33:29.000Z"
   options = [
+    { optionType = { code = "shell.sudo" }, value = "on" },
     {
       content = { uuid = "d44ce246-4116-4274-b807-e0a40f41afa6" }
       optionType = { code = "script" }
-    },
-    { optionType = { code = "shell.sudo" }, value = "on" }
+    }
   ]
   taskType = { code = "script" }
   visibility = "public"
