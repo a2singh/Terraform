@@ -14,11 +14,16 @@ resource "option-type-form" "testing" {
       code = "764b6506-8eaa-4c26-9b7d-56af6ec8a8c5"
       name = "764b6506-8eaa-4c26-9b7d-56af6ec8a8c5"
       uuid = "eb1c0920-f6ed-4907-ba9c-678a66d2356b"
-      defaultValue = "2"
+      config = {
+        addon = ""
+        addonPosition = ""
+        retainDefault = false
+      }
       fieldContext = "config.customOptions"
       fieldLabel = "Groups"
-      fieldName = "group"
+      fieldName = "group5"
       formField = true
+      refCode = "764b6506-8eaa-4c26-9b7d-56af6ec8a8c5"
       type = "group"
     },
     {
@@ -26,7 +31,9 @@ resource "option-type-form" "testing" {
       name = "7c87386d-4230-4da3-b10c-caf4a2a56a52"
       uuid = "71ced9e5-ceeb-485b-9c89-25a9f2e353b1"
       config = {
-        cloudType = 20
+        addon = ""
+        addonPosition = ""
+        cloudType = ""
         filterResource = false
         group = "764b6506-8eaa-4c26-9b7d-56af6ec8a8c5"
         groupFieldType = "field"
@@ -34,19 +41,49 @@ resource "option-type-form" "testing" {
         instanceTypeCode = ""
         instanceTypeFieldCode = ""
         instanceTypeFieldType = "field"
+        retainDefault = false
       }
       displayOrder = 1
       fieldContext = "config.customOptions"
       fieldLabel = "Clouds"
       fieldName = "cloud"
       formField = true
+      refCode = "7c87386d-4230-4da3-b10c-caf4a2a56a52"
       type = "cloud"
+    },
+    {
+      code = "07efcce5-b32f-4cdd-b679-ac3de619806f"
+      name = "07efcce5-b32f-4cdd-b679-ac3de619806f"
+      uuid = "d8fc27d7-323e-49d4-a0f6-a4fa56c85632"
+      config = {
+        addon = ""
+        addonPosition = ""
+        cloudField = "7c87386d-4230-4da3-b10c-caf4a2a56a52"
+        cloudFieldType = "field"
+        cloudId = ""
+        groupField = "764b6506-8eaa-4c26-9b7d-56af6ec8a8c5"
+        groupFieldType = "field"
+        groupId = ""
+        instanceTypeCode = "centos"
+        instanceTypeFieldCode = ""
+        instanceTypeFieldType = "value"
+        retainDefault = false
+      }
+      displayOrder = 2
+      fieldContext = "config.customOptions"
+      fieldLabel = "Layout"
+      fieldName = "layout1"
+      formField = true
+      refCode = "07efcce5-b32f-4cdd-b679-ac3de619806f"
+      type = "layout"
     },
     {
       code = "f9493ac5-4635-410b-afca-6acc5039dd11"
       name = "f9493ac5-4635-410b-afca-6acc5039dd11"
       uuid = "d12de678-3e6b-4dda-8396-ab47cd0b1de6"
       config = {
+        addon = ""
+        addonPosition = ""
         cloudField = "7c87386d-4230-4da3-b10c-caf4a2a56a52"
         cloudFieldType = "field"
         cloudId = ""
@@ -55,75 +92,22 @@ resource "option-type-form" "testing" {
         groupField = "764b6506-8eaa-4c26-9b7d-56af6ec8a8c5"
         groupFieldType = "field"
         groupId = ""
-        layoutField = ""
+        layoutField = "07efcce5-b32f-4cdd-b679-ac3de619806f"
         layoutFieldType = "field"
         layoutId = ""
-        poolField = "76164e66-3dc5-469d-9391-c09e202efc68"
+        poolField = ""
         poolFieldType = "field"
         poolId = ""
+        retainDefault = false
         showPricing = false
       }
-      displayOrder = 2
+      displayOrder = 3
       fieldContext = "config.customOptions"
       fieldLabel = "plan"
       fieldName = "plan"
       formField = true
+      refCode = "f9493ac5-4635-410b-afca-6acc5039dd11"
       type = "plan"
-    },
-    {
-      code = "76164e66-3dc5-469d-9391-c09e202efc68"
-      name = "76164e66-3dc5-469d-9391-c09e202efc68"
-      uuid = "a18d5111-1622-4135-912e-8cc1381a828c"
-      config = {
-        cloudField = "7c87386d-4230-4da3-b10c-caf4a2a56a52"
-        cloudFieldType = "field"
-        cloudId = ""
-        groupField = "764b6506-8eaa-4c26-9b7d-56af6ec8a8c5"
-        groupFieldType = "field"
-        groupId = ""
-        layoutField = ""
-        layoutFieldType = "field"
-        layoutId = ""
-        planField = ""
-        planFieldType = "field"
-        planId = ""
-      }
-      displayOrder = 3
-      fieldContext = "config.customOptions"
-      fieldLabel = "Resourcepool"
-      fieldName = "Resourcepool"
-      formField = true
-      type = "resourcePool"
-    },
-    {
-      code = "c5eb739f-4629-4f6e-b4e2-4cbb7313c994"
-      name = "c5eb739f-4629-4f6e-b4e2-4cbb7313c994"
-      uuid = "8807dfa8-fab5-4454-840e-5c73a7fa7608"
-      config = {
-        addon = ""
-        addonPosition = ""
-        cloudField = "7c87386d-4230-4da3-b10c-caf4a2a56a52"
-        cloudFieldType = "field"
-        cloudId = ""
-        defaultValue = ""
-        enableIPModeSelection = true
-        groupField = "764b6506-8eaa-4c26-9b7d-56af6ec8a8c5"
-        groupFieldType = "field"
-        groupId = ""
-        layoutField = ""
-        layoutFieldType = "field"
-        layoutId = ""
-        poolField = "76164e66-3dc5-469d-9391-c09e202efc68"
-        poolFieldType = "field"
-        poolId = ""
-        showNetworkTypeSelection = true
-      }
-      displayOrder = 4
-      fieldContext = "config.customOptions"
-      fieldLabel = "Networks"
-      fieldName = "networks"
-      formField = true
-      type = "networkManager"
     }
   ]
 }
