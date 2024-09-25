@@ -26,7 +26,7 @@ resource "option-type-form" "All Resources" {
       defaultValue = "32"
       fieldContext = "config.customOptions"
       fieldLabel = "Group"
-      fieldName = "group"
+      fieldName = "group1"
       formField = true
       refCode = "421e4ace-a79d-444c-9306-da432773de20"
       required = true
@@ -48,8 +48,8 @@ resource "option-type-form" "All Resources" {
         instanceTypeCode = ""
         instanceTypeFieldCode = ""
         instanceTypeFieldType = "field"
+        retainDefault = false
       }
-      defaultValue = "11"
       displayOrder = 1
       fieldContext = "config.customOptions"
       fieldLabel = "Cloud"
@@ -87,7 +87,7 @@ resource "option-type-form" "All Resources" {
         groupId = ""
         instanceTypeCode = "centos"
         instanceTypeField = ""
-        instanceTypeFieldCode = null
+        instanceTypeFieldCode = ""
         instanceTypeFieldType = "value"
         multiSelect = false
         sortable = ""
@@ -96,7 +96,7 @@ resource "option-type-form" "All Resources" {
       displayOrder = 2
       fieldContext = "config.customOptions"
       fieldLabel = "Layout"
-      fieldName = "layout"
+      fieldName = "layout1"
       formField = true
       refCode = "c0d7f244-7fed-4e8c-a0a8-363e1f3db8f4"
       required = true
