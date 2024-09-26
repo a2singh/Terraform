@@ -1,0 +1,29 @@
+resource "container-type" "kubernetes-ubuntu-22_04-olvm-amd64" {
+  code = "kubernetes-ubuntu-22_04-olvm-amd64"
+  name = "olvm Kubernetes Cluster on Ubuntu 22.04"
+  uuid = "ee685a1d-5c2a-4f65-b7dc-dfdcb973ce40"
+  category = "kubernetes"
+  checkTypeCode = "vmCheck"
+  cloneType = "ubuntu"
+  containerPorts = [ { code = "ubuntu.22" } ]
+  containerVersion = "22.04"
+  imageCode = "olvm morpheus kubernetes on ubuntu 22.04"
+  logTypeCode = "ubuntu"
+  mountLogs = "/var/log"
+  providerType = "olvm"
+  provisionType = { code = "olvm-provision-standard" }
+  scripts = [
+    { code = "kube-ubuntu-22-setup-script-v1" },
+    { code = "kube-adm-master-setup-script-v1" },
+    { code = "kubernetes-ectd-encrypt-install-master-script-v1" }
+  ]
+  serverType = "vm"
+  shortName = "kubernetes-ubuntu"
+  showServerLogs = true
+  statTypeCode = "server"
+  templates = [
+    { code = "do-kubeadm-cluster-master-init" },
+    { code = "kubernetes-etcd-encrypt-install-master" }
+  ]
+  virtualImage = { code = "olvm.plugin.image.morpheus.ubuntu.22.04.amd64" }
+}
