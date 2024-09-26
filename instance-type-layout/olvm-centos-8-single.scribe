@@ -1,0 +1,16 @@
+resource "instance-type-layout" "olvm-centos-8-single" {
+  code = "olvm-centos-8-single"
+  name = "CentOS 8-Stream VM"
+  uuid = "2e199463-d679-4a3b-a102-36b2b84f807e"
+  actions = [ { code = "generic-add-node" } ]
+  description = "This will provision a single vm"
+  enabled = false
+  hasAutoScale = true
+  instanceType = { code = "centos" }
+  instanceVersion = "8"
+  provisionType = { code = "olvm-provision-standard" }
+  serverType = "vm"
+  sortOrder = 19
+  supportsConvertToManaged = true
+  workloads = [ { code = "olvm-centos-8-set" } ]
+}
