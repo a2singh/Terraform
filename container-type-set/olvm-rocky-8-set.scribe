@@ -1,0 +1,6 @@
+resource "container-type-set" "olvm-rocky-8-set" {
+  code = "olvm-rocky-8-set"
+  uuid = "dd9c2bab-149c-4d7f-82e4-5789319f82a7"
+  dynamicCount = true
+  workloadType = { code = "olvm-plugin-rocky-8" }
+}
