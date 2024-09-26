@@ -1,0 +1,15 @@
+resource "instance-type-layout" "olvm-ubuntu-24.04-single" {
+  code = "olvm-ubuntu-24.04-single"
+  name = "Ubuntu 24.04 VM"
+  uuid = "37f03c62-18a8-4f3e-b722-372c09f36e7c"
+  actions = [ { code = "ubuntu-add-node" } ]
+  description = "This will provision a single vm"
+  hasAutoScale = true
+  instanceType = { code = "ubuntu" }
+  instanceVersion = "24.04"
+  provisionType = { code = "olvm-provision-standard" }
+  serverType = "vm"
+  sortOrder = 19
+  supportsConvertToManaged = true
+  workloads = [ { code = "olvm-ubuntu-24.04-set" } ]
+}
