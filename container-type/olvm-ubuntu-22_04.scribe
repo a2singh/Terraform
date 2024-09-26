@@ -1,0 +1,21 @@
+resource "container-type" "olvm-ubuntu-22.04" {
+  code = "olvm-ubuntu-22.04"
+  name = "Ubuntu 22.04"
+  uuid = "002dfab0-380b-4830-9626-ae170101e6f7"
+  category = "ubuntu"
+  actions = [ { code = "ubuntu-remove-node" } ]
+  backupType = "olvmSnapshot"
+  checkTypeCode = "containerCheck"
+  cloneType = "ubuntu"
+  containerPorts = [ { code = "ubuntu.22" } ]
+  containerVersion = "22.04"
+  logTypeCode = "ubuntu"
+  mountLogs = "/var/log"
+  providerType = "olvm"
+  provisionType = { code = "olvm-provision-standard" }
+  serverType = "vm"
+  shortName = "ubuntu"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "olvm.plugin.image.morpheus.ubuntu.22.04.amd64" }
+}
