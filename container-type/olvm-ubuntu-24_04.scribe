@@ -1,0 +1,21 @@
+resource "container-type" "olvm-ubuntu-24.04" {
+  code = "olvm-ubuntu-24.04"
+  name = "Ubuntu 24.04"
+  uuid = "5bccaee4-ad3a-4234-adfc-77c577582d08"
+  category = "ubuntu"
+  actions = [ { code = "ubuntu-remove-node" } ]
+  backupType = "olvmSnapshot"
+  checkTypeCode = "containerCheck"
+  cloneType = "ubuntu"
+  containerPorts = [ { code = "ubuntu.22" } ]
+  containerVersion = "24.04"
+  logTypeCode = "ubuntu"
+  mountLogs = "/var/log"
+  providerType = "olvm"
+  provisionType = { code = "olvm-provision-standard" }
+  serverType = "vm"
+  shortName = "ubuntu"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "olvm.plugin.image.morpheus.ubuntu.24.04.amd64" }
+}
