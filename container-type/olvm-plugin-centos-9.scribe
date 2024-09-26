@@ -1,0 +1,21 @@
+resource "container-type" "olvm-plugin-centos-9" {
+  code = "olvm-plugin-centos-9"
+  name = "CentOS 9-Stream"
+  uuid = "93edeab3-cd1f-4d10-bcaa-41f2a51c3d1e"
+  category = "centos"
+  actions = [ { code = "generic-remove-node" } ]
+  backupType = "olvmSnapshot"
+  checkTypeCode = "containerCheck"
+  cloneType = "centos"
+  containerPorts = [ { code = "centos.22" } ]
+  containerVersion = "9"
+  logTypeCode = "centos"
+  mountLogs = "/var/log"
+  providerType = "olvm"
+  provisionType = { code = "olvm-provision-standard" }
+  serverType = "vm"
+  shortName = "centos"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "olvm.plugin.image.morpheus.centos.9.amd64" }
+}
