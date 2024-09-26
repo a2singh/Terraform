@@ -1,0 +1,15 @@
+resource "instance-type-layout" "olvm-ubuntu-22.04-single" {
+  code = "olvm-ubuntu-22.04-single"
+  name = "Ubuntu 22.04 VM"
+  uuid = "efa7f6ef-1814-4e18-ba73-6d0e3b4d639c"
+  actions = [ { code = "ubuntu-add-node" } ]
+  description = "This will provision a single vm"
+  hasAutoScale = true
+  instanceType = { code = "ubuntu" }
+  instanceVersion = "22.04"
+  provisionType = { code = "olvm-provision-standard" }
+  serverType = "vm"
+  sortOrder = 19
+  supportsConvertToManaged = true
+  workloads = [ { code = "olvm-ubuntu-22.04-set" } ]
+}
