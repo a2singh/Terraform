@@ -1,0 +1,21 @@
+resource "container-type" "olvm-plugin-rocky-9" {
+  code = "olvm-plugin-rocky-9"
+  name = "Rocky Linux 9"
+  uuid = "ce8229d2-867f-4cdc-81ac-e0045b58a42d"
+  category = "rocky"
+  actions = [ { code = "generic-remove-node" } ]
+  backupType = "olvmSnapshot"
+  checkTypeCode = "containerCheck"
+  cloneType = "rocky"
+  containerPorts = [ { code = "rocky.22" } ]
+  containerVersion = "9"
+  logTypeCode = "rocky"
+  mountLogs = "/var/log"
+  providerType = "olvm"
+  provisionType = { code = "olvm-provision-standard" }
+  serverType = "vm"
+  shortName = "rocky"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "olvm.plugin.image.morpheus.rocky.9.amd64" }
+}
