@@ -1,0 +1,24 @@
+resource "container-type" "kubernetes-ubuntu-22_04-worker-olvm-amd64" {
+  code = "kubernetes-ubuntu-22_04-worker-olvm-amd64"
+  name = "olvm Kubernetes Worker on Ubuntu 22.04"
+  uuid = "bbc7853d-a740-4f7c-ac56-3958ba6b4cfb"
+  category = "kubernetes"
+  checkTypeCode = "vmCheck"
+  cloneType = "ubuntu"
+  containerPorts = [ { code = "ubuntu.22" } ]
+  containerVersion = "22.04"
+  imageCode = "olvm morpheus kubernetes on ubuntu 22.04"
+  logTypeCode = "ubuntu"
+  mountLogs = "/var/log"
+  providerType = "olvm"
+  provisionType = { code = "olvm-provision-standard" }
+  scripts = [
+    { code = "kube-ubuntu-22-setup-script-v1" },
+    { code = "kubernetes-worker-join-v1" }
+  ]
+  serverType = "vm"
+  shortName = "kubernetes-worker-ubuntu"
+  showServerLogs = true
+  statTypeCode = "server"
+  virtualImage = { code = "olvm.plugin.image.morpheus.ubuntu.22.04.amd64" }
+}
