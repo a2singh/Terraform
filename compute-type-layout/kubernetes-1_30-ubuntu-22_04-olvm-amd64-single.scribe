@@ -1,0 +1,35 @@
+resource "compute-type-layout" "kubernetes-1_30-ubuntu-22_04-olvm-amd64-single" {
+  code = "kubernetes-1_30-ubuntu-22_04-olvm-amd64-single"
+  name = "MKS Kubernetes 1.30 Cluster on Ubuntu 22.04"
+  clusterVersion = "1.30.x"
+  computeServers = [
+    { code = "kubernetes-ubuntu-22_04-olvm-amd64-set" },
+    { code = "kubernetes-ubuntu-22_04-worker-olvm-amd64-set" }
+  ]
+  computeVersion = "22.04"
+  containerRuntime = "containerd"
+  dateCreated = "2024-09-26T06:28:21.000Z"
+  description = "provision a kubernetes 1.30 cluster on ubuntu 22.04"
+  groupType = { code = "kubernetes-cluster" }
+  hasAutoScale = true
+  lastUpdated = "2024-09-26T06:28:21.000Z"
+  memoryRequirement = 1073741824
+  networkRuntime = "calico"
+  optionTypes = [
+    { code = "olvm.plugin.provision.datacenter" },
+    { code = "olvm.plugin.provision.cloudDatacenter" },
+    { code = "olvm.plugin.provision.cluster" },
+    { code = "kubernetes.master.podCidr" },
+    { code = "kubernetes.master.serviceCidr" }
+  ]
+  packages = [
+    { code = "kubernetes-calico-3-26-0-package" },
+    { code = "kubernetes-rook-1-13-package" },
+    { code = "kubernetes-fluentbit-3-0-7-package" },
+    { code = "kubernetes-prometheus-0-12-package" },
+    { code = "kubernetes-nginx-ingress-operator-1-10-1-package" }
+  ]
+  provisionType = { code = "olvm-provision-standard" }
+  serverCount = 4
+  type = { code = "olvm-kube-master" }
+}
