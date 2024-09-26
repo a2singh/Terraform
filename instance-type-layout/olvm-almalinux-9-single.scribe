@@ -1,0 +1,15 @@
+resource "instance-type-layout" "olvm-almalinux-9-single" {
+  code = "olvm-almalinux-9-single"
+  name = "Almalinux 9 VM"
+  uuid = "8b69edc7-55fa-46c2-9f45-af09ad29895c"
+  actions = [ { code = "generic-add-node" } ]
+  description = "This will provision a single vm"
+  hasAutoScale = true
+  instanceType = { code = "almalinux" }
+  instanceVersion = "9"
+  provisionType = { code = "olvm-provision-standard" }
+  serverType = "vm"
+  sortOrder = 19
+  supportsConvertToManaged = true
+  workloads = [ { code = "olvm-almalinux-9-set" } ]
+}

@@ -1,0 +1,6 @@
+resource "container-type-set" "olvm-almalinux-9-set" {
+  code = "olvm-almalinux-9-set"
+  uuid = "1492b91e-0211-4bdf-876a-f80e13676075"
+  dynamicCount = true
+  workloadType = { code = "olvm-plugin-almalinux-9" }
+}
