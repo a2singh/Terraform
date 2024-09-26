@@ -1,0 +1,21 @@
+resource "container-type" "olvm-plugin-almalinux-9" {
+  code = "olvm-plugin-almalinux-9"
+  name = "Almalinux 9"
+  uuid = "34375790-2c1e-4a7a-b5b5-349ca7a4e882"
+  category = "almalinux"
+  actions = [ { code = "generic-remove-node" } ]
+  backupType = "olvmSnapshot"
+  checkTypeCode = "containerCheck"
+  cloneType = "almalinux"
+  containerPorts = [ { code = "almalinux.22" } ]
+  containerVersion = "9"
+  logTypeCode = "almalinux"
+  mountLogs = "/var/log"
+  providerType = "olvm"
+  provisionType = { code = "olvm-provision-standard" }
+  serverType = "vm"
+  shortName = "almalinux"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "olvm.plugin.image.morpheus.almalinux.9.amd64" }
+}
