@@ -1,0 +1,21 @@
+resource "container-type" "olvm-plugin-debian-12" {
+  code = "olvm-plugin-debian-12"
+  name = "Debian 12"
+  uuid = "5a997d24-ca69-4325-b62a-fc592e337f8e"
+  category = "debian"
+  actions = [ { code = "generic-remove-node" } ]
+  backupType = "olvmSnapshot"
+  checkTypeCode = "containerCheck"
+  cloneType = "debian"
+  containerPorts = [ { code = "debian.22" } ]
+  containerVersion = "12"
+  logTypeCode = "debian"
+  mountLogs = "/var/log"
+  providerType = "olvm"
+  provisionType = { code = "olvm-provision-standard" }
+  serverType = "vm"
+  shortName = "debian"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "olvm.plugin.image.morpheus.debian.12.amd64" }
+}
