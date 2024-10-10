@@ -9,6 +9,6 @@ resource "instance-type-layout" "506d9bb5-b3ae-415d-84ed-ba5cfe7d99a7" {
   instanceVersion = "22.04"
   memoryRequirement = 0
   provisionType = { code = "vmware" }
-  taskSets = [ { name = "AT Morph PP Workflow" } ]
+  taskSets = [ { name = "AT Morph Provisioning Workflow" } ]
   workloads = [ { code = "1fc81e96-dd99-474d-827d-3abf8348d014" } ]
 }
