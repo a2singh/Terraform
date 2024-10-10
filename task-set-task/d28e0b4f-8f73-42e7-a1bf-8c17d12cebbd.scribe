@@ -1,0 +1,5 @@
+resource "task-set-task" "d28e0b4f-8f73-42e7-a1bf-8c17d12cebbd" {
+  uuid = "d28e0b4f-8f73-42e7-a1bf-8c17d12cebbd"
+  task = { code = "Restart" }
+  taskPhase = "operation"
+}

@@ -1,0 +1,8 @@
+resource "task-set" "AT-Restart" {
+  name = "AT-Restart"
+  uuid = "b3500de9-9071-4b4a-9010-2957a8bba537"
+  dateCreated = "2024-10-10T17:57:50.000Z"
+  lastUpdated = "2024-10-10T17:57:50.000Z"
+  taskSetTasks = [ { uuid = "d28e0b4f-8f73-42e7-a1bf-8c17d12cebbd" } ]
+  taskSetType = "operation"
+}
