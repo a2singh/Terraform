@@ -1,0 +1,27 @@
+resource "task" "ap new ansible tower task" {
+  name = "ap new ansible tower task"
+  uuid = "5956a23e-4bb5-49f1-a3f9-fc89f8e52a1d"
+  dateCreated = "2024-10-10T11:54:41.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2024-10-10T11:54:41.000Z"
+  options = [
+    {
+      optionType = { code = "ansibleTowerJobTemplateId" }
+      value = { code = "ansibleTower.jobTemplate.26.49" }
+    },
+    {
+      optionType = { code = "ansibleTowerIntegrationId" }
+      value = { name = "AT Ansible Tower" }
+    },
+    {
+      optionType = { code = "ansibleTowerInventoryId" }
+      value = "25"
+    },
+    {
+      optionType = { code = "ansibleTowerExecuteMode" }
+      value = "executeHost"
+    },
+    { optionType = { code = "ansibleGroup" }, value = "new Kyndryl" }
+  ]
+  taskType = { code = "ansibleTowerTask" }
+}
