@@ -1,0 +1,7 @@
+resource "task-set" "AT Print Spec Variable (Provisioning)" {
+  name = "AT Print Spec Variable (Provisioning)"
+  uuid = "f548b782-a3f7-4493-abac-855e69763a8e"
+  dateCreated = "2024-10-11T06:13:41.000Z"
+  lastUpdated = "2024-10-11T06:13:41.000Z"
+  taskSetTasks = [ { uuid = "3ae86ad7-031f-4c4b-a8a2-346299dd31c5" } ]
+}
