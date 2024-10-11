@@ -1,0 +1,5 @@
+resource "task-set-task" "e4d44521-39d8-4f0d-a15b-4838cce20b0d" {
+  uuid = "e4d44521-39d8-4f0d-a15b-4838cce20b0d"
+  task = { name = "Print_Python_Morpheus" }
+  taskPhase = "operation"
+}

@@ -1,0 +1,8 @@
+resource "task-set" "AT Print_Python_Morpheus (Operational)" {
+  name = "AT Print_Python_Morpheus (Operational)"
+  uuid = "fc14a271-1807-4de1-8025-1d46d80c9fcb"
+  dateCreated = "2024-10-11T06:06:10.000Z"
+  lastUpdated = "2024-10-11T06:12:40.000Z"
+  taskSetTasks = [ { uuid = "e4d44521-39d8-4f0d-a15b-4838cce20b0d" } ]
+  taskSetType = "operation"
+}
