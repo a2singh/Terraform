@@ -1,0 +1,7 @@
+resource "task-set" "AS Morph Test Workflow" {
+  name = "AS Morph Test Workflow"
+  uuid = "0473c4ef-d82b-4756-819f-4a0eb5caa2b2"
+  dateCreated = "2024-10-11T04:46:36.000Z"
+  lastUpdated = "2024-10-11T04:48:44.000Z"
+  taskSetTasks = [ { uuid = "a35598cf-9f52-466f-a11f-2dab9d6a7baf" } ]
+}
