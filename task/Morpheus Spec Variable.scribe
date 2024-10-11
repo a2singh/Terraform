@@ -3,7 +3,7 @@ resource "task" "Morpheus Spec Variable" {
   uuid = "ab3fbe28-6fd0-4bcb-9666-685e38395acd"
   dateCreated = "2023-11-03T05:07:28.000Z"
   executeTarget = "local"
-  lastUpdated = "2023-11-03T06:50:05.000Z"
+  lastUpdated = "2024-10-11T04:40:45.000Z"
   options = [
     {
       optionType = { code = "pythonAdditionalPackages" }
@@ -15,5 +15,6 @@ resource "task" "Morpheus Spec Variable" {
     }
   ]
   resultType = "json"
+  retryable = true
   taskType = { code = "jythonTask" }
 }
