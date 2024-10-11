@@ -1,0 +1,10 @@
+resource "file-content" "e8f46a81-8b03-4fdc-bf4f-b901cd306fb3" {
+  uuid = "e8f46a81-8b03-4fdc-bf4f-b901cd306fb3"
+  content = <<EOFSCRIBE
+write-host env:$computername
+echo hostname
+shkdasd -y
+EOFSCRIBE
+  dateCreated = "2024-10-11T07:01:18.000Z"
+  lastUpdated = "2024-10-11T07:01:18.000Z"
+}

@@ -1,0 +1,19 @@
+resource "task" "AT Test New Windows PowerShell task" {
+  name = "AT Test New Windows PowerShell task"
+  uuid = "74dd5d40-8604-43dc-8a89-ebb72ddacba4"
+  dateCreated = "2024-10-11T07:01:18.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2024-10-11T07:01:18.000Z"
+  options = [
+    {
+      optionType = { code = "winrm.powershellVersion" }
+      value = "7.0"
+    },
+    { optionType = { code = "winrm.elevated" }, value = "on" },
+    {
+      content = { uuid = "e8f46a81-8b03-4fdc-bf4f-b901cd306fb3" }
+      optionType = { code = "script" }
+    }
+  ]
+  taskType = { code = "winrmTask" }
+}
