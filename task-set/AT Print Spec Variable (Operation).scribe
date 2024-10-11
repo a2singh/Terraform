@@ -1,0 +1,8 @@
+resource "task-set" "AT Print Spec Variable (Operation)" {
+  name = "AT Print Spec Variable (Operation)"
+  uuid = "7b5395a3-9513-42b1-aedb-1c75f2d9e0f7"
+  dateCreated = "2024-10-11T06:08:10.000Z"
+  lastUpdated = "2024-10-11T06:12:56.000Z"
+  taskSetTasks = [ { uuid = "f6d69def-cb95-48e7-ac14-6b63f2f7b149" } ]
+  taskSetType = "operation"
+}
