@@ -1,0 +1,7 @@
+resource "task-set" "AT Print Python Morpheus ( Provisioning)" {
+  name = "AT Print Python Morpheus ( Provisioning)"
+  uuid = "c9602e71-7a88-4d1e-b59d-debc8390c6de"
+  dateCreated = "2024-10-11T06:09:17.000Z"
+  lastUpdated = "2024-10-11T06:09:17.000Z"
+  taskSetTasks = [ { uuid = "1e3cd9a4-d5b2-4246-bfa4-53e11eec6b68" } ]
+}
