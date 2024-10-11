@@ -6,13 +6,13 @@ resource "task" "AT Test New Windows PowerShell task" {
   lastUpdated = "2024-10-11T07:01:18.000Z"
   options = [
     {
-      content = { uuid = "e8f46a81-8b03-4fdc-bf4f-b901cd306fb3" }
-      optionType = { code = "script" }
+      optionType = { code = "winrm.powershellVersion" }
+      value = "7.0"
     },
     { optionType = { code = "winrm.elevated" }, value = "on" },
     {
-      optionType = { code = "winrm.powershellVersion" }
-      value = "7.0"
+      content = { uuid = "e8f46a81-8b03-4fdc-bf4f-b901cd306fb3" }
+      optionType = { code = "script" }
     }
   ]
   taskType = { code = "winrmTask" }
