@@ -1,0 +1,14 @@
+resource "task" "AT New Test Task" {
+  name = "AT New Test Task"
+  uuid = "3d77c7b4-d6b9-4938-ad7c-1acfcd8b3d94"
+  dateCreated = "2024-10-11T06:56:29.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2024-10-11T06:56:29.000Z"
+  options = [
+    {
+      content = { uuid = "21772b17-2239-437c-ad80-63ba4c1614e1" }
+      optionType = { code = "script" }
+    }
+  ]
+  taskType = { code = "script" }
+}

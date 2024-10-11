@@ -1,0 +1,6 @@
+resource "file-content" "21772b17-2239-437c-ad80-63ba4c1614e1" {
+  uuid = "21772b17-2239-437c-ad80-63ba4c1614e1"
+  content = "sudo dnf check update"
+  dateCreated = "2024-10-11T06:56:29.000Z"
+  lastUpdated = "2024-10-11T06:56:29.000Z"
+}
