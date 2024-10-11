@@ -1,0 +1,8 @@
+resource "task-set" "AT Test Workflow" {
+  name = "AT Test Workflow"
+  uuid = "f690d932-f35d-42ed-ab72-6fc834184ca6"
+  dateCreated = "2024-10-11T04:31:54.000Z"
+  lastUpdated = "2024-10-11T04:32:29.000Z"
+  taskSetTasks = [ { uuid = "ecbbe068-61e1-4214-bb85-8688926595a0" } ]
+  taskSetType = "operation"
+}
