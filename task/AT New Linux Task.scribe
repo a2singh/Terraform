@@ -1,0 +1,14 @@
+resource "task" "AT New Linux Task" {
+  name = "AT New Linux Task"
+  uuid = "99e330cd-770a-410d-b8c2-26f65595b5d4"
+  dateCreated = "2024-10-11T07:05:42.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2024-10-11T07:05:42.000Z"
+  options = [
+    {
+      content = { uuid = "b97f8fd3-75ee-42f5-8c4e-17bbd2f40bf7" }
+      optionType = { code = "script" }
+    }
+  ]
+  taskType = { code = "script" }
+}

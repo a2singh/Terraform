@@ -1,0 +1,9 @@
+resource "file-content" "b97f8fd3-75ee-42f5-8c4e-17bbd2f40bf7" {
+  uuid = "b97f8fd3-75ee-42f5-8c4e-17bbd2f40bf7"
+  content = <<EOFSCRIBE
+sudo dnf check-update
+sudo dnf update --y
+EOFSCRIBE
+  dateCreated = "2024-10-11T07:05:42.000Z"
+  lastUpdated = "2024-10-11T07:05:42.000Z"
+}
