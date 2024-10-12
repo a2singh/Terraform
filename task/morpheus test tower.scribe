@@ -6,12 +6,12 @@ resource "task" "morpheus test tower" {
   lastUpdated = "2024-08-02T08:38:45.000Z"
   options = [
     {
-      optionType = { code = "ansibleTowerIntegrationId" }
-      value = { name = "AT Ansible Tower" }
-    },
-    {
       optionType = { code = "ansibleTowerJobTemplateId" }
       value = { code = "ansibleTower.jobTemplate.26.11" }
+    },
+    {
+      optionType = { code = "ansibleTowerIntegrationId" }
+      value = { name = "AT Ansible Tower" }
     },
     {
       optionType = { code = "ansibleTowerInventoryId" }
