@@ -7,4 +7,5 @@ resource "instance-type" "xenwind" {
   environmentPrefix = "XEN_WINDOWS"
   hasAutoScale = true
   hasDeployment = true
+  layouts = [ { code = "21b97857-1f9a-4b43-9d65-d261dd03747d" } ]
 }
