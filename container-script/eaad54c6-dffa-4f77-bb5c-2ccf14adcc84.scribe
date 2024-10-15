@@ -1,0 +1,29 @@
+resource "container-script" "eaad54c6-dffa-4f77-bb5c-2ccf14adcc84" {
+  code = "eaad54c6-dffa-4f77-bb5c-2ccf14adcc84"
+  name = "AT 208106"
+  uuid = "706b2add-171c-4e41-9c57-5cff2587b790"
+  dateCreated = "2024-10-15T11:23:50.000Z"
+  lastUpdated = "2024-10-15T11:23:50.000Z"
+  runAsUser = "asingh"
+  script = <<EOFSCRIBE
+#!/bin/bash
+
+BASE="/opt/morpheus/.local/insm"
+HOST="10.32.23.79"
+PORT="5025"
+USER="asingh"
+
+echo "Adding scom node : ASMORPHUNKVM30"
+IDFILE="${BASE}/${USER}"
+
+#SSHCMD01="ssh -p ${PORT} -i ${IDFILE} ${USER}@${HOST} /INSM/Automation/nsmnode -add omnode -os 'WIN_MS_XX_XX_deutsch' -service 'ZBP' -node ASMORPHUNKVM30"
+#${SSHCMD01}
+#echo "Exitcode: $?"
+SSHCMD02="ssh -p ${PORT} -i ${IDFILE} ${USER}@${HOST} /INSM/Automation/nsmnode -add scomnode -os windows -node SASMORPHUNKVM30 -service ZBP"
+${SSHCMD02}
+EXIT_CODE=$?
+echo "Exitcode: $EXIT_CODE"
+EOFSCRIBE
+  scriptPhase = "postProvision"
+  sudoUser = true
+}
