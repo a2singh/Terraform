@@ -1,0 +1,7 @@
+resource "task-set" "install arango db on ubuntu" {
+  name = "install arango db on ubuntu"
+  uuid = "a4bb9f4a-5d90-4d82-9cae-ef9d437a4c2e"
+  dateCreated = "2024-10-15T10:37:19.000Z"
+  lastUpdated = "2024-10-15T10:37:19.000Z"
+  taskSetTasks = [ { uuid = "da422add-94d3-48a5-8ce8-7e86ac2bd1fd" } ]
+}

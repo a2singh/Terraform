@@ -1,0 +1,4 @@
+resource "task-set-task" "da422add-94d3-48a5-8ce8-7e86ac2bd1fd" {
+  uuid = "da422add-94d3-48a5-8ce8-7e86ac2bd1fd"
+  task = { name = "install arangobd on ubuntu" }
+}

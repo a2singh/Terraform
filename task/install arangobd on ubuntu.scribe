@@ -1,0 +1,18 @@
+resource "task" "install arangobd on ubuntu" {
+  name = "install arangobd on ubuntu"
+  uuid = "7fb125de-87b0-47b0-886d-f4746b719ccb"
+  dateCreated = "2024-10-15T10:36:36.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2024-10-15T10:36:36.000Z"
+  options = [
+    {
+      optionType = { code = "ansibleGitId" }
+      value = { name = "AP Ansible" }
+    },
+    {
+      optionType = { code = "ansiblePlaybook" }
+      value = "arangodb.yaml"
+    }
+  ]
+  taskType = { code = "ansibleTask" }
+}
