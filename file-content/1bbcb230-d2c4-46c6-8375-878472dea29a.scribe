@@ -1,0 +1,10 @@
+resource "file-content" "1bbcb230-d2c4-46c6-8375-878472dea29a" {
+  uuid = "1bbcb230-d2c4-46c6-8375-878472dea29a"
+  content = <<EOFSCRIBE
+#/bin/bash
+echo"hello atul singh"
+
+EOFSCRIBE
+  dateCreated = "2024-10-16T07:13:58.000Z"
+  lastUpdated = "2024-10-16T07:20:09.000Z"
+}
