@@ -7,7 +7,7 @@ resource "file-content" "bbb91b80-7903-4269-be81-5e8a8043e4f0" {
 TARGET_HOST="10.32.20.108"
 TARGET_USER="asingh"
 TARGET_PASSWORD="P@ssw0rd123?"  
-TARGET_COMMAND="whoami"
+TARGET_COMMAND= echo helloworld
  
 # Run the command on the target VM via SSH using sshpass
 sshpass -p "$TARGET_PASSWORD" ssh -o StrictHostKeyChecking=no "$TARGET_USER"@"$TARGET_HOST" "$TARGET_COMMAND" > /dev/null 2>&1
@@ -22,5 +22,5 @@ echo "The command exit code is: $EXIT_CODE"
 return $EXIT_CODE
 EOFSCRIBE
   dateCreated = "2024-10-15T11:21:59.000Z"
-  lastUpdated = "2024-10-16T06:15:10.000Z"
+  lastUpdated = "2024-10-16T07:22:54.000Z"
 }
