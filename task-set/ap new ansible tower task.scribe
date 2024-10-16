@@ -2,6 +2,6 @@ resource "task-set" "ap new ansible tower task" {
   name = "ap new ansible tower task"
   uuid = "6bc85cd5-f785-494a-a877-7c2a9c43638d"
   dateCreated = "2024-10-14T11:00:40.000Z"
-  lastUpdated = "2024-10-14T11:00:40.000Z"
-  taskSetTasks = [ { uuid = "ee741a24-8129-42aa-9e36-7f3c1be054fa" } ]
+  lastUpdated = "2024-10-16T13:37:51.000Z"
+  taskSetTasks = [ { uuid = "9f31af8b-df2c-4f96-aaf9-9e94cba45de0" } ]
 }
