@@ -10,7 +10,7 @@ TARGET_PASSWORD="P@ssw0rd123?"
 TARGET_COMMAND="whoami"
  
 # Run the command on the target VM via SSH using sshpass
-sshpass -p "$TARGET_PASSWORD" ssh -o StrictHostKeyChecking=no "$TARGET_USER"@"$TARGET_HOST" "$TARGET_COMMAND"
+sshpass -p "$TARGET_PASSWORD" ssh -o StrictHostKeyChecking=no "$TARGET_USER"@"$TARGET_HOST" "$TARGET_COMMAND" > /dev/null 2>&1
  
 # Capture the exit code of the command
 EXIT_CODE=$?
@@ -19,8 +19,8 @@ EXIT_CODE=$?
 echo "The command exit code is: $EXIT_CODE"
  
 # Return the exit code from the script
-exit $EXIT_CODE
+return $EXIT_CODE
 EOFSCRIBE
   dateCreated = "2024-10-15T11:21:59.000Z"
-  lastUpdated = "2024-10-16T05:57:44.000Z"
+  lastUpdated = "2024-10-16T06:15:10.000Z"
 }
