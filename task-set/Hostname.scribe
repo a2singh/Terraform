@@ -3,9 +3,6 @@ resource "task-set" "Hostname" {
   uuid = "58885843-4ae0-42cb-b307-894510f1b916"
   dateCreated = "2024-07-10T11:36:23.000Z"
   lastUpdated = "2024-07-30T09:47:36.000Z"
-  taskSetTasks = [
-    { uuid = "04dd9a02-d793-4347-9ce0-373333373a03" },
-    { uuid = "82137c97-dd4d-4815-bc49-d03267509202" }
-  ]
+  taskSetTasks = [ { uuid = "04dd9a02-d793-4347-9ce0-373333373a03" } ]
   taskSetType = "operation"
 }
