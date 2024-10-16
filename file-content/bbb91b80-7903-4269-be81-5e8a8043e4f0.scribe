@@ -2,23 +2,25 @@ resource "file-content" "bbb91b80-7903-4269-be81-5e8a8043e4f0" {
   uuid = "bbb91b80-7903-4269-be81-5e8a8043e4f0"
   content = <<EOFSCRIBE
 #!/bin/bash
-
-BASE="/opt/morpheus/.local/insm"
-HOST="10.32.23.79"
-PORT="5025"
-USER="asingh"
-
-echo "Adding scom node : ASMORPHUNKVM30"
-IDFILE="${BASE}/${USER}"
-
-#SSHCMD01="ssh -p ${PORT} -i ${IDFILE} ${USER}@${HOST} /INSM/Automation/nsmnode -add omnode -os 'WIN_MS_XX_XX_deutsch' -service 'ZBP' -node ASMORPHUNKVM30"
-#${SSHCMD01}
-#echo "Exitcode: $?"
-SSHCMD02="ssh -p ${PORT} -i ${IDFILE} ${USER}@${HOST} /INSM/Automation/nsmnode -add scomnode -os windows -node SASMORPHUNKVM30 -service ZBP"
-${SSHCMD02}
+ 
+# Variables
+TARGET_HOST="10.32.20.108"
+TARGET_USER="asingh"
+TARGET_PASSWORD="P@ssw0rd123?"  
+TARGET_COMMAND="whoami"
+ 
+# Run the command on the target VM via SSH using sshpass
+sshpass -p "$TARGET_PASSWORD" ssh -o StrictHostKeyChecking=no "$TARGET_USER"@"$TARGET_HOST" "$TARGET_COMMAND"
+ 
+# Capture the exit code of the command
 EXIT_CODE=$?
-echo "Exitcode: $EXIT_CODE"
+ 
+# Output the exit code
+echo "The command exit code is: $EXIT_CODE"
+ 
+# Return the exit code from the script
+exit $EXIT_CODE
 EOFSCRIBE
   dateCreated = "2024-10-15T11:21:59.000Z"
-  lastUpdated = "2024-10-15T11:21:59.000Z"
+  lastUpdated = "2024-10-16T05:57:44.000Z"
 }
