@@ -1,0 +1,18 @@
+resource "file-content" "8f3cb533-4724-4c2c-a43c-8f3211622196" {
+  uuid = "8f3cb533-4724-4c2c-a43c-8f3211622196"
+  content = <<EOFSCRIBE
+#/bin/bash
+echo"hello atul singh"
+
+# Capture the exit code of the command
+EXIT_CODE=$?
+ 
+# Output the exit code
+echo "The command exit code is: $EXIT_CODE"
+ 
+# Return the exit code from the script
+return $EXIT_CODE
+EOFSCRIBE
+  dateCreated = "2024-10-16T07:11:03.000Z"
+  lastUpdated = "2024-10-16T07:11:03.000Z"
+}

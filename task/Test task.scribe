@@ -1,0 +1,14 @@
+resource "task" "Test task" {
+  name = "Test task"
+  uuid = "f3e503ee-c2ff-4a13-98a8-3882fb30201c"
+  dateCreated = "2024-10-16T07:11:03.000Z"
+  executeTarget = "local"
+  lastUpdated = "2024-10-16T07:11:03.000Z"
+  options = [
+    {
+      content = { uuid = "8f3cb533-4724-4c2c-a43c-8f3211622196" }
+      optionType = { code = "script" }
+    }
+  ]
+  taskType = { code = "script" }
+}
