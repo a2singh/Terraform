@@ -1,0 +1,4 @@
+resource "task-set-task" "b2ca7e21-46ae-463e-b681-1960e3e29600" {
+  uuid = "b2ca7e21-46ae-463e-b681-1960e3e29600"
+  task = { name = "ap new ansible tower task" }
+}
