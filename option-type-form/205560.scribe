@@ -53,13 +53,16 @@ resource "option-type-form" "205560" {
     {
       code = "cpu"
       name = "AT CPU"
-      uuid = "a8255a4c-8174-44e2-a383-54879447a537"
+      uuid = "1bc9a5a0-d686-4be0-920e-40b3c8ad8ab7"
+      config = { step = 1 }
       defaultValue = "2"
       description = "AT CPU"
+      displayOrder = 3
       fieldContext = "config.customOptions"
       fieldLabel = "CPU"
       fieldName = "cpu"
-      labels = [ "cpu" ]
+      formField = true
+      refCode = "cpu"
       type = "number"
       visibleOnCode = "plan:(1052)"
     }
