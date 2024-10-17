@@ -3,24 +3,35 @@ resource "file-content" "bbb91b80-7903-4269-be81-5e8a8043e4f0" {
   content = <<EOFSCRIBE
 #!/bin/bash
 
-# Variables
-TARGET_HOST="10.32.20.108"
+TARGET_HOST="10.32.23.32"
 TARGET_USER="asingh"
 TARGET_PASSWORD="P@ssw0rd123?"
-TARGET_COMMAND="whoami"
 
-# Run the command on the target VM via SSH using sshpass
-sshpass -p "$TARGET_PASSWORD" ssh -o StrictHostKeyChecking=no "$TARGET_USER"@"$TARGET_HOST" "$TARGET_COMMAND"
+echo "Starting script execution"
 
-# Capture the exit code of the command
-EXIT_CODE=$?
+# Execute commands on remote system
+sshpass -p "$TARGET_PASSWORD" ssh -o StrictHostKeyChecking=no "$TARGET_USER"@"$TARGET_HOST" "
+    whoami > /tmp/whoami_output.txt
+    echo \$? > /tmp/exit_code.txt"
 
-# Output the exit code
-echo "The command exit code is: $EXIT_CODE"
+# Retrieve whoami output
+WHOAMI_OUTPUT=$(sshpass -p "$TARGET_PASSWORD" ssh -o StrictHostKeyChecking=no "$TARGET_USER"@"$TARGET_HOST" "cat /tmp/whoami_output.txt")
 
-# Return the exit code from the script
+# Retrieve exit code
+EXIT_CODE=$(sshpass -p "$TARGET_PASSWORD" ssh -o StrictHostKeyChecking=no "$TARGET_USER"@"$TARGET_HOST" "cat /tmp/exit_code.txt")
+
+# Display retrieved information
+echo "User logged in: $WHOAMI_OUTPUT"
+echo "Exit code: $EXIT_CODE"
+
+# Clean up temporary files
+sshpass -p "$TARGET_PASSWORD" ssh -o StrictHostKeyChecking=no "$TARGET_USER"@"$TARGET_HOST" "
+    rm /tmp/whoami_output.txt
+    rm /tmp/exit_code.txt"
+
+# Exit with the retrieved exit code
 exit $EXIT_CODE
 EOFSCRIBE
   dateCreated = "2024-10-15T11:21:59.000Z"
-  lastUpdated = "2024-10-17T05:29:53.000Z"
+  lastUpdated = "2024-10-17T09:32:28.000Z"
 }
