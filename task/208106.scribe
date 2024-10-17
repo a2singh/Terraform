@@ -1,13 +1,13 @@
 resource "task" "208106" {
   code = "208106"
-  name = "at new tesk task 208106"
-  uuid = "0479f6ca-e5c8-4aa7-beae-aef6f31bc017"
-  dateCreated = "2024-10-17T05:06:56.000Z"
+  name = "AT 208106"
+  uuid = "8f577e94-08dc-4510-8368-f27ef4fa8b29"
+  dateCreated = "2024-10-15T11:21:59.000Z"
   executeTarget = "local"
-  lastUpdated = "2024-10-17T09:42:49.000Z"
+  lastUpdated = "2024-10-17T09:32:28.000Z"
   options = [
     {
-      content = { uuid = "75677051-60fd-47dd-99e0-524b470ceee5" }
+      content = { uuid = "bbb91b80-7903-4269-be81-5e8a8043e4f0" }
       optionType = { code = "script" }
     }
   ]
