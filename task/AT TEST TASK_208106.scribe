@@ -3,7 +3,7 @@ resource "task" "AT TEST TASK_208106" {
   uuid = "717da85e-e4ff-4f0e-830b-6e20154b0d28"
   dateCreated = "2024-10-17T06:20:44.000Z"
   executeTarget = "local"
-  lastUpdated = "2024-10-17T07:57:48.000Z"
+  lastUpdated = "2024-10-17T09:18:48.000Z"
   options = [
     {
       content = { uuid = "66a67550-cbf7-4ff2-b152-c713543a4a46" }
