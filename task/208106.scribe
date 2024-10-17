@@ -1,13 +1,13 @@
 resource "task" "208106" {
   code = "208106"
-  name = "AT 208106"
-  uuid = "8f577e94-08dc-4510-8368-f27ef4fa8b29"
-  dateCreated = "2024-10-15T11:21:59.000Z"
+  name = "AT New Test Task 208106"
+  uuid = "ecd882d6-1abc-4885-b8fb-ae267de246cc"
+  dateCreated = "2024-10-16T07:13:58.000Z"
   executeTarget = "local"
-  lastUpdated = "2024-10-16T07:22:54.000Z"
+  lastUpdated = "2024-10-16T07:20:09.000Z"
   options = [
     {
-      content = { uuid = "bbb91b80-7903-4269-be81-5e8a8043e4f0" }
+      content = { uuid = "1bbcb230-d2c4-46c6-8375-878472dea29a" }
       optionType = { code = "script" }
     }
   ]
