@@ -3,16 +3,26 @@ resource "file-content" "75677051-60fd-47dd-99e0-524b470ceee5" {
   content = <<EOFSCRIBE
 #!/bin/bash
 
-# Run your command
-whoami
 
-# Capture the exit code
-exit_code=$?
 
-# Print the exit code
-echo "The exit code is: $exit_code"
+# Variables
+TARGET_HOST="10.32.23.32"
+TARGET_USER="asingh"
+TARGET_PASSWORD="P@ssw0rd123?"
+TARGET_COMMAND="whoami"
 
+# Run the command on the target VM via SSH using sshpass
+sshpass -p "$TARGET_PASSWORD" ssh -o StrictHostKeyChecking=no "$TARGET_USER"@"$TARGET_HOST" "cat /home/asingh/whoami"
+
+# Capture the exit code of the command
+EXIT_CODE=$?
+
+# Output only the exit code
+echo $EXIT_CODE
+
+# Return the exit code from the script
+exit $EXIT_CODE
 EOFSCRIBE
   dateCreated = "2024-10-17T05:06:56.000Z"
-  lastUpdated = "2024-10-17T05:06:56.000Z"
+  lastUpdated = "2024-10-17T09:42:49.000Z"
 }
