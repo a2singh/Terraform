@@ -1,0 +1,18 @@
+resource "file-content" "75677051-60fd-47dd-99e0-524b470ceee5" {
+  uuid = "75677051-60fd-47dd-99e0-524b470ceee5"
+  content = <<EOFSCRIBE
+#!/bin/bash
+
+# Run your command
+whoami
+
+# Capture the exit code
+exit_code=$?
+
+# Print the exit code
+echo "The exit code is: $exit_code"
+
+EOFSCRIBE
+  dateCreated = "2024-10-17T05:06:56.000Z"
+  lastUpdated = "2024-10-17T05:06:56.000Z"
+}
