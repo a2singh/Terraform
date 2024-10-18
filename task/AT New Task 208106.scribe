@@ -1,0 +1,14 @@
+resource "task" "AT New Task 208106" {
+  name = "AT New Task 208106"
+  uuid = "d25e93b0-cf95-4387-94b1-68c460f69d12"
+  dateCreated = "2024-10-18T05:03:12.000Z"
+  executeTarget = "local"
+  lastUpdated = "2024-10-18T05:03:12.000Z"
+  options = [
+    {
+      content = { uuid = "d962b885-35bf-4893-9bee-9161da63b42b" }
+      optionType = { code = "script" }
+    }
+  ]
+  taskType = { code = "script" }
+}

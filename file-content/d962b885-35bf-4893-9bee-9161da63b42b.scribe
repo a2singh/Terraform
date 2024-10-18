@@ -1,0 +1,37 @@
+resource "file-content" "d962b885-35bf-4893-9bee-9161da63b42b" {
+  uuid = "d962b885-35bf-4893-9bee-9161da63b42b"
+  content = <<EOFSCRIBE
+#!/bin/bash
+
+# Configuration
+REMOTE_HOST="10.32.23.32"  
+REMOTE_USER="asingh"      
+REMOTE_PASS="P@ssw0rd123?"       
+REMOTE_COMMAND="whoami"      
+
+# Function to run remote command and display results
+run_remote_command() {
+    echo "Connecting to $REMOTE_HOST..."
+
+    # Use sshpass to provide the password non-interactively
+    RESULT=$(sshpass -p "$REMOTE_PASS" ssh -o StrictHostKeyChecking=no "$REMOTE_USER@$REMOTE_HOST" "$REMOTE_COMMAND")
+    EXIT_CODE=$?
+
+    echo "Command output:"
+    echo "$RESULT"
+    echo ""
+    echo "Exit code: $EXIT_CODE"
+
+    if [ $EXIT_CODE -eq 0 ]; then
+        echo "Command executed successfully."
+    else
+        echo "Command execution failed."
+    fi
+}
+
+# Run the function
+run_remote_command
+EOFSCRIBE
+  dateCreated = "2024-10-18T05:03:12.000Z"
+  lastUpdated = "2024-10-18T05:03:12.000Z"
+}
