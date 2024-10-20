@@ -6,5 +6,6 @@ resource "account-integration" "dg-helm-dynamodb" {
   integrationType = { code = "git" }
   serviceFlag = true
   serviceUrl = "https://github.com/dgaharwar/helm-dynamodb"
+  statusMessage = "unable to call git repo"
   type = "git"
 }
