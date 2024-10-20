@@ -8,5 +8,4 @@ resource "instance-type" "npc.ubuntu20.04" {
   hasAutoScale = true
   hasDeployment = true
   hasSettings = true
-  layouts = [ { code = "158f271b-d260-4b3f-b7a1-96a3e8ee6385" } ]
 }
