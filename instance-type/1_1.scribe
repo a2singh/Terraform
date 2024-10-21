@@ -5,8 +5,4 @@ resource "instance-type" "1.1" {
   category = "web"
   deploymentService = ""
   environmentPrefix = "AP_DELETE_ME"
-  layouts = [
-    { code = "506cd032-4931-4878-94cc-9ae0170bcddf" },
-    { code = "fad6c6e8-91e1-4e30-8110-59da516d0111" }
-  ]
 }
