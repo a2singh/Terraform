@@ -1,0 +1,11 @@
+resource "instance-type-layout" "02eea83e-5f9a-49d9-a2f0-d046cfb879cd" {
+  code = "02eea83e-5f9a-49d9-a2f0-d046cfb879cd"
+  name = "ap azure layout"
+  uuid = "0f6c5cb5-4d80-4cfb-ada3-87bac09d3fe5"
+  instanceType = { code = "apazure" }
+  instanceVersion = "22.1"
+  memoryRequirement = 0
+  provisionType = { code = "azure" }
+  supportsConvertToManaged = true
+  workloads = [ { code = "f4934fc5-4014-4d4f-995d-e46e28124ac7" } ]
+}

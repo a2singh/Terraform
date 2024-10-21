@@ -1,0 +1,8 @@
+resource "instance-type" "apazure" {
+  code = "apazure"
+  name = "ap azure instance"
+  uuid = "ba30490c-7f1f-478a-9450-5b66f7b59927"
+  category = "os"
+  deploymentService = ""
+  environmentPrefix = "AP_AZURE_INSTANCE"
+}

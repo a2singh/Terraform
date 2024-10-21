@@ -1,0 +1,15 @@
+resource "container-type" "f4934fc5-4014-4d4f-995d-e46e28124ac7" {
+  code = "f4934fc5-4014-4d4f-995d-e46e28124ac7"
+  name = "ap azure node"
+  uuid = "60bc7c8e-7d61-4c6e-92b4-c29d9ae70006"
+  containerVersion = "22.1"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "azure" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "azurenode"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "scvmm.image.41.8cd49d19-31e8-494a-9524-74811da3bf66" }
+}
