@@ -13,8 +13,10 @@ file_path = "/tmp/output.txt"
 with open(file_path, "w") as file:
     file.write(output_data)
 
-print(f"Data has been written to {file_path}")
+# Print a message confirming that the data has been written
+print("Data has been written to {}".format(file_path))
+
 EOFSCRIBE
   dateCreated = "2024-10-23T06:14:53.000Z"
-  lastUpdated = "2024-10-23T07:49:20.000Z"
+  lastUpdated = "2024-10-23T09:22:48.000Z"
 }
