@@ -1,0 +1,5 @@
+resource "task-set-task" "06d62297-3d57-4444-aec7-fa29dd235032" {
+  uuid = "06d62297-3d57-4444-aec7-fa29dd235032"
+  task = { name = "at-208194" }
+  taskPhase = "teardown"
+}
