@@ -1,0 +1,9 @@
+resource "file-content" "a60081f0-b4b2-4c71-bdf7-f13abe229fb0" {
+  uuid = "a60081f0-b4b2-4c71-bdf7-f13abe229fb0"
+  content = <<EOFSCRIBE
+Write-Output "Hello Everyone, This is Atul Singh"
+
+EOFSCRIBE
+  dateCreated = "2024-10-23T08:24:42.000Z"
+  lastUpdated = "2024-10-23T08:24:42.000Z"
+}

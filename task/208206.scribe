@@ -1,0 +1,21 @@
+resource "task" "208206" {
+  code = "208206"
+  name = "at-test_208206"
+  uuid = "f166b2db-9ec9-4650-80b1-516956480ae8"
+  dateCreated = "2024-10-23T08:24:42.000Z"
+  executeTarget = "local"
+  labels = [ "208206" ]
+  lastUpdated = "2024-10-23T08:24:42.000Z"
+  options = [
+    {
+      optionType = { code = "winrm.powershellVersion" }
+      value = "5.0"
+    },
+    {
+      content = { uuid = "a60081f0-b4b2-4c71-bdf7-f13abe229fb0" }
+      optionType = { code = "script" }
+    }
+  ]
+  taskType = { code = "winrmTask" }
+  visibility = "public"
+}
