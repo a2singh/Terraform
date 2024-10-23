@@ -5,6 +5,5 @@ resource "instance-type" "OS" {
   category = "os"
   deploymentService = ""
   environmentPrefix = "AP_CENTOS"
-  layouts = [ { code = "488e6802-9160-4321-9140-b6ba3cbc288a" } ]
   visibility = "public"
 }
