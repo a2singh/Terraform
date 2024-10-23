@@ -3,12 +3,17 @@ resource "task" "windows_variable_task" {
   uuid = "e0e5672b-dfd1-4bcc-81d7-42afe2e87527"
   dateCreated = "2024-01-04T11:35:00.000Z"
   executeTarget = "resource"
-  lastUpdated = "2024-01-05T11:31:07.000Z"
+  lastUpdated = "2024-10-23T12:00:55.000Z"
   options = [
+    {
+      optionType = { code = "winrm.powershellVersion" }
+      value = "5.0"
+    },
     {
       content = { uuid = "ecc501b2-c493-4dd5-840e-b8d86461ca28" }
       optionType = { code = "script" }
     }
   ]
   taskType = { code = "winrmTask" }
+  visibility = "public"
 }
