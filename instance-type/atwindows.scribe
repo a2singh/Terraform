@@ -8,4 +8,5 @@ resource "instance-type" "atwindows" {
   hasAutoScale = true
   hasDeployment = true
   hasSettings = true
+  layouts = [ { code = "200275b7-90ca-4709-b131-abaddb052813" } ]
 }
