@@ -4,6 +4,9 @@ resource "task-set" "AT-TeardownWorkflow" {
   dateCreated = "2024-10-23T06:42:51.000Z"
   description = "Workflow for support case 208194"
   labels = [ "208194" ]
-  lastUpdated = "2024-10-23T06:42:51.000Z"
-  taskSetTasks = [ { uuid = "06d62297-3d57-4444-aec7-fa29dd235032" } ]
+  lastUpdated = "2024-10-24T06:37:32.000Z"
+  taskSetTasks = [
+    { uuid = "3dd10f82-ed77-4141-8154-aca5b38d1e86" },
+    { uuid = "ba879b30-e8be-4dd2-96c3-a3e5bcba74b1" }
+  ]
 }

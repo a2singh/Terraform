@@ -1,0 +1,17 @@
+resource "task" "208194" {
+  code = "208194"
+  name = "AT-208194"
+  uuid = "e8f61472-b09f-44c8-a428-ce0e844780a4"
+  dateCreated = "2024-10-23T06:14:53.000Z"
+  executeTarget = "local"
+  labels = [ "Don't Delete" ]
+  lastUpdated = "2024-10-24T06:51:17.000Z"
+  options = [
+    { optionType = { code = "pythonBinary" }, value = "python3" },
+    {
+      content = { uuid = "6f11f4eb-7e95-4e1d-80f1-589fd6cb960b" }
+      optionType = { code = "pythonScript" }
+    }
+  ]
+  taskType = { code = "jythonTask" }
+}

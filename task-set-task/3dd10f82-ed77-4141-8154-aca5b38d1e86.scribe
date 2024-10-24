@@ -1,0 +1,6 @@
+resource "task-set-task" "3dd10f82-ed77-4141-8154-aca5b38d1e86" {
+  uuid = "3dd10f82-ed77-4141-8154-aca5b38d1e86"
+  task = { code = "208194" }
+  taskOrder = 1
+  taskPhase = "teardown"
+}
