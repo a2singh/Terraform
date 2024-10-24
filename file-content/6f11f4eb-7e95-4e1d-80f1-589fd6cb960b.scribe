@@ -1,22 +1,23 @@
 resource "file-content" "6f11f4eb-7e95-4e1d-80f1-589fd6cb960b" {
   uuid = "6f11f4eb-7e95-4e1d-80f1-589fd6cb960b"
   content = <<EOFSCRIBE
-# Simple Python script to write some output to a file
+import datetime
+
+# Generate a dynamic file name based on the current date and time
+timestamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+file_path = f"/tmp/output_{timestamp}.txt"
 
 # Define the output data
-output_data = "Hello, this is a sample output stored in a local file."
-
-# Specify the file path
-file_path = "/tmp/output.txt"
+output_data = "Hello, this is a sample output stored in a local file at {timestamp}."
 
 # Open the file in write mode and store the output
 with open(file_path, "w") as file:
     file.write(output_data)
 
 # Print a message confirming that the data has been written
-print("Data has been written to {}".format(file_path))
+print(f"Data has been written to {file_path} at {timestamp}")
 
 EOFSCRIBE
   dateCreated = "2024-10-23T06:14:53.000Z"
-  lastUpdated = "2024-10-23T09:22:48.000Z"
+  lastUpdated = "2024-10-24T05:54:35.000Z"
 }
