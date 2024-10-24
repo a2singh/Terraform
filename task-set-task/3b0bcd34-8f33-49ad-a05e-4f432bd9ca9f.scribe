@@ -1,0 +1,4 @@
+resource "task-set-task" "3b0bcd34-8f33-49ad-a05e-4f432bd9ca9f" {
+  uuid = "3b0bcd34-8f33-49ad-a05e-4f432bd9ca9f"
+  task = { code = "208194" }
+}

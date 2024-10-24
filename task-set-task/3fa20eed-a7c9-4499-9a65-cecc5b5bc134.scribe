@@ -1,0 +1,6 @@
+resource "task-set-task" "3fa20eed-a7c9-4499-9a65-cecc5b5bc134" {
+  uuid = "3fa20eed-a7c9-4499-9a65-cecc5b5bc134"
+  task = { code = "208194" }
+  taskOrder = 1
+  taskPhase = "reconfigure"
+}

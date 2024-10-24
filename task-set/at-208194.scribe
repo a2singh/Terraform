@@ -2,5 +2,10 @@ resource "task-set" "at-208194" {
   name = "at-208194"
   uuid = "ad5d460d-14dc-4769-ab7f-768856614352"
   dateCreated = "2024-10-24T05:55:25.000Z"
-  lastUpdated = "2024-10-24T05:55:25.000Z"
+  lastUpdated = "2024-10-24T06:10:07.000Z"
+  taskSetTasks = [
+    { uuid = "26e8ad53-9c31-4010-bbcb-fcc1a92ee0e5" },
+    { uuid = "3b0bcd34-8f33-49ad-a05e-4f432bd9ca9f" },
+    { uuid = "3fa20eed-a7c9-4499-9a65-cecc5b5bc134" }
+  ]
 }
