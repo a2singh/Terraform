@@ -1,11 +1,11 @@
 resource "task" "208206" {
   code = "208206"
-  name = "at-test_208206"
+  name = "at PowerShell 208206 (Master)"
   uuid = "f166b2db-9ec9-4650-80b1-516956480ae8"
   dateCreated = "2024-10-23T08:24:42.000Z"
   executeTarget = "resource"
   labels = [ "208206" ]
-  lastUpdated = "2024-10-28T09:21:54.000Z"
+  lastUpdated = "2024-10-29T08:38:06.000Z"
   options = [
     {
       optionType = { code = "winrm.powershellVersion" }
