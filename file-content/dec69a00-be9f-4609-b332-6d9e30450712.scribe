@@ -1,0 +1,19 @@
+resource "file-content" "dec69a00-be9f-4609-b332-6d9e30450712" {
+  uuid = "dec69a00-be9f-4609-b332-6d9e30450712"
+  content = <<EOFSCRIBE
+#!/bin/bash
+
+HOST="98.81.120.233"
+PORT=22
+
+# Method 1: Using nc (netcat)
+echo "Checking port $PORT on $HOST using netcat..."
+if nc -z -v -w 5 $HOST $PORT 2>&1 | grep -q 'succeeded'; then
+    echo "Port $PORT is open on $HOST"
+else
+    echo "Port $PORT is closed or filtered on $HOST"
+fi
+EOFSCRIBE
+  dateCreated = "2024-10-30T06:23:44.000Z"
+  lastUpdated = "2024-10-30T06:23:44.000Z"
+}

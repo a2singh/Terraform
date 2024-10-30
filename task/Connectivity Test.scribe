@@ -1,0 +1,14 @@
+resource "task" "Connectivity Test" {
+  name = "Connectivity Test"
+  uuid = "46eb2203-f300-437d-918b-0977ed350fb5"
+  dateCreated = "2024-10-30T06:23:44.000Z"
+  executeTarget = "local"
+  lastUpdated = "2024-10-30T06:23:44.000Z"
+  options = [
+    {
+      content = { uuid = "dec69a00-be9f-4609-b332-6d9e30450712" }
+      optionType = { code = "script" }
+    }
+  ]
+  taskType = { code = "script" }
+}
