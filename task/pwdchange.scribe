@@ -5,11 +5,11 @@ resource "task" "pwdchange" {
   executeTarget = "resource"
   lastUpdated = "2023-10-19T11:56:29.000Z"
   options = [
+    { optionType = { code = "shell.sudo" }, value = "on" },
     {
       content = { uuid = "8747d8e7-9fc5-46cd-bef7-f9476960b8b7" }
       optionType = { code = "script" }
-    },
-    { optionType = { code = "shell.sudo" }, value = "on" }
+    }
   ]
   taskType = { code = "script" }
 }
