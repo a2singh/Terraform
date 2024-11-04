@@ -1,0 +1,10 @@
+resource "instance-type" "aws" {
+  code = "aws"
+  name = "at aws ubuntu 22.04"
+  uuid = "11666d7f-db91-4eb0-b064-12585300c550"
+  category = "os"
+  deploymentService = "defaultDeployService"
+  environmentPrefix = "AT_AWS_UBUNTU_22_04"
+  hasDeployment = true
+  hasSettings = true
+}
