@@ -1,0 +1,11 @@
+resource "instance-type-layout" "b98dadfb-4398-49db-8c12-c207c9977c70" {
+  code = "b98dadfb-4398-49db-8c12-c207c9977c70"
+  name = "at aws ubuntu 22.04"
+  uuid = "264657d0-612e-4efc-b927-a432ea6fbda4"
+  instanceType = { code = "aws" }
+  instanceVersion = "22.04"
+  memoryRequirement = 0
+  provisionType = { code = "amazon" }
+  supportsConvertToManaged = true
+  workloads = [ { code = "f9e03679-d272-4f85-bb3f-bc7074ab386b" } ]
+}

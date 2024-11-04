@@ -1,0 +1,16 @@
+resource "container-type" "f9e03679-d272-4f85-bb3f-bc7074ab386b" {
+  code = "f9e03679-d272-4f85-bb3f-bc7074ab386b"
+  name = "at aws ubuntu 22.04"
+  uuid = "d5f89411-7af5-490a-9e79-92c56f229f36"
+  containerVersion = "22.04"
+  entryPoint = ""
+  labels = [ "ubuntu 22.04" ]
+  logTypeCode = "vm"
+  provisionType = { code = "amazon" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "ubuntu22.04"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { uuid = "a01520a5-4054-426e-bc80-a323de865260" }
+}
