@@ -12,14 +12,14 @@ println("server internalIp   : ${server.internalIp}")
 println("============================================================")
 com.morpheus.ComputeServer.withNewSession { 
 def ComputeServerRecord = com.morpheus.ComputeServer.get(server.id)
-def serverDetails = AmazonComputeUtility.getServerDetail(ComputeServerRecord)
+newServer = new ComputeServer()
 //ComputeServerRecord.server.sshHost = '34.235.117.187'
 //ComputeServerRecord.save(flush:true)
-println(serverDetails)
+println(newServer)
 //println ComputeServerRecord.getConfigMap()
 }
 
 EOFSCRIBE
   dateCreated = "2024-11-05T11:09:17.000Z"
-  lastUpdated = "2024-11-05T12:57:59.000Z"
+  lastUpdated = "2024-11-05T13:11:05.000Z"
 }
