@@ -1,0 +1,14 @@
+resource "task" "Amazon Daily Refresh" {
+  name = "Amazon Daily Refresh"
+  uuid = "6230a24b-08e0-4dc2-ac18-92db9999bec8"
+  dateCreated = "2024-11-05T10:46:23.000Z"
+  executeTarget = "local"
+  lastUpdated = "2024-11-05T10:46:23.000Z"
+  options = [
+    {
+      content = { uuid = "d477fa71-f6be-4eb0-9608-49bc55f575f4" }
+      optionType = { code = "groovyScript" }
+    }
+  ]
+  taskType = { code = "groovyTask" }
+}
