@@ -1,0 +1,26 @@
+resource "file-content" "7a242151-41f2-4209-948e-faec1761c809" {
+  uuid = "7a242151-41f2-4209-948e-faec1761c809"
+  content = <<EOFSCRIBE
+import groovy.json.JsonOutput
+println("server sshHost  : ${server.sshHost}")
+println("server externalIp  : ${server.externalIp}")
+println("server internalIp   : ${server.internalIp}")
+
+def serverJson = JsonOutput.toJson(server)
+println(JsonOutput.prettyPrint(serverJson))
+
+//com.morpheus.Instance.withNewSession { 
+//def instanceRecord = com.morpheus.Instance.get(instance.id)
+//println instanceRecord.getConfigMap()
+//}
+println("==========")
+com.morpheus.ComputeServer.withNewSession { 
+def ComputeServerRecord = com.morpheus.ComputeServer.get(server.id)
+println(ComputeServerRecord)
+println ComputeServerRecord.getConfigMap()
+}
+
+EOFSCRIBE
+  dateCreated = "2024-11-05T11:09:17.000Z"
+  lastUpdated = "2024-11-05T11:52:10.000Z"
+}

@@ -1,0 +1,14 @@
+resource "task" "RPC SSH Host" {
+  name = "RPC SSH Host"
+  uuid = "f68fdfb5-f5b5-4972-acbd-89e28f66764d"
+  dateCreated = "2024-11-05T11:09:17.000Z"
+  executeTarget = "local"
+  lastUpdated = "2024-11-05T11:52:10.000Z"
+  options = [
+    {
+      content = { uuid = "7a242151-41f2-4209-948e-faec1761c809" }
+      optionType = { code = "groovyScript" }
+    }
+  ]
+  taskType = { code = "groovyTask" }
+}
