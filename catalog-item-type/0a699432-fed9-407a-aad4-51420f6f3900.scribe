@@ -1,0 +1,78 @@
+resource "catalog-item-type" "0a699432-fed9-407a-aad4-51420f6f3900" {
+  name = "API Gateway"
+  uuid = "0a699432-fed9-407a-aad4-51420f6f3900"
+  config = {
+    appSpec = <<EOFSCRIBE
+id: 35
+image: /assets/branding/90x30/blueprint-terraform-bd2db256993d5bf66a82de44e10d7e8d.svg
+name: API Gateway
+autoValidate: true
+terraform:
+  refreshMode: manual
+  tf: |-
+    provider "aws" {
+      region     = var.region
+      access_key = var.access_key
+      secret_key = var.secret_key
+    }
+
+    ## REQUIRED VARIABLES
+    variable "region" {
+      description = "The AWS region to deploy resources"
+      type        = string
+    }
+
+    variable "access_key" {
+      description = "The AWS access key"
+      type        = string
+    }
+
+    variable "secret_key" {
+      description = "The AWS secret key"
+      type        = string
+    }
+
+    variable "route_selection_expression" {
+      description = "The route selection expression for the API."
+      type        = string
+      default     = "$request.method $request.path"
+    }
+
+    resource "aws_apigatewayv2_api" "my_api" {
+      name                      = "MyAPI"
+      protocol_type             = "HTTP"
+      route_selection_expression = var.route_selection_expression
+    }
+
+    resource "aws_apigatewayv2_stage" "my_stage" {
+      api_id      = aws_apigatewayv2_api.my_api.id
+      name        = "prod"
+      auto_deploy = true
+    }
+
+    output "api_endpoint" {
+      value = aws_apigatewayv2_api.my_api.api_endpoint
+    }
+  tfvarSecret: tfvars/profile/cloud/amazon/variables
+  backendType: internal
+  timeoutMode: one-hour
+  configType: tf
+type: terraform
+defaultCloud:
+  id: 12
+  code: ''
+needsReset: true
+group:
+  id: 2
+  code: ''
+templateParameter:
+  route_selection_expression: $request.method $request.path
+  access_key: AKIAR7UYHMXE26LWT5G5
+  secret_key: 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
+
+EOFSCRIBE
+  }
+  dateCreated = "2024-11-05T08:48:48.000Z"
+  lastUpdated = "2024-11-05T08:48:48.000Z"
+  refType = "AppTemplate"
+}
