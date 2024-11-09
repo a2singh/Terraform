@@ -5,9 +5,5 @@ resource "instance-type" "cent" {
   category = "os"
   deploymentService = ""
   environmentPrefix = "AMIT_CENTOS"
-  layouts = [
-    { code = "226b114b-336e-49e6-b463-6d36790b7086" },
-    { code = "954b068d-bdaf-40a6-926d-5df88c9f2e04" }
-  ]
   visibility = "public"
 }
