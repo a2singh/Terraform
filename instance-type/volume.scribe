@@ -5,6 +5,5 @@ resource "instance-type" "volume" {
   category = "apps"
   deploymentService = ""
   environmentPrefix = "205067"
-  layouts = [ { code = "51e2cddf-0da4-451f-a70f-447b168f50f7" } ]
   visibility = "public"
 }
