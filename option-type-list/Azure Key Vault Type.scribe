@@ -1,0 +1,12 @@
+resource "option-type-list" "Azure Key Vault Type" {
+  name = "Azure Key Vault Type"
+  uuid = "683ba464-afae-4d50-a9bc-94777c2f2d72"
+  initialDataset = <<EOFSCRIBE
+[
+{ "name": "EC", "value": "EC" },
+{ "name": "EC-HSM", "value": "EC-HSM" },
+{ "name": "RSA", "value": "RSA" }
+]
+EOFSCRIBE
+  type = "manual"
+}

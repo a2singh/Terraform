@@ -1,0 +1,12 @@
+resource "option-type" "keyType" {
+  code = "keyType"
+  name = "Azure KeyVault - KeyType"
+  uuid = "65827343-a2ae-4382-99cc-e3f0991e2c28"
+  fieldContext = "config.customOptions"
+  fieldLabel = "Key Type"
+  fieldName = "keyType"
+  noBlank = true
+  optionList = { name = "Azure Key Vault Type" }
+  optionSource = "list"
+  type = "select"
+}
