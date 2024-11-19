@@ -1,0 +1,42 @@
+resource "option-type-form" "208417" {
+  code = "208417"
+  name = "208417"
+  uuid = "b9068872-a1d7-4551-a60f-bb2aa9c653b6"
+  config = {
+    enableVar = false
+    form = ""
+    formField = ""
+    formOptions = ""
+    formType = "static"
+  }
+  description = "manual OptionList"
+  labels = [ "208417" ]
+  options = [
+    {
+      code = "keyType"
+      name = "Azure KeyVault - KeyType"
+      uuid = "65827343-a2ae-4382-99cc-e3f0991e2c28"
+      fieldContext = "config.customOptions"
+      fieldLabel = "Key Type"
+      fieldName = "keyType"
+      noBlank = true
+      optionList = { name = "Azure Key Vault Type" }
+      optionSource = "list"
+      type = "select"
+    },
+    {
+      code = "keySize"
+      name = "Azure KeyVault - KeySize"
+      uuid = "0d15bef6-61a8-4ea4-ab1b-8cfea60c0154"
+      dependsOnCode = "keyType"
+      fieldContext = "config.customOptions"
+      fieldLabel = "Key Size"
+      fieldName = "keySize"
+      noBlank = true
+      optionList = { name = "Azure Key Vault KeySize" }
+      optionSource = "list"
+      type = "select"
+      visibleOnCode = "keyType:(EC)"
+    }
+  ]
+}
