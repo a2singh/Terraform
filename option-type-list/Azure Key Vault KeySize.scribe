@@ -1,0 +1,12 @@
+resource "option-type-list" "Azure Key Vault KeySize" {
+  name = "Azure Key Vault KeySize"
+  uuid = "208849c0-14ce-4242-8327-506dd3e67850"
+  initialDataset = <<EOFSCRIBE
+[
+{ "name": "2048", "value": 2048 },
+{ "name": "3072", "value": 3072 },
+{ "name": "4096", "value": 4096 }
+]
+EOFSCRIBE
+  type = "manual"
+}

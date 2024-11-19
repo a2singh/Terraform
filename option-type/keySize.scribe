@@ -1,0 +1,14 @@
+resource "option-type" "keySize" {
+  code = "keySize"
+  name = "Azure KeyVault - KeySize"
+  uuid = "0d15bef6-61a8-4ea4-ab1b-8cfea60c0154"
+  dependsOnCode = "keyType"
+  fieldContext = "config.customOptions"
+  fieldLabel = "Key Size"
+  fieldName = "keySize"
+  noBlank = true
+  optionList = { name = "Azure Key Vault KeySize" }
+  optionSource = "list"
+  type = "select"
+  visibleOnCode = "keyType:(EC)"
+}
