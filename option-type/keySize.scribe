@@ -10,5 +10,5 @@ resource "option-type" "keySize" {
   optionList = { name = "Azure Key Vault KeySize" }
   optionSource = "list"
   type = "select"
-  visibleOnCode = "keyType:(EC)"
+  visibleOnCode = "keyType:(RSA)"
 }
