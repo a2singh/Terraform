@@ -5,7 +5,8 @@ resource "option-type-list" "Azure Key Vault Type" {
 [
 { "name": "EC", "value": "EC" },
 { "name": "EC-HSM", "value": "EC-HSM" },
-{ "name": "RSA", "value": "RSA" }
+{ "name": "RSA", "value": "RSA" },
+{ "name": "RSA-HSM", "value": "RSA-HSM" }
 ]
 EOFSCRIBE
   type = "manual"
