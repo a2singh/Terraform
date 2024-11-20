@@ -1,0 +1,16 @@
+resource "container-type" "a0fefdd0-493f-4ac3-8767-80e49aa4ef55" {
+  code = "a0fefdd0-493f-4ac3-8767-80e49aa4ef55"
+  name = "RHEL 9"
+  uuid = "3631fbba-b660-4427-9fd4-6f254107a5b8"
+  containerVersion = "9"
+  entryPoint = ""
+  labels = [ "RHEL" ]
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "rhel9"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "vmware.vsphere.image.50.vm-225363" }
+}
