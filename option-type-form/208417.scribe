@@ -36,7 +36,7 @@ resource "option-type-form" "208417" {
       optionList = { name = "Azure Key Vault KeySize" }
       optionSource = "list"
       type = "select"
-      visibleOnCode = "keyType:(RSA)"
+      visibleOnCode = "keyType:(RSA),keyType:(RSA-HSM)"
     }
   ]
 }
