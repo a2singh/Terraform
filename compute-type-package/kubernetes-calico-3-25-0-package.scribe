@@ -1,0 +1,20 @@
+resource "compute-type-package" "kubernetes-calico-3-25-0-package" {
+  code = "kubernetes-calico-3-25-0-package"
+  name = "calico 3.25.0 package"
+  category = "kubernetes.network"
+  dateCreated = "2024-10-15T09:17:54.000Z"
+  description = "install calico google networking"
+  lastUpdated = "2024-10-15T09:17:54.000Z"
+  packageType = "calico"
+  packageVersion = "1.0"
+  providerType = "kubernetes"
+  restartDns = true
+  sortOrder = 10
+  specTemplates = [
+    { code = "kubernetes-calico-3-25-0" },
+    { code = "kubernetes-tigera-crds" },
+    { code = "kubernetes-calico-3-25-0-service-accounts-rolebindings" },
+    { code = "kubernetes-tigera-deployment" }
+  ]
+  type = "network"
+}
