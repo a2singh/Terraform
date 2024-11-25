@@ -3,9 +3,9 @@ resource "option-type-list" "Azure Key Vault KeySize" {
   uuid = "208849c0-14ce-4242-8327-506dd3e67850"
   initialDataset = <<EOFSCRIBE
 [
-  {"keyType": "RSA", "keySizes": [2048, 3072]},
-  {"keyType": "EC", "keySizes": [256, 384]},
-  {"keyType": "RSA-HSM", "keySizes": [2048, 3072, 4096]}
+  {"name":"RSA","value":[2048,3072]},
+  {"name":"EC","value":[256,384]},
+  {"name":"RSA-HSM","value":[4096]}
 ]
 EOFSCRIBE
   type = "manual"
