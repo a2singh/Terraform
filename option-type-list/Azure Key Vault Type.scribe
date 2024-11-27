@@ -9,36 +9,5 @@ resource "option-type-list" "Azure Key Vault Type" {
 { "name": "RSA-HSM", "value": "RSA-HSM" }
 ]
 EOFSCRIBE
-  translationScript = <<EOFSCRIBE
-function parseObjectProperties (obj, parse) {
-  for (var k in obj) {
-    if (typeof obj[k] === 'object' && obj[k] !== null) {
-      parseObjectProperties(obj[k], parse)
-    } else {
-      parse(k, obj[k])
-    }
-  }
-}
-
-
-// then apply to the property the task you want, in this case just console
-console.log('---------Start Trans Type Input------')
-parseObjectProperties(input, function(k, prop) {
-console.log(k + ': ' + prop)
-})
-console.log('---------Stop Trans Type Input------')
-
-console.log('---------Start Trans Type Data------')
-parseObjectProperties(data, function(k, prop) {
-console.log(k + ': ' + prop)
-})
-console.log('---------Stop Trans Type Data------')
-
-console.log('---------Start Trans KeySize Results ------')
-parseObjectProperties(results, function(k, prop) {
-console.log(k + ': ' + prop)
-})
-console.log('---------Stop Trans Type Results------')
-EOFSCRIBE
   type = "manual"
 }
