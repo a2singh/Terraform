@@ -3,7 +3,7 @@ resource "task-set" "208417" {
   uuid = "c1e765e0-f63a-48ea-b4e9-7867c708991c"
   dateCreated = "2024-11-20T10:25:03.000Z"
   labels = [ "208417" ]
-  lastUpdated = "2024-11-27T16:29:29.000Z"
+  lastUpdated = "2024-11-27T17:32:40.000Z"
   optionTypes = [ { code = "keyType" }, { code = "keySize" } ]
   taskSetType = "operation"
 }
