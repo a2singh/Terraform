@@ -2,6 +2,7 @@ resource "container-type" "4e0ee616-45c1-48db-afcd-25ebc50ceb21" {
   code = "4e0ee616-45c1-48db-afcd-25ebc50ceb21"
   name = "centos 8"
   uuid = "7ad153de-6961-4266-a11c-80bff2960b34"
+  actions = [ { code = "generic-remove-node" } ]
   containerVersion = "8"
   entryPoint = ""
   labels = [ "8" ]
