@@ -2,9 +2,11 @@ resource "instance-type" "volume" {
   code = "volume"
   name = "205067"
   uuid = "af4716fd-0a46-498b-b49a-bb109f8f66b8"
-  category = "apps"
-  deploymentService = ""
+  category = "os"
+  deploymentService = "defaultDeployService"
   environmentPrefix = "205067"
-  layouts = [ { code = "51e2cddf-0da4-451f-a70f-447b168f50f7" } ]
+  hasAutoScale = true
+  hasDeployment = true
+  hasSettings = true
   visibility = "public"
 }
