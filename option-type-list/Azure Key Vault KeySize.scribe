@@ -9,17 +9,45 @@ resource "option-type-list" "Azure Key Vault KeySize" {
 ]
 EOFSCRIBE
   translationScript = <<EOFSCRIBE
-if (input.keyType) {
-    for (var x = 0; x < data.length; x++) {
+function parseObjectProperties (obj, parse) {
+  for (var k in obj) {
+    if (typeof obj[k] === 'object' && obj[k] !== null) {
+      parseObjectProperties(obj[k], parse)
+    } else {
+      parse(k, obj[k])
+    }
+  }
+}
+
+
+// then apply to the property the task you want, in this case just console
+console.log('---------Start Trans KeySize Input------')
+parseObjectProperties(input, function(k, prop) {
+console.log(k + ': ' + prop)
+})
+console.log('---------Stop Trans KeySize Input------')
+
+console.log('---------Start Trans KeySize Data------')
+parseObjectProperties(data, function(k, prop) {
+console.log(k + ': ' + prop)
+})
+console.log('---------Stop Trans KeySize Data------')
+
+console.log('---------Start Trans KeySize Results ------')
+parseObjectProperties(results, function(k, prop) {
+console.log(k + ': ' + prop)
+})
+console.log('---------Stop Trans KeySize Results------')
+
+for (var x = 0; x < data.length; x++) {
         if (input.keyType === 'RSA') {
             if (data[x].name === '2048' || data[x].name === '3072') {
-                results.push({name: data[x].name, value: data[x]});
+                results.push({name: data[x].name, value: data[x].name});
             }
         } else {
             results.push({name: data[x].name, value: 4096});
         }
     }
-}
 EOFSCRIBE
   type = "manual"
 }
