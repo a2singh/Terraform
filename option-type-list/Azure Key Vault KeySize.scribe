@@ -10,11 +10,19 @@ resource "option-type-list" "Azure Key Vault KeySize" {
 EOFSCRIBE
   realTime = true
   translationScript = <<EOFSCRIBE
-for (var x = 0; x < data.length; x++) {
+if (input.keyType) {
+    for (var x = 0; x < data.length; x++) {
+        if (input.keyType === 'RSA') {
             if (data[x].name === '2048' || data[x].name === '3072') {
-                results.push({name: data[x].name, value: data[x].name});
+                results.push({ name: data[x].name, value: data[x].value });
             }
+        } else if (input.keyType === 'RSA-HSM') {
+            if (data[x].name === '4096') { // Only include the "4096" entry
+                results.push({ name: data[x].name, value: data[x].value });
+            }
+        }
     }
+}
 EOFSCRIBE
   type = "manual"
 }

@@ -7,9 +7,9 @@ resource "option-type" "keySize" {
   fieldContext = "config.customOptions"
   fieldLabel = "Key Size"
   fieldName = "keySize"
-  noBlank = true
   optionList = { name = "Azure Key Vault KeySize" }
   optionSource = "list"
+  required = true
   type = "select"
   visibleOnCode = "keyType:(RSA),keyType:(RSA-HSM)"
 }
