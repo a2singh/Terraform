@@ -1,0 +1,16 @@
+resource "container-type" "34eaaf64-3150-4d01-a91e-22aa36a5b252" {
+  code = "34eaaf64-3150-4d01-a91e-22aa36a5b252"
+  name = "At redhat"
+  uuid = "90ec2ea7-8851-4ab2-ad4f-83eb6fe02edc"
+  actions = [ { code = "generic-remove-node" } ]
+  containerVersion = "9"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "at.redhat"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "vmware.vsphere.image.50.vm-225363" }
+}

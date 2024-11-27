@@ -1,0 +1,13 @@
+resource "instance-type-layout" "5b0534da-95c4-49c0-a70a-6df9e2533047" {
+  code = "5b0534da-95c4-49c0-a70a-6df9e2533047"
+  name = "AT Redhat"
+  uuid = "acf51d46-59b4-44b4-a802-23f43b7eda5b"
+  actions = [ { code = "generic-add-node" } ]
+  hasAutoScale = true
+  instanceType = { code = "redhat" }
+  instanceVersion = "9"
+  memoryRequirement = 0
+  provisionType = { code = "vmware" }
+  supportsConvertToManaged = true
+  workloads = [ { code = "34eaaf64-3150-4d01-a91e-22aa36a5b252" } ]
+}

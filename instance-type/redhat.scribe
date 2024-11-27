@@ -1,0 +1,12 @@
+resource "instance-type" "redhat" {
+  code = "redhat"
+  name = "AT New redhat"
+  uuid = "6611985f-8a1c-40a4-84a8-872170a68e00"
+  category = "os"
+  deploymentService = "defaultDeployService"
+  environmentPrefix = "AT_NEW_REDHAT"
+  hasAutoScale = true
+  hasDeployment = true
+  hasSettings = true
+  visibility = "public"
+}
