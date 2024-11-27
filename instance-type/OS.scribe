@@ -3,8 +3,10 @@ resource "instance-type" "OS" {
   name = "AP CentOS"
   uuid = "3e3ccc0e-c831-4a90-8222-d7c6ea1d1474"
   category = "os"
-  deploymentService = ""
+  deploymentService = "defaultDeployService"
   environmentPrefix = "AP_CENTOS"
-  layouts = [ { code = "488e6802-9160-4321-9140-b6ba3cbc288a" } ]
+  hasAutoScale = true
+  hasDeployment = true
+  hasSettings = true
   visibility = "public"
 }

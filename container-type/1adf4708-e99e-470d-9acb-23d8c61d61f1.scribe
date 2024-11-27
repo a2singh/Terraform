@@ -2,6 +2,7 @@ resource "container-type" "1adf4708-e99e-470d-9acb-23d8c61d61f1" {
   code = "1adf4708-e99e-470d-9acb-23d8c61d61f1"
   name = "AP centOS"
   uuid = "0275dc2e-7124-4dde-8655-44b195822c69"
+  actions = [ { code = "generic-remove-node" } ]
   containerVersion = "7.5"
   entryPoint = ""
   labels = [ "os" ]
