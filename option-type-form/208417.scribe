@@ -29,6 +29,7 @@ resource "option-type-form" "208417" {
       name = "Azure KeyVault - KeySize"
       uuid = "0d15bef6-61a8-4ea4-ab1b-8cfea60c0154"
       dependsOnCode = "keyType"
+      displayOrder = 1
       fieldContext = "config.customOptions"
       fieldLabel = "Key Size"
       fieldName = "keySize"
