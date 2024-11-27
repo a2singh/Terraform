@@ -2,6 +2,7 @@ resource "instance-type-layout" "226b114b-336e-49e6-b463-6d36790b7086" {
   code = "226b114b-336e-49e6-b463-6d36790b7086"
   name = "amit layout"
   uuid = "021843eb-2d55-472c-ad47-0844f5247324"
+  actions = [ { code = "generic-add-node" } ]
   instanceType = { code = "cent" }
   instanceVersion = "7.5"
   memoryRequirement = 0

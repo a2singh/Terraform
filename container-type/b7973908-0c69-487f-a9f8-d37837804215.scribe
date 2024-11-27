@@ -2,6 +2,7 @@ resource "container-type" "b7973908-0c69-487f-a9f8-d37837804215" {
   code = "b7973908-0c69-487f-a9f8-d37837804215"
   name = "amit centOS"
   uuid = "e1a20680-a4b0-45d9-a15e-fbe8cc971afc"
+  actions = [ { code = "generic-remove-node" } ]
   containerVersion = "7.5"
   entryPoint = ""
   logTypeCode = "vm"

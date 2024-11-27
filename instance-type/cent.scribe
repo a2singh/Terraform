@@ -3,11 +3,10 @@ resource "instance-type" "cent" {
   name = "amit centos"
   uuid = "4efc5165-b37d-48e7-92ec-20a951aa5e37"
   category = "os"
-  deploymentService = ""
+  deploymentService = "defaultDeployService"
   environmentPrefix = "AMIT_CENTOS"
-  layouts = [
-    { code = "226b114b-336e-49e6-b463-6d36790b7086" },
-    { code = "954b068d-bdaf-40a6-926d-5df88c9f2e04" }
-  ]
+  hasAutoScale = true
+  hasDeployment = true
+  hasSettings = true
   visibility = "public"
 }
