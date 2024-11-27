@@ -3,11 +3,23 @@ resource "option-type-list" "Azure Key Vault KeySize" {
   uuid = "208849c0-14ce-4242-8327-506dd3e67850"
   initialDataset = <<EOFSCRIBE
 [
-  { "name": "EC", "value": "EC" },
-  { "name": "EC-HSM", "value": "EC-HSM" },
-  { "name": "RSA", "value": "RSA" },
-  { "name": "RSA-HSM", "value": "RSA-HSM" }
+  { "name": "2048", "value": 2048 },
+  { "name": "3071", "value": 3072 },
+  { "name": "4096", "value": 4096 }
 ]
+EOFSCRIBE
+  translationScript = <<EOFSCRIBE
+if (input.keyType) {
+    for (var x = 0; x < data.length; x++) {
+        if (input.keyType === 'RSA') {
+            if (data[x].name === '2048' || data[x].name === '3072') {
+                results.push({name: data[x].name, value: data[x]});
+            }
+        } else {
+            results.push({name: data[x].name, value: 4096});
+        }
+    }
+}
 EOFSCRIBE
   type = "manual"
 }
