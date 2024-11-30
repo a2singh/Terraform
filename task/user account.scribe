@@ -6,12 +6,12 @@ resource "task" "user account" {
   lastUpdated = "2024-10-23T12:01:10.000Z"
   options = [
     {
-      optionType = { code = "winrm.powershellVersion" }
-      value = "5.0"
-    },
-    {
       content = { uuid = "0407c1b5-87b2-4e58-99d3-c59c4cb8b6f4" }
       optionType = { code = "script" }
+    },
+    {
+      optionType = { code = "winrm.powershellVersion" }
+      value = "5.0"
     }
   ]
   taskType = { code = "winrmTask" }
