@@ -6,12 +6,12 @@ resource "task" "windows_variable_task" {
   lastUpdated = "2024-10-23T12:00:55.000Z"
   options = [
     {
-      content = { uuid = "ecc501b2-c493-4dd5-840e-b8d86461ca28" }
-      optionType = { code = "script" }
-    },
-    {
       optionType = { code = "winrm.powershellVersion" }
       value = "5.0"
+    },
+    {
+      content = { uuid = "ecc501b2-c493-4dd5-840e-b8d86461ca28" }
+      optionType = { code = "script" }
     }
   ]
   taskType = { code = "winrmTask" }
