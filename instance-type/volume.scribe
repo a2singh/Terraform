@@ -8,4 +8,5 @@ resource "instance-type" "volume" {
   hasAutoScale = true
   hasDeployment = true
   hasSettings = true
+  layouts = [ { code = "51e2cddf-0da4-451f-a70f-447b168f50f7" } ]
 }
