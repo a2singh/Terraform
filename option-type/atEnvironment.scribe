@@ -1,0 +1,15 @@
+resource "option-type" "atEnvironment" {
+  code = "atEnvironment"
+  name = "AT Environment"
+  uuid = "0c0c446f-b5ae-41d4-891e-6d6eaa3c9106"
+  defaultValue = "Production"
+  description = "AT Environment"
+  fieldContext = "config.customOptions"
+  fieldLabel = "environment"
+  fieldName = "atEnvironment"
+  labels = [ "Environment" ]
+  optionList = { name = "at environment" }
+  optionSource = "list"
+  required = true
+  type = "select"
+}
