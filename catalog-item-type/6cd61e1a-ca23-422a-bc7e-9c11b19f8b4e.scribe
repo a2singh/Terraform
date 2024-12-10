@@ -1012,7 +1012,7 @@ EOFSCRIBE
     { code = "app_name" },
     { code = "network" },
     { code = "servicePlans" },
-    { code = "environment" }
+    { code = "atEnvironment" }
   ]
   refType = "AppTemplate"
 }
