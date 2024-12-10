@@ -3,6 +3,6 @@ resource "task-set" "Assign_Environment" {
   uuid = "602a21e2-4520-450e-950b-aed0eade3d40"
   dateCreated = "2024-12-10T09:19:26.000Z"
   lastUpdated = "2024-12-10T09:19:26.000Z"
-  optionTypes = [ { code = "atEnvironment" } ]
+  optionTypes = [ { code = "atEnvironments" } ]
   taskSetType = "operation"
 }

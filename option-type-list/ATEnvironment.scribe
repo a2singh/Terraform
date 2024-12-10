@@ -1,0 +1,12 @@
+resource "option-type-list" "ATEnvironment" {
+  name = "ATEnvironment"
+  uuid = "ddbf9378-4ad5-4846-95a4-2685670dd96b"
+  apiType = "environments"
+  description = "AT Environment"
+  realTime = true
+  translationScript = <<EOFSCRIBE
+for (var x = 0; x < data.length; x++) {
+ results.push({name:data[x].name,value:data[x].name});}
+EOFSCRIBE
+  type = "api"
+}
