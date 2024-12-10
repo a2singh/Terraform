@@ -140,7 +140,7 @@ resource "catalog-item-type" "b9499060-bfbf-4d29-8af6-3e3e17016fb7" {
     { code = "cpu" },
     { code = "ram" },
     { code = "plan" },
-    { code = "atEnvironment" }
+    { code = "atEnvironments" }
   ]
   refType = "InstanceType"
 }
