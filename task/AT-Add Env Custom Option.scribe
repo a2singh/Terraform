@@ -1,0 +1,30 @@
+resource "task" "AT-Add Env Custom Option" {
+  name = "AT-Add Env Custom Option"
+  uuid = "61465416-a8db-4a30-adbe-0f41177256b9"
+  dateCreated = "2024-12-10T11:46:52.000Z"
+  executeTarget = "local"
+  lastUpdated = "2024-12-10T11:46:52.000Z"
+  options = [
+    {
+      optionType = { code = "webUrl" }
+      value = "<%= morpheus.applianceUrl %>api/instances/<%= instance.id %>"
+    },
+    { optionType = { code = "webMethod" }, value = "PUT" },
+    {
+      optionType = { code = "webHeaders" }
+      value = "[{\"key\":\"Content-Type\",\"value\":\"application/json; charset=ISO-8859-1\"},{\"key\":\"Authorization\",\"value\":\"BEARER <%= morpheus.apiAccessToken %>\"}]"
+    },
+    { optionType = { code = "ignoreSSL" }, value = "on" },
+    {
+      optionType = { code = "webBody" }
+      value = <<EOFSCRIBE
+{
+"instance": {
+"instanceContext": "<%=customOptions.atEnvironments%>"
+}
+}
+EOFSCRIBE
+    }
+  ]
+  taskType = { code = "httpTask" }
+}

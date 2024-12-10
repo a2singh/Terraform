@@ -1,0 +1,9 @@
+resource "task-set" "AT- Add Env Custom Option" {
+  name = "AT- Add Env Custom Option"
+  uuid = "3b200534-7eff-4bab-a86f-35cc5a36df55"
+  dateCreated = "2024-12-10T11:52:43.000Z"
+  lastUpdated = "2024-12-10T11:52:43.000Z"
+  optionTypes = [ { code = "atEnvironments" } ]
+  taskSetTasks = [ { uuid = "feac2f2b-e7e3-4d0d-bedc-0539775c1617" } ]
+  taskSetType = "operation"
+}
