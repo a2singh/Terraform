@@ -1,0 +1,18 @@
+resource "task" "create" {
+  name = "create"
+  uuid = "60f7b223-73c6-497f-9b90-8ea6f56baa28"
+  dateCreated = "2024-12-11T14:34:53.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2024-12-11T14:34:53.000Z"
+  options = [
+    {
+      optionType = { code = "ansibleGitId" }
+      value = { name = "AP Ansible" }
+    },
+    {
+      optionType = { code = "ansiblePlaybook" }
+      value = "create_dir"
+    }
+  ]
+  taskType = { code = "ansibleTask" }
+}
