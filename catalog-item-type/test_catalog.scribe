@@ -1,0 +1,107 @@
+resource "catalog-item-type" "test.catalog" {
+  code = "test.catalog"
+  name = "AT TF Test Catalog"
+  uuid = "070f49c8-959d-4d3f-a1dd-19171c62a173"
+  config = {
+    appSpec = <<EOFSCRIBE
+id: 36
+image: /assets/branding/90x30/blueprint-terraform-bd2db256993d5bf66a82de44e10d7e8d.svg
+labelString: Terraform
+autoValidate: true
+description: Blueprint Created to Test Morpheus Cases
+terraform:
+  tfVersion: ''
+  refreshMode: manual
+  tf: |-
+    provider "aws" {
+      region     = var.region
+      access_key = var.access_key
+      secret_key = var.secret_key
+    }
+
+    ## REQUIRED VARIABLES
+    variable "region" {
+      description = "The AWS region to deploy resources"
+      type        = string
+    }
+
+    variable "access_key" {
+      description = "The AWS access key"
+      type        = string
+    }
+
+    variable "secret_key" {
+      description = "The AWS secret key"
+      type        = string
+    }
+
+
+    # Define a security group allowing SSH and HTTP access
+    resource "aws_security_group" "at-morph-sg-01" {
+      name        = "at-morph-sg-01"
+      description = "Allow SSH and HTTP traffic"
+
+      ingress {
+        from_port   = 22
+        to_port     = 22
+        protocol    = "tcp"
+        cidr_blocks = ["0.0.0.0/0"]  # Allow SSH from anywhere (use caution)
+      }
+
+      ingress {
+        from_port   = 80
+        to_port     = 80
+        protocol    = "tcp"
+        cidr_blocks = ["0.0.0.0/0"]  # Allow HTTP from anywhere
+      }
+
+      egress {
+        from_port   = 0
+        to_port     = 0
+        protocol    = "-1"  # Allow all outbound traffic
+        cidr_blocks = ["0.0.0.0/0"]
+      }
+    }
+
+    # Launch an EC2 instance
+    resource "aws_instance" "my_ec2" {
+      ami           = "ami-0e2c8caa4b6378d8c"  # Replace with a valid AMI ID for your region
+      instance_type = "t2.micro"              # Instance type
+
+      # Attach the security group to the instance
+      vpc_security_group_ids = [aws_security_group.at-morph-sg-01.id]
+
+      tags = {
+        Name = "ATEC2Instance"
+      }
+    }
+
+    # Output the instance's public IP
+    output "instance_public_ip" {
+      value = aws_instance.my_ec2.public_ip
+    }
+  tfvarSecret: tfvars/profile/cloud/amazon/variables
+  backendType: internal
+  timeoutMode: one-hour
+  configType: tf
+type: terraform
+category: ''
+defaultCloud:
+  id: 58
+  code: ''
+needsReset: true
+group:
+  id: 56
+  code: ''
+environment: Morph Test Machine
+name: AT-TF-TestCatalog
+templateParameter:
+  access_key: AKIARYHEDPFYURIK45RR
+  secret_key: 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
+
+EOFSCRIBE
+  }
+  dateCreated = "2024-12-11T08:32:39.000Z"
+  lastUpdated = "2024-12-11T08:32:39.000Z"
+  refType = "AppTemplate"
+}
