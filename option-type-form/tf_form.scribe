@@ -1,0 +1,28 @@
+resource "option-type-form" "tf.form" {
+  code = "tf.form"
+  name = "TF FORM"
+  uuid = "ce4c7bf4-930c-48b6-bbbe-f296ce37ade2"
+  config = {
+    enableVar = false
+    form = ""
+    formField = ""
+    formOptions = ""
+    formType = "static"
+  }
+  options = [
+    {
+      code = "5ad6a439-25f0-4a0c-b72f-d9859a43032e"
+      name = "5ad6a439-25f0-4a0c-b72f-d9859a43032e"
+      uuid = "1b64335a-3318-4205-83e9-937812938a41"
+      config = {
+        addon = ""
+        addonPosition = ""
+        retainDefault = false
+      }
+      fieldContext = "config.customOptions"
+      fieldLabel = "instance_name"
+      fieldName = "instance_name"
+      formField = true
+    }
+  ]
+}
