@@ -8,5 +8,4 @@ resource "instance-type" "207822" {
   hasAutoScale = true
   hasDeployment = true
   hasSettings = true
-  layouts = [ { code = "0545e702-329f-4901-a9c0-8c518c1f3347" } ]
 }
