@@ -2,44 +2,47 @@ resource "file-content" "2a83c50f-868a-404f-a9b5-9e44917a3e8c" {
   uuid = "2a83c50f-868a-404f-a9b5-9e44917a3e8c"
   content = <<EOFSCRIBE
 # Define the provider
-provider "aws" {  
-region     = "us-west-1" 
-access_key = "AKIARYHEDPFYURIK45RR" 
-secret_key = "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"}
-
+provider "aws" {
+  region     = "us-east-1"
+  access_key = "AKIARYHEDPFYURIK45RR"
+  secret_key = "QK9whAAu43bL6xsYEQehaictXZ8SlVybZ55uxq79"
+}
 # Use existing VPC
 data "aws_vpc" "existing_vpc" {
-  id = "vpc-01196562ddad329e7"   # Replace with your existing VPC ID}
+  id = "vpc-01196562ddad329e7"  # Replace with your existing VPC ID
+}
 
 # Use existing public subnet
 data "aws_subnet" "existing_subnet" {
-  id = "subnet-03b85b03186d6eabd"  # Replace with your existing subnet ID}
+  id = "subnet-03b85b03186d6eabd"  # Replace with your existing subnet ID
+}
 
 # Use existing security group
 data "aws_security_group" "existing_sg" {
- id = "sg-0354d29a5fac6e956"  # Replace with your existing security group ID}
+  id = "sg-0354d29a5fac6e956"  # Replace with your existing security group ID
+}
 
 # Create an EC2 instance
 resource "aws_instance" "web_server" {
-ami                = "ami-0e2c8caa4b6378d8c" # Amazon Linux 2023 AMI  
-instance_type      = "t2.micro"  
-subnet_id          = data.aws_subnet.existing_subnet.id  
-vpc_security_group_ids = [data.aws_security_group.existing_sg.id]  # Use security group ID instead of name  
+  ami                = "ami-0e2c8caa4b6378d8c" # Amazon Linux 2023 AMI
+  instance_type      = "t2.micro"
+  subnet_id          = data.aws_subnet.existing_subnet.id
+  vpc_security_group_ids = [data.aws_security_group.existing_sg.id]  # Use security group ID instead of name
 
-tags = {    
-Name = "morph_server"  
-}  
+  tags = {
+    Name = "web_server"
+  }
 
-user_data = <<-EOF              
-#!/bin/bash              
-yum update -y              
-yum install httpd -y              
-systemctl start httpd              
-systemctl enable httpd              
-echo "Hello, Terraform!" > /var/www/html/index.html            
-EOF
-} 
+  user_data = <<-EOF
+              #!/bin/bash
+              yum update -y
+              yum install httpd -y
+              systemctl start httpd
+              systemctl enable httpd
+              echo "Hello, Terraform!" > /var/www/html/index.html
+            EOF
+}
 EOFSCRIBE
   dateCreated = "2024-12-17T05:21:34.000Z"
-  lastUpdated = "2024-12-17T05:21:34.000Z"
+  lastUpdated = "2024-12-17T13:12:47.000Z"
 }
