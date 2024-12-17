@@ -1,0 +1,87 @@
+resource "option-type-form" "at.tf.form" {
+  code = "at.tf.form"
+  name = "AT_TEST_TERRAFORM_01"
+  uuid = "50fe4153-c3f6-45dd-ac03-cb107845f642"
+  config = {
+    enableVar = false
+    form = ""
+    formField = ""
+    formOptions = ""
+    formType = "static"
+  }
+  options = [
+    {
+      code = "df574198-11d5-449b-adc3-5280d264f4ef"
+      name = "df574198-11d5-449b-adc3-5280d264f4ef"
+      uuid = "21cf016b-a33d-4ca7-8820-15c9c00d9658"
+      fieldContext = "config.customOptions"
+      fieldLabel = "instance name"
+      fieldName = "instance_name"
+      formField = true
+    },
+    {
+      code = "ead8db85-f427-4958-8533-08a0df7d4b93"
+      name = "ead8db85-f427-4958-8533-08a0df7d4b93"
+      uuid = "02e02d41-306e-4ca0-88d5-9b972e13aaa3"
+      config = { allowReadonly = false }
+      displayOrder = 1
+      fieldContext = "config.customOptions"
+      fieldLabel = "group"
+      fieldName = "group"
+      formField = true
+      type = "group"
+    },
+    {
+      code = "f629765b-5b18-40ae-b970-2a44f2e1fd66"
+      name = "f629765b-5b18-40ae-b970-2a44f2e1fd66"
+      uuid = "0a2360da-5f06-4f65-8b13-5d1843e1592a"
+      config = {
+        addon = ""
+        addonPosition = ""
+        cloudType = ""
+        filterResource = false
+        group = "ead8db85-f427-4958-8533-08a0df7d4b93"
+        groupFieldType = "field"
+        groupId = ""
+        instanceTypeCode = ""
+        instanceTypeFieldCode = ""
+        instanceTypeFieldType = "field"
+        retainDefault = false
+      }
+      displayOrder = 2
+      fieldContext = "config.customOptions"
+      fieldLabel = "cloud"
+      fieldName = "cloud"
+      formField = true
+      type = "cloud"
+    },
+    {
+      code = "2ce3997b-9ca7-43d0-b087-78527b34c3c2"
+      name = "2ce3997b-9ca7-43d0-b087-78527b34c3c2"
+      uuid = "89c952d3-490e-4ba3-bb69-de1c430e78a2"
+      config = {
+        cloudField = "f629765b-5b18-40ae-b970-2a44f2e1fd66"
+        cloudFieldType = "field"
+        cloudId = ""
+        defaultValue = ""
+        diskField = ""
+        groupField = "ead8db85-f427-4958-8533-08a0df7d4b93"
+        groupFieldType = "field"
+        groupId = ""
+        layoutField = ""
+        layoutFieldType = "value"
+        layoutId = "1242"
+        poolField = ""
+        poolFieldType = "value"
+        poolId = "1406"
+        showPricing = false
+      }
+      displayOrder = 3
+      fieldContext = "config.customOptions"
+      fieldLabel = "service plan"
+      fieldName = "service_plan"
+      formField = true
+      type = "plan"
+    }
+  ]
+}

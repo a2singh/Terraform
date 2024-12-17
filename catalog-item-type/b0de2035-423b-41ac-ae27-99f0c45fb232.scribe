@@ -1,0 +1,54 @@
+resource "catalog-item-type" "b0de2035-423b-41ac-ae27-99f0c45fb232" {
+  name = "AT TF EC2 Instance"
+  uuid = "b0de2035-423b-41ac-ae27-99f0c45fb232"
+  config = {
+    name = "$${userInitials.toUpperCase()}$${tenant.take(5).toUpperCase()}$${platform.take(3).toUpperCase()}VM$${sequence+10}"
+    backup = {
+      backupJob = {
+        retentionCount = null
+        scheduleTypeId = "2"
+        syntheticFullEnabled = false
+        syntheticFullSchedule = null
+      }
+      createBackup = true
+      jobAction = "new"
+      providerBackupType = -1
+      veeamManagedServer = ""
+    }
+    cloud = { name = "AT AWS Cloud", id = 17 }
+    config = {
+      createUser = true
+      isEC2 = false
+      isVpcSelectable = true
+      resourcePoolId = ""
+    }
+    defaultExpandAdvanced = false
+    environment = "2"
+    group = { name = "All Groups", id = "2" }
+    hideLock = true
+    hostName = "$${userInitials.toUpperCase()}$${tenant.take(5).toUpperCase()}$${platform.take(3).toUpperCase()}VM$${sequence+10}"
+    instance = { shutdownDays = "1", userGroup = { id = "" } }
+    layout = { code = "69c9b4e7-7fe2-414b-80ea-5c64f665cc0b", id = 1242 }
+    plan = { code = "terraform.default", id = 274 }
+    showScale = false
+    type = "at.tf.ec2"
+    version = "Ubuntu Server 24.04 LTS (HVM)"
+    volumes = [
+      {
+        name = "root"
+        maxIOPS = null
+        maxStorage = 0
+        readonlyName = false
+        rootVolume = true
+        size = 0
+        storageType = 1
+        volumeCustomizable = false
+      }
+    ]
+  }
+  dateCreated = "2024-12-17T14:45:23.000Z"
+  form = { code = "at.tf.form" }
+  formType = "form"
+  lastUpdated = "2024-12-17T14:45:23.000Z"
+  refType = "InstanceType"
+}
