@@ -1,0 +1,11 @@
+resource "instance-type" "at.tf.ec2" {
+  code = "at.tf.ec2"
+  name = "AT Terraform Instance"
+  uuid = "5ea69d23-32db-43f5-a83e-25e7fdf46cb3"
+  category = "os"
+  deploymentService = "defaultDeployService"
+  environmentPrefix = "AT_TERRAFORM_INSTANCE"
+  hasAutoScale = true
+  hasDeployment = true
+  hasSettings = true
+}
