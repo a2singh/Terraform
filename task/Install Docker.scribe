@@ -5,11 +5,11 @@ resource "task" "Install Docker" {
   executeTarget = "resource"
   lastUpdated = "2024-09-10T12:11:18.000Z"
   options = [
-    { optionType = { code = "shell.sudo" }, value = "on" },
     {
       content = { uuid = "20a9cf79-5a96-4835-b3b5-6f0b8872e696" }
       optionType = { code = "script" }
-    }
+    },
+    { optionType = { code = "shell.sudo" }, value = "on" }
   ]
   taskType = { code = "script" }
 }
