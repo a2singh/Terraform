@@ -7,5 +7,4 @@ resource "instance-type" "aws" {
   environmentPrefix = "AT_AWS_UBUNTU_22_04"
   hasDeployment = true
   hasSettings = true
-  layouts = [ { code = "b98dadfb-4398-49db-8c12-c207c9977c70" } ]
 }
