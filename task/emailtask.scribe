@@ -11,12 +11,12 @@ resource "task" "emailtask" {
       value = "<%= instance.createdByEmail%>"
     },
     {
-      content = { uuid = "df36d440-2caa-49f2-adf9-aa982e44f457" }
-      optionType = { code = "emailBody" }
-    },
-    {
       optionType = { code = "emailSubject" }
       value = "Intance Provisioned successfully"
+    },
+    {
+      content = { uuid = "df36d440-2caa-49f2-adf9-aa982e44f457" }
+      optionType = { code = "emailBody" }
     }
   ]
   taskType = { code = "email" }
