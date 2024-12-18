@@ -1,0 +1,13 @@
+resource "instance-type-layout" "59fc3fed-c76f-4db9-843f-f0aab9934973" {
+  code = "59fc3fed-c76f-4db9-843f-f0aab9934973"
+  name = "AT_AZ_TF_Layout"
+  uuid = "55a26ca1-805c-4237-9336-ced8f3cd5b94"
+  actions = [ { code = "generic-add-node" } ]
+  hasAutoScale = true
+  instanceType = { code = "at.az.instance" }
+  instanceVersion = "latest"
+  memoryRequirement = 0
+  provisionType = { code = "terraform" }
+  specTemplates = [ { uuid = "f2bed41f-7218-4b70-a1c9-ad14d6dab4e7" } ]
+  supportsConvertToManaged = true
+}

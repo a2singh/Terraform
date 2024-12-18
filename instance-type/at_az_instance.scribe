@@ -1,0 +1,11 @@
+resource "instance-type" "at.az.instance" {
+  code = "at.az.instance"
+  name = "AT_AZ_TF_Instance"
+  uuid = "6327e8e2-259b-4ae0-9ed8-56c0792baddc"
+  category = "os"
+  deploymentService = "defaultDeployService"
+  environmentPrefix = "AT_AZ_TF_INSTANCE"
+  hasAutoScale = true
+  hasDeployment = true
+  hasSettings = true
+}
