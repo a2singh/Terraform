@@ -9,9 +9,6 @@ resource "instance-type-layout" "69c9b4e7-7fe2-414b-80ea-5c64f665cc0b" {
   instanceVersion = "Ubuntu Server 24.04 LTS (HVM)"
   memoryRequirement = 0
   provisionType = { code = "terraform" }
-  specTemplates = [
-    { uuid = "a22cc1f1-54e8-49c8-b1f9-4b6fa815bfd2" },
-    { uuid = "f2bed41f-7218-4b70-a1c9-ad14d6dab4e7" }
-  ]
+  specTemplates = [ { uuid = "a22cc1f1-54e8-49c8-b1f9-4b6fa815bfd2" } ]
   supportsConvertToManaged = true
 }
