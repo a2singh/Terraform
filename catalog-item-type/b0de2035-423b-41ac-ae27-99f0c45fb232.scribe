@@ -2,7 +2,7 @@ resource "catalog-item-type" "b0de2035-423b-41ac-ae27-99f0c45fb232" {
   name = "AT TF EC2 Instance"
   uuid = "b0de2035-423b-41ac-ae27-99f0c45fb232"
   config = {
-    name = "$${userInitials.toUpperCase()}$${tenant.take(5).toUpperCase()}$${platform.take(3).toUpperCase()}VM$${sequence+10}"
+    name = "<%=customOptions.instance_name%>"
     backup = {
       backupJob = {
         retentionCount = null
@@ -26,7 +26,7 @@ resource "catalog-item-type" "b0de2035-423b-41ac-ae27-99f0c45fb232" {
     environment = "2"
     group = { name = "All Groups", id = "2" }
     hideLock = true
-    hostName = "$${userInitials.toUpperCase()}$${tenant.take(5).toUpperCase()}$${platform.take(3).toUpperCase()}VM$${sequence+10}"
+    hostName = "<%=customOptions.instance_name%>"
     instance = { shutdownDays = "1", userGroup = { id = "" } }
     layout = { code = "69c9b4e7-7fe2-414b-80ea-5c64f665cc0b", id = 1242 }
     plan = { code = "terraform.default", id = 274 }
@@ -48,7 +48,8 @@ resource "catalog-item-type" "b0de2035-423b-41ac-ae27-99f0c45fb232" {
   }
   dateCreated = "2024-12-17T14:45:23.000Z"
   form = { code = "at.tf.form" }
+  formConfig = "{\"optOut\":{\"2ce3997b-9ca7-43d0-b087-78527b34c3c2\":false,\"ead8db85-f427-4958-8533-08a0df7d4b93\":false,\"f629765b-5b18-40ae-b970-2a44f2e1fd66\":false}}"
   formType = "form"
-  lastUpdated = "2024-12-17T14:45:23.000Z"
+  lastUpdated = "2024-12-18T06:52:59.000Z"
   refType = "InstanceType"
 }
