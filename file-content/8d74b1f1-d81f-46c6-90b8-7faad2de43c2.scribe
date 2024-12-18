@@ -1,0 +1,79 @@
+resource "file-content" "8d74b1f1-d81f-46c6-90b8-7faad2de43c2" {
+  uuid = "8d74b1f1-d81f-46c6-90b8-7faad2de43c2"
+  content = <<EOFSCRIBE
+provider "azurerm" {
+  features {}
+  tenant_id       = "b16e2942-acf7-4664-a827-c99d7e81a77d"
+  subscription_id = "98be8a0e-a472-4391-915d-040d50197832"
+  client_id       = "a6eeed5e-436b-4985-9b6f-d9acbe9eded0"
+  client_secret   = "1c7e7fff-8f8b-40c0-b6d0-40ccd2bba1ff"
+}
+
+resource "azurerm_resource_group" "example" {
+  name     = "at-rsg-eus2"
+  location = "East US 2"
+}
+
+resource "azurerm_virtual_network" "example" {
+  name                = "at-vnet-eus2"
+  address_space       = ["10.0.0.0/24"]
+  location            = azurerm_resource_group.example.location
+  resource_group_name = azurerm_resource_group.example.name
+}
+
+resource "azurerm_subnet" "example" {
+  name                 = "default"
+  resource_group_name  = azurerm_resource_group.example.name
+  virtual_network_name = azurerm_virtual_network.example.name
+  address_prefixes     = ["10.0.0.0/24"]
+}
+
+resource "azurerm_network_interface" "example" {
+  name                = "example-nic"
+  location            = azurerm_resource_group.example.location
+  resource_group_name = azurerm_resource_group.example.name
+
+  ip_configuration {
+    name                          = "internal"
+    subnet_id                     = azurerm_subnet.example.id
+    private_ip_address_allocation = "Dynamic"
+  }
+}
+
+resource "azurerm_virtual_machine" "example" {
+  name                  = "attestvm002"
+  location              = azurerm_resource_group.example.location
+  resource_group_name   = azurerm_resource_group.example.name
+  network_interface_ids = [azurerm_network_interface.example.id]
+  vm_size               = "Standard_D2s_v3"
+
+  storage_os_disk {
+    name              = "example-os-disk"
+    caching           = "ReadWrite"
+    create_option     = "FromImage"
+    managed_disk_type = "StandardSSD_LRS"
+    disk_size_gb      = 32
+  }
+
+  storage_image_reference {
+    publisher = "Canonical"
+    offer     = "UbuntuServer"
+    sku       = "18.04-LTS"
+    version   = "latest"
+  }
+
+  os_profile {
+    computer_name  = "attestvm002"
+    admin_username = "adminuser"
+    admin_password = "Password1234!"
+  }
+
+  os_profile_linux_config {
+    disable_password_authentication = false
+  }
+}
+
+EOFSCRIBE
+  dateCreated = "2024-12-18T09:57:33.000Z"
+  lastUpdated = "2024-12-18T09:57:33.000Z"
+}
