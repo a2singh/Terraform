@@ -3,7 +3,7 @@ resource "resource-spec-template" "a22cc1f1-54e8-49c8-b1f9-4b6fa815bfd2" {
   uuid = "a22cc1f1-54e8-49c8-b1f9-4b6fa815bfd2"
   config = { terraform = { tfVersion = "" } }
   dateCreated = "2024-12-17T05:21:34.000Z"
-  lastUpdated = "2024-12-17T13:12:47.000Z"
+  lastUpdated = "2024-12-18T06:59:30.000Z"
   template = { uuid = "2a83c50f-868a-404f-a9b5-9e44917a3e8c" }
   templateType = "Terraform"
   type = { code = "terraform" }
