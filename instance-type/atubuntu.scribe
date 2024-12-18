@@ -7,5 +7,4 @@ resource "instance-type" "atubuntu" {
   environmentPrefix = "AZ_UBUNTU"
   hasAutoScale = true
   hasSettings = true
-  layouts = [ { code = "c24ee400-ae34-41d4-81a8-368991b35f5a" } ]
 }
