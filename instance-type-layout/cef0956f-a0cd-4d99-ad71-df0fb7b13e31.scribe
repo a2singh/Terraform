@@ -1,0 +1,13 @@
+resource "instance-type-layout" "cef0956f-a0cd-4d99-ad71-df0fb7b13e31" {
+  code = "cef0956f-a0cd-4d99-ad71-df0fb7b13e31"
+  name = "Azure Terraform Layout"
+  uuid = "efc448f9-7429-47f8-9465-001a217685e1"
+  actions = [ { code = "generic-add-node" } ]
+  hasAutoScale = true
+  instanceType = { code = "azure.tf" }
+  instanceVersion = "latest"
+  memoryRequirement = 0
+  provisionType = { code = "terraform" }
+  specTemplates = [ { uuid = "f2bed41f-7218-4b70-a1c9-ad14d6dab4e7" } ]
+  supportsConvertToManaged = true
+}

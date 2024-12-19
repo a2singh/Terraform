@@ -1,0 +1,11 @@
+resource "instance-type" "azure.tf" {
+  code = "azure.tf"
+  name = "Azure Terraform Instance"
+  uuid = "daa24985-445f-4845-b552-326e684a64a5"
+  category = "os"
+  deploymentService = "defaultDeployService"
+  environmentPrefix = "AZURE_TERRAFORM_INSTANCE"
+  hasAutoScale = true
+  hasDeployment = true
+  hasSettings = true
+}
