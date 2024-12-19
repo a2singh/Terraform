@@ -8,5 +8,4 @@ resource "instance-type" "at.az.instance" {
   hasAutoScale = true
   hasDeployment = true
   hasSettings = true
-  layouts = [ { code = "59fc3fed-c76f-4db9-843f-f0aab9934973" } ]
 }
