@@ -1,0 +1,15 @@
+resource "task" "ataz.groovy" {
+  code = "ataz.groovy"
+  name = "AT_Azure_Groovy_Task"
+  uuid = "c4487597-52ea-4c6e-9b2b-165f07131144"
+  dateCreated = "2024-12-19T07:30:37.000Z"
+  executeTarget = "local"
+  lastUpdated = "2024-12-19T07:30:37.000Z"
+  options = [
+    {
+      content = { uuid = "f14bd7a8-2523-480f-ab89-3ed97aa42913" }
+      optionType = { code = "groovyScript" }
+    }
+  ]
+  taskType = { code = "groovyTask" }
+}

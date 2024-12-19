@@ -1,0 +1,10 @@
+resource "file-content" "f14bd7a8-2523-480f-ab89-3ed97aa42913" {
+  uuid = "f14bd7a8-2523-480f-ab89-3ed97aa42913"
+  content = <<EOFSCRIBE
+    com.morpheus.ComputeServer.withNewSession {
+      grails.util.Holders.applicationContext['azureComputeService'].refreshDailyZoneType()
+    }
+EOFSCRIBE
+  dateCreated = "2024-12-19T07:30:37.000Z"
+  lastUpdated = "2024-12-19T07:30:37.000Z"
+}
