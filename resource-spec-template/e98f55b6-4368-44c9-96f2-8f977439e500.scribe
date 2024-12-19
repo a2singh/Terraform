@@ -1,0 +1,10 @@
+resource "resource-spec-template" "e98f55b6-4368-44c9-96f2-8f977439e500" {
+  name = "ataztf_spectemp"
+  uuid = "e98f55b6-4368-44c9-96f2-8f977439e500"
+  config = { terraform = { tfVersion = "" } }
+  dateCreated = "2024-12-19T14:11:31.000Z"
+  lastUpdated = "2024-12-19T14:11:31.000Z"
+  template = { uuid = "6622a75d-16c6-43d8-b4f4-a5f85fefb832" }
+  templateType = "Terraform"
+  type = { code = "terraform" }
+}

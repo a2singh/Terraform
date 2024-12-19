@@ -1,0 +1,95 @@
+resource "file-content" "6622a75d-16c6-43d8-b4f4-a5f85fefb832" {
+  uuid = "6622a75d-16c6-43d8-b4f4-a5f85fefb832"
+  content = <<EOFSCRIBE
+provider "azurerm" {
+  features {}
+
+  tenant_id       = "b16e2942-acf7-4664-a827-c99d7e81a77d"         # Replace with your Tenant ID
+  subscription_id = "98be8a0e-a472-4391-915d-040d50197832"   # Replace with your Subscription ID
+  client_id       = "a6eeed5e-436b-4985-9b6f-d9acbe9eded0"         # Replace with your Access Key (App ID)
+  client_secret   = "CjC8Q~hsS6B40adscsM~W07KEuS4QxiJoGddMc6l"     # Replace with your Secret Key (App Password)
+}
+
+
+# Variables for existing resources
+variable "resource_group_name" {
+  default = "at-rsg-eus2" # Replace with your Resource Group name
+}
+
+variable "vnet_name" {
+  default = "at-vnet-eus2" # Replace with your existing VNet name
+}
+
+variable "subnet_name" {
+  default = "default" # Replace with your existing Subnet name
+}
+
+variable "location" {
+  default = "East US 2" # Replace with your Azure region
+}
+
+# Define existing resource IDs
+data "azurerm_resource_group" "rg" {
+  name = var.resource_group_name
+}
+
+data "azurerm_virtual_network" "vnet" {
+  name                = var.vnet_name
+  resource_group_name = var.resource_group_name
+}
+
+data "azurerm_subnet" "subnet" {
+  name                 = var.subnet_name
+  virtual_network_name = data.azurerm_virtual_network.vnet.name
+  resource_group_name  = var.resource_group_name
+}
+
+
+# Create a Network Interface (NIC)
+resource "azurerm_network_interface" "nic" {
+  name                = "my-nic"
+  location            = data.azurerm_resource_group.rg.location
+  resource_group_name = data.azurerm_resource_group.rg.name
+
+  ip_configuration {
+    name                          = "my-ipconfig"
+    subnet_id                     = data.azurerm_subnet.subnet.id
+    private_ip_address_allocation = "Dynamic"
+  }
+}
+
+# Create a VM with credentials
+resource "azurerm_linux_virtual_machine" "vm" {
+  name                = "my-linux-vm"
+  resource_group_name = data.azurerm_resource_group.rg.name
+  location            = data.azurerm_resource_group.rg.location
+  size                = "Standard_B2s"
+
+  admin_username = "velan"
+  admin_password = "Welcome@12345" # Replace with your password
+
+  disable_password_authentication = false
+
+  network_interface_ids = [
+    azurerm_network_interface.nic.id
+  ]
+
+  os_disk {
+    caching              = "ReadWrite"
+    storage_account_type = "Standard_LRS"
+    name                 = "my-os-disk"
+  }
+
+  source_image_reference {
+    publisher = "Canonical"
+    offer     = "UbuntuServer"
+    sku       = "18.04-LTS"
+    version   = "latest"
+  }
+}
+
+
+EOFSCRIBE
+  dateCreated = "2024-12-19T14:11:31.000Z"
+  lastUpdated = "2024-12-19T14:11:31.000Z"
+}
