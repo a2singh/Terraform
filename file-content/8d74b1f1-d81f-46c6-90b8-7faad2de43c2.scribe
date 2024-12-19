@@ -7,7 +7,7 @@ provider "azurerm" {
   tenant_id       = "b16e2942-acf7-4664-a827-c99d7e81a77d"
   client_id       = "a6eeed5e-436b-4985-9b6f-d9acbe9eded0"
   client_secret   = "1c7e7fff-8f8b-40c0-b6d0-40ccd2bba1ff"
-}  
+}
 resource "azurerm_resource_group" "resource_group" {
   name     = "at-rsg-eus2"
   location = "East US 2"
@@ -16,21 +16,21 @@ resource "azurerm_resource_group" "resource_group" {
 resource "azurerm_virtual_network" "vnet" {
   name                = "at-vnet-eus2"
   address_space       = ["10.0.0.0/24"]
-  location            = "East US 2"
-  resource_group_name = "at-rsg-eus2"
+  location            = azurerm_resource_group.resource_group.location
+  resource_group_name = azurerm_resource_group.resource_group.name
 }
 
 resource "azurerm_subnet" "subnet" {
   name                 = "default"
-  resource_group_name  = "at-rsg-eus2"
-  virtual_network_name = "at-vnet-eus2"
+  resource_group_name  = azurerm_resource_group.resource_group.name
+  virtual_network_name = azurerm_virtual_network.vnet.name
   address_prefixes     = ["10.0.1.0/24"]
 }
 
 resource "azurerm_network_interface" "nic" {
   name                = "myNIC"
-  location            = "East US 2"
-  resource_group_name = "at-rsg-eus2"
+  location            = azurerm_resource_group.resource_group.location
+  resource_group_name = azurerm_resource_group.resource_group.name
 
   ip_configuration {
     name                          = "internal"
@@ -40,12 +40,12 @@ resource "azurerm_network_interface" "nic" {
 }
 
 resource "azurerm_linux_virtual_machine" "vm" {
-  name                = at_morph_azvm
-  location            = "East US 2"
-  resource_group_name = "at-rsg-eus2"
+  name                = "at-morph-azvm"
+  location            = azurerm_resource_group.resource_group.location
+  resource_group_name = azurerm_resource_group.resource_group.name
   size                = "Standard_B1s"
-  admin_username      = "asingh"
-  admin_password      = "Passw0rd123?"
+  admin_username      = "asingh"           # Replace with your admin username
+  admin_password      = "Passw0rd123?"     # Replace with a strong password
 
   network_interface_ids = [
     azurerm_network_interface.nic.id,
@@ -63,13 +63,11 @@ resource "azurerm_linux_virtual_machine" "vm" {
     version   = "latest"
   }
 
-tags = {    
-Name = “azure_vm"  
-}  
+  tags = {
+    Name = "azure_vm"
   }
 }
-
 EOFSCRIBE
   dateCreated = "2024-12-18T09:57:33.000Z"
-  lastUpdated = "2024-12-19T12:53:28.000Z"
+  lastUpdated = "2024-12-19T13:57:09.000Z"
 }
