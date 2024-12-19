@@ -3,82 +3,33 @@ resource "file-content" "8d74b1f1-d81f-46c6-90b8-7faad2de43c2" {
   content = <<EOFSCRIBE
 provider "azurerm" {
   features {}
-  subscription_id = var.subscription_id
-  tenant_id       = var.tenant_id
-  client_id       = var.client_id
-  client_secret   = var.client_secret
-}
-
-variable "subscription_id" {}
-variable "tenant_id" {}
-variable "client_id" {}
-variable "client_secret" {}
-
-variable "resource_group_name" {
-  description = "The name of the existing resource group"
-  type        = string
-}
-
-variable "location" {
-  description = "Azure location"
-  type        = string   default     = "East US 2"
-}
-
-variable "vm_name" {
-  description = "The name of the Virtual Machine"
-  type        = string
-  default     = "myVM"
-}
-
-variable "admin_username" {
-  description = "Admin username for the VM"
-  type        = string   default     = "asingh"
-}
-
-variable "admin_password" {
-  description = "Admin password for the VM"
-  type        = string
-  sensitive   = true   default     = "Password123?"
-}
-
-variable "tag_environment" {
-  description = "Environment tag for the VM"
-  type        = string   default     = "test"
-}
-
-variable "application_name" {
-  description = "Application name tag for the VM"
-  type        = string
-}
-
-variable "application_type" {
-  description = "Application type tag for the VM"
-  type        = string
-}
-
-variable "resource_group_option" {
-  description = "Application type tag for the VM"
-  type        = string   default     = "at-rsg-eus2"
+  subscription_id = "98be8a0e-a472-4391-915d-040d50197832"
+  tenant_id       = "b16e2942-acf7-4664-a827-c99d7e81a77d"
+  client_id       = "a6eeed5e-436b-4985-9b6f-d9acbe9eded0”
+  client_secret   = "1c7e7fff-8f8b-40c0-b6d0-40ccd2bba1ff"
+}  resource "azurerm_resource_group" "resource_group" {
+  name     = "at-rsg-eus2"
+  location = "East US 2"
 }
 
 resource "azurerm_virtual_network" "vnet" {
   name                = "at-vnet-eus2"
   address_space       = ["10.0.0.0/24"]
-  location            = var.location
-  resource_group_name = var.resource_group_name
+  location            = "East US 2"
+  resource_group_name = "at-rsg-eus2”
 }
 
 resource "azurerm_subnet" "subnet" {
   name                 = "default"
-  resource_group_name  = var.resource_group_name
-  virtual_network_name = azurerm_virtual_network.vnet.name
+  resource_group_name  = "at-rsg-eus2”
+  virtual_network_name = "at-vnet-eus2"
   address_prefixes     = ["10.0.1.0/24"]
 }
 
 resource "azurerm_network_interface" "nic" {
   name                = "myNIC"
-  location            = var.location
-  resource_group_name = var.resource_group_name
+  location            = "East US 2"
+  resource_group_name = "at-rsg-eus2”
 
   ip_configuration {
     name                          = "internal"
@@ -88,12 +39,12 @@ resource "azurerm_network_interface" "nic" {
 }
 
 resource "azurerm_linux_virtual_machine" "vm" {
-  name                = var.vm_name
-  location            = var.location
-  resource_group_name = var.resource_group_name
+  name                = at_morph_azvm
+  location            = "East US 2"
+  resource_group_name = "at-rsg-eus2”
   size                = "Standard_B1s"
-  admin_username      = var.admin_username
-  admin_password      = var.admin_password
+  admin_username      = "asingh"
+  admin_password      = "Passw0rd123?”
 
   network_interface_ids = [
     azurerm_network_interface.nic.id,
@@ -111,15 +62,14 @@ resource "azurerm_linux_virtual_machine" "vm" {
     version   = "latest"
   }
 
-  tags = {
-    Tag_Environment       = var.tag_environment
-    Application_Name      = var.application_name
-    Application_Type      = var.application_type
-    Resource_Group_Option = var.resource_group_option
+tags = {    
+Name = “azure_vm”  
+}  
+
   }
 }
 
 EOFSCRIBE
   dateCreated = "2024-12-18T09:57:33.000Z"
-  lastUpdated = "2024-12-18T11:01:40.000Z"
+  lastUpdated = "2024-12-19T06:05:11.000Z"
 }
