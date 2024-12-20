@@ -1,0 +1,29 @@
+resource "option-type-form" "at.az.tf" {
+  code = "at.az.tf"
+  name = "AT Azur Terraform"
+  uuid = "08dc6eba-4b7d-4a36-8ec7-edcc218368e2"
+  config = {
+    enableVar = false
+    form = ""
+    formField = ""
+    formOptions = ""
+    formType = "static"
+  }
+  options = [
+    {
+      code = "2c0301ec-cd86-4c2c-befe-fa4780c5a944"
+      name = "2c0301ec-cd86-4c2c-befe-fa4780c5a944"
+      uuid = "aec765ac-0cf1-40ee-8965-dd25f4a34975"
+      config = {
+        addon = ""
+        addonPosition = ""
+        retainDefault = false
+      }
+      defaultValue = "ATTFTESTVM1994"
+      fieldContext = "config.customOptions"
+      fieldLabel = "instance name"
+      fieldName = "instanceName"
+      formField = true
+    }
+  ]
+}
