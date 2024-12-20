@@ -1,0 +1,11 @@
+resource "instance-type" "az.tf.instance" {
+  code = "az.tf.instance"
+  name = "az_tf_instance"
+  uuid = "0628e7fc-6aad-4f30-836e-f897709aff81"
+  category = "os"
+  deploymentService = "defaultDeployService"
+  environmentPrefix = "AZ_TF_INSTANCE"
+  hasAutoScale = true
+  hasDeployment = true
+  hasSettings = true
+}

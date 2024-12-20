@@ -1,0 +1,12 @@
+resource "instance-type-layout" "80b07f47-c6a6-4733-b8ba-4ddce6ed1683" {
+  code = "80b07f47-c6a6-4733-b8ba-4ddce6ed1683"
+  name = "az_tf_layout"
+  uuid = "0bffcd13-6aa0-4a16-99e5-deaf75102f47"
+  actions = [ { code = "generic-add-node" } ]
+  hasAutoScale = false
+  instanceType = { code = "az.tf.instance" }
+  instanceVersion = "latest"
+  memoryRequirement = 0
+  provisionType = { code = "terraform" }
+  specTemplates = [ { uuid = "e98f55b6-4368-44c9-96f2-8f977439e500" } ]
+}
