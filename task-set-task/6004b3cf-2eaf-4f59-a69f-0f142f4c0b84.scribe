@@ -1,0 +1,6 @@
+resource "task-set-task" "6004b3cf-2eaf-4f59-a69f-0f142f4c0b84" {
+  uuid = "6004b3cf-2eaf-4f59-a69f-0f142f4c0b84"
+  task = { name = "Get Server Info" }
+  taskOrder = 2
+  taskPhase = "shutdown"
+}

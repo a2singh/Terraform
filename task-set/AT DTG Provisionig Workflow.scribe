@@ -2,9 +2,11 @@ resource "task-set" "AT DTG Provisionig Workflow" {
   name = "AT DTG Provisionig Workflow"
   uuid = "d7c1388c-c4fa-4d24-9f2a-c68a9fd5e357"
   dateCreated = "2024-12-20T13:58:37.000Z"
-  lastUpdated = "2024-12-20T13:58:37.000Z"
+  lastUpdated = "2024-12-20T14:22:35.000Z"
   taskSetTasks = [
-    { uuid = "27332830-209d-4017-a6bd-dafc88f39dba" },
-    { uuid = "4f930f25-ce57-4f40-ad24-62d97921799d" }
+    { uuid = "1a50252d-2a57-4445-b9a7-ad37a5434882" },
+    { uuid = "3e240082-878c-432c-b40e-61cf84bb7f55" },
+    { uuid = "6004b3cf-2eaf-4f59-a69f-0f142f4c0b84" },
+    { uuid = "612aabce-6597-4cbb-8619-25d2437cb3e3" }
   ]
 }

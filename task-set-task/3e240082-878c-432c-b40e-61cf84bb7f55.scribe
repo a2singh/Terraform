@@ -1,0 +1,5 @@
+resource "task-set-task" "3e240082-878c-432c-b40e-61cf84bb7f55" {
+  uuid = "3e240082-878c-432c-b40e-61cf84bb7f55"
+  task = { name = "Get Server Info" }
+  taskPhase = "reconfigure"
+}
