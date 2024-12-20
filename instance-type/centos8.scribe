@@ -8,5 +8,4 @@ resource "instance-type" "centos8" {
   hasAutoScale = true
   hasDeployment = true
   hasSettings = true
-  layouts = [ { code = "61f8a5a9-f80f-44a9-a053-5d11354a6dab" } ]
 }
