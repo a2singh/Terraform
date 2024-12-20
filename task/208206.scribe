@@ -8,12 +8,12 @@ resource "task" "208206" {
   lastUpdated = "2024-10-29T08:38:06.000Z"
   options = [
     {
-      optionType = { code = "winrm.powershellVersion" }
-      value = "5.0"
-    },
-    {
       content = { uuid = "a60081f0-b4b2-4c71-bdf7-f13abe229fb0" }
       optionType = { code = "script" }
+    },
+    {
+      optionType = { code = "winrm.powershellVersion" }
+      value = "5.0"
     }
   ]
   taskType = { code = "winrmTask" }
