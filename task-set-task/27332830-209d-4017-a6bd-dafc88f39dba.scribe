@@ -1,0 +1,6 @@
+resource "task-set-task" "27332830-209d-4017-a6bd-dafc88f39dba" {
+  uuid = "27332830-209d-4017-a6bd-dafc88f39dba"
+  task = { code = "206916" }
+  taskOrder = 1
+  taskPhase = "stop"
+}
