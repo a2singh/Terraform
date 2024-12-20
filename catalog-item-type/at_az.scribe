@@ -3,7 +3,7 @@ resource "catalog-item-type" "at.az" {
   name = "AT Azure VM Catalog"
   uuid = "1204002e-6984-4ee4-801f-a2a33dff3ca7"
   config = {
-    name = "$${userInitials.toUpperCase()}$${tenant.take(5).toUpperCase()}$${platform.take(3).toUpperCase()}VM$${sequence+10}"
+    name = "<%=customOptions.instance_name%>"
     backup = {
       backupJob = {
         retentionCount = null
@@ -28,7 +28,7 @@ resource "catalog-item-type" "at.az" {
     group = { name = "All Groups", id = "2" }
     hasTemplateParameters = true
     hideLock = true
-    hostName = "$${userInitials.toUpperCase()}$${tenant.take(5).toUpperCase()}$${platform.take(3).toUpperCase()}VM$${sequence+10}"
+    hostName = "<%=customOptions.instance_name%>"
     instance = { shutdownDays = "1", userGroup = { id = "" } }
     layout = { code = "80b07f47-c6a6-4733-b8ba-4ddce6ed1683", id = 1245 }
     plan = { code = "terraform.default", id = 274 }
@@ -55,11 +55,12 @@ resource "catalog-item-type" "at.az" {
       }
     ]
   }
+  darkIconPath = "https://10.32.23.86/storage/logos/uploads/CatalogItemType/63/logo/AT Azure VM Catalog_original.png"
   dateCreated = "2024-12-20T08:26:24.000Z"
   description = "Catalog Created to Deploy a VM in Azure cloud using TF code"
-  form = { code = "at.tf.form" }
+  form = { code = "tf.form" }
   formType = "form"
-  lastUpdated = "2024-12-20T08:58:05.000Z"
+  lastUpdated = "2024-12-20T18:45:13.000Z"
   logoSettings = "{\"type\":\"custom\"}"
   refType = "InstanceType"
 }
