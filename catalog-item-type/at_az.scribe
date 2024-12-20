@@ -1,0 +1,65 @@
+resource "catalog-item-type" "at.az" {
+  code = "at.az"
+  name = "AT Azure VM Catalog"
+  uuid = "1204002e-6984-4ee4-801f-a2a33dff3ca7"
+  config = {
+    name = "$${userInitials.toUpperCase()}$${tenant.take(5).toUpperCase()}$${platform.take(3).toUpperCase()}VM$${sequence+10}"
+    backup = {
+      backupJob = {
+        retentionCount = null
+        scheduleTypeId = "2"
+        syntheticFullEnabled = false
+        syntheticFullSchedule = null
+      }
+      createBackup = true
+      jobAction = "new"
+      providerBackupType = -1
+      veeamManagedServer = ""
+    }
+    cloud = { name = "AT Azure", id = 47 }
+    config = {
+      createUser = true
+      isEC2 = false
+      isVpcSelectable = true
+      resourcePoolId = ""
+    }
+    defaultExpandAdvanced = false
+    environment = "2"
+    group = { name = "All Groups", id = "2" }
+    hasTemplateParameters = true
+    hideLock = true
+    hostName = "$${userInitials.toUpperCase()}$${tenant.take(5).toUpperCase()}$${platform.take(3).toUpperCase()}VM$${sequence+10}"
+    instance = { shutdownDays = "1", userGroup = { id = "" } }
+    layout = { code = "80b07f47-c6a6-4733-b8ba-4ddce6ed1683", id = 1245 }
+    plan = { code = "terraform.default", id = 274 }
+    showScale = false
+    templateParameter = {
+      location = "East US 2"
+      resource_group_name = "at-rsg-eus2"
+      subnet_name = "default"
+      vnet_name = "at-vnet-eus2"
+    }
+    type = "az.tf.instance"
+    version = "latest"
+    volumes = [
+      {
+        name = "root"
+        datastoreId = 605
+        maxIOPS = null
+        maxStorage = 0
+        readonlyName = false
+        rootVolume = true
+        size = 0
+        storageType = 1
+        volumeCustomizable = false
+      }
+    ]
+  }
+  dateCreated = "2024-12-20T08:26:24.000Z"
+  description = "Catalog Created to Deploy a VM in Azure cloud using TF code"
+  form = { code = "at.tf.form" }
+  formType = "form"
+  lastUpdated = "2024-12-20T08:58:05.000Z"
+  logoSettings = "{\"type\":\"custom\"}"
+  refType = "InstanceType"
+}

@@ -18,6 +18,7 @@ resource "option-type-form" "at.tf.form" {
       fieldLabel = "instance name"
       fieldName = "instance_name"
       formField = true
+      refCode = "df574198-11d5-449b-adc3-5280d264f4ef"
     },
     {
       code = "ead8db85-f427-4958-8533-08a0df7d4b93"
@@ -29,6 +30,7 @@ resource "option-type-form" "at.tf.form" {
       fieldLabel = "group"
       fieldName = "group"
       formField = true
+      refCode = "ead8db85-f427-4958-8533-08a0df7d4b93"
       type = "group"
     },
     {
@@ -53,6 +55,7 @@ resource "option-type-form" "at.tf.form" {
       fieldLabel = "cloud"
       fieldName = "cloud"
       formField = true
+      refCode = "f629765b-5b18-40ae-b970-2a44f2e1fd66"
       type = "cloud"
     },
     {
@@ -81,7 +84,24 @@ resource "option-type-form" "at.tf.form" {
       fieldLabel = "service plan"
       fieldName = "service_plan"
       formField = true
+      refCode = "2ce3997b-9ca7-43d0-b087-78527b34c3c2"
       type = "plan"
+    },
+    {
+      code = "f2d4b549-0a80-49e5-8394-3bdafb05a99f"
+      name = "f2d4b549-0a80-49e5-8394-3bdafb05a99f"
+      uuid = "c20fe216-0e11-4f3d-ba96-17d54d33eebf"
+      config = {
+        addon = ""
+        addonPosition = ""
+        retainDefault = false
+      }
+      displayOrder = 4
+      fieldContext = "config.customOptions"
+      fieldLabel = "environment"
+      fieldName = "environment"
+      formField = true
+      type = "environment"
     }
   ]
 }
