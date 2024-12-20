@@ -5,4 +5,5 @@ resource "instance-type" "do.1" {
   category = "os"
   deploymentService = ""
   environmentPrefix = "AP_DOCKER"
+  layouts = [ { code = "caa6ff64-8d1c-499a-a8cc-225a4a8b1a97" } ]
 }
