@@ -9,11 +9,11 @@ resource "task" "Email alert" {
       optionType = { code = "emailAddress" }
       value = "asingh@morpheusdata.com"
     },
+    { optionType = { code = "emailSubject" }, value = "task failed" },
     {
       content = { uuid = "df23681b-8cca-4056-a742-d59e3dd6f1ce" }
       optionType = { code = "emailBody" }
-    },
-    { optionType = { code = "emailSubject" }, value = "task failed" }
+    }
   ]
   taskType = { code = "email" }
 }
