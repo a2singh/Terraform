@@ -6,4 +6,5 @@ resource "instance-type" "13.1" {
   deploymentService = ""
   environmentPrefix = "_POSTGRES_STANDALONE"
   hasAutoScale = true
+  layouts = [ { code = "3079e211-81e6-44fd-bfa2-5219383b30d6" } ]
 }
