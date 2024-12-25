@@ -8,5 +8,4 @@ resource "instance-type" "az.tf.instance" {
   hasAutoScale = true
   hasDeployment = true
   hasSettings = true
-  layouts = [ { code = "80b07f47-c6a6-4733-b8ba-4ddce6ed1683" } ]
 }
