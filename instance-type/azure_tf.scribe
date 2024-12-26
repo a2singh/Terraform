@@ -8,5 +8,4 @@ resource "instance-type" "azure.tf" {
   hasAutoScale = true
   hasDeployment = true
   hasSettings = true
-  layouts = [ { code = "cef0956f-a0cd-4d99-ad71-df0fb7b13e31" } ]
 }
