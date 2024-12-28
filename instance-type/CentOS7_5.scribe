@@ -9,5 +9,6 @@ resource "instance-type" "CentOS7.5" {
   hasDeployment = true
   hasSettings = true
   labels = [ "Operating System CentOS" ]
+  layouts = [ { code = "e57439e0-f8f5-4849-a2e6-317249e58430" } ]
   optionTypes = [ { code = "app_name" } ]
 }
