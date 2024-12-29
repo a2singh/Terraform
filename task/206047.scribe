@@ -7,12 +7,12 @@ resource "task" "206047" {
   options = [
     { optionType = { code = "host" }, value = "10.32.20.55" },
     { optionType = { code = "port" }, value = "5986" },
-    { optionType = { code = "username" }, value = "amit" },
-    { optionType = { code = "winrm.elevated" }, value = "on" },
     {
       content = { uuid = "246ad6e5-e072-4f72-b41c-dc44b35a028d" }
       optionType = { code = "script" }
-    }
+    },
+    { optionType = { code = "username" }, value = "amit" },
+    { optionType = { code = "winrm.elevated" }, value = "on" }
   ]
   taskType = { code = "winrmTask" }
   visibility = "public"
