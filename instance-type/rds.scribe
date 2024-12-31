@@ -5,5 +5,4 @@ resource "instance-type" "rds" {
   category = "os"
   deploymentService = ""
   environmentPrefix = "RDS_INSTANCE_TYPE"
-  layouts = [ { code = "e5fe5ce4-621a-4efc-bb7a-9f76c3a97ad7" } ]
 }
