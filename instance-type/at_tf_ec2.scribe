@@ -8,4 +8,5 @@ resource "instance-type" "at.tf.ec2" {
   hasAutoScale = true
   hasDeployment = true
   hasSettings = true
+  layouts = [ { code = "69c9b4e7-7fe2-414b-80ea-5c64f665cc0b" } ]
 }
